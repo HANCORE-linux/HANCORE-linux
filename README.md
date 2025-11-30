@@ -26,7 +26,11 @@
   <img src="https://img.shields.io/badge/nvidia-RTX%202080-%2376B900.svg?&style=for-the-badge&logo=nvidia&logoColor=white" />
 </p>
 
-
+<h3>Code I use for my Themes with</h3>
+<p align="left">
+<img alt="CSS" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+<img alt="JSON" src="https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white" />
+</p>
 
 ## 📊 GitHub Stats:
  <!-- https://github.com/anuraghazra/github-readme-stats -->
