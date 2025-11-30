@@ -10,17 +10,17 @@
 - I’m new to the Linux world — Omarchy has taught me a ton about the Linux environment.
 - I use Arch with Hyprland and mainly edit my themes using Aether & Omarchist.
 - My editors of choice are Neovim and VS Code.
-- Always exploring new inspiration to push my designs further.
+- Always exploring new inspiration to push my designs further. 
+</br>
 
-<h4 align='left'>
-  :star: Here are my projects that I'm working on: <br>
-- [Waybar-Themes](https://github.com/HANCORE-linux/waybar-themes) <br>
-- [Themes](https://github.com/HANCORE-linux?tab=repositories)
-</h4>
+  :star: Here are my projects that I'm working on:
+- [Waybar-Themes](https://github.com/HANCORE-linux/waybar-themes)
+- [Themes-Reprositories](https://github.com/HANCORE-linux?tab=repositories)
+
 
 <p align='center'>
   💻 My workspace<br/><br/>
-  <img src="https://img.shields.io/badge/Omarchy-%230078D6.svg?&style=for-the-badge&logo=linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Omarchy-%230078D6.svg?&style=for-the-badge&logo=linux&logoColor=000000" />
   <img src="https://img.shields.io/badge/intel-core%20i7%208700K%2012th-%230071C5.svg?&style=for-the-badge&logo=intel&logoColor=white" />
   <img src="https://img.shields.io/badge/RAM-32GB-%230071C5.svg?&style=for-the-badge&logoColor=white" />
   <img src="https://img.shields.io/badge/nvidia-RTX%202080-%2376B900.svg?&style=for-the-badge&logo=nvidia&logoColor=white" />
