@@ -38,7 +38,7 @@
 
 ---
 
-<a href="https://github.com/HANCORE-linux" alt="HANCORE-linux"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=CREATED%20BY&message=HANCORE&color=000000"></a>
-<a href="[https://github.com/hancore-linux/hancore-linux/blob/main/LICENSE]" alt="https://github.com/hancore-linux/hancore-linux/blob/main/LICENSE"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=LICENSE&message=MIT&color=000000"></a>
+<a href="https://github.com/hancore-linux" alt="https://github.com/hancore-linux"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=CREATED%20BY&message=HANCORE&color=000000"></a>
+<a href="https://github.com/hancore-linux/hancore-linux/blob/main/LICENSE" alt="https://github.com/hancore-linux/hancore-linux/blob/main/LICENSE"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=LICENSE&message=MIT&color=000000"></a>
 
 <!-- badge_plugin_end -->
