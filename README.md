@@ -30,6 +30,7 @@
 <p align="left">
 <img alt="CSS" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 <img alt="JSON" src="https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white" />
+<img width="30" height="30" alt="AETHER" src="https://github.com/bjarneo/aether/blob/main/icon.png"/>
 </p>
 
 ## 📊 GitHub Stats:
