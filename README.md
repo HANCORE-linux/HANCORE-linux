@@ -1,44 +1,40 @@
-<h1 align='center'>
-  Hi there 👋 I'm HANCORE 🖥️
-</h1>
-<h3 align='center'>
-  Building themes, collecting inspiration, polishing pixels.
-</h3>
+<div align="center">
 
+# HANCORE
+I'm a Mechanical engineer. Not a software guy. I build themes the way I think.
 
-- I love creating new themes and experimenting with fresh ideas.
-- I’m new to the Linux world — Omarchy has taught me a ton about the Linux environment.
-- I use Arch with Hyprland and mainly edit my themes using Aether & Omarchist.
-- My editors of choice are Neovim and VS Code.
-- Always exploring new inspiration to push my designs further. 
-</br>
+## Omarchy Themes
+| [BlackTurq](https://github.com/HANCORE-linux/omarchy-blackturq-theme) | [BlackGold](https://github.com/HANCORE-linux/omarchy-blackgold-theme) | [Demon](https://github.com/HANCORE-linux/omarchy-demon-theme) | [InkyPinky](https://github.com/HANCORE-linux/omarchy-inkypinky-theme) | [Oxford](https://github.com/HANCORE-linux/omarchy-oxford-theme) | [RoseofDune](https://github.com/HANCORE-linux/omarchy-roseofdune-theme) | [Moodpeak](https://github.com/HANCORE-linux/omarchy-moodpeak-theme) | [TheGreek](https://github.com/HANCORE-linux/omarchy-thegreek-theme) |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| ![](https://github.com/HANCORE-linux/omarchy-blackturq-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-blackgold-theme/blob/V2-Blackgold/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-demon-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-inkypinky-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-oxford-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-roseofdune-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-moodpeak-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-thegreek-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-sapphire-theme/blob/main/preview.png?raw=true)
 
-  :star: Here are my projects that I'm working on:
-- [Waybar-Themes](https://github.com/HANCORE-linux/waybar-themes)
-- [Themes-Reprositories](https://github.com/HANCORE-linux?tab=repositories)
+| [Batou](https://github.com/HANCORE-linux/omarchy-batou-theme) | [Sapphire](https://github.com/HANCORE-linux/omarchy-sapphire-theme) | [Mecha no Onna](https://github.com/HANCORE-linux/omarchy-mechanoonna-theme) | [BlackMoney](https://github.com/HANCORE-linux/omarchy-blackmoney-theme) | [ShadesofJade](https://github.com/HANCORE-linux/omarchy-shadesofjade-theme) | [Last Horizon](https://github.com/HANCORE-linux/omarchy-lasthorizon-theme) | [WhiteGold](https://github.com/HANCORE-linux/omarchy-whitegold-theme) |
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| ![](https://github.com/HANCORE-linux/omarchy-batou-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-sapphire-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-mechanoonna-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-blackmoney-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-shadesofjade-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-lasthorizon-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-whitegold-theme/blob/main/preview.png?raw=true) 
 
+| [Velvet Night](https://github.com/HANCORE-linux/omarchy-velvetnight-theme) |
+| :--: |
+| ![](https://github.com/HANCORE-linux/omarchy-velvetnight-theme/blob/main/preview.png?raw=true) |
 
-<p align='center'>
-  💻 My workspace<br/><br/>
-  <img src="https://img.shields.io/badge/Omarchy-%230078D6.svg?&style=for-the-badge&logo=linux&logoColor=000000" />
-  <img src="https://img.shields.io/badge/intel-core%20i7%208700K%2012th-%230071C5.svg?&style=for-the-badge&logo=intel&logoColor=white" />
-  <img src="https://img.shields.io/badge/RAM-32GB-%230071C5.svg?&style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/nvidia-RTX%202080-%2376B900.svg?&style=for-the-badge&logo=nvidia&logoColor=white" />
-</p>
+## Waybar Themes
+Some example's of my Waybar-Themes collection. Check more here [Waybar-Themes](https://github.com/HANCORE-linux/waybar-themes)
+| [V2.2](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v22) | [V3-Shadow](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v3-shadow) | [V3-border2](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v3-border2) | [V6.e](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshot-v6e) |
+| :--: | :--: | :--: | :--: |
+| ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.2/V22.png?raw=true) | ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V3-shadow/V3shadow.png?raw=true) | ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V3-border2/V3border2.png?raw=true) | ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V6.e/V6e.png?raw=true)
 
-<h3>Code I use for my Themes</h3>
-<p align="left">
+## GitHub Stars
+[![Total stars](https://img.shields.io/github/stars/hancore-linux?style=flat-square&label=Stars&color=000000&labelColor=FFFFFF&logo=github&logoColor=FFFFFF)](https://github.com/hancore-linux) 
+
+<h3>Theme Code & Tools </h3>
+<p align="center">
 <img alt="CSS" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 <img alt="JSON" src="https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white" />
-<img width="30" height="30" alt="AETHER" src="https://github.com/bjarneo/aether/blob/main/icon.png"/>
-</p>
+<img width="30" height="30" alt="AETHER" src="https://github.com/bjarneo/aether/blob/main/icon.png"/> 
+<img width="120" height="40" alt="[Theme-Hook-Script](https://github.com/imbypass/omarchy-theme-hook)" src="https://github.com/user-attachments/assets/d9569e80-3fd2-4095-a376-599396f7e727"/> </p>
+</div>
 
-## 📊 GitHub Stats:
- <!-- https://github.com/anuraghazra/github-readme-stats -->
-
-  <a href="https://github.com/HANCORE-linux/github-readme-stats"><img alt="HANCORE's Github Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api/?username=HANCORE-linux&show_icons=true&include_all_commits=true&count_private=true&theme=react&hide_border=true&bg_color=1F222E&title_color=F85D7F&icon_color=F8D866" height="192px"/></a>
-<br/>
-  
-![Visitors](https://api.visitorbadge.io/api/visitors?path=HANCORE-linux-969&label=Visitors&countColor=%23263759)
-
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=HANCORE-linux&bg_color=0d1117&color=FFFFFF&line=2c83f8&point=FFFFFF&hide_border=true&area=true&custom_title=HANCORE's%20Contribution%20Graph)
+Credits & Contributions
+- [Miqim / readme](https://github.com/tahfizhabib)
+- [Bypass / Theme-hook-script](https://github.com/imbypass/omarchy-theme-hook)
+- [bjarneo / Aether](https://github.com/bjarneo/aether)
+- [DHH / Omarchy](https://github.com/basecamp/omarchy)
