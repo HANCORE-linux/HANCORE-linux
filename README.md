@@ -37,4 +37,5 @@ Credits & Contributions
 - [Miqim / readme](https://github.com/tahfizhabib)
 - [Bypass / Theme-hook-script](https://github.com/imbypass/omarchy-theme-hook)
 - [bjarneo / Aether](https://github.com/bjarneo/aether)
+- [Taha / Omarchist](https://github.com/tahayvr/omarchist)
 - [DHH / Omarchy](https://github.com/basecamp/omarchy)
