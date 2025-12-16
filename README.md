@@ -46,5 +46,5 @@ Credits & Contributions
 
 Contact <br>
 <a href="https://discord.com/users/816417588610334741">
-<img height="18" src="https://img.shields.io/badge/Discord-1a1a1a?style=flat-square&logo=discord&logoColor=5865F2&labelColor=FFFFFF" />
+<img height="18" src="https://img.shields.io/badge/Discord-1a1a1a?style=flat-square&logo=discord&logoColor=000000&labelColor=FFFFFF" />
   </a>
