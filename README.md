@@ -3,7 +3,11 @@
 # HANCORE
 I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 
-## Omarchy Themes
+
+## <img width="120" height="120" alt="screenshot-2025-12-16_23-30-08" src="https://github.com/user-attachments/assets/9b644b6a-ec7d-4af2-b83a-043ac94ba5e9"  /> 
+#### Omarchy Themes
+
+
 | [BlackTurq](https://github.com/HANCORE-linux/omarchy-blackturq-theme) | [BlackGold](https://github.com/HANCORE-linux/omarchy-blackgold-theme) | [Demon](https://github.com/HANCORE-linux/omarchy-demon-theme) | [InkyPinky](https://github.com/HANCORE-linux/omarchy-inkypinky-theme) | [Oxford](https://github.com/HANCORE-linux/omarchy-oxford-theme) | [RoseofDune](https://github.com/HANCORE-linux/omarchy-roseofdune-theme) | [Moodpeak](https://github.com/HANCORE-linux/omarchy-moodpeak-theme) | [TheGreek](https://github.com/HANCORE-linux/omarchy-thegreek-theme) |
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | ![](https://github.com/HANCORE-linux/omarchy-blackturq-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-blackgold-theme/blob/V2-Blackgold/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-demon-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-inkypinky-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-oxford-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-roseofdune-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-moodpeak-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-thegreek-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-sapphire-theme/blob/main/preview.png?raw=true)
@@ -16,7 +20,7 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 | :--: |
 | ![](https://github.com/HANCORE-linux/omarchy-velvetnight-theme/blob/main/preview.png?raw=true) |
 
-## Waybar Themes
+#### Waybar Themes
 Some example's of my Waybar-Themes collection. Check out [Waybar-Themes](https://github.com/HANCORE-linux/waybar-themes)
 | [V2.2](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v22) | [V3-Shadow](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v3-shadow) | [V3-border2](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v3-border2) | [V6.e](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshot-v6e) |
 | :--: | :--: | :--: | :--: |
@@ -33,6 +37,7 @@ Some example's of my Waybar-Themes collection. Check out [Waybar-Themes](https:/
 <img alt="NeoVim" src="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white" />
 <img width="30" height="30" alt="AETHER" src="https://github.com/bjarneo/aether/blob/main/icon.png"/> 
 <img width="120" height="40" alt="[Theme-Hook-Script](https://github.com/imbypass/omarchy-theme-hook)" src="https://github.com/user-attachments/assets/d9569e80-3fd2-4095-a376-599396f7e727"/> </p>
+
 </div>
 
 
