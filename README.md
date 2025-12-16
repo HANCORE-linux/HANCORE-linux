@@ -33,9 +33,16 @@ Some example's of my Waybar-Themes collection. Check out [Waybar-Themes](https:/
 <img width="120" height="40" alt="[Theme-Hook-Script](https://github.com/imbypass/omarchy-theme-hook)" src="https://github.com/user-attachments/assets/d9569e80-3fd2-4095-a376-599396f7e727"/> </p>
 </div>
 
+
 Credits & Contributions
 - [Miqim / readme](https://github.com/tahfizhabib)
 - [Bypass / Theme-hook-script](https://github.com/imbypass/omarchy-theme-hook)
 - [bjarneo / Aether](https://github.com/bjarneo/aether)
 - [Taha / Omarchist](https://github.com/tahayvr/omarchist)
 - [DHH / Omarchy](https://github.com/basecamp/omarchy)
+
+
+Contact <br>
+<a href="https://discord.com/users/816417588610334741">
+<img height="18" src="https://img.shields.io/badge/Discord-1a1a1a?style=flat-square&logo=discord&logoColor=5865F2&labelColor=FFFFFF" />
+  </a>
