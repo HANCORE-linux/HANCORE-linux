@@ -16,9 +16,9 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | ![](https://github.com/HANCORE-linux/omarchy-batou-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-sapphire-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-mechanoonna-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-blackmoney-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-shadesofjade-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-lasthorizon-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-whitegold-theme/blob/main/preview.png?raw=true) 
 
-| [Velvet Night](https://github.com/HANCORE-linux/omarchy-velvetnight-theme) |
-| :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-velvetnight-theme/blob/main/preview.png?raw=true) |
+| [Velvet Night](https://github.com/HANCORE-linux/omarchy-velvetnight-theme) | [Harbor](https://github.com/HANCORE-linux/omarchy-harbor-theme) |
+| :--: | :--: |
+| ![](https://github.com/HANCORE-linux/omarchy-velvetnight-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-harbor-theme/blob/main/preview.png?raw=true)
 
 #### Waybar Themes
 Some example's of my Waybar-Themes collection. Check out [Waybar-Themes](https://github.com/HANCORE-linux/waybar-themes)
