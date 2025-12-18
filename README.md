@@ -21,7 +21,7 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 | ![](https://github.com/HANCORE-linux/omarchy-velvetnight-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-harbor-theme/blob/main/preview.png?raw=true)
 
 #### Waybar Themes
-Some example's of my Waybar-Themes collection. Check out [Waybar-Themes](https://github.com/HANCORE-linux/waybar-themes)
+Some examples of my Waybar themes. Check here for more variations: [Waybar-Themes](https://github.com/HANCORE-linux/waybar-themes)
 | [V2.2](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v22) | [V3-Shadow](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v3-shadow) | [V3-border2](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v3-border2) | [V6.e](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshot-v6e) | [V2 "Gruvbox"](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v2) |
 | :--: | :--: | :--: | :--: | :--: |
 | ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.2/V22.png?raw=true) | ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V3-shadow/V3shadow.png?raw=true) | ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V3-border2/V3border2.png?raw=true) | ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V6.e/V6e.png?raw=true)| ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2/V2.png?raw=true)
