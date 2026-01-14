@@ -51,7 +51,8 @@ Credits & Contributions
 - [DHH / Omarchy](https://github.com/basecamp/omarchy)
 
 
-Contact <br>
+Contact & Coffee <br>
 <a href="https://discord.com/users/816417588610334741">
-<img height="18" src="https://img.shields.io/badge/Discord-1a1a1a?style=flat-square&logo=discord&logoColor=000000&labelColor=FFFFFF" />
-  </a>
+<img height="18" src="https://img.shields.io/badge/Discord-1a1a1a?style=flat-square&logo=discord&logoColor=000000&labelColor=FFFFFF" /> </a>
+[![BuyMeACoffee](https://raw.githubusercontent.com/pachadotdev/buymeacoffee-badges/main/bmc-black.svg)](https://www.buymeacoffee.com/hancore)
+ 
