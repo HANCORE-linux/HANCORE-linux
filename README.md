@@ -53,6 +53,6 @@ Credits & Contributions
 
 Contact & Coffee <br>
 <a href="https://discord.com/users/816417588610334741">
-<img height="18" src="https://img.shields.io/badge/Discord-1a1a1a?style=flat-square&logo=discord&logoColor=000000&labelColor=FFFFFF" /> </a>
+<img height="18" src="https://img.shields.io/badge/Discord-1a1a1a?style=flat-square&logo=discord&logoColor=000000&labelColor=FFFFFF" /></a>&nbsp;
 [![BuyMeACoffee](https://raw.githubusercontent.com/pachadotdev/buymeacoffee-badges/main/bmc-black.svg)](https://www.buymeacoffee.com/hancore)
  
