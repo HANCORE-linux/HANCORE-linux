@@ -20,6 +20,10 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 | :--: | :--: | :--: | :--: |  :--: |:--: |
 | ![](https://github.com/HANCORE-linux/omarchy-velvetnight-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-harbor-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-harbordark-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-oxocarbon-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-solitude-theme/blob/main/preview.png?raw=true)| ![](https://github.com/HANCORE-linux/omarchy-greek-noir-theme/blob/main/preview.png?raw=true)
 
+| [Turbonite](https://github.com/HANCORE-linux/omarchy-turbonite-theme) |
+| :--: |
+| ![](https://github.com/HANCORE-linux/omarchy-turbonite-theme/blob/main/preview.png?raw=true)
+
 #### Waybar Themes
 Some examples of my Waybar themes. Check here for more variations: [Waybar-Themes](https://github.com/HANCORE-linux/waybar-themes)
 | [V2.2](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v22) | [V3-Shadow](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v3-shadow) | [V3-border2](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v3-border2) | [V6.e](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshot-v6e) | [V2 "Gruvbox"](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v2) | [V2.1 "RosePine"](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v21) |
