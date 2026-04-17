@@ -4,7 +4,7 @@
 I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 
 
-## <img width="120" height="120" alt="screenshot-2025-12-16_23-30-08" src="https://github.com/user-attachments/assets/9b644b6a-ec7d-4af2-b83a-043ac94ba5e9"  /> 
+## <img width="420" height="120" alt="screenshot-2025-12-16_23-30-08" src="https://github.com/user-attachments/assets/9b644b6a-ec7d-4af2-b83a-043ac94ba5e9"/> 
 #### Omarchy Themes
 
 
