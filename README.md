@@ -26,6 +26,11 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 
 #### Waybar Themes
 Some examples of my Waybar themes. Check here for more variations: [Waybar-Themes](https://github.com/HANCORE-linux/waybar-themes)
+<div align="center">
+  <a href="https://github.com/HANCORE-linux/waybar-themes">
+    <img src="https://img.shields.io/badge/Waybar_Configs-36+-df6124?style=for-the-badge&labelColor=000000" alt="Waybar Configs">
+  </a>
+</div>
 <table>
   <tr>
     <td colspan="2">
