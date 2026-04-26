@@ -26,9 +26,25 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 
 #### Waybar Themes
 Some examples of my Waybar themes. Check here for more variations: [Waybar-Themes](https://github.com/HANCORE-linux/waybar-themes)
-| [V2.2](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v22) | [V3-Shadow](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v3-shadow) | [V3-border2](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v3-border2) | [V6.e](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshot-v6e) | [V2 "Gruvbox"](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v2) | [V2.1 "RosePine"](https://github.com/HANCORE-linux/waybar-themes?tab=readme-ov-file#screenshots-v21) |
-| :--: | :--: | :--: | :--: | :--: | :--: |
-| ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.2/V22.png?raw=true) | ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V3.1/V3shadow.png?raw=true) | ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V3.3/V3border2.png?raw=true) | ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V6.e/V6e.png?raw=true) | ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2/V2.png?raw=true) | ![](https://github.com/HANCORE-linux/waybar-themes/blob/main/config/V2.1/v21.png?raw=true)
+<table>
+  <tr>
+    <td colspan="2">
+      Two Waybar examples with an .svg image as Omarchy menu, directly transferred from the beautiful and well-known Omarchy Screensaver ascii text style.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <a href="https://github.com/HANCORE-linux/waybar-themes#v29b">
+        <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/showcases/V2.9c.png?raw=true" alt="V2.9b" width="100%">
+      </a>
+    </td>
+    <td width="50%">
+      <a href="https://github.com/HANCORE-linux/waybar-themes#v29c">
+        <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/showcases/V2.9d.png?raw=true" alt="V2.9c" width="100%">
+      </a>
+    </td>
+  </tr>
+</table>
 
 ## GitHub Stars
 [![Total stars](https://img.shields.io/github/stars/hancore-linux?style=flat-square&label=Stars&color=000000&labelColor=FFFFFF&logo=github&logoColor=FFFFFF)](https://github.com/hancore-linux) 
