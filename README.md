@@ -5,7 +5,11 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 
 
 ## <img width="320" height="60" alt="screenshot-2025-12-16_23-30-08" src="https://github.com/user-attachments/assets/9b644b6a-ec7d-4af2-b83a-043ac94ba5e9"/> 
-#### Omarchy Themes
+<div align="center">
+  <a href="https://github.com/HANCORE-linux?tab=repositories">
+    <img src="https://img.shields.io/badge/Omarchy_Themes-23-df6124?style=for-the-badge&labelColor=000000" alt="Omarchy Themes">
+  </a>
+</div>
 
 
 | [BlackTurq](https://github.com/HANCORE-linux/omarchy-blackturq-theme) | [BlackGold](https://github.com/HANCORE-linux/omarchy-blackgold-theme) | [Demon](https://github.com/HANCORE-linux/omarchy-demon-theme) | [InkyPinky](https://github.com/HANCORE-linux/omarchy-inkypinky-theme) | [Oxford](https://github.com/HANCORE-linux/omarchy-oxford-theme) | [RoseofDune](https://github.com/HANCORE-linux/omarchy-roseofdune-theme) | [Moodpeak](https://github.com/HANCORE-linux/omarchy-moodpeak-theme) | [TheGreek](https://github.com/HANCORE-linux/omarchy-thegreek-theme) |
@@ -24,11 +28,9 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 | :--: |:--: |
 | ![](https://github.com/HANCORE-linux/omarchy-turbonite-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-saga-theme/blob/main/preview.png?raw=true)
 
-#### Waybar Themes
-Some examples of my Waybar themes. Check here for more variations: [Waybar-Themes](https://github.com/HANCORE-linux/waybar-themes)
 <div align="center">
   <a href="https://github.com/HANCORE-linux/waybar-themes">
-    <img src="https://img.shields.io/badge/Waybar_Configs-36+-df6124?style=for-the-badge&labelColor=000000" alt="Waybar Configs">
+    <img src="https://img.shields.io/badge/Waybar_Themes-36+-df6124?style=for-the-badge&labelColor=000000" alt="Waybar Configs">
   </a>
 </div>
 <table>
