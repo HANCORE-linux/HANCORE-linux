@@ -177,19 +177,24 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 </div>
 <table>
   <tr>
-    <td colspan="2">
-      <p align="center"> Two Waybar examples with an .svg image as Omarchy menu, directly transferred from the beautiful and well-known Omarchy Screensaver ascii text style.</p>
+    <td colspan="3">
+      <p align="center"> Three Waybar examples with an .svg image as Omarchy menu, directly transferred from the beautiful and well-known Omarchy Screensaver ascii text style.</p>
     </td>
   </tr>
   <tr>
-    <td width="50%">
-      <a href="https://github.com/HANCORE-linux/waybar-themes#v29b">
-        <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/showcases/V2.9c.png?raw=true" alt="V2.9b" width="100%">
+    <td width="33%">
+      <a href="https://github.com/HANCORE-linux/waybar-themes#v29c">
+        <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/showcases/V2.9c.png?raw=true" alt="V2.9c" width="100%">
       </a>
     </td>
-    <td width="50%">
-      <a href="https://github.com/HANCORE-linux/waybar-themes#v29c">
-        <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/showcases/V2.9d.png?raw=true" alt="V2.9c" width="100%">
+    <td width="33%">
+      <a href="https://github.com/HANCORE-linux/waybar-themes#v29d">
+        <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/showcases/V2.9d.png?raw=true" alt="V2.9d" width="100%">
+      </a>
+    </td>
+    <td width="33%">
+      <a href="https://github.com/HANCORE-linux/waybar-themes#v29e">
+        <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/showcases/V2.9e.png?raw=true" alt="V2.9e" width="100%">
       </a>
     </td>
   </tr>
