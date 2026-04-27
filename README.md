@@ -12,53 +12,37 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 </div>
 
 
-| [BlackTurq](https://github.com/HANCORE-linux/omarchy-blackturq-theme) | [BlackGold](https://github.com/HANCORE-linux/omarchy-blackgold-theme)
-| :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-blackturq-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-blackgold-theme/blob/V2-Blackgold/preview.png?raw=true)
+| [BlackTurq](https://github.com/HANCORE-linux/omarchy-blackturq-theme) | [BlackGold](https://github.com/HANCORE-linux/omarchy-blackgold-theme) | [Demon](https://github.com/HANCORE-linux/omarchy-demon-theme)
+| :--: | :--: | :--: |
+| ![](https://github.com/HANCORE-linux/omarchy-blackturq-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-blackgold-theme/blob/V2-Blackgold/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-demon-theme/blob/main/preview.png?raw=true)
 
-| [Demon](https://github.com/HANCORE-linux/omarchy-demon-theme) | [InkyPinky](https://github.com/HANCORE-linux/omarchy-inkypinky-theme)
-| :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-demon-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-inkypinky-theme/blob/main/preview.png?raw=true)
+| [InkyPinky](https://github.com/HANCORE-linux/omarchy-inkypinky-theme) | [Oxford](https://github.com/HANCORE-linux/omarchy-oxford-theme) | [RoseofDune](https://github.com/HANCORE-linux/omarchy-roseofdune-theme)
+| :--: | :--: | :--: |
+| ![](https://github.com/HANCORE-linux/omarchy-inkypinky-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-oxford-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-roseofdune-theme/blob/main/preview.png?raw=true)
 
-| [Oxford](https://github.com/HANCORE-linux/omarchy-oxford-theme) | [RoseofDune](https://github.com/HANCORE-linux/omarchy-roseofdune-theme)
-| :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-oxford-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-roseofdune-theme/blob/main/preview.png?raw=true)
+| [Moodpeak](https://github.com/HANCORE-linux/omarchy-moodpeak-theme) | [TheGreek](https://github.com/HANCORE-linux/omarchy-thegreek-theme)| [Batou](https://github.com/HANCORE-linux/omarchy-batou-theme)
+| :--: | :--: | :--: |
+| ![](https://github.com/HANCORE-linux/omarchy-moodpeak-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-thegreek-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-batou-theme/blob/main/preview.png?raw=true)
 
-| [Moodpeak](https://github.com/HANCORE-linux/omarchy-moodpeak-theme) | [TheGreek](https://github.com/HANCORE-linux/omarchy-thegreek-theme)
-| :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-moodpeak-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-thegreek-theme/blob/main/preview.png?raw=true)
+| [Sapphire](https://github.com/HANCORE-linux/omarchy-sapphire-theme) | [Mecha no Onna](https://github.com/HANCORE-linux/omarchy-mechanoonna-theme) | [BlackMoney](https://github.com/HANCORE-linux/omarchy-blackmoney-theme)  
+| :--: | :--: | :--: |
+| ![](https://github.com/HANCORE-linux/omarchy-sapphire-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-mechanoonna-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-blackmoney-theme/blob/main/preview.png?raw=true)
 
-| [Batou](https://github.com/HANCORE-linux/omarchy-batou-theme) | [Sapphire](https://github.com/HANCORE-linux/omarchy-sapphire-theme) 
-| :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-batou-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-sapphire-theme/blob/main/preview.png?raw=true)
+| [ShadesofJade](https://github.com/HANCORE-linux/omarchy-shadesofjade-theme) | [Last Horizon](https://github.com/HANCORE-linux/omarchy-lasthorizon-theme) | [Velvet Night](https://github.com/HANCORE-linux/omarchy-velvetnight-theme)
+| :--: | :--: | :--: |
+| ![](https://github.com/HANCORE-linux/omarchy-shadesofjade-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-lasthorizon-theme/blob/v2.0.0/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-velvetnight-theme/blob/main/preview.png?raw=true)
 
-| [Mecha no Onna](https://github.com/HANCORE-linux/omarchy-mechanoonna-theme) | [BlackMoney](https://github.com/HANCORE-linux/omarchy-blackmoney-theme) 
-| :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-mechanoonna-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-blackmoney-theme/blob/main/preview.png?raw=true)
+| [WhiteGold](https://github.com/HANCORE-linux/omarchy-whitegold-theme) | [Harbor-Dark](https://github.com/HANCORE-linux/omarchy-harbordark-theme) | [Harbor](https://github.com/HANCORE-linux/omarchy-harbor-theme)
+| :--: | :--: | :--: |
+| ![](https://github.com/HANCORE-linux/omarchy-whitegold-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-harbordark-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-harbor-theme/blob/main/preview.png?raw=true)
 
-| [ShadesofJade](https://github.com/HANCORE-linux/omarchy-shadesofjade-theme) | [Last Horizon](https://github.com/HANCORE-linux/omarchy-lasthorizon-theme)
-| :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-shadesofjade-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-lasthorizon-theme/blob/v2.0.0/preview.png?raw=true)
+| [Solitude](https://github.com/HANCORE-linux/omarchy-solitude-theme) | [Oxocarbon-Dark](https://github.com/HANCORE-linux/omarchy-oxocarbon-theme) | [Turbonite](https://github.com/HANCORE-linux/omarchy-turbonite-theme)
+| :--: | :--: | :--: |
+| ![](https://github.com/HANCORE-linux/omarchy-solitude-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-oxocarbon-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-turbonite-theme/blob/main/preview.png?raw=true)
 
-| [Velvet Night](https://github.com/HANCORE-linux/omarchy-velvetnight-theme) | [WhiteGold](https://github.com/HANCORE-linux/omarchy-whitegold-theme)
+| [Greek-Noir](https://github.com/HANCORE-linux/omarchy-greek-noir-theme) | [SAGA](https://github.com/HANCORE-linux/omarchy-saga-theme)
 | :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-velvetnight-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-whitegold-theme/blob/main/preview.png?raw=true)
-
-| [Harbor-Dark](https://github.com/HANCORE-linux/omarchy-harbordark-theme) | [Harbor](https://github.com/HANCORE-linux/omarchy-harbor-theme)
-| :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-harbordark-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-harbor-theme/blob/main/preview.png?raw=true)
-
-| [Solitude](https://github.com/HANCORE-linux/omarchy-solitude-theme) | [Oxocarbon-Dark](https://github.com/HANCORE-linux/omarchy-oxocarbon-theme) 
-| :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-solitude-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-oxocarbon-theme/blob/main/preview.png?raw=true)
-
-| [Turbonite](https://github.com/HANCORE-linux/omarchy-turbonite-theme) | [Greek-Noir](https://github.com/HANCORE-linux/omarchy-greek-noir-theme)
-| :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-turbonite-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-greek-noir-theme/blob/main/preview.png?raw=true)
-
-| [SAGA](https://github.com/HANCORE-linux/omarchy-saga-theme)
-| :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-saga-theme/blob/main/preview.png?raw=true)
+| ![](https://github.com/HANCORE-linux/omarchy-greek-noir-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-saga-theme/blob/main/preview.png?raw=true)
 
 <div align="center">
   <a href="https://github.com/HANCORE-linux/waybar-themes">
