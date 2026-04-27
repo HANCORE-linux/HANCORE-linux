@@ -4,7 +4,7 @@
 I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 
 
-## <img width="320" height="60" alt="screenshot-2025-12-16_23-30-08" src="https://github.com/user-attachments/assets/9b644b6a-ec7d-4af2-b83a-043ac94ba5e9"/> 
+## <img src="https://raw.githubusercontent.com/HANCORE-linux/waybar-themes/0ba3d711b67c3317b8173f331582dfc433709b15/config/V2.9e/bob2.svg"/> 
 <div align="center">
   <a href="https://github.com/HANCORE-linux?tab=repositories">
     <img src="https://img.shields.io/badge/Omarchy_Themes-23-df6124?style=for-the-badge&labelColor=000000" alt="Omarchy Themes">
