@@ -36,7 +36,7 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 <table>
   <tr>
     <td colspan="2">
-      Two Waybar examples with an .svg image as Omarchy menu, directly transferred from the beautiful and well-known Omarchy Screensaver ascii text style.
+      <p align="center"> Two Waybar examples with an .svg image as Omarchy menu, directly transferred from the beautiful and well-known Omarchy Screensaver ascii text style.</p>
     </td>
   </tr>
   <tr>
