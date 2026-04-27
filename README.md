@@ -38,7 +38,7 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 
 | [Solitude](https://github.com/HANCORE-linux/omarchy-solitude-theme) | [Oxocarbon-Dark](https://github.com/HANCORE-linux/omarchy-oxocarbon-theme) | [Turbonite](https://github.com/HANCORE-linux/omarchy-turbonite-theme)
 | :--: | :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-solitude-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-oxocarbon-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-turbonite-theme/blob/main/preview.png?raw=true)
+| ![](https://github.com/HANCORE-linux/omarchy-solitude-theme/blob/main/preview.png) | ![](https://github.com/HANCORE-linux/omarchy-oxocarbon-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-turbonite-theme/blob/main/preview.png?raw=true)
 
 | [Greek-Noir](https://github.com/HANCORE-linux/omarchy-greek-noir-theme) | [SAGA](https://github.com/HANCORE-linux/omarchy-saga-theme)
 | :--: | :--: |
