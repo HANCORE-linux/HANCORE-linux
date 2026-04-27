@@ -195,8 +195,16 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
   </tr>
 </table>
 
-## GitHub Stars
-[![Total stars](https://img.shields.io/github/stars/hancore-linux?style=flat-square&label=Stars&color=000000&labelColor=FFFFFF&logo=github&logoColor=FFFFFF)](https://github.com/hancore-linux) 
+<div align="center">
+  <a href="https://github.com/HANCORE-linux/waybar-themes">
+    <img src="https://img.shields.io/badge/STARS-000000?style=for-the-badge&labelColor=df6124" alt="Waybar Configs">
+  </a>
+</div>
+<div align="center">
+  <a href="https://github.com/HANCORE-linux?tab=repositories">
+<img src="https://img.shields.io/github/stars/HANCORE-linux?style=for-the-badge&label=&labelColor=df6124&color=df6124" alt="Total Stars Count">
+  </a>
+</div>
 
 <h3>Theme Code & Tools </h3>
 <p align="center">
