@@ -81,7 +81,7 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
       </a>
     </td>
     <td width="33%" valign="top" align="center">
-         <strong><a href="https://github.com/HANCORE-linux/omarchy-mechanoonna-theme">Mecha no Onna</a></strong>
+         <strong><a href="https://github.com/HANCORE-linux/omarchy-mechanoonna-theme">Mecha no Onna (メカの女)</a></strong>
       <a href="https://github.com/HANCORE-linux/omarchy-mechanoonna-theme">
         <img src="https://raw.githubusercontent.com/HANCORE-linux/omarchy-mechanoonna-theme/master/preview.png" alt="Mecha no Onna (メカの女)" width="100%" />
       </a>
