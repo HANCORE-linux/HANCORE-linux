@@ -34,7 +34,7 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 
 | [WhiteGold](https://github.com/HANCORE-linux/omarchy-whitegold-theme) | [Harbor-Dark](https://github.com/HANCORE-linux/omarchy-harbordark-theme) | [Harbor](https://github.com/HANCORE-linux/omarchy-harbor-theme)
 | :--: | :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-whitegold-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-harbordark-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-harbor-theme/blob/main/preview.png?raw=true)
+| ![](https://github.com/HANCORE-linux/omarchy-whitegold-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-harbordark-theme/blob/main/preview.png) | ![](https://github.com/HANCORE-linux/omarchy-harbor-theme/blob/main/preview.png?raw=true)
 
 | [Solitude](https://github.com/HANCORE-linux/omarchy-solitude-theme) | [Oxocarbon-Dark](https://github.com/HANCORE-linux/omarchy-oxocarbon-theme) | [Turbonite](https://github.com/HANCORE-linux/omarchy-turbonite-theme)
 | :--: | :--: | :--: |
