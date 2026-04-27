@@ -18,7 +18,7 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 
 | [InkyPinky](https://github.com/HANCORE-linux/omarchy-inkypinky-theme) | [Oxford](https://github.com/HANCORE-linux/omarchy-oxford-theme) | [RoseofDune](https://github.com/HANCORE-linux/omarchy-roseofdune-theme)
 | :--: | :--: | :--: |
-| ![](https://github.com/HANCORE-linux/omarchy-inkypinky-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-oxford-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-roseofdune-theme/blob/main/preview.png?raw=true)
+| ![](https://github.com/HANCORE-linux/omarchy-inkypinky-theme/blob/main/preview.png?raw=true) | ![](https://github.com/HANCORE-linux/omarchy-oxford-theme/blob/main/preview.png) | ![](https://github.com/HANCORE-linux/omarchy-roseofdune-theme/blob/main/preview.png?raw=true)
 
 | [Moodpeak](https://github.com/HANCORE-linux/omarchy-moodpeak-theme) | [TheGreek](https://github.com/HANCORE-linux/omarchy-thegreek-theme)| [Batou](https://github.com/HANCORE-linux/omarchy-batou-theme)
 | :--: | :--: | :--: |
