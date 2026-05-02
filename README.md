@@ -1,6 +1,7 @@
 <div align="center">
 
-# HANCORE
+# <img width="650" height="140" alt="gemini-svg (3)" src="https://github.com/user-attachments/assets/aba7af6b-4d6f-4cd2-9b41-7f86649a9d3c" />
+
 I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 
 
