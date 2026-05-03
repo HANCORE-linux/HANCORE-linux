@@ -183,17 +183,20 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
     </td>
   </tr>
   <tr>
-    <td width="33%">
-      <a href="https://github.com/HANCORE-linux/waybar-themes#v29c">
+    <td width="33%" valign="top" align="center">
+             <strong><a href="https://github.com/HANCORE-linux/waybar-themes#v29c">V2.9c</a></strong>
+     <a href="https://github.com/HANCORE-linux/waybar-themes#v29c">
         <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/showcases/V2.9c.png?raw=true" alt="V2.9c" width="100%">
       </a>
     </td>
-    <td width="33%">
+    <td width="33%" valign="top" align="center">
+             <strong><a href="https://github.com/HANCORE-linux/waybar-themes#v29d">V2.9d</a></strong>
       <a href="https://github.com/HANCORE-linux/waybar-themes#v29d">
         <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/showcases/V2.9d.png?raw=true" alt="V2.9d" width="100%">
       </a>
     </td>
-    <td width="33%">
+      <td width="33%" valign="top" align="center">
+             <strong><a href="https://github.com/HANCORE-linux/waybar-themes#v29c">V2.9e</a></strong>
       <a href="https://github.com/HANCORE-linux/waybar-themes#v29e">
         <img src="https://github.com/HANCORE-linux/waybar-themes/blob/main/showcases/V2.9e.png?raw=true" alt="V2.9e" width="100%">
       </a>
