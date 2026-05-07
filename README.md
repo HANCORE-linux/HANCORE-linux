@@ -178,7 +178,7 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 
 <div align="center">
   <a href="https://github.com/HANCORE-linux/waybar-themes">
-    <img src="https://img.shields.io/badge/Waybar_Themes-36+-df6124?style=for-the-badge&labelColor=000000" alt="Waybar Configs">
+    <img src="https://img.shields.io/badge/Waybar_Themes-40+-df6124?style=for-the-badge&labelColor=000000" alt="Waybar Configs">
   </a>
 </div>
 <table>
