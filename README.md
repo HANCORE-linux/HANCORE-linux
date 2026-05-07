@@ -167,7 +167,12 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
         <img src="https://raw.githubusercontent.com/HANCORE-linux/omarchy-saga-theme/master/preview.png" alt="SAGA" width="100%" />
       </a>
     </td>
-<td width="33%"></td> 
+<td width="33%" valign="top" align="center">
+    <strong><a href="https://github.com/HANCORE-linux/omarchy-kanso-theme">Kansō (簡素)</a></strong>
+      <a href="https://github.com/HANCORE-linux/omarchy-kanso-theme">
+        <img src="https://raw.githubusercontent.com/HANCORE-linux/omarchy-kanso-theme/master/preview.png" alt="SAGA" width="100%" />
+      </a>
+</td> 
   </tr>
 </table>
 
