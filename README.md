@@ -240,11 +240,12 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 <img alt="NeoVim" src="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white" />
 <img width="30" height="30" alt="AETHER" src="https://github.com/bjarneo/aether/blob/main/icon.png"/> 
 <img width="120" height="40" alt="[Theme-Hook-Script](https://github.com/imbypass/omarchy-theme-hook)" src="https://github.com/user-attachments/assets/d9569e80-3fd2-4095-a376-599396f7e727"/> </p>
-
 </div>
 
 
-Credits & Contributions
+
+### Credits & Contributions
+
 - [Miqim / Visual Stylist](https://github.com/tahfizhabib)
 - [Bypass / Theme-hook-script](https://github.com/imbypass/omarchy-theme-hook)
 - [bjarneo / Aether](https://github.com/bjarneo/aether)
@@ -252,8 +253,6 @@ Credits & Contributions
 - [DHH / Omarchy](https://github.com/basecamp/omarchy)
 
 
-Contact & Coffee <br>
-<a href="https://discord.com/users/816417588610334741">
-<img height="18" src="https://img.shields.io/badge/Discord-1a1a1a?style=flat-square&logo=discord&logoColor=000000&labelColor=FFFFFF" /></a>&nbsp;
-[![BuyMeACoffee](https://raw.githubusercontent.com/pachadotdev/buymeacoffee-badges/main/bmc-black.svg)](https://www.buymeacoffee.com/hancore)
- 
+### Contact & Coffee
+
+<a href="https://discord.com/users/816417588610334741"><img height="18" src="https://img.shields.io/badge/Discord-1a1a1a?style=flat-square&logo=discord&logoColor=000000&labelColor=FFFFFF" /></a>&nbsp;<a href="https://www.buymeacoffee.com/hancore"><img height="18" src="https://raw.githubusercontent.com/pachadotdev/buymeacoffee-badges/main/bmc-black.svg" /></a>
