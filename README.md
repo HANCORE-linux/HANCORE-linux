@@ -174,6 +174,16 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
       </a>
 </td> 
   </tr>
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <strong><a href="https://github.com/HANCORE-linux/omarchy-ryu-theme">Ryū</a></strong>
+      <a href="https://github.com/HANCORE-linux/omarchy-ryu-theme">
+        <img src="https://raw.githubusercontent.com/HANCORE-linux/omarchy-ryu-theme/master/preview.png" alt="Vorschau" width="100%" />
+      </a>
+    </td>
+    <td width="33%"></td>
+    <td width="33%"></td>
+  </tr>
 </table>
 
 <div align="center">
