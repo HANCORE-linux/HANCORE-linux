@@ -8,7 +8,7 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 ## <img src="https://raw.githubusercontent.com/HANCORE-linux/waybar-themes/0ba3d711b67c3317b8173f331582dfc433709b15/config/V2.9e/bob2.svg"/> 
 <div align="center">
   <a href="https://github.com/HANCORE-linux?tab=repositories">
-    <img src="https://img.shields.io/badge/Omarchy_Themes-24-df6124?style=for-the-badge&labelColor=000000" alt="Omarchy Themes">
+    <img src="https://img.shields.io/badge/Omarchy_Themes-25-df6124?style=for-the-badge&labelColor=000000" alt="Omarchy Themes">
   </a>
 </div>
 
