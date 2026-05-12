@@ -246,6 +246,7 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 
 ### Credits & Contributions
 
+- [OldJobobo / Content Creator](https://github.com/OldJobobo)
 - [Miqim / Visual Stylist](https://github.com/tahfizhabib)
 - [Bypass / Theme-hook-script](https://github.com/imbypass/omarchy-theme-hook)
 - [bjarneo / Aether](https://github.com/bjarneo/aether)
