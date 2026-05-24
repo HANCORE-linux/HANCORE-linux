@@ -88,7 +88,7 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
       </a>
     </td>
     <td width="33%" valign="top" align="center">
-         <strong><a href="https://github.com/HANCORE-linux/omarchy-blackmoney-theme">Blackmoney</a></strong>
+         <strong><a href="https://github.com/HANCORE-linux/omarchy-blackmoney-theme">BlackMoney</a></strong>
       <a href="https://github.com/HANCORE-linux/omarchy-blackmoney-theme">
         <img src="https://raw.githubusercontent.com/HANCORE-linux/omarchy-blackmoney-theme/master/preview.png" alt="Blackmoney" width="100%" />
       </a>
