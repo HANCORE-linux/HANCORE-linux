@@ -220,6 +220,26 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 </table>
 
 <div align="center">
+  <a href="https://github.com/HANCORE-linux/quickshell-dots">
+    <img src="https://img.shields.io/badge/Quickshell_Configs-1+-df6124?style=for-the-badge&labelColor=000000" alt="Quickshell-Dots">
+  </a>
+</div>
+<table>
+  <tr>
+    <td colspan="1">
+      <p align="center"> **Split layout** — dynamically reorganize your bar from a unified island into separate pill groups; each module can be standalone or merged, giving you full control over dock density and visual grouping </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" align="center">
+             <strong><a href="https://github.com/HANCORE-linux/quickshell-dots">V1</a></strong>
+     <a href="https://github.com/HANCORE-linux/quickshell-dots">
+        <img src="https://github.com/HANCORE-linux/quickshell-dots/blob/main/assets/V1.png?raw=true" alt="V2.9c" width="100%">
+      </a>
+    </td>
+</table>
+
+<div align="center">
   <a href="https://github.com/HANCORE-linux/waybar-themes">
     <img src="https://img.shields.io/badge/STARS-000000?style=for-the-badge&labelColor=df6124" alt="Waybar Configs">
   </a>
