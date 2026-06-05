@@ -234,7 +234,8 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
     <td width="50%" valign="top" align="center">
              <strong><a href="https://github.com/HANCORE-linux/quickshell-dots">V1</a></strong>
      <a href="https://github.com/HANCORE-linux/quickshell-dots">
-        <img src="https://github.com/HANCORE-linux/quickshell-dots/blob/main/assets/V1.png?raw=true" alt="V2.9c" width="100%">
+<video src="https://github.com/user-attachments/assets/ac2c48a6-c6ef-4eb7-bee3-ed1a483d2f20" controls="controls" style="max-width: 100%;">
+</video>
       </a>
     </td>
 </table>
