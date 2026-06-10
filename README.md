@@ -227,7 +227,7 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 <table>
   <tr>
     <td colspan="2">
-      <p align="center"> **Quickshell bar for Omarchy** — splittable pill groups · multi-style theme/wallpaper/media pickers · per-widget popups · system monitors & control center · particle animations </p>
+      <p align="center"> <b>Quickshell bar for Omarchy</b> — splittable pill groups · multi-style theme/wallpaper/media pickers · per-widget popups · system monitors & control center · particle animations </p>
     </td>
   </tr>
   <tr>
