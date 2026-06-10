@@ -226,19 +226,26 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 </div>
 <table>
   <tr>
-    <td colspan="1">
+    <td colspan="2">
       <p align="center"> **Split layout** — dynamically reorganize your bar from a unified island into separate pill groups; each module can be standalone or merged, giving you full control over dock density and visual grouping </p>
     </td>
   </tr>
   <tr>
+    <td width="50%" align="center"><strong><a href="https://github.com/HANCORE-linux/quickshell-dots">Theme Picker</a></strong></td>
+    <td width="50%" align="center"><strong><a href="https://github.com/HANCORE-linux/quickshell-dots">Bar functions &amp; animations</a></strong></td>
+  </tr>
+  <tr>
     <td width="50%" valign="top" align="center">
-             <strong><a href="https://github.com/HANCORE-linux/quickshell-dots">V1</a></strong>
-     <a href="https://github.com/HANCORE-linux/quickshell-dots">
-<video src="https://github.com/user-attachments/assets/f40e958b-6139-407a-ac9b-b3fe6cbc74bd
-" controls="controls" style="max-width: 100%;">
-</video>
+      <a href="https://github.com/HANCORE-linux/quickshell-dots">
+        <video src="https://github.com/user-attachments/assets/160ca54f-defb-40de-a0e4-6d2e4139294d" controls="controls" style="max-width: 100%;"></video>
       </a>
     </td>
+    <td width="50%" valign="top" align="center">
+      <a href="https://github.com/HANCORE-linux/quickshell-dots">
+        <video src="https://github.com/user-attachments/assets/5e91501e-e12c-4125-be10-caa26678098d" controls="controls" style="max-width: 100%;"></video>
+      </a>
+    </td>
+  </tr>
 </table>
 
 <div align="center">
