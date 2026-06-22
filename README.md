@@ -255,7 +255,7 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 </div>
 <div align="center">
   <a href="https://github.com/HANCORE-linux?tab=repositories">
-<img src="https://img.shields.io/github/stars/HANCORE-linux?style=for-the-badge&label=&labelColor=df6124&color=df6124" alt="Total Stars Count">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https://api.github-star-counter.workers.dev/user/HANCORE-linux&query=$.stars&style=for-the-badge&label=&labelColor=df6124&color=df6124" alt="Total Stars Count">
   </a>
 </div>
 
