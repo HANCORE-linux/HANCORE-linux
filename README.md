@@ -265,8 +265,11 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
 <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" alt="ARCH" />
 <img alt="CSS" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 <img alt="JSON" src="https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white" />
+<img alt="Qt" src="https://img.shields.io/badge/Qt-%23217346.svg?style=for-the-badge&logo=Qt&logoColor=white" />
 <img alt="VSCode" src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" />
 <img alt="NeoVim" src="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white" />
+<img alt="GPT" src="https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white" />
+<img alt="Claude" src="https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=claude&logoColor=white" />
 <img width="30" height="30" alt="AETHER" src="https://github.com/bjarneo/aether/blob/main/icon.png"/> 
 <img width="120" height="40" alt="[Theme-Hook-Script](https://github.com/imbypass/omarchy-theme-hook)" src="https://github.com/user-attachments/assets/d9569e80-3fd2-4095-a376-599396f7e727"/> </p>
 </div>
