@@ -181,7 +181,11 @@ I'm a mechanical engineer. Not a software guy. I build themes the way I think.
         <img src="https://raw.githubusercontent.com/HANCORE-linux/omarchy-ryu-theme/master/preview.png" alt="Vorschau" width="100%" />
       </a>
     </td>
-    <td width="33%"></td>
+    <td width="33%" valign="top" align="center">
+      <strong><a href="https://github.com/HANCORE-linux/omarchy-dos-moos-theme">Dos-Moos</a></strong>
+      <a href="https://github.com/HANCORE-linux/omarchy-dos-moos-theme">
+        <img src="https://raw.githubusercontent.com/HANCORE-linux/omarchy-dos-moos-theme/master/preview.png" alt="Vorschau" width="100%" />
+      </a>
     <td width="33%"></td>
   </tr>
 </table>
