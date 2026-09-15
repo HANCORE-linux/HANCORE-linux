@@ -1,0 +1,278 @@
+{
+  "fetched_at": "2026-09-15T15:39:09.195103+00:00",
+  "themes": {
+    "banish": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-banish-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-banish-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 3,
+        "width": 54,
+        "height": 20,
+        "sha256": "58ee73a20fd164d3ba5d714b518c8a2d796718bf347b705980adde2031b48b70"
+      },
+      "sha256": "c2a94e406c538f28be5868026201d6848079042780f861933134505df0550489"
+    },
+    "blackmoney": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-blackmoney-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-blackmoney-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 12,
+        "width": 60,
+        "height": 20,
+        "sha256": "60fdb427d3268365ed83856f06ce34dddf42123551ee9a4ea9143b6b06ec2a12"
+      },
+      "sha256": "205b821004115c6eaf9363e37d5533af06d733667494b3b2bdfebc4e4eb5ff52"
+    },
+    "demon": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-demon-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-demon-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 17,
+        "width": 60,
+        "height": 20,
+        "sha256": "c3ff0d9bd414018fa00b169de0b83d22d0bd7a5ba3eae106fbe8bf276d009c56"
+      },
+      "sha256": "e26fc0e282f4abda51ade9ca96dad23c9db1ce4ae3f967654610bc55f69609a9"
+    },
+    "dos-moos": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-dos-moos-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-dos-moos-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 25,
+        "width": 60,
+        "height": 20,
+        "sha256": "69dc40ea9f6d50002393ce72766017c3b7be232311623725102fa828e100c0f4"
+      },
+      "sha256": "70d3b30de641902cb30e54fb4743ab778f63f3933fcf81969653b6fe455b6b79"
+    },
+    "greek-noir": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-greek-noir-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-greek-noir-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 30,
+        "width": 60,
+        "height": 20,
+        "sha256": "87de69659d8c679be3b641fe9fd4668207a48e6754be2d6e9ed270e0692e7482"
+      },
+      "sha256": "3b86a3bc49c754a207ee339b50e92f961f2ca2e36f9ff79bdb1a57c9beab2e52"
+    },
+    "harbor": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-harbor-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-harbor-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 20,
+        "width": 60,
+        "height": 20,
+        "sha256": "8dd1d42844226698ebe925393d029e7ffe8a14c6a954b0aa6157b53e604e8889"
+      },
+      "sha256": "8142137f671d39608135175617efe3feff990aadfeba5e491062f64b37b3fc48"
+    },
+    "harbordark": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-harbordark-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-harbordark-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 35,
+        "width": 60,
+        "height": 20,
+        "sha256": "eae714d67c9b45a0f633481bbd6ff0cfdb540d79a57d70e03d46a69e59707cc5"
+      },
+      "sha256": "e343daf061fe34de6a382e370c79fa753eb66afebd317a3fc4b665ce8377dbe6"
+    },
+    "inkypinky": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-inkypinky-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-inkypinky-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 34,
+        "width": 60,
+        "height": 20,
+        "sha256": "7e5974e41e6967c6040e4cd1f0bfd0c9a1b0d8dda5e76fa62ccff20476993697"
+      },
+      "sha256": "f76d687fd5f514c87b898b1f79f8582a7df1097edd617ad262ba8da708bbeb0c"
+    },
+    "kanso": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-kanso-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-kanso-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 23,
+        "width": 60,
+        "height": 20,
+        "sha256": "eb8bbaebca5b7ceb45e8d90d5baae7eeea8117806ed5d1d437ec927490514f2c"
+      },
+      "sha256": "475ab4c7ad77f50b781a74fa1d35340f2e3365aa1a26983076ff826b81f341fd"
+    },
+    "moodpeak": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-moodpeak-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-moodpeak-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 23,
+        "width": 60,
+        "height": 20,
+        "sha256": "43df2fafd5fdcd6d102dec8125a82e37722e6a755a239012a136cd155fe98f99"
+      },
+      "sha256": "afeb1d73dd30eca162cee0f1a5bf733f38ef246ae0063d4ae3f4a435224534fa"
+    },
+    "oxford": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-oxford-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-oxford-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 13,
+        "width": 60,
+        "height": 20,
+        "sha256": "95f2add6e68af903909f30a73d93d937e0bcdcec788cedfce75eccac3f7a12b0"
+      },
+      "sha256": "0025c71f8229948868bf8a6a168bbd46bf29e0593a7107398bbf37b5d5cdd248"
+    },
+    "oxocarbon": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-oxocarbon-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-oxocarbon-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 16,
+        "width": 60,
+        "height": 20,
+        "sha256": "5d9de544a2de7cc4711d6797675c11d63622556e2f713638009bbdfed0cf8352"
+      },
+      "sha256": "14d0ffcdbd524b810d88fce05934af0c1a1571bdebb30a36428befd421aee9aa"
+    },
+    "roseofdune": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-roseofdune-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-roseofdune-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 13,
+        "width": 60,
+        "height": 20,
+        "sha256": "fde39b7c88b20387806310e7ae38ff48cb0a4ccf52630db8bd5f6f526c0f9724"
+      },
+      "sha256": "81d439c91056fc581eccfa8806e0b44f53139aa75b75774b4158ab68777c5c80"
+    },
+    "ryu": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-ryu-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-ryu-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 9,
+        "width": 54,
+        "height": 20,
+        "sha256": "59adaeec23072b829d39ca7cb5e52765b0a99441eba39cc228fcddcac54235a1"
+      },
+      "sha256": "778151050d3cb8873863e71eacba98bd2b867fde925d6bfa6c852974894b38e5"
+    },
+    "saga": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-saga-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-saga-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 15,
+        "width": 60,
+        "height": 20,
+        "sha256": "4dff5748e61cb79e8e4088b564c53f481e6327c76a6b670b97e98b0b62db7cf1"
+      },
+      "sha256": "37dafe1d51aad28526f266d11058dcd424a0072f508a14c48cfa22f010f71858"
+    },
+    "sapphire": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-sapphire-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-sapphire-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 21,
+        "width": 60,
+        "height": 20,
+        "sha256": "66e8ba2c494b79bd94548ac30a2e55157a83babacf31ad9d6c2e8d496ceb769f"
+      },
+      "sha256": "1566f75a04bad83668b1e423f7e9a248474238b25e8bd66cee49ca94dccf6422"
+    },
+    "shadesofjade": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-shadesofjade-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-shadesofjade-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 24,
+        "width": 60,
+        "height": 20,
+        "sha256": "3974ef6b37f6fa91e9c48e215df3c244f85a22fe8e6e411b1256ba03f6a6ed58"
+      },
+      "sha256": "b82bafca75794cdba6151c7e4548a5a210644491f9cc06362a67395d5bd4a5da"
+    },
+    "thegreek": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-thegreek-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-thegreek-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 17,
+        "width": 60,
+        "height": 20,
+        "sha256": "c142a38ddef442705e4ce5cf3a1c7669e8d338f219b03e65d71546ca4200e773"
+      },
+      "sha256": "6761c8ec1403a5ed1f35cccf4a4354e5804b8fb9c97486b02ff6117e8a5177d5"
+    },
+    "turbonite": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-turbonite-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-turbonite-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 23,
+        "width": 60,
+        "height": 20,
+        "sha256": "61d9be2eda2f0f90d197ac228198126bfe90eb83af45ee0d0640cca4263312c9"
+      },
+      "sha256": "72acb65625bcdde7875bde20ea469a5f65d257ed063a2688415312a4db891fb9"
+    },
+    "velvetnight": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-velvetnight-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-velvetnight-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 12,
+        "width": 60,
+        "height": 20,
+        "sha256": "09eed7074ccdebe4d10738502706de8ccb70e44e2838bf2bd56af81662864ced"
+      },
+      "sha256": "84deca5668354f3bf9f7bda03e49b9eece4634f5ed3365c45e913753fcea659d"
+    },
+    "whitegold": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-whitegold-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-whitegold-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "stars": 14,
+        "width": 60,
+        "height": 20,
+        "sha256": "bf5125f3e6d0e2740a49254d1aed2c71a91e655a0641308f2c06bc264276ba06"
+      },
+      "sha256": "6fc7a6f3cb748b4ec4fbb0fd91dd3306f6759ac0844c506a41d069ed66af4ce5"
+    }
+  }
+}

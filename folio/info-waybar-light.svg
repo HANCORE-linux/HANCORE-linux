@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="384" viewBox="0 0 624 192">
+  <title>Waybar themes — For the bar.</title>
+  <defs><filter id="float" x="-15%" y="-50%" width="130%" height="210%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="8" /><feOffset dy="10" /></filter></defs>
+  <path d="M24 16H600V142L578 164H24Z" fill="#000000" opacity="0.19" filter="url(#float)" />
+  <path d="M24 16H600V142L578 164H24Z" fill="#e9e7e0" stroke="#c6c5bf" stroke-width="1.5" />
+  <text x="312" y="72" text-anchor="middle" fill="#262522" font-family="IBM Plex Sans" font-size="40" font-weight="600">Waybar themes</text>
+  <text x="312" y="126" text-anchor="middle" fill="#50565b" font-family="IBM Plex Sans" font-size="34" font-weight="500">For the bar.</text>
+  
+</svg>

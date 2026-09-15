@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="1224" viewBox="0 0 624 612">
+  <title>theme-lasthorizon — independent card with decorative connection route</title>
+  <image x="0" y="40" width="624" height="492" xlink:href="collection/assets/lasthorizon-light.png" />
+  <path d="M312 0V56M312 512V584H0" fill="none" stroke="#a1a6ab" stroke-width="2.5" />
+  <path d="M312 12V32M100 584H156" fill="none" stroke="#41474d" stroke-width="3.5" />
+  <path d="M301 56H323M301 512H323" fill="none" stroke="#41474d" stroke-width="3" />
+  
+</svg>

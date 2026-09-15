@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 480">
+  <title>Waybar — three layout details</title>
+  <rect width="1200" height="480" fill="#0a0c0d"/>
+  <g fill="#ebe5d6" font-family="JetBrains Mono, monospace" font-size="32">
+    <text x="42" y="56">V2.9c</text><text x="42" y="207">V2.9d</text><text x="42" y="358">V2.9e</text>
+  </g>
+  <svg x="42" y="80" width="1116" height="45" viewBox="0 0 1116 45"><image xlink:href="../sources/waybar-v29c.png" width="1920" height="1080"/></svg>
+  <svg x="42" y="231" width="1116" height="45" viewBox="0 0 1116 45"><image xlink:href="../sources/waybar-v29d.png" width="2560" height="1440"/></svg>
+  <svg x="42" y="382" width="1116" height="45" viewBox="40 0 1116 45"><image xlink:href="../sources/waybar-v29e.png" width="2560" height="1440"/></svg>
+  <path d="M42 151H1158M42 302H1158" stroke="#303333"/>
+  <path d="M42 457H134" stroke="#df6124" stroke-width="3"/>
+</svg>

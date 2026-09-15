@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="1400" viewBox="0 0 624 700">
+  <title>OmaQ · Chat — original interface, chamfered project mount</title>
+  <defs><filter id="float" x="-15%" y="-15%" width="130%" height="140%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="8" /><feOffset dy="10" /></filter></defs>
+  <path d="M24 16H600V646L578 668H24Z" fill="#000000" opacity="0.48" filter="url(#float)" />
+  <path d="M24 16H600V646L578 668H24Z" fill="#191c1e" stroke="#353a3d" stroke-width="1.5" />
+  <rect x="32" y="24" width="560" height="560" fill="#101213" />
+  <svg x="85.846154" y="24.000000" width="452.307692" height="560.000000" viewBox="0 0 420 520" preserveAspectRatio="xMidYMid meet" overflow="hidden">
+    <image xlink:href="sources/omaq.png" width="420" height="520" />
+  </svg>
+  <text x="312" y="636" text-anchor="middle" fill="#e8e3d9" font-family="IBM Plex Sans" font-size="34" font-weight="500">OmaQ · Chat</text>
+</svg>

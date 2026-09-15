@@ -1,0 +1,26 @@
+{
+  "selected": "core",
+  "variants": [
+    {"id": "core", "label": "HANCORE · HC-Signet", "family": "IBM Plex Sans", "geometry": "hc-signet", "text": "HANCORE", "size": 40, "weight": 600, "spacing": 2, "baseline": 154, "display_height": 88},
+    {"id": "logo", "label": "Frühere Wortmarke", "family": "IBM Plex Sans", "geometry": "drawn-logo", "text": "HANCORE", "size": 80, "weight": 500, "spacing": 8, "baseline": 104},
+    {"id": "cut", "label": "HANCORE · eigenes H", "family": "IBM Plex Sans", "geometry": "custom-h", "text": "ANCORE", "size": 88, "weight": 500, "spacing": 0, "baseline": 94},
+    {"id": "plex", "label": "IBM Plex · reduziert", "family": "IBM Plex Sans", "text": "hancore", "size": 100, "weight": 500, "spacing": 0, "baseline": 88},
+    {"id": "syne", "label": "Syne · geometrisch", "family": "Syne", "text": "HANCORE", "size": 88, "weight": 600, "spacing": 1.5, "baseline": 87},
+    {"id": "bricolage", "label": "Bricolage · eigenwillig", "family": "Bricolage Grotesque", "text": "hancore", "size": 98, "weight": 600, "spacing": 0, "baseline": 89},
+    {"id": "saira", "label": "Saira · Schablone", "family": "Saira Stencil One", "text": "HANCORE", "size": 86, "weight": 400, "spacing": 1, "baseline": 87}
+  ],
+  "caption": {"family": "IBM Plex Mono", "size": 32, "weight": 400},
+  "sources": [
+    "https://github.com/IBM/plex",
+    "https://github.com/google/fonts/tree/main/ofl/ibmplexsans",
+    "https://github.com/google/fonts/tree/main/ofl/ibmplexmono",
+    "https://github.com/google/fonts/tree/main/ofl/syne",
+    "https://github.com/ateliertriay/bricolage",
+    "https://github.com/google/fonts/tree/main/ofl/sairastencilone"
+  ],
+  "badge_style": "flat-square",
+  "badge_label_color": "000000",
+  "badge_color": "df6124",
+  "badge_reference": "https://github.com/OldJobobo/OldJobobo/blob/main/README.md",
+  "color_reference": "https://github.com/HANCORE-linux/HANCORE-linux/blob/main/README.md"
+}

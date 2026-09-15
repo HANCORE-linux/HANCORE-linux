@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 108">
+  <title>THEME ARCHIVE</title>
+  <rect width="900" height="108" fill="#0a0c0d"/>
+  <path d="M24 20V88M876 20V88" stroke="#343736" fill="none"/>
+  <path d="M24 20V88" stroke="#df6124" stroke-width="3"/>
+  <text x="44" y="69" fill="#df6124" font-family="JetBrains Mono, monospace" font-size="32">A</text>
+  <text x="116" y="74" fill="#ebe5d6" font-family="Nimbus Sans Narrow, Arial Narrow, sans-serif" font-size="56" font-weight="700">THEME ARCHIVE</text>
+  <path d="M831 53h25v7h-25z" fill="#df6124"/>
+  <circle cx="876" cy="88" r="2" fill="#df6124"/>
+</svg>

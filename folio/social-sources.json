@@ -1,0 +1,14 @@
+{
+  "references": {
+    "discord": "https://discord.com/branding",
+    "kofi": "https://more.ko-fi.com/brand-assets"
+  },
+  "rights": "Discord and Ko-fi brand assets belong to their respective owners; not relicensed as HANCORE artwork. Geometry and brand colors are preserved. Ko-fi AVIF is converted to PNG only for renderer compatibility.",
+  "files": [
+    {"path": "sources/discord-symbol-white.svg", "url": "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e3d7f4ef6498ac018f2c55_Symbol.svg", "sha256": "eb3bf5a2e8b9f9aa39c1b1d38aeaa7c2997084567634c55f4141aa39cf426cec"},
+    {"path": "sources/discord-symbol-black.svg", "url": "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e3d8014ea898f3a4b2156c_Symbol.svg", "sha256": "3efc001289994d74fa3f919397259d1e7b8e77188c9161880243965ee284466e"},
+    {"path": "sources/discord-symbol-blurple.svg", "url": "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e3d80db9971f10a9757c99_Symbol.svg", "sha256": "296286aa112c4400af8e96191ab888f81abd4bd1d5dc7294112a622ef43581b1", "usage": "Unmodified alternative retained; black/white variants are used in the footer."},
+    {"path": "sources/kofi-icon.avif", "url": "https://cdn.prod.website-files.com/5c14e387dab576fe667689cf/670f5a01229bf8a18f97a3c1_favion.avif", "sha256": "9f9288bd3d551014c157d5946da165dc6fc306cde96f49d39cb2755590d02b1f"},
+    {"path": "sources/kofi-icon.png", "derived_from": "sources/kofi-icon.avif", "conversion": "magick sources/kofi-icon.avif sources/kofi-icon.png; format conversion only", "sha256": "c9a87b4385f82e12de7682b49ff274337165a31dc9d628839c291f10e0364416"}
+  ]
+}

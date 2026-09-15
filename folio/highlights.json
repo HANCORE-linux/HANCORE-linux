@@ -1,0 +1,24 @@
+{
+  "verified_on": "2026-09-15",
+  "chat": {
+    "name": "OmaQ",
+    "url": "https://github.com/HANCORE-linux/OmaQ"
+  },
+  "latest_theme": {
+    "slug": "banish",
+    "created_at": "2026-09-14T20:10:55Z",
+    "selection": "Newest non-fork public HANCORE-linux omarchy-*-theme repository by created_at, not pushed_at.",
+    "source": "https://api.github.com/users/HANCORE-linux/repos?sort=created&direction=desc&per_page=100"
+  },
+  "included_in_omarchy": [
+    {
+      "slug": "lasthorizon",
+      "source": "https://github.com/omacom/omarchy/tree/quattro/themes/last-horizon"
+    },
+    {
+      "slug": "solitude",
+      "source": "https://github.com/omacom/omarchy/tree/quattro/themes/solitude"
+    }
+  ],
+  "omarchy_collection": "https://github.com/omacom/omarchy/tree/quattro/themes"
+}

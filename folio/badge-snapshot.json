@@ -1,0 +1,48 @@
+{
+  "fetched_at": "2026-09-15T06:34:42.999633+00:00",
+  "note": "Public Shields snapshot. Exported shadow PNGs are not a live feed.",
+  "badges": {
+    "solitude": {
+      "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-solitude-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+      "stars": 61,
+      "width": 60,
+      "height": 20,
+      "sha256": "0fd092ffe72299d71d2c07913279c984d33a9bd67f59c95d63b007cde4a94dc8"
+    },
+    "blackturq": {
+      "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-blackturq-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+      "stars": 52,
+      "width": 60,
+      "height": 20,
+      "sha256": "2e98d00f5d1b502055b482f7d77d5f6d4ee585287e9c3b1496684737ffba3699"
+    },
+    "blackgold": {
+      "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-blackgold-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+      "stars": 47,
+      "width": 60,
+      "height": 20,
+      "sha256": "2d3819421c0a914574082182ae0af0ff8f565f05123841a6a4d8db83d1bde3b3"
+    },
+    "mechanoonna": {
+      "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-mechanoonna-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+      "stars": 47,
+      "width": 60,
+      "height": 20,
+      "sha256": "5930690dc1aa708f6776ee51bb2a560ff4cecf0b542e6451df71c4a37ab63097"
+    },
+    "batou": {
+      "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-batou-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+      "stars": 38,
+      "width": 60,
+      "height": 20,
+      "sha256": "2ce7b2f4dd802526f4412a89dc55f4a5e3f0a377473447cb767fcba9ec3c4dc6"
+    },
+    "lasthorizon": {
+      "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-lasthorizon-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+      "stars": 36,
+      "width": 60,
+      "height": 20,
+      "sha256": "fa77091c62bd52198169a52a50e4abd425874e3ad6d2f0d3a1f49d0964b4a5cb"
+    }
+  }
+}

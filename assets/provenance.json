@@ -1,0 +1,102 @@
+{
+  "version": 3,
+  "publication_status": "local-review",
+  "build": "python scripts/build_profile.py",
+  "notes": [
+    "Screenshots retain their original UI and colors; framing and crops are defined in SVG sources.",
+    "Rise uses a preserved V1 carousel capture, not a newly captured runtime or a V2 screenshot.",
+    "Theme screenshots may contain third-party wallpaper; original asset credits remain with their repositories.",
+    "The small palette samples are not complete ANSI palettes."
+  ],
+  "sources": [
+    {
+      "path": "assets/sources/shibumi-bars.png",
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/Shibumi-Shell/3cb7f6d26df47b0e2d697575e4b42ba48e405c1d/docs/screenshots/shibumi-bars.png",
+      "sha256": "966d2d9f13cc246b42f48e96d60dd21256bdd9a65d1a6444f86cac6dbb09768c"
+    },
+    {
+      "path": "assets/sources/blackturq.png",
+      "url": "https://github.com/user-attachments/assets/9d6baa88-5156-4178-84ef-8e09357e37e2",
+      "sha256": "e34eb9122fa0ea1cd717dee76ab2c52a79a8cbeb9b19b706289d5c9572342543"
+    },
+    {
+      "path": "assets/sources/harbor-desktop.png",
+      "url": "https://github.com/user-attachments/assets/22809c2d-67c2-4a63-ab65-cc215b5b462d",
+      "sha256": "dc55cf042d9f18e4f12d9603c8e0b15d8a44c0fa3bb8575707916ec492b0be67"
+    },
+    {
+      "path": "assets/sources/roseofdune.png",
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-roseofdune-theme/d6dc57d6482fdd41fdc08dad9784cffaabaeb0cd/preview.png",
+      "sha256": "81d439c91056fc581eccfa8806e0b44f53139aa75b75774b4158ab68777c5c80"
+    },
+    {
+      "path": "assets/sources/rise-carousel.webp",
+      "origin": "Preserved full-resolution Rise V1 carousel capture from the previous local profile's .review/legacy-assets/02-rise-original.webp. The original frame timestamp was not recorded.",
+      "repository": "https://github.com/HANCORE-linux/quickshell-dots",
+      "sha256": "fdecbfe1b3c6efe5f9f3eebdbb44610399a6622311af0a85636d1138d77c26d4"
+    },
+    {
+      "path": "assets/sources/waybar-v29c.png",
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/waybar-themes/a4cdf25484c37ad8588cabc019e06c8c40b203e9/showcases/V2.9c.png",
+      "sha256": "64960cba34ba90a67a19cf76054a054ce56bcb2496a989f01368c7cdec069b87"
+    },
+    {
+      "path": "assets/sources/waybar-v29d.png",
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/waybar-themes/a4cdf25484c37ad8588cabc019e06c8c40b203e9/showcases/V2.9d.png",
+      "sha256": "5b9adc8a4a7683c324426f02b7fdc40c80aaa9b3c6c0c18b0957815c2d4fcac6"
+    },
+    {
+      "path": "assets/sources/waybar-v29e.png",
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/waybar-themes/a4cdf25484c37ad8588cabc019e06c8c40b203e9/showcases/V2.9e.png",
+      "sha256": "b4fbc4f59e4f97c1fd55e2eb06d8d38a8c9497da81586c1d37e9138f679a21f3"
+    }
+  ],
+  "inputs": {
+    "data/themes.json": "7c251f001507dea7489dac3ffd63da10e14590bff9d8fc711d09c86ff733c545",
+    "data/sources.json": "203b2f5db58966f753451365845f54c7de45ab2f6e3b8ae4cd8e1461d8ef3b7e",
+    "scripts/build_profile.py": "2c445df6079efb198ede643868af3262ee948e4484bb0824f627561ded39eaf9",
+    "assets/sources/shibumi-bars.png": "966d2d9f13cc246b42f48e96d60dd21256bdd9a65d1a6444f86cac6dbb09768c",
+    "assets/sources/blackturq.png": "e34eb9122fa0ea1cd717dee76ab2c52a79a8cbeb9b19b706289d5c9572342543",
+    "assets/sources/harbor-desktop.png": "dc55cf042d9f18e4f12d9603c8e0b15d8a44c0fa3bb8575707916ec492b0be67",
+    "assets/sources/roseofdune.png": "81d439c91056fc581eccfa8806e0b44f53139aa75b75774b4158ab68777c5c80",
+    "assets/sources/rise-carousel.webp": "fdecbfe1b3c6efe5f9f3eebdbb44610399a6622311af0a85636d1138d77c26d4",
+    "assets/sources/waybar-v29c.png": "64960cba34ba90a67a19cf76054a054ce56bcb2496a989f01368c7cdec069b87",
+    "assets/sources/waybar-v29d.png": "5b9adc8a4a7683c324426f02b7fdc40c80aaa9b3c6c0c18b0957815c2d4fcac6",
+    "assets/sources/waybar-v29e.png": "b4fbc4f59e4f97c1fd55e2eb06d8d38a8c9497da81586c1d37e9138f679a21f3",
+    "assets/brand/avatar-h-construct-source.svg": "adcf722c6b8658b61f2140df0df4e416c8ecaffa5ba1a391477a7572f18e6e2b",
+    "assets/brand/avatar-h-source.svg": "804768aa2c17cb94c3acd181f47d505a1f44b16a32d24bea274e49367aba326b",
+    "assets/brand/hero-source.svg": "efe069fb92f72bb27a927eb165a93458a184d98117aaacfa000e26e3a97d4999",
+    "assets/brand/section-archive-source.svg": "8d360a1fce33e9468bc967247e3a062d6395d636e0d4b82a388543ee365305fc",
+    "assets/brand/section-credits-source.svg": "1ec8daba2f3336107032268373083d11e172721cd9a7ef1480ad7ff9149e9f7b",
+    "assets/brand/section-marketplace-source.svg": "df657347fd38855d5fb076caefe93e18959059c751ce94be55806a0e22990396",
+    "assets/brand/section-rise-source.svg": "de18eb37e1ffe82b6740a731ef9970e5998faf5294a74d39c9f3bc30e6e95136",
+    "assets/brand/section-shibumi-source.svg": "2f1f2460cdfc13defba20db7706cd647323825d6393451f12844ededa8d4d3d4",
+    "assets/brand/section-themes-source.svg": "8b15e4b84a4498f9c3400958f06f41a35fbc9951fd440d09e923f37b6cefa19a",
+    "assets/brand/section-waybar-source.svg": "928518f14e0b2c1a9fff57cb44821547b59aff9115245ea4e9cb6c3ad3199c10",
+    "assets/systems/rise-source.svg": "d5ef6660aafb26c20f72018b268285a1c43dc3dc837460dc54a869f55872d56a",
+    "assets/systems/shibumi-source.svg": "17d88cc3bd23045fafcdc12e8eadbd1609ae378b1ab6c13426f0e8504caca8ea",
+    "assets/systems/waybar-source.svg": "1c38c44ad3a71351a11afefcb497fbc930c6ef3ad53b67b3a5923fb1a0709597",
+    "assets/themes/selected-mobile-source.svg": "c6e8763091e30466abb1ca04d594e96d819305a90d98e317c779714ca8173727",
+    "assets/themes/selected-source.svg": "39c34af91e51ab42675db07956bc1ba705f3942ffb622b7cd1b6cb907137da4f"
+  },
+  "outputs": {
+    "assets/brand/hero.webp": "bff11ade7a5c1657428a693de8a69b98fd6bfd14af665eb6db69e1a63b606a1d",
+    "assets/brand/section-shibumi.webp": "18860ee4b76d11b35fe7c44915f825345533186509bbc6d2821efaefa646aed5",
+    "assets/brand/section-waybar.webp": "448dabe1a73211d8153b584375b8dbdbd9abdd93321565372912601a5a72e921",
+    "assets/brand/section-rise.webp": "32140e2ee24a743bacf24c7b5c50df9c5b444589ba411cc547c2a483fc147160",
+    "assets/brand/section-themes.webp": "551f3a26a8e8c1d0cbb23c74f6282f87135d1f2be3d96e83e4c8315378c03b7a",
+    "assets/brand/section-marketplace.webp": "e25f000a4df7453b111ceea9e1f83adba8dc31483270fe02ea8abaeadd9fb5db",
+    "assets/brand/section-archive.webp": "975c370910820da6f09671ffeafc832220d6c2577d370fa21abfc3fd7215031a",
+    "assets/brand/section-credits.webp": "adbf94d01b5aa5d4703a1c64c8cfec9bc4cd87e35e92c260ab990addca389ade",
+    "assets/systems/shibumi.webp": "53a3c81b2b8f12c213d9c1b97cf7c20b623b6614e41fe6b16f2346d522914825",
+    "assets/systems/waybar.webp": "98d37367df35844ae1459cab97a2bd01e198588f3fb85f99fe16485fcf3d11b1",
+    "assets/systems/rise.webp": "008b87d46c7387c05582edcadef12289db1574bde704e5b504f74771745469a6",
+    "assets/themes/selected.webp": "4f5a981e1afa1c1ac2fad61b9b3896e0c7af0f47d12141b71fe77db408269b15",
+    "assets/themes/selected-mobile.webp": "8c1afe37ee273ed35e0e998eb60b7ec8a6b33c4b019a3fae36ff0ca758de70d1",
+    "assets/themes/blackturq.webp": "71c2a5fcf17e733d5b70fff7e91047aa6b0834fcf5de08e322f6f28088ce2c14",
+    "assets/themes/harbor.webp": "d545141f48047570527707e63f1e0a2b991cbdbdd02f31abf1077763e248cc76",
+    "assets/themes/roseofdune.webp": "62a41b62d8feb6fc902de81231bd75a5563fbc4ccfa925e7497db580720d1369",
+    "assets/brand/avatar-h.png": "085f389662323e8e63d1e7544a4760e0d4af6f2fb519bec6db4bc65307c376ce",
+    "assets/brand/avatar-h-construct.png": "b5c1b6a43611fee680c83f3901b674fdbf304b7b2b58f889fb6a26911085e20b"
+  }
+}

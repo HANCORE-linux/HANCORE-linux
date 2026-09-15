@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">HANCORE H-Frame</title>
+  <desc id="desc">An original modular H mark built from two structural rails and a signal-orange bridge.</desc>
+  <g fill="#ebe5d6">
+    <path d="M80 64h104v144l24 24v48l-24 24v144H80V320l32-32v-64l-32-32V64Z"/>
+    <path d="M328 64h104v128l-32 32v64l32 32v128H328V304l-24-24v-48l24-24V64Z"/>
+    <path d="M184 208h144v96H184z"/>
+  </g>
+  <path fill="#df6124" d="M220 240h72v32h-72z"/>
+</svg>

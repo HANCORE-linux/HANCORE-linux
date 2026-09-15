@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">HANCORE H-Frame Avatar with Grid</title>
+  <desc id="desc">The modular HANCORE H mark over its rectangular construction grid, centred on a deep cool black field for a circular avatar crop.</desc>
+  <rect width="1024" height="1024" fill="#0A0C0D"/>
+  <g transform="translate(512 512) scale(1.5355) translate(-256 -256)">
+    <g fill="none" stroke="#393C3B" stroke-width="3">
+      <path d="M24 64V448M56 64V448M456 64V448M488 64V448"/>
+      <path d="M24 64H488M24 256H488M24 448H488"/>
+    </g>
+    <g fill="#EBE5D6">
+      <path d="M80 64h104v144l24 24v48l-24 24v144H80V320l32-32v-64l-32-32V64Z"/>
+      <path d="M328 64h104v128l-32 32v64l32 32v128H328V304l-24-24v-48l24-24V64Z"/>
+      <path d="M184 208h144v96H184z"/>
+    </g>
+    <path fill="#DF6124" d="M220 240h72v32h-72z"/>
+    <g fill="#DF6124">
+      <circle cx="24" cy="64" r="7"/>
+      <circle cx="488" cy="64" r="7"/>
+      <circle cx="24" cy="448" r="7"/>
+      <circle cx="488" cy="448" r="7"/>
+    </g>
+  </g>
+</svg>

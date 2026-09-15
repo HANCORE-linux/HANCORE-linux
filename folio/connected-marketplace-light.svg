@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="1800" viewBox="0 0 624 900">
+  <title>marketplace — independent card with decorative connection route</title>
+  <image x="0" y="120" width="624" height="700" xlink:href="assets/marketplace-light.png" />
+  <path d="M0 48H312V136M312 788V900" fill="none" stroke="#a1a6ab" stroke-width="2.5" />
+  <path d="M100 48H156" fill="none" stroke="#41474d" stroke-width="3.5" />
+  <path d="M301 136H323M301 788H323" fill="none" stroke="#41474d" stroke-width="3" />
+  
+</svg>

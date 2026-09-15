@@ -1,0 +1,112 @@
+# Compact GitHub profile draft
+
+This is the editable source of the GitHub profile, not a website. After the final neutral-project-title review, the user explicitly approved commit and push on 2026-09-15. `scripts/export_profile.py --write` promotes the three approved pages to the root, rebasing image paths without changing the design. Earlier iteration notes below describe the local-only state at that time. Previous root documents are preserved in the local pre-publication backup. Only the loopback preview on port 8767 is needed.
+
+## Current composition
+
+The three featured project frames now define the entire series: one neutral mount, one cut lower-right corner, a fine edge and a separate floating shadow. The earlier [Solitude folder-register study](studies/register/DIRECTION.md) remains available as a historical comparison only. A [separate collection](collection/DIRECTION.md) documents the current theme archive and the unselected earlier HANCORE lettering study.
+
+Three equal chamfered project mounts: Shibumi-Shell, OmaQ · Chat, and Omarchy-Plugin-Marketplace. All retain the 248 × 278 visible footprint with 2× exports, centered IBM Plex Sans names, one cut lower-right corner and a separate shadow behind the mount. Original source viewports fit inside equal image windows without stretching: Shibumi's complete configuration panel, OmaQ's complete public chat demo, and the marketplace's introduction plus two complete plugin cards. No screenshot is retouched or generated. The marketplace links directly to its canonical `omacom/omarchy-plugin-marketplace` repository. Waybar and QS-Dots / Rise have two shallow, individually linked information cards below.
+
+Three matching information cards identify Banish as the newest theme, and Last Horizon / Solitude as shipping with Omarchy. Each title links to its own repository. The official wordmark appears inside the latter two cards at approximately 65 × 15 pixels in HANCORE's existing orange #DF6124, optically aligned with “Ships with”. No partnership or broader endorsement is implied. The former single text sentence and standalone brand link are replaced by these three direct repository links.
+
+Six popular themes form a 3 × 2 gallery on wide views, retaining their 248 × 196 dimensions and ranking. Each linked card combines the full public desktop preview, a left-aligned IBM Plex Sans name beneath the image, exact ANSI color00–07 swatches and the black/orange shadow badge. Neutral dark/light surfaces, edge colors and shadow settings match the project cards exactly. The old colored tabs and offset rear layer are removed. Label contrast remains above 4.5:1. Screenshots keep their original rendered size and move upward by 60 SVG units; no screenshot is filtered or retouched. The Stars box now has its own four-pixel lower-right cut and matching silhouette shadow. Banish's NEW is right-aligned directly above the Stars box at x520/y374, ending at the shared x580 edge. This explicitly replaces its earlier position at the h.
+
+The full collection is deliberately absent from the profile DOM. A matching shallow “All 27 themes / Open collection →” card links to [THEMES.md](THEMES.md), a separate GitHub Markdown page: A–Z, two 396 × 312 cards per row on desktop, one per row on narrow screens. Every row is a native paragraph containing two linked pictures; no custom CSS, grid, scripting or table is required. A return link appears at both ends. The old four-column palette table is preserved in the backup, not displayed in the current README.
+
+The footer has three icon-only links in this exact order: Discord, Ko-fi, Acknowledgements. Each has a 44 × 44 image target, accessible alternative text and a tooltip. The two existing social symbols and target URLs are unchanged. The new original open-book symbol with an orange heart sits to the right of Ko-fi; its line weight and 32px visual footprint match the quiet footer scale. It links to `folio/ACKNOWLEDGEMENTS.md`, not an inline list or a section named “Credits & Contributions”. The separate page uses a 16px Plex Sans heading and a native, selectable list with the seven user-specified names and roles, in their supplied order. Link destinations are reused from the previous root acknowledgements document; that original document and its rights/tooling notes remain untouched. The local page is `/folio-acknowledgements.html`, keeping the older comparison page intact. No account, profile or donation settings are changed.
+
+## Typography
+
+The user distinguished a standalone logo symbol from the previous drawn wordmark. The new `core` proposal is an interlocking HC signet made from two independent filled shapes. Its stepped connection and cut corner echo the cards; it works without any text. A smaller, quiet IBM Plex Sans HANCORE name sits underneath. Both symbol and name use the exact requested orange #DF6124 in dark and light views. The header is 220 × 88, with a 44 × 40 visible symbol; `mark-core-{dark,light}.svg` and corresponding 512px transparent PNGs export the symbol alone. `scripts/folio_identity.py` owns the geometry. The public avatar remains unchanged. The prior seven-letter vector wordmark, H monogram and typography studies are retained as comparisons, not presented as the new standalone signet. This is an original local design proposal, not a trademark-clearance claim.
+
+Project labels use IBM Plex Sans Medium at approximately 13.5 displayed pixels, including the full Omarchy-Plugin-Marketplace name. Register titles retain IBM Plex Sans Medium at approximately 15 pixels in the profile. “Linux themes & interfaces.”, “Most starred themes”, “Theme archive” and “27 themes · color00–07 · A–Z” share approximately 16px IBM Plex Sans Semibold. `scripts/folio_labels.py` exports 248 × 28 unframed labels at 4× for the profile and Acknowledgements. The archive heading now uses the shared chamfered info-card composition at 280 × 76, exported at 1408 × 384, with centered title and metadata at the same readable type size. All have complete alternative text. This keeps the font consistent with the cards without relying on README CSS. Fonts are unmodified upstream files with their SIL OFL notices in `type/`; none were installed system-wide.
+
+The six shallow information/archive cards are 248 × 76, with 40px semibold titles and 34px medium captions in a 624-unit SVG: approximately 16px and 13.5px on desktop. Names and captions are now centered, with at least 4.5:1 contrast. “Ships with” and the orange Omarchy wordmark are centered as one combined unit, using the bundled Plex Sans Medium's measured Pango advance (166246/1024 SVG units), a 20-unit gap and the unchanged 164-unit-wide mark. Theme-card names and ANSI palettes are explicitly exempt from the centering request and remain left-aligned. Native image wrapping handles mobile layout; the source text is preserved in image alternative text.
+
+The separate “Namensstudie” preview preserves the earlier thin-outline HANCORE study for comparison. It is not the new HC signet and changes neither the selected identity nor the public avatar.
+
+### Orange title accents and archive-heading tile
+
+Following the user's review, Shibumi-Shell, OmaQ, Omarchy-Plugin-Marketplace, Waybar themes and QS-Dots / Rise return to the neutral title color (#E8E3D9 on dark mounts, #262522 on light mounts). Orange title accents are reserved for “All 27 themes” and the matching “Theme archive” heading tile; the “27 themes · color00–07 · A–Z” metadata stays neutral. The dark-mode accent is the existing #DF6124; on light mounts #AC450F maintains readability (4.79:1 and 4.70:1 contrast respectively). All project/info text remains centered. Banish, Last Horizon and Solitude information cards, all 27 theme-image cards, badges, palettes, original captures, logo and connection routes are unchanged. The archive heading is slightly wider than a compact info card so the full metadata fits without reducing its 16px size; the two-column gallery keeps its original card dimensions. The pre-archive-tile state is saved in `.review/archive/vor-orange-archivkachel-RYXaYz/`. Commit and push remain paused.
+
+Verification: static checks pass for 142 base PNGs and all 54 theme-card variants. All 43 browser cases plus eight native no-script/no-style cases pass; desktop connection seams, independent links, archive navigation and 320px mobile wrapping are intact. The desktop profile remains 1500px tall, with 21 images / 18 links; the archive remains 28 images / 29 links. A hash comparison verifies 295 protected source, theme, palette, badge, logo, footer and Markdown files unchanged from this iteration's backup. Wide dark and narrow light archive screenshots were visually checked for heading fit and spacing.
+
+## Connection-line request
+
+The user's [Bedirhan reference](https://x.com/bedirhandogn/status/2098336712812335257) was inspected from its three public media files: thin orthogonal routes, short bright segments and small terminal marks. The user rejected a single combined graphic because all three project cards must remain individually clickable; they explicitly reaffirmed that they still want the connection lines. The earlier interpretation that this rejected the lines themselves was incorrect.
+
+`scripts/folio_connections.py` now exports 30 connection PNGs: 15 independently linked cards in dark/light, each carrying its own part of a continuous circuit route around the mount. Adjacent anchors deliberately have no HTML whitespace between them; native `align="top"` and explicit line breaks join their rows without CSS positioning. A thin neutral bus, downward branches, short bright segments and tiny terminal bars repeat the reference's restrained line language. These are decorative connections between HANCORE's works, not claims of software dependencies. No logo, screenshot or title is combined across link targets.
+
+The first group runs from the three main project cards, through transparent margins beside Waybar and QS-Dots, down to Banish / Last Horizon / Solitude. Waybar and QS-Dots each retain their own link and visible 248 × 76 body inside a 372 × 108 bridge slice. All three vertical rails avoid the card contents; the two outside rails have small side taps into the bar/shell cards. The group ends at the three highlight cards. Under “Most starred themes” a second, independent bus starts in the same style, continues through both three-card rows, merges below the bottom row and ends at the centered “All 27 themes / Open collection →” card. The footer remains separate.
+
+All existing 624-unit-wide compositions are embedded at their original scale. Transparent line margins change only the overall image canvas: projects display at about 248 × 358, highlights and archive CTA at 248 × 92, top popular themes at 248 × 270 and bottom popular themes at 248 × 243. Their visible mount, screenshot, type size, palette and badge dimensions are unchanged. At viewport widths below 1280px, native `<picture>` queries select the base cards without connector margins or routes. The conservative viewport breakpoint is not container-aware. The two explicit popular rows still wrap natively on smaller views. Every card keeps its independent link. Source dimensions reserve the appropriate image size without custom CSS. GitHub [supports the picture element](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#the-picture-element); no README script, style, image map or table is needed.
+
+The local preview's theme control now overrides only the color-scheme portion of source queries, preserving their width condition. It does not draw the lines. The browser checks include line seams, independent hit targets, both sides of the 1280px breakpoint, and native source selection/dimensions with scripts and styles disabled. Previous assets are preserved in `.review/archive/vor-einzelkarten-verbindungen-0rtgal/`; the theme archive, palettes, labels, NEW/Stars layout, logo and root Markdown remain unchanged.
+
+Verification: 516 pre-existing image/font/palette assets, `folio/THEMES.md` and both root Markdown files are byte-identical to that backup. Static export checks pass with 114 base PNGs. All 35 rendered page/viewport/mode cases pass, plus eight native image-selection/dimension cases without scripts or styles. Project hit targets retain three distinct canonical URLs, and the two circuit seams have no horizontal gaps. The wide desktop README is 1372px tall; narrow layouts retain the previous card heights. The main README remains 20 images / 17 links, and the archive remains 28 images / 29 links. Nothing was published.
+
+The subsequent Acknowledgements + extended-lines iteration is backed up in `.review/archive/vor-acknowledgements-icon-pmZIhw/`. All 516 pre-existing non-connector image/font/palette assets, the full theme archive and all three original root Markdown documents are byte-identical to that backup. Only the six earlier connector exports are replaced; 22 additional connection images, two acknowledgement icons and two heading variants are added. Static checks pass with 140 base PNGs. All 43 page/viewport/mode cases pass, plus eight native selection/dimension cases without scripts or styles. Checks cover project→bridge→highlight seams, both rows of the theme network, footer icon order, exact acknowledgements text and keyboard navigation out and back. The wide desktop README is 1475px tall and contains 21 images / 18 links. Acknowledgements has one heading image / eight links; the archive remains 28 images / 29 links. No publication was performed.
+
+The final archive-connection and text-centering request is backed up in `.review/archive/vor-zentrierung-abschlusslinie-ZU3xNT/`. The three project labels and six info/CTA captions are centered; no theme-card content is recentered. All 161 collection exports, original sources and bundled font/license files checked against that backup are byte-identical, as are the separate theme/acknowledgements pages and all root Markdown documents. The last three theme routes now merge into a fifteenth linked node: the archive CTA. Static checks pass with 142 base PNGs, all 43 runtime cases pass, and all eight native no-script/no-style source-dimension cases pass. The wide desktop README is 1500px tall with the same 21 images / 18 links. Publication remains unapproved and untouched.
+
+## Data and provenance
+
+- `highlights.json` records the latest-theme creation date and exact upstream Omarchy theme folders. These are verified snapshots, not scheduled updates.
+- `popular-themes.json` records all 27 star counts used for selection: strictly greater than 30, descending stars, repository-name tie break, at most six. Public screenshot Git blob IDs are verified.
+- `badge-snapshot.json` records public Shields URLs, fresh counts, UTC timestamp, dimensions and source hashes. The compact flat-square design follows OldJobobo, with HANCORE's existing black #000000 label and orange #DF6124 value. Shadow badges are exported snapshots, not live counters; dated tooltip and alternative text disclose freshness. Refreshing badges does not automatically change the ranking snapshot.
+- `palettes.json` records eight colors per theme, public colors.toml URLs, timestamp and hashes. Original configs are preserved in `sources/palettes/`. Colors are read from configuration, never guessed from screenshots.
+- `provenance.json` hashes generation inputs and outputs. Original screenshots are unchanged; compositions and shadows are native SVG. Earlier unused Banish, Solitude, signature, Waybar and QS-Dots exports remain.
+- `collection/sources.json` records the other 21 public preview downloads and actual Shields badges, including retrieval date and hashes. The six popular previews/badges reuse the approved existing sources. `collection/provenance.json` hashes all 54 register PNGs, embedded badge assets, source files and the shared geometry generator.
+- `social-sources.json` records official Discord/Ko-fi asset URLs and SHA-256 hashes. Discord SVG geometry is unmodified; the Ko-fi AVIF receives only a PNG format conversion for compatibility. Social compositions add transparent spacing, not altered branding.
+
+The marketplace screenshot is its public repository preview. The unused QS-Dots asset uses a preserved real Rise V1 carousel capture with no recorded frame timestamp, not a new V2 screenshot. The Waybar study uses already-verified public V2.9c/d/e bar crops.
+
+## Sources and rights
+
+- [Official Omarchy brand](https://omarchy.org/brand/): the original is preserved in `sources/omarchy-wordmark.svg`. The derived SVG changes only fill #9ECE6A to #DF6124, not geometry. Omarchy identifies its pending trademark and reserves all rights. These brand assets are not relicensed under this repository's license.
+- [Omarchy Plugin Marketplace](https://github.com/omacom/omarchy-plugin-marketplace): canonical repository and screenshot.
+- [OldJobobo](https://github.com/OldJobobo/OldJobobo/blob/main/README.md): compact Shields reference.
+- [HANCORE's public profile](https://github.com/HANCORE-linux/HANCORE-linux/blob/main/README.md): existing badge palette.
+- [IBM Plex](https://github.com/IBM/plex): wordmark and captions. Unmodified font files from Google Fonts' [IBM Plex Sans](https://github.com/google/fonts/tree/main/ofl/ibmplexsans) and [IBM Plex Mono](https://github.com/google/fonts/tree/main/ofl/ibmplexmono) directories; each bundled with its SIL OFL notice.
+- [Syne](https://github.com/google/fonts/tree/main/ofl/syne), [Bricolage Grotesque](https://github.com/ateliertriay/bricolage), [Saira Stencil One](https://github.com/google/fonts/tree/main/ofl/sairastencilone), [Instrument Serif](https://github.com/Instrument/instrument-serif): included OFL licenses govern the font files.
+- [antfu/design](https://github.com/antfu/design) was inspected earlier, not installed as a skill; its website components are not used.
+- [Discord brand assets](https://discord.com/branding) and [Ko-fi creator kit](https://more.ko-fi.com/brand-assets): official symbols, owned by their respective brands and excluded from the original HANCORE artwork license. Unmodified source files and URLs are recorded in `social-sources.json`.
+
+The local profile frame and proposed pins sit outside the README and approximate GitHub. The avatar is a public snapshot. No account, pin, commit or publication changes were performed.
+
+## Refresh and verify
+
+Optional public-data refreshes:
+
+```sh
+python scripts/refresh_folio_badges.py
+python scripts/refresh_folio_palettes.py
+```
+
+Build and review from the repository root:
+
+```sh
+python scripts/build_folio.py
+python scripts/render_folio.py
+python scripts/build_register_study.py --render
+python scripts/check_folio.py
+python scripts/build_register_study.py --check
+node scripts/review_folio.mjs
+```
+
+The renderer uses GitHub's Markdown API. Runtime checks cover dark/light modes, narrow/wide views, separate archive navigation by keyboard, two-column layout, project order, image loading, font controls and server routes. Export checks verify exact palettes and pixel variation in screenshot and badge regions. Only if the existing preview is stopped, start `python scripts/serve_folio.py --port 8767`. Do not restart 8765/8766.
+
+Preview: http://127.0.0.1:8767/
+
+The editable pages are `folio/README.md`, `folio/THEMES.md` and `folio/ACKNOWLEDGEMENTS.md`. The publication exporter updates the root copies and rebases both image directories; Markdown cross-links point between the root pages. Asset/tooling notices are preserved in `docs/ASSET-NOTICES.md`. Subsequent commits and pushes still require an explicit request.
+
+The pre-orange-signet state is preserved in `.review/archive/vor-orange-signet-verbindungen-Jt5XdI/`. This iteration changes the selected header identity, adds standalone signet exports and replaces the four small section texts with matching 16px Plex Sans labels. Project cards, information cards, theme cards, NEW/Stars geometry, social icons, archive card dimensions and root Markdown are preserved. Current counts: 20 images / 17 links in the profile; 28 images / 29 links in the archive, including its new heading graphic. Static checks and all 33 browser cases pass; desktop README height is 1324px, with unchanged 3×2 popular-theme and two-column archive layouts.
+
+The complete pre-unified-frame/logo state is preserved in `.review/archive/vor-einheitlichen-rahmen-logo-VM9dfY/` (folio, scripts, preview pages and untouched root Markdown). That earlier iteration intentionally replaced the 54 theme-card exports, clipped their derived Stars badges, added the filled vector logo/monogram, added six information/archive cards and replaced footer text with two icons. The first three project cards, original screenshot/badge sources, exact palettes, rankings, archive Markdown/dimensions and root Markdown stayed unchanged. Its browser review covered 33 page/viewport/mode combinations and the archive keyboard flow. At that stage the README had 18 images and 17 links; the archive had 27 images and 29 links.
+
+Final verification: all 100 protected source/data/project/root files are byte-identical to that backup. The rendered desktop regions have at most 2/255 channel-level differences on less than 0.5% of channels after moving from y84 to y24. A frame-free control containing only the original BlackTurq image reproduced exactly the same 4,845 changed channels and maximum delta 2; this is position-dependent raster rounding, not a screenshot edit or blur. Thus the original sources are byte-identical, while the shifted PNG crops are not claimed to be byte-identical. Static source/export, frame, contrast, palette, cut-badge, logo, icon and link checks pass; all 33 browser cases pass.
+
+The preceding header/project-line iteration is preserved in `.review/archive/vor-kopf-projektlinie-BhFMf4/`. Its verification found all 146 protected archive/source/root files byte-identical and passed all 33 browser cases. Those historical checks describe that iteration, before the user's subsequent request to replace the theme frames.
+
+Earlier backups remain in `.review/archive/`, including `vor-register-serie-dTJh4y` (approved single-card study, prior compact profile, full palette table and previous review script), `vor-plex-YIlgeZ`, `vor-typografie-badges-i8aBPn`, `vor-breiten-tabellen-O9H1he`, and `vor-omaq-highlights-WU69h8`.

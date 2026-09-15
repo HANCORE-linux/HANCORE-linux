@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="384" viewBox="0 0 624 192">
+  <title>All 27 themes — Open collection →</title>
+  <defs><filter id="float" x="-15%" y="-50%" width="130%" height="210%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="8" /><feOffset dy="10" /></filter></defs>
+  <path d="M24 16H600V142L578 164H24Z" fill="#000000" opacity="0.48" filter="url(#float)" />
+  <path d="M24 16H600V142L578 164H24Z" fill="#191c1e" stroke="#353a3d" stroke-width="1.5" />
+  <text x="312" y="72" text-anchor="middle" fill="#df6124" font-family="IBM Plex Sans" font-size="40" font-weight="600">All 27 themes</text>
+  <text x="312" y="126" text-anchor="middle" fill="#bfc4c9" font-family="IBM Plex Sans" font-size="34" font-weight="500">Open collection →</text>
+  
+</svg>

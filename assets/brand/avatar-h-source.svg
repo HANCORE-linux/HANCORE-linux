@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">HANCORE H-Frame Avatar</title>
+  <desc id="desc">The modular HANCORE H mark centred on a deep cool black field, sized to survive a circular avatar crop.</desc>
+  <rect width="1024" height="1024" fill="#0A0C0D"/>
+  <g transform="translate(512 512) scale(1.5355) translate(-256 -256)">
+    <g fill="#EBE5D6">
+      <path d="M80 64h104v144l24 24v48l-24 24v144H80V320l32-32v-64l-32-32V64Z"/>
+      <path d="M328 64h104v128l-32 32v64l32 32v128H328V304l-24-24v-48l24-24V64Z"/>
+      <path d="M184 208h144v96H184z"/>
+    </g>
+    <path fill="#DF6124" d="M220 240h72v32h-72z"/>
+  </g>
+</svg>

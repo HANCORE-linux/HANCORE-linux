@@ -1,0 +1,23 @@
+# Local visual review output
+.review/
+*.tmp.png
+
+# Generated local previews
+/index.html
+/preview.html
+/themes.html
+/acknowledgements.html
+/concept.html
+/folio.html
+/collection.html
+/identity.html
+/register-profile.html
+/register.html
+/folio-acknowledgements.html
+/scripts/preview/github-markdown-themes.css
+.preview-*
+
+# Python cache and temporary preview transactions
+__pycache__/
+*.py[cod]
+/hancore-preview-*/

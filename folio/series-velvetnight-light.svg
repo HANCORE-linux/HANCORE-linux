@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="984" viewBox="0 0 624 492">
+  <title>Velvet Night — chamfered theme mount</title>
+  <desc>Full original desktop, exact ANSI colors 0 through 7, and 12 GitHub stars from the dated snapshot. Static linked image.</desc>
+  <defs>
+    <filter id="float" x="-15%" y="-15%" width="130%" height="140%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="8" /><feOffset dy="10" /></filter>
+  </defs>
+  <path d="M24 16H600V450L578 472H24Z" fill="#000000" opacity="0.19" filter="url(#float)" />
+  <path d="M24 16H600V450L578 472H24Z" fill="#e9e7e0" stroke="#c6c5bf" stroke-width="1.5" />
+  <image x="32" y="24" width="560" height="315" xlink:href="collection/sources/velvetnight.png" />
+  <text x="44" y="382" fill="#262522" font-family="IBM Plex Sans" font-size="38" font-weight="500">Velvet Night</text>
+  <g id="ansi-palette"><title>ANSI color00–07, left to right</title><rect x="44" y="420" width="22" height="30" fill="#0A101F" /><rect x="66" y="420" width="22" height="30" fill="#811139" /><rect x="88" y="420" width="22" height="30" fill="#5C637A" /><rect x="110" y="420" width="22" height="30" fill="#e5af1b" /><rect x="132" y="420" width="22" height="30" fill="#9099a5" /><rect x="154" y="420" width="22" height="30" fill="#e2687c" /><rect x="176" y="420" width="22" height="30" fill="#C24F40" /><rect x="198" y="420" width="22" height="30" fill="#F5ECDF" /><rect x="44" y="420" width="176" height="30" fill="none" stroke="#c6c5bf" stroke-width="1" /></g>
+  <image x="398.83870967741933" y="400" width="211.3548387096774" height="90.58064516129032" xlink:href="collection/assets/badge-velvetnight-light.png" />
+</svg>

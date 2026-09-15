@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 640 1416">
+<title>Selected themes — BlackTurq, Harbor, Rose of Dune</title>
+<rect width="640" height="1416" fill="#0a0c0d"/>
+<g transform="translate(24 24)">
+<text x="0" y="39" fill="#ebe5d6" font-family="Nimbus Sans Narrow, sans-serif" font-weight="700" font-size="40">BlackTurq</text>
+<image xlink:href="../sources/blackturq.png" x="0" y="64" width="592" height="333.0"/>
+<rect x="0.0" y="409.0" width="148.0" height="12" fill="#0a0a0a"/>
+<rect x="148.0" y="409.0" width="148.0" height="12" fill="#ADF0E9"/>
+<rect x="296.0" y="409.0" width="148.0" height="12" fill="#8FECD5"/>
+<rect x="444.0" y="409.0" width="148.0" height="12" fill="#485362"/>
+</g>
+<g transform="translate(24 492)">
+<text x="0" y="39" fill="#ebe5d6" font-family="Nimbus Sans Narrow, sans-serif" font-weight="700" font-size="40">Harbor</text>
+<image xlink:href="../sources/harbor-desktop.png" x="0" y="64" width="592" height="333.0"/>
+<rect x="0.0" y="409.0" width="148.0" height="12" fill="#dfe4c4"/>
+<rect x="148.0" y="409.0" width="148.0" height="12" fill="#1c2d28"/>
+<rect x="296.0" y="409.0" width="148.0" height="12" fill="#5e81ac"/>
+<rect x="444.0" y="409.0" width="148.0" height="12" fill="#dc8164"/>
+</g>
+<g transform="translate(24 960)">
+<text x="0" y="39" fill="#ebe5d6" font-family="Nimbus Sans Narrow, sans-serif" font-weight="700" font-size="40">Rose of Dune</text>
+<image xlink:href="../sources/roseofdune.png" x="0" y="64" width="592" height="333.0"/>
+<rect x="0.0" y="409.0" width="148.0" height="12" fill="#F5E6D3"/>
+<rect x="148.0" y="409.0" width="148.0" height="12" fill="#35302a"/>
+<rect x="296.0" y="409.0" width="148.0" height="12" fill="#DEA193"/>
+<rect x="444.0" y="409.0" width="148.0" height="12" fill="#76634c"/>
+</g>
+</svg>

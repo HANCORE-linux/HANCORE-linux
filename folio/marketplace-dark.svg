@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="1400" viewBox="0 0 624 700">
+  <title>Omarchy-Plugin-Marketplace — original interface, chamfered project mount</title>
+  <defs><filter id="float" x="-15%" y="-15%" width="130%" height="140%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="8" /><feOffset dy="10" /></filter></defs>
+  <path d="M24 16H600V646L578 668H24Z" fill="#000000" opacity="0.48" filter="url(#float)" />
+  <path d="M24 16H600V646L578 668H24Z" fill="#191c1e" stroke="#353a3d" stroke-width="1.5" />
+  <rect x="32" y="24" width="560" height="560" fill="#101213" />
+  <svg x="32.000000" y="46.400000" width="560.000000" height="515.200000" viewBox="12 0 750 690" preserveAspectRatio="xMidYMid meet" overflow="hidden">
+    <image xlink:href="sources/marketplace.png" width="1153" height="699" />
+  </svg>
+  <text x="312" y="636" text-anchor="middle" fill="#e8e3d9" font-family="IBM Plex Sans" font-size="34" font-weight="500">Omarchy-Plugin-Marketplace</text>
+</svg>

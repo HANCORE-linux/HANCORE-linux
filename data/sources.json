@@ -1,0 +1,43 @@
+[
+  {
+    "path": "assets/sources/shibumi-bars.png",
+    "url": "https://raw.githubusercontent.com/HANCORE-linux/Shibumi-Shell/3cb7f6d26df47b0e2d697575e4b42ba48e405c1d/docs/screenshots/shibumi-bars.png",
+    "sha256": "966d2d9f13cc246b42f48e96d60dd21256bdd9a65d1a6444f86cac6dbb09768c"
+  },
+  {
+    "path": "assets/sources/blackturq.png",
+    "url": "https://github.com/user-attachments/assets/9d6baa88-5156-4178-84ef-8e09357e37e2",
+    "sha256": "e34eb9122fa0ea1cd717dee76ab2c52a79a8cbeb9b19b706289d5c9572342543"
+  },
+  {
+    "path": "assets/sources/harbor-desktop.png",
+    "url": "https://github.com/user-attachments/assets/22809c2d-67c2-4a63-ab65-cc215b5b462d",
+    "sha256": "dc55cf042d9f18e4f12d9603c8e0b15d8a44c0fa3bb8575707916ec492b0be67"
+  },
+  {
+    "path": "assets/sources/roseofdune.png",
+    "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-roseofdune-theme/d6dc57d6482fdd41fdc08dad9784cffaabaeb0cd/preview.png",
+    "sha256": "81d439c91056fc581eccfa8806e0b44f53139aa75b75774b4158ab68777c5c80"
+  },
+  {
+    "path": "assets/sources/rise-carousel.webp",
+    "origin": "Preserved full-resolution Rise V1 carousel capture from the previous local profile's .review/legacy-assets/02-rise-original.webp. The original frame timestamp was not recorded.",
+    "repository": "https://github.com/HANCORE-linux/quickshell-dots",
+    "sha256": "fdecbfe1b3c6efe5f9f3eebdbb44610399a6622311af0a85636d1138d77c26d4"
+  },
+  {
+    "path": "assets/sources/waybar-v29c.png",
+    "url": "https://raw.githubusercontent.com/HANCORE-linux/waybar-themes/a4cdf25484c37ad8588cabc019e06c8c40b203e9/showcases/V2.9c.png",
+    "sha256": "64960cba34ba90a67a19cf76054a054ce56bcb2496a989f01368c7cdec069b87"
+  },
+  {
+    "path": "assets/sources/waybar-v29d.png",
+    "url": "https://raw.githubusercontent.com/HANCORE-linux/waybar-themes/a4cdf25484c37ad8588cabc019e06c8c40b203e9/showcases/V2.9d.png",
+    "sha256": "5b9adc8a4a7683c324426f02b7fdc40c80aaa9b3c6c0c18b0957815c2d4fcac6"
+  },
+  {
+    "path": "assets/sources/waybar-v29e.png",
+    "url": "https://raw.githubusercontent.com/HANCORE-linux/waybar-themes/a4cdf25484c37ad8588cabc019e06c8c40b203e9/showcases/V2.9e.png",
+    "sha256": "b4fbc4f59e4f97c1fd55e2eb06d8d38a8c9497da81586c1d37e9138f679a21f3"
+  }
+]

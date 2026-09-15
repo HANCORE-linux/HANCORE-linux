@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="624" height="492" viewBox="0 0 624 492">
+  <title>BlackTurq — full desktop preview</title>
+  <defs><filter id="float" x="-15%" y="-15%" width="130%" height="140%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="8" /><feOffset dy="10" /></filter></defs>
+  <rect x="24" y="16" width="576" height="324" fill="#000000" opacity="0.20" filter="url(#float)" />
+  <image x="24" y="16" xlink:href="sources/popular-blackturq.png" width="576" height="324" />
+  <text x="312" y="391" text-anchor="middle" fill="#262522" font-family="IBM Plex Mono" font-size="32" font-weight="400">BlackTurq</text>
+  <image x="206.32258064516128" y="402" width="211.3548387096774" height="90.58064516129032" xlink:href="assets/badge-blackturq-light.png" />
+</svg>

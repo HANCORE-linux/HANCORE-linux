@@ -1,0 +1,14 @@
+/* Local GitHub surrounding frame only. No rules change the README body. */
+.preview-tabs { flex-wrap:wrap; }
+.profile-column { min-width:0; }
+.folio-pins { margin-top:24px; }
+.folio-pins h2 { font-size:16px; font-weight:400; margin:0 0 12px; }
+.folio-pins h2 small { font-size:12px; color:var(--muted); margin-left:8px; }
+.folio-pins ul { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.folio-pins li { border:1px solid var(--line); border-radius:6px; padding:16px; min-width:0; }
+.folio-pins a { font-weight:600; text-decoration:none; overflow-wrap:anywhere; }
+.folio-pins p { font-size:12px; margin:8px 0 12px; color:var(--muted); }
+.folio-pins .language { color:var(--muted); font-size:12px; }
+.folio-pins .language i { display:inline-block; width:12px; height:12px; border-radius:50%; margin-right:5px; vertical-align:-1px; }
+html[data-view="readme"] .folio-pins { display:none; }
+@media(max-width:600px) { .folio-pins ul { grid-template-columns:minmax(0,1fr); } }

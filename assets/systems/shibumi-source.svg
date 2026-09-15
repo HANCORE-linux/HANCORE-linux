@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 700">
+  <title>Shibumi — bar configuration</title>
+  <rect width="900" height="700" fill="#0a0c0d"/>
+  <svg x="40" y="30" width="820" height="638" viewBox="5 38 820 638">
+    <image xlink:href="../sources/shibumi-bars.png" width="920" height="760"/>
+  </svg>
+  <path d="M40 684H132" stroke="#df6124" stroke-width="3"/>
+</svg>

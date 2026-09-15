@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="352" viewBox="0 0 440 176" role="img" aria-labelledby="core-title">
+  <title id="core-title">HANCORE — HC signet with name</title>
+  <desc>An original interlocking HC symbol with a stepped connection and cut corner. HANCORE orange, #DF6124.</desc>
+  <g id="core-symbol" transform="translate(176 12)" fill="#df6124"><path d="M0 12L12 0H16V32H29L38 23V43L33 48H16V80H0Z" /><path d="M50 0H88V16H57L50 23V57L57 64H88L72 80H50L34 64V16Z" /></g>
+  <text x="220" y="154" text-anchor="middle" fill="#df6124" font-family="IBM Plex Sans" font-weight="600" font-size="40" letter-spacing="2">HANCORE</text>
+</svg>

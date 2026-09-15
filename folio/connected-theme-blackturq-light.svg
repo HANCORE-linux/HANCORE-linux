@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="1360" viewBox="0 0 624 680">
+  <title>theme-blackturq — independent card with decorative connection route</title>
+  <image x="0" y="120" width="624" height="492" xlink:href="collection/assets/blackturq-light.png" />
+  <path d="M0 48H624M312 8V136M312 592V680" fill="none" stroke="#a1a6ab" stroke-width="2.5" />
+  <path d="M312 76V112" fill="none" stroke="#41474d" stroke-width="3.5" />
+  <path d="M301 136H323M301 592H323" fill="none" stroke="#41474d" stroke-width="3" />
+  <rect x="308" y="4" width="8" height="8" fill="#df6124" />
+</svg>

@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "name": "BlackTurq",
+    "slug": "blackturq",
+    "palette_source": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-blackturq-theme/b9f90f8a8a53fea35158023e998fa2ed67f343a9/colors.toml",
+    "description": "Anodized black, electric turquoise and high contrast",
+    "order": 0,
+    "image": "blackturq.png",
+    "palette": [
+      "#0a0a0a",
+      "#ADF0E9",
+      "#8FECD5",
+      "#485362"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "BlackGold",
+    "slug": "blackgold",
+    "description": "Obsidian, gold and cinematic warmth"
+  },
+  {
+    "id": 3,
+    "name": "Demon",
+    "slug": "demon",
+    "description": "Charcoal, ember and aggressive contrast"
+  },
+  {
+    "id": 4,
+    "name": "InkyPinky",
+    "slug": "inkypinky",
+    "description": "Ink, violet and soft contrast"
+  },
+  {
+    "id": 5,
+    "name": "Oxford",
+    "slug": "oxford",
+    "description": "Wood, navy and muted collegiate tones"
+  },
+  {
+    "id": 6,
+    "name": "Rose of Dune",
+    "slug": "roseofdune",
+    "palette_source": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-roseofdune-theme/d6dc57d6482fdd41fdc08dad9784cffaabaeb0cd/colors.toml",
+    "description": "Blush, sand and a light interface",
+    "order": 2,
+    "image": "roseofdune.png",
+    "palette": [
+      "#F5E6D3",
+      "#35302a",
+      "#DEA193",
+      "#76634c"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Moodpeak",
+    "slug": "moodpeak",
+    "description": "Cobalt, violet and nocturnal color"
+  },
+  {
+    "id": 8,
+    "name": "The Greek",
+    "slug": "thegreek",
+    "description": "Parchment, olive and architectural restraint"
+  },
+  {
+    "id": 9,
+    "name": "Batou",
+    "slug": "batou",
+    "description": "Graphite, bone and tactical contrast"
+  },
+  {
+    "id": 10,
+    "name": "Sapphire",
+    "slug": "sapphire",
+    "description": "Midnight, electric blue and crystalline accents"
+  },
+  {
+    "id": 11,
+    "name": "Mecha no Onna",
+    "slug": "mechanoonna",
+    "description": "Ink, ivory and illustrated detail"
+  },
+  {
+    "id": 12,
+    "name": "BlackMoney",
+    "slug": "blackmoney",
+    "description": "Black, green and gold"
+  },
+  {
+    "id": 13,
+    "name": "Shades of Jade",
+    "slug": "shadesofjade",
+    "description": "Deep green, jade and sculptural color"
+  },
+  {
+    "id": 14,
+    "name": "Last Horizon",
+    "slug": "lasthorizon",
+    "description": "Charcoal, warm skin tones and cinematic light"
+  },
+  {
+    "id": 15,
+    "name": "Velvet Night",
+    "slug": "velvetnight",
+    "description": "Navy, mauve and dense nocturnal color"
+  },
+  {
+    "id": 16,
+    "name": "White Gold",
+    "slug": "whitegold",
+    "description": "Ivory, brass and a light interface"
+  },
+  {
+    "id": 17,
+    "name": "Harbor Dark",
+    "slug": "harbordark",
+    "description": "Charcoal, red and industrial contrast"
+  },
+  {
+    "id": 18,
+    "name": "Harbor",
+    "slug": "harbor",
+    "palette_source": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-harbor-theme/27a7f3b5f9eb1306995f89573f4b7647eaeed8e4/colors.toml",
+    "description": "Sage, paper and quiet Nordic tones",
+    "order": 1,
+    "image": "harbor-desktop.png",
+    "palette": [
+      "#dfe4c4",
+      "#1c2d28",
+      "#5e81ac",
+      "#dc8164"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Solitude",
+    "slug": "solitude",
+    "description": "Monochrome, ink and minimal contrast"
+  },
+  {
+    "id": 20,
+    "name": "Oxocarbon",
+    "slug": "oxocarbon",
+    "description": "Black, cyan and technical color"
+  },
+  {
+    "id": 21,
+    "name": "Turbonite",
+    "slug": "turbonite",
+    "description": "Black, amber and automotive influence"
+  },
+  {
+    "id": 22,
+    "name": "Greek Noir",
+    "slug": "greek-noir",
+    "description": "Charcoal, orange and editorial contrast"
+  },
+  {
+    "id": 23,
+    "name": "Saga",
+    "slug": "saga",
+    "description": "Slate, pastel and expansive color"
+  },
+  {
+    "id": 24,
+    "name": "Kansō",
+    "slug": "kanso",
+    "description": "Forest, charcoal and restraint"
+  },
+  {
+    "id": 25,
+    "name": "Ryū",
+    "slug": "ryu",
+    "description": "Ivory, ink and mythic intensity"
+  },
+  {
+    "id": 26,
+    "name": "Dos-Moos",
+    "slug": "dos-moos",
+    "description": "Blue-green, charcoal and tactile color"
+  },
+  {
+    "id": 27,
+    "name": "Banish",
+    "slug": "banish",
+    "description": "Basalt, pink and cold ultraviolet"
+  }
+]

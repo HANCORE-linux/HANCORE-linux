@@ -1,0 +1,384 @@
+{
+  "fetched_at": "2026-09-15T06:37:52.837252+00:00",
+  "order": "ANSI color0 through color7, left to right",
+  "themes": {
+    "blackturq": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-blackturq-theme/HEAD/colors.toml",
+      "colors": [
+        "#0a0a0a",
+        "#D35F5F",
+        "#8FECD5",
+        "#A9D1D7",
+        "#ADF0E9",
+        "#485362",
+        "#5a676b",
+        "#c4d8e2"
+      ],
+      "sha256": "3abdef4f3a9a121833b0dd481d0fee653abd0fea7a1392e8740b106e4d30ab80"
+    },
+    "blackgold": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-blackgold-theme/HEAD/colors.toml",
+      "colors": [
+        "#0D0D0D",
+        "#D35F5F",
+        "#a3850e",
+        "#4D574E",
+        "#6E6A58",
+        "#BFA75D",
+        "#7A6A2C",
+        "#F6F1DD"
+      ],
+      "sha256": "3f65775b59babc0f376013d04833834c4a90116cd2cb40a256746bc0207df802"
+    },
+    "demon": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-demon-theme/HEAD/colors.toml",
+      "colors": [
+        "#0F0F0F",
+        "#BB1C1C",
+        "#586259",
+        "#E24C00",
+        "#5C624B",
+        "#655E56",
+        "#7A7D80",
+        "#BDB5AA"
+      ],
+      "sha256": "3386d0faed3d3eaaacabd4fe04411582b479cbe54c24ea9a7e7f8d31782330fe"
+    },
+    "inkypinky": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-inkypinky-theme/HEAD/colors.toml",
+      "colors": [
+        "#13131D",
+        "#EA90A8",
+        "#a6b2c7",
+        "#D18BA2",
+        "#7c7ca8",
+        "#9f859f",
+        "#919ab7",
+        "#a1a2a7"
+      ],
+      "sha256": "27764f0b1ebd529dbd2eb4082bbae03cbca9501460ed4403c082e5f9c74c7bfe"
+    },
+    "oxford": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-oxford-theme/HEAD/colors.toml",
+      "colors": [
+        "#292b31",
+        "#dd5544",
+        "#76856a",
+        "#f3e9bd",
+        "#bda07f",
+        "#b7a593",
+        "#9b907f",
+        "#ffffff"
+      ],
+      "sha256": "59f60059678f12ff68b54608f5948e7d02eb36bb59ff571c04bf6fc93fd2ebb6"
+    },
+    "roseofdune": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-roseofdune-theme/HEAD/colors.toml",
+      "colors": [
+        "#F5E6D3",
+        "#a02b16",
+        "#9e4f5b",
+        "#644535",
+        "#76634c",
+        "#78292e",
+        "#713a56",
+        "#a94a34"
+      ],
+      "sha256": "83d609a7733f8106d3d28624c9cf5e065409a94dcea92e306a13b48a298145e8"
+    },
+    "moodpeak": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-moodpeak-theme/HEAD/colors.toml",
+      "colors": [
+        "#181c22",
+        "#ff7b92",
+        "#4ecdc4",
+        "#82eeff",
+        "#6a85ff",
+        "#b388eb",
+        "#c9aff0",
+        "#d1d7e0"
+      ],
+      "sha256": "2fa9bafb4677f870339ef890a742f2648f84e453134dc2de9eddf14f8bf4d6fc"
+    },
+    "thegreek": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-thegreek-theme/HEAD/colors.toml",
+      "colors": [
+        "#d0d0c8",
+        "#db0030",
+        "#2e3125",
+        "#51573b",
+        "#DE6A41",
+        "#43432b",
+        "#6b1f2f",
+        "#383835"
+      ],
+      "sha256": "5e843b999f4cfe3ddb3f2aadae4e61c6f4ca7b5a48f5824308487be9b75b8911"
+    },
+    "batou": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-batou-theme/HEAD/colors.toml",
+      "colors": [
+        "#121212",
+        "#e19e74",
+        "#a5a297",
+        "#c6c4b0",
+        "#605d5b",
+        "#8a8575",
+        "#C2BBB0",
+        "#dbd9d3"
+      ],
+      "sha256": "c52081b975fb2a772031ac7b61fdc7f6348e8454780feaab63c85cd61f366dd0"
+    },
+    "sapphire": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-sapphire-theme/HEAD/colors.toml",
+      "colors": [
+        "#060d1f",
+        "#e95c4b",
+        "#6488EA",
+        "#d5edeb",
+        "#f7c3c6",
+        "#85cec4",
+        "#fff6d2",
+        "#e1e9f5"
+      ],
+      "sha256": "891d2677a0355b62b091899908e0c5e40c1c33dd8badc63632f8f196f4a29604"
+    },
+    "mechanoonna": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-mechanoonna-theme/HEAD/colors.toml",
+      "colors": [
+        "#1c1b19",
+        "#c5564a",
+        "#a89984",
+        "#ebdbb2",
+        "#908d88",
+        "#afa499",
+        "#d4bd99",
+        "#fbf1c7"
+      ],
+      "sha256": "f6468734a7e74050c17c4a5fd34c1867c13aacce4011d8dadf8cb424fdbd3fa8"
+    },
+    "blackmoney": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-blackmoney-theme/HEAD/colors.toml",
+      "colors": [
+        "#0C0C0C",
+        "#dd5670",
+        "#2a593f",
+        "#525b54",
+        "#d8d4b4",
+        "#689e80",
+        "#88c6a3",
+        "#ece4d4"
+      ],
+      "sha256": "e305db565c95959d4380733407293ee8608692fb7c9ab7c7e38d422bc5531947"
+    },
+    "shadesofjade": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-shadesofjade-theme/HEAD/colors.toml",
+      "colors": [
+        "#00110b",
+        "#ff3370",
+        "#00a86b",
+        "#D1FFb0",
+        "#FF6600",
+        "#8fc85c",
+        "#80d4b5",
+        "#FFF7F2"
+      ],
+      "sha256": "77845454a86610712f4e39ea4414e948f5c474f1b873ea2ed09c547c7faa44ae"
+    },
+    "lasthorizon": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-lasthorizon-theme/HEAD/colors.toml",
+      "colors": [
+        "#0c0b0c",
+        "#c38b7b",
+        "#87a9b0",
+        "#6B5E73",
+        "#b59790",
+        "#c4d8e2",
+        "#a5a0b6",
+        "#cfd3cd"
+      ],
+      "sha256": "050b423941fdd5a4113dd0538a25c9566ae529226c99913174d3a03d529f7426"
+    },
+    "velvetnight": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-velvetnight-theme/HEAD/colors.toml",
+      "colors": [
+        "#0A101F",
+        "#811139",
+        "#5C637A",
+        "#e5af1b",
+        "#9099a5",
+        "#e2687c",
+        "#C24F40",
+        "#F5ECDF"
+      ],
+      "sha256": "05a68f607e362a2246dacc7ff9631123ffb7a8ce0f52312c57f7daf3df184e53"
+    },
+    "whitegold": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-whitegold-theme/HEAD/colors.toml",
+      "colors": [
+        "#DEDBC8",
+        "#4B0304",
+        "#725c0a",
+        "#2E311A",
+        "#005C32",
+        "#762b2f",
+        "#3B3B3B",
+        "#665e4a"
+      ],
+      "sha256": "611c3b255d3ee959f67668078b6e72b0d7548badd8a040ceb1f99652f0a286de"
+    },
+    "harbordark": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-harbordark-theme/HEAD/colors.toml",
+      "colors": [
+        "#1B1B1B",
+        "#F44336",
+        "#e75a50",
+        "#a99b7a",
+        "#e58980",
+        "#77838a",
+        "#6d6d6d",
+        "#E1CE98"
+      ],
+      "sha256": "fdfe2fa61059c70277c8eafdb65f4d235dbbeb504c6389398b81221663a86385"
+    },
+    "harbor": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-harbor-theme/HEAD/colors.toml",
+      "colors": [
+        "#dfe4c4",
+        "#b14752",
+        "#556753",
+        "#dc8164",
+        "#4c6c94",
+        "#8a5b81",
+        "#3d727d",
+        "#384f54"
+      ],
+      "sha256": "4aa3d1766f345da8e19455431cca7c5623b80ace29ae2e08b79a1a2134778df6"
+    },
+    "solitude": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-solitude-theme/HEAD/colors.toml",
+      "colors": [
+        "#101315",
+        "#565d60",
+        "#9fa5a9",
+        "#d9dbdc",
+        "#798186",
+        "#aeaeae",
+        "#707070",
+        "#cbc2be"
+      ],
+      "sha256": "55a651397ebe67de12305344911ec385a92b79bf8717bbf82c5d849f725f656e"
+    },
+    "oxocarbon": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-oxocarbon-theme/HEAD/colors.toml",
+      "colors": [
+        "#161616",
+        "#3ddbd9",
+        "#33b1ff",
+        "#ee5396",
+        "#42be65",
+        "#be95ff",
+        "#ff7eb6",
+        "#f2f4f8"
+      ],
+      "sha256": "9290c73aaeac9e3b1c71570b3a0e84e38d98ca798e136655d687ebb97bd9dfc9"
+    },
+    "turbonite": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-turbonite-theme/HEAD/colors.toml",
+      "colors": [
+        "#0B0C0C",
+        "#f24331",
+        "#6E6A64",
+        "#ed9a1d",
+        "#847B4E",
+        "#A7A483",
+        "#EBD698",
+        "#CAC8C4"
+      ],
+      "sha256": "0725fcaee8bc3e08a60c3fd4ebad1db4af4cd7a5defabf8f793625cb20980227"
+    },
+    "greek-noir": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-greek-noir-theme/HEAD/colors.toml",
+      "colors": [
+        "#171717",
+        "#aeab94",
+        "#F25623",
+        "#757864",
+        "#88A57D",
+        "#F56E0F",
+        "#7b837b",
+        "#a6ada6"
+      ],
+      "sha256": "3074e58656fc457b60ca3f8ab7653884adb18ec24a1147fad0d03c16be62f5b4"
+    },
+    "saga": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-saga-theme/HEAD/colors.toml",
+      "colors": [
+        "#05080a",
+        "#ff9fbc",
+        "#baf7b5",
+        "#fff6c3",
+        "#b2fff3",
+        "#dfbaff",
+        "#ffc79b",
+        "#f3ceff"
+      ],
+      "sha256": "9b07228d6c3a9b15dced189818f33793ab0b791885578961999ead77e5e598ae"
+    },
+    "kanso": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-kanso-theme/HEAD/colors.toml",
+      "colors": [
+        "#090E13",
+        "#c4746e",
+        "#8a9a7b",
+        "#c4b28a",
+        "#8ba4b0",
+        "#a292a3",
+        "#8ea4a2",
+        "#c8c093"
+      ],
+      "sha256": "76868b4738b69c7e67eb4a8507391e4c22677fcd2c8a29e4823c691dab268ea8"
+    },
+    "ryu": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-ryu-theme/HEAD/colors.toml",
+      "colors": [
+        "#050505",
+        "#da614e",
+        "#8B9388",
+        "#51605b",
+        "#75897F",
+        "#C2A46D",
+        "#717C7C",
+        "#D6D0C5"
+      ],
+      "sha256": "514f21e82f0ee7b044c9209eb1ae1165d8096e701236762f0483283c49d1d60d"
+    },
+    "dos-moos": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-dos-moos-theme/HEAD/colors.toml",
+      "colors": [
+        "#131516",
+        "#F0334A",
+        "#819890",
+        "#F4E276",
+        "#A5B5AB",
+        "#72856C",
+        "#6d877d",
+        "#d5dbd7"
+      ],
+      "sha256": "db4b7d7080bc6620d08159f99b378144fda31a36fb159e0be2681228f91cf70a"
+    },
+    "banish": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-banish-theme/HEAD/colors.toml",
+      "colors": [
+        "#0c0b0d",
+        "#ff4a78",
+        "#f2f2ea",
+        "#8F57FF",
+        "#6C70E0",
+        "#bd5cff",
+        "#53b1ca",
+        "#D8D1CC"
+      ],
+      "sha256": "b62730aaf48e6a41949948a63051689b013111eab7498e8a9bc4729cdc373771"
+    }
+  }
+}

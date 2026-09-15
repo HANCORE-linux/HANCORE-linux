@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 360" role="img" aria-labelledby="title desc">
+  <title id="title">HANCORE</title>
+  <desc id="desc">The HANCORE wordmark and constructed H in warm cream and orange on charcoal.</desc>
+  <rect width="1600" height="360" fill="#0a0c0d"/>
+  <path d="M64 56V304" stroke="#df6124" stroke-width="6"/>
+  <path d="M106 304H1000" stroke="#393c3b"/>
+  <text x="103" y="248" font-family="Nimbus Sans Narrow, Arial Narrow, sans-serif" font-weight="700" font-size="210" letter-spacing="3" fill="#ebe5d6">HANCORE</text>
+  <g stroke="#343736" fill="none">
+    <path d="M1184 50V310M1450 50V310M1148 72H1486M1148 288H1486"/>
+    <circle cx="1317" cy="180" r="133"/>
+    <path d="M1148 180H1486"/>
+  </g>
+  <g transform="translate(1163 26) scale(.6)" fill="#ebe5d6">
+    <path d="M80 64h104v144l24 24v48l-24 24v144H80V320l32-32v-64l-32-32V64Z"/>
+    <path d="M328 64h104v128l-32 32v64l32 32v128H328V304l-24-24v-48l24-24V64Z"/>
+    <path d="M184 208h144v96H184z"/>
+    <path fill="#df6124" d="M220 240h72v32h-72z"/>
+  </g>
+  <g fill="#df6124"><circle cx="1184" cy="72" r="4"/><circle cx="1450" cy="288" r="4"/></g>
+</svg>

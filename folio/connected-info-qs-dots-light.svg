@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1872" height="544" viewBox="0 0 936 272">
+  <title>info-qs-dots — independent card with decorative connection route</title>
+  <image x="0" y="40" width="624" height="192" xlink:href="assets/info-qs-dots-light.png" />
+  <path d="M0 0V272M624 0V272M624 120H600" fill="none" stroke="#a1a6ab" stroke-width="2.5" />
+  <path d="M624 24V60" fill="none" stroke="#41474d" stroke-width="3.5" />
+  <path d="M600 113V127" fill="none" stroke="#41474d" stroke-width="3" />
+  
+</svg>

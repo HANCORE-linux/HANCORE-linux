@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1872" height="544" viewBox="0 0 936 272">
+  <title>info-waybar — independent card with decorative connection route</title>
+  <image x="312" y="40" width="624" height="192" xlink:href="assets/info-waybar-dark.png" />
+  <path d="M312 0V272M936 0V272M312 120H336" fill="none" stroke="#48525b" stroke-width="2.5" />
+  <path d="M312 204V240" fill="none" stroke="#e8e3d9" stroke-width="3.5" />
+  <path d="M336 113V127" fill="none" stroke="#e8e3d9" stroke-width="3" />
+  
+</svg>

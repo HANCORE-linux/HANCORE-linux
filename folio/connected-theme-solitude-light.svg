@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="1360" viewBox="0 0 624 680">
+  <title>theme-solitude — independent card with decorative connection route</title>
+  <image x="0" y="120" width="624" height="492" xlink:href="collection/assets/solitude-light.png" />
+  <path d="M624 48H312V136M312 592V680" fill="none" stroke="#a1a6ab" stroke-width="2.5" />
+  <path d="M468 48H524" fill="none" stroke="#41474d" stroke-width="3.5" />
+  <path d="M301 136H323M301 592H323" fill="none" stroke="#41474d" stroke-width="3" />
+  
+</svg>

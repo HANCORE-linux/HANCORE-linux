@@ -1,0 +1,8 @@
+[
+  {"repo":"Shibumi-Shell","description":"A configurable shell for Omarchy.","language":"QML","color":"#44a51c"},
+  {"repo":"OmaQ","description":"Invite-only chat for Omarchy.","language":"QML","color":"#44a51c"},
+  {"repo":"waybar-themes","description":"Waybar layouts and themes.","language":"CSS","color":"#663399"},
+  {"repo":"quickshell-dots","description":"Rise: layouts, widgets and visual pickers.","language":"QML","color":"#44a51c"},
+  {"repo":"omarchy-banish-theme","description":"Dark surfaces and a sharp contrast.","language":null,"color":null},
+  {"repo":"omarchy-plugin-marketplace","owner":"omacom","description":"Discover and share Omarchy plugins.","language":null,"color":null}
+]
