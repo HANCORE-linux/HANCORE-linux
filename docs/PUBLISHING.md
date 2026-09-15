@@ -8,8 +8,9 @@ This is native GitHub Markdown, not a website.
 ## Source and export
 
 Edit `folio/README.md` outside its generated regions and use the generators
-for cards, labels and archive content. The source thank-you page is
-`folio/ACKNOWLEDGEMENTS.md`. Images stay in `folio/assets/` and
+for cards, labels and archive content. Edit acknowledgement names, roles and
+links in `folio/acknowledgements.json`; `folio/ACKNOWLEDGEMENTS.md` is generated.
+Images stay in `folio/assets/` and
 `folio/collection/assets/`. The exporter rebases image paths without changing
 the approved images, layout or independent repository links.
 
@@ -76,11 +77,22 @@ python scripts/export_profile.py --write
 python scripts/export_profile.py --check
 ```
 
-The local preview can then be rerendered as above. A short native bio and total
-badge are configured in `folio/profile-summary.json`; the total's complete
+The local preview can then be rerendered as above. The bio and total badge are
+configured in `folio/profile-summary.json`. The bio uses the same chamfered
+mount and IBM Plex Sans as the cards, at about 18 px: two lines on wide screens,
+six reflowed lines on narrow screens, with the full wording in image alt text.
+The subtitle follows the bio. The larger total badge (54 px canvas height,
+about 16.5 px lettering) sits directly below the archive CTA, before social icons.
+These use native Markdown pictures, not README CSS. The total's complete
 public repository list and provenance live in `folio/total-stars.json`.
-Both archive return links target `https://github.com/HANCORE-linux`, not the
-repository's README view.
+All three return links (archive top/bottom and acknowledgements) target
+`https://github.com/HANCORE-linux`, not the repository's README view.
+
+The separate acknowledgements page uses one linked card per person, vertically
+stacked at every screen size. Each card has a square public GitHub portrait on
+the left and centered Plex name/role to its right. Names, roles and original
+destinations are configured in `folio/acknowledgements.json`. Portrait sources
+are preserved and checked by hash; the daily star job does not refetch them.
 
 GitHub can delay scheduled jobs. In public repositories it can disable schedules
 after 60 days without repository activity; re-enable the workflow in Actions if

@@ -1,0 +1,80 @@
+{
+  "fetched_at": "2026-09-15T19:32:03.079737+00:00",
+  "note": "Public GitHub profile avatars; unchanged raster sources, rights remain with their owners.",
+  "avatars": {
+    "amit": {
+      "github": "vyrx-dev",
+      "github_id": 139481531,
+      "url": "https://avatars.githubusercontent.com/u/139481531?v=4&s=256",
+      "path": "sources/avatar-amit.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "dfadd497c3ba5749bb6db73ce9e75ec27478375079dc98646cb90862dd17a53d"
+    },
+    "oldjobobo": {
+      "github": "OldJobobo",
+      "github_id": 212266,
+      "url": "https://avatars.githubusercontent.com/u/212266?v=4&s=256",
+      "path": "sources/avatar-oldjobobo.jpg",
+      "width": 256,
+      "height": 256,
+      "sha256": "e0e4b094d224d8d2547a6b10841d08777541964eff61580fbcd1eb7908c1130b"
+    },
+    "miqim": {
+      "github": "tahfizhabib",
+      "github_id": 200197783,
+      "url": "https://avatars.githubusercontent.com/u/200197783?v=4&s=256",
+      "path": "sources/avatar-miqim.jpg",
+      "width": 256,
+      "height": 256,
+      "sha256": "efd770ad7026a8e2f4c450350fb5086f745b47c99d75f6a6f3895f293f45430b"
+    },
+    "bypass": {
+      "github": "imbypass",
+      "github_id": 13155155,
+      "url": "https://avatars.githubusercontent.com/u/13155155?v=4&s=256",
+      "path": "sources/avatar-bypass.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "cbb1a40d9a834a6ff093fa75956d39af7dc79e49d5e314637ee8da26eb2fb45d"
+    },
+    "bjarneo": {
+      "github": "bjarneo",
+      "github_id": 1419214,
+      "url": "https://avatars.githubusercontent.com/u/1419214?v=4&s=256",
+      "path": "sources/avatar-bjarneo.jpg",
+      "width": 256,
+      "height": 256,
+      "sha256": "3ec6f62404b89a83d8f32c4b5fc4091db5b6be0e5582fb8ba2f3ff3e408a4e26"
+    },
+    "taha": {
+      "github": "tahayvr",
+      "github_id": 77543049,
+      "url": "https://avatars.githubusercontent.com/u/77543049?v=4&s=256",
+      "path": "sources/avatar-taha.jpg",
+      "width": 256,
+      "height": 256,
+      "sha256": "514acf66489db1cc333d801407a0d920cf558094d2f81224131b2f76ba088fe0"
+    },
+    "dhh": {
+      "github": "dhh",
+      "github_id": 2741,
+      "url": "https://avatars.githubusercontent.com/u/2741?v=4&s=256",
+      "path": "sources/avatar-dhh.jpg",
+      "width": 256,
+      "height": 256,
+      "sha256": "60154ea850afc573ce368c9019fe36a780665f20074974c9151143bdb68999ea"
+    },
+    "ryan-hughes": {
+      "github": "ryanrhughes",
+      "github_id": 1630358,
+      "url": "https://avatars.githubusercontent.com/u/1630358?v=4&s=256",
+      "path": "sources/avatar-ryan-hughes.jpg",
+      "width": 256,
+      "height": 256,
+      "sha256": "3af988004b7b71bb87ad354a784f153f810ae59da665608eda3915cd251cfca8",
+      "fetched_at": "2026-09-15T19:38:27.154106+00:00"
+    }
+  },
+  "last_updated": "2026-09-15T19:38:27.154106+00:00"
+}

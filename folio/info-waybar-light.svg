@@ -5,5 +5,5 @@
   <path d="M24 16H600V142L578 164H24Z" fill="#e9e7e0" stroke="#c6c5bf" stroke-width="1.5" />
   <text x="312" y="72" text-anchor="middle" fill="#262522" font-family="IBM Plex Sans" font-size="40" font-weight="600">Waybar themes</text>
   <text x="312" y="126" text-anchor="middle" fill="#50565b" font-family="IBM Plex Sans" font-size="34" font-weight="500">For the bar.</text>
-  
+
 </svg>

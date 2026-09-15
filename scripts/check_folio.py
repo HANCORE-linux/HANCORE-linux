@@ -15,7 +15,8 @@ from folio_details import detail_cards, SOCIALS, SHIPS_WITH_ADVANCE, ACCENT_INK
 from folio_labels import labels, label_dimensions
 from folio_connections import specs as connection_specs, connected_picture
 from folio_register import contrast
-from folio_summary import summary_html, snapshot as total_snapshot, settings as summary_settings
+from folio_summary import summary_html, total_badge_html, snapshot as total_snapshot, settings as summary_settings
+from folio_acknowledgements import people as acknowledged_people, acknowledgement_markdown
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -233,7 +234,7 @@ def main():
         assert record['url'] == badge_url(slug, record['stars'] if record.get('api_snapshot') else None)
         assert isinstance(snapshot['badges'][slug]['stars'], int)
     themes = json.loads((ROOT / 'data/themes.json').read_text())
-    assert parsed.images == 16 + len(popular), parsed.images
+    assert parsed.images == 17 + len(popular), parsed.images
     totals = total_snapshot()
     if all(record.get('api_snapshot') for record in snapshot['badges'].values()):
         archive_sources = json.loads((ROOT / 'folio/collection/sources.json').read_text())
@@ -243,10 +244,25 @@ def main():
             slug = theme['slug']
             record = snapshot['badges'].get(slug) or archive_sources['themes'][slug]['badge']
             assert record['stars'] == ranking[slug] == repos[f'HANCORE-linux/omarchy-{slug}-theme'], f'Inconsistent star counts: {slug}'
-    assert summary_html() in (ROOT / 'folio/README.md').read_text()
+    readme = (ROOT / 'folio/README.md').read_text()
+    assert summary_html() in readme and total_badge_html() in readme
+    assert readme.index('bio-wide-dark.png') < readme.index('label-subtitle-dark.png') < readme.index('connected-shibumi-dark.png')
+    assert readme.index('connected-info-archive-dark.png') < readme.index('total-stars-dark.png') < readme.index('social-discord-dark.png')
     assert len(summary_settings()['bio']) == 2
     ns = {'s': 'http://www.w3.org/2000/svg'}
     for mode in ('dark', 'light'):
+        for size, width, height in [('wide', 1872, 192), ('narrow', 704, 406)]:
+            bio = ET.parse(ROOT / f'folio/bio-{size}-{mode}.svg').getroot()
+            lines = bio.findall('s:text', ns)
+            assert ' '.join(line.text for line in lines) == ' '.join(summary_settings()['bio']), 'Bio words changed during reflow'
+            assert len(lines) == (2 if size == 'wide' else 6)
+            assert all(line.get('font-family') == 'IBM Plex Sans' and line.get('font-size') == '46' for line in lines)
+            assert all(line.get('text-anchor') == 'middle' and line.get('x') == str(width // 2) for line in lines)
+            paths = bio.findall('s:path', ns)
+            assert len(paths) == 2 and paths[0].get('filter') == 'url(#float)'
+            assert paths[1].get('fill') == ('#191c1e' if mode == 'dark' else '#e9e7e0')
+            assert all(contrast(paths[1].get('fill'), line.get('fill')) >= 4.5 for line in lines)
+            assert struct.unpack('>II', (ROOT / f'folio/assets/bio-{size}-{mode}.png').read_bytes()[16:24]) == (width * 2, height * 2)
         svg = ET.parse(ROOT / f'folio/total-stars-{mode}.svg').getroot()
         assert svg.find('s:image', ns).get('{http://www.w3.org/1999/xlink}href') == 'sources/badge-total-stars.svg'
         assert svg.find('s:image', ns).get('clip-path') == 'url(#badge-cut)'
@@ -264,10 +280,30 @@ def main():
     thanks_source = (ROOT / 'folio/ACKNOWLEDGEMENTS.md').read_text()
     thanks = Check()
     thanks.feed(thanks_source)
-    assert thanks.images == 1 and len(thanks.links) == 8
-    assert thanks_source.count('<li>') == 7
-    for name, role in [('Amit', 'Content Creator'), ('OldJobobo', 'Minister of Taste'), ('Miqim', 'Visual Stylist'), ('Bypass', 'Theme-hook-script'), ('bjarneo', 'Aether'), ('Taha', 'Omarchist'), ('DHH', 'Omarchy')]:
-        assert f'>{name}</a> / {role}</li>' in thanks_source
+    assert thanks.images == len(acknowledged_people()) + 1 and len(thanks.links) == len(acknowledged_people()) + 1
+    assert thanks_source == acknowledgement_markdown() and '<li>' not in thanks_source
+    assert thanks.links.count('https://github.com/HANCORE-linux') == 1 and './README.md' not in thanks.links
+    assert 'https://github.com/dhh' in thanks.links and 'https://github.com/basecamp/omarchy' not in thanks.links
+    for name, role in [('Amit', 'Content Creator'), ('OldJobobo', 'Minister of Taste'), ('Miqim', 'Visual Stylist'), ('Bypass', 'Theme-hook-script'), ('bjarneo', 'Aether'), ('Taha', 'Omarchist'), ('DHH', 'Omarchy'), ('Ryan Hughes', 'Omarchy-dev')]:
+        assert f'alt="{name} / {role}"' in thanks_source
+    avatars = json.loads((ROOT / 'folio/avatar-sources.json').read_text())['avatars']
+    for person in acknowledged_people():
+        assert person['url'] in thanks.links
+        avatar = avatars[person['slug']]
+        assert avatar['github'].casefold() == person['github'].casefold()
+        assert hashlib.sha256((ROOT / 'folio' / avatar['path']).read_bytes()).hexdigest() == avatar['sha256']
+        for mode in ('dark', 'light'):
+            svg = ET.parse(ROOT / f'folio/thanks-{person["slug"]}-{mode}.svg').getroot()
+            portrait = svg.find('s:image', ns)
+            assert [portrait.get(key) for key in ('x', 'y', 'width', 'height')] == ['36', '42', '128', '128']
+            assert 'clip-path' not in portrait.attrib and 'filter' not in portrait.attrib, 'Keep square original avatars'
+            assert portrait.get('{http://www.w3.org/1999/xlink}href') == avatar['path']
+            texts = svg.findall('s:text', ns)
+            assert [node.text for node in texts] == [person['name'], person['role']]
+            assert all(node.get('text-anchor') == 'middle' and node.get('x') == '392' and node.get('font-family') == 'IBM Plex Sans' for node in texts)
+            mount = svg.findall('s:path', ns)[1]
+            assert mount.get('d') == 'M24 16H600V174L578 196H24Z'
+            assert all(contrast(mount.get('fill'), node.get('fill')) >= 4.5 for node in texts)
     assert 'Credits' not in thanks_source and 'Contributions' not in thanks_source
     archive = Check()
     archive.feed((ROOT / 'folio/THEMES.md').read_text())
@@ -287,6 +323,8 @@ def main():
     expected_assets.update(f'badge-{work["theme_slug"]}-{mode}.png' for work in popular for mode in ['dark','light'])
     expected_assets.add('omarchy-wordmark-orange.png')
     expected_assets.update(f'total-stars-{mode}.png' for mode in ('dark', 'light'))
+    expected_assets.update(f'bio-{size}-{mode}.png' for size in ('wide', 'narrow') for mode in ('dark', 'light'))
+    expected_assets.update(f'thanks-{person["slug"]}-{mode}.png' for person in acknowledged_people() for mode in ('dark', 'light'))
     expected_assets.update(f'palette-{theme["slug"]}.png' for theme in themes)
     expected_assets.update(f'info-{card["slug"]}-{mode}.png' for card in detail_cards(themes, highlights) for mode in ('dark', 'light'))
     expected_assets.update(f'social-{slug}-{mode}.png' for slug, _, _ in SOCIALS for mode in ('dark', 'light'))

@@ -32,7 +32,7 @@ def detail_cards(themes, highlights):
     return cards
 
 
-def detail_svg(card, mode, *, width=624, caption_size=34, caption_weight=500):
+def detail_svg(card, mode, *, width=624, title_size=40, caption_size=34, caption_weight=500):
     dark = mode == 'dark'
     paper, edge, ink, secondary = ('#191c1e', '#353a3d', '#e8e3d9', '#bfc4c9') if dark else ('#e9e7e0', '#c6c5bf', '#262522', '#50565b')
     opacity = '0.48' if dark else '0.19'
@@ -47,9 +47,9 @@ def detail_svg(card, mode, *, width=624, caption_size=34, caption_weight=500):
   <defs><filter id="float" x="-15%" y="-50%" width="130%" height="210%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="8" /><feOffset dy="10" /></filter></defs>
   <path d="{outline}" fill="#000000" opacity="{opacity}" filter="url(#float)" />
   <path d="{outline}" fill="{paper}" stroke="{edge}" stroke-width="1.5" />
-  <text x="{center}" y="72" text-anchor="middle" fill="{title_ink}" font-family="IBM Plex Sans" font-size="40" font-weight="600">{escape(card['title'])}</text>
+  <text x="{center}" y="72" text-anchor="middle" fill="{title_ink}" font-family="IBM Plex Sans" font-size="{title_size}" font-weight="600">{escape(card['title'])}</text>
   <text x="{caption_x}" y="126" text-anchor="middle" fill="{secondary}" font-family="IBM Plex Sans" font-size="{caption_size}" font-weight="{caption_weight}">{escape(card['caption'])}</text>
-  {brand}
+{('  ' + brand) if brand else ''}
 </svg>'''
 
 

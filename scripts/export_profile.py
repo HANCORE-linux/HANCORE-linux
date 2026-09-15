@@ -2,6 +2,7 @@
 """Export the approved folio to the GitHub profile root; never commit or push."""
 import argparse
 from html.parser import HTMLParser
+import json
 from pathlib import Path
 import re
 from urllib.parse import urlsplit
@@ -48,8 +49,9 @@ class References(HTMLParser):
 
 
 def verify(documents):
-    expected_counts = {'README.md': (22, 19), 'THEMES.md': (28, 29),
-                       'ACKNOWLEDGEMENTS.md': (1, 8)}
+    acknowledgements_count = len(json.loads((ROOT / 'folio/acknowledgements.json').read_text())['people']) + 1
+    expected_counts = {'README.md': (23, 19), 'THEMES.md': (28, 29),
+                       'ACKNOWLEDGEMENTS.md': (acknowledgements_count, acknowledgements_count)}
     references = set()
     for name, source in documents.items():
         parsed = References()
@@ -63,7 +65,9 @@ def verify(documents):
             assert parsed.links.count('https://github.com/HANCORE-linux') == 2
             assert './README.md' not in parsed.links
         else:
-            assert './README.md' in parsed.links
+            assert parsed.links.count('https://github.com/HANCORE-linux') == 1
+            assert './README.md' not in parsed.links
+            assert 'https://github.com/dhh' in parsed.links
     return references
 
 

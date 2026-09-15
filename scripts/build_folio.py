@@ -18,7 +18,8 @@ from folio_badges import badge_svg
 from folio_details import detail_cards, detail_svg, social_svg, SOCIALS
 from folio_labels import labels, label_svg, label_picture
 from folio_connections import connected_svg, connected_picture, specs as connection_specs
-from folio_summary import summary_html, snapshot as total_snapshot
+from folio_summary import bio_svg, summary_html, total_badge_html, snapshot as total_snapshot
+from folio_acknowledgements import people as acknowledged_people, acknowledgement_svg, acknowledgement_markdown
 
 ROOT = Path(__file__).resolve().parents[1]
 FOLIO = ROOT / 'folio'
@@ -69,6 +70,8 @@ def inputs():
             FOLIO / 'social-sources.json', FOLIO / 'sources/kofi-icon.avif', FOLIO / 'ACKNOWLEDGEMENTS.md',
             FOLIO / 'popular-themes.json', FOLIO / 'identity.json',
             ROOT / 'scripts/folio_summary.py', ROOT / 'scripts/refresh_folio_totals.py',
+            ROOT / 'scripts/folio_acknowledgements.py', FOLIO / 'acknowledgements.json', FOLIO / 'avatar-sources.json',
+            *[FOLIO / avatar['path'] for avatar in json.loads((FOLIO / 'avatar-sources.json').read_text())['avatars'].values()],
             FOLIO / 'profile-summary.json', FOLIO / 'total-stars.json',
             FOLIO / 'badge-snapshot.json', *sorted((FOLIO / 'sources').glob('*.svg')),
             FOLIO / 'palettes.json', *sorted((FOLIO / 'sources/palettes').glob('*.toml')),
@@ -134,9 +137,7 @@ def readme_content(markdown):
     <source media="(prefers-color-scheme: dark)" srcset="./assets/wordmark-{selected}-dark.png" />
     <img src="./assets/wordmark-{selected}-light.png" alt="HANCORE" width="220" height="{display_height}" />
   </picture>
-  <br />
-  {label_picture('subtitle', len(themes))}
-</p>\n\n{summary_html()}'''
+</p>\n\n{summary_html()}\n\n<p align="center">{label_picture('subtitle', len(themes))}</p>'''
     details = detail_cards(themes, highlights)
     connections = {s['slug']: s for s in connection_specs(popular_works(), details)}
     project_rows = [''.join(connected_picture(connections[slug], url, alt) for slug, url, alt in FEATURED)]
@@ -159,7 +160,7 @@ def readme_content(markdown):
     archive = next(card for card in details if card['group'] == 'index')
     archive_picture = connected_picture(connections['info-archive'], archive['url'], f'{archive["title"]} — {archive["caption"]}')
     gallery = '<p align="center">' + label_picture('popular', len(themes)) + '</p>\n\n<p align="center">' + ''.join(cells[:3]) + '<br />' + ''.join(cells[3:]) + '<br />' + archive_picture + '</p>'
-    index = '<!-- The archive link is the final node of the connected theme group above. -->'
+    index = total_badge_html()
     footer = '<p align="center">\n' + '\n'.join(f'  <a href="{url}" title="{label}"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/social-{slug}-dark.png" /><img src="./assets/social-{slug}-light.png" alt="{label}" width="44" height="44" /></picture></a>' for slug, label, url in SOCIALS) + '\n</p>'
     for name, body in [('identity', heading), ('projects', projects), ('highlights', table), ('popular-themes', gallery), ('theme-index', index), ('social', footer)]:
         pattern = rf'(<!-- BEGIN GENERATED: {name} -->).*?(<!-- END GENERATED: {name} -->)'
@@ -277,9 +278,11 @@ def main():
                 assert checksum(ROOT / name) == digest, f'Stale {section}: {name}'
         markdown = (FOLIO / 'README.md').read_text()
         assert readme_content(markdown) == markdown, 'Stale highlights or theme index'
+        assert (FOLIO / 'ACKNOWLEDGEMENTS.md').read_text() == acknowledgement_markdown(), 'Stale acknowledgement cards'
         print('OK folio source and export hashes')
         return
     outputs = []
+    (FOLIO / 'ACKNOWLEDGEMENTS.md').write_text(acknowledgement_markdown())
     social_sources = json.loads((FOLIO / 'social-sources.json').read_text())
     for source in social_sources['files']:
         assert checksum(FOLIO / source['path']) == source['sha256'], f'Changed social source: {source["path"]}'
@@ -334,7 +337,9 @@ def main():
             matched = subprocess.check_output(['fc-match', '-f', '%{family}', style['family']], env=env, text=True)
             assert style['family'] in matched.split(','), f'Font fallback for {style["family"]}: {matched}'
         for mode, ink in INK.items():
-            compositions = [('signature', signature(ink)), ('mark-logo', logo_svg(ink, mark=True)), ('mark-core', signet_svg(mark=True)), *[(w['slug'], tile(w, ink)) for w in works],
+            compositions = [('signature', signature(ink)), ('mark-logo', logo_svg(ink, mark=True)), ('mark-core', signet_svg(mark=True)),
+                            ('bio-wide', bio_svg(mode)), ('bio-narrow', bio_svg(mode, wide=False)), *[(w['slug'], tile(w, ink)) for w in works],
+                            *[(f'thanks-{person["slug"]}', acknowledgement_svg(person, mode)) for person in acknowledged_people()],
                             *[(f'label-{slug}', label_svg(lines, ink, slug)) for slug, lines in labels(len(themes)).items()],
                             *[(f'info-{card["slug"]}', detail_svg(card, mode)) for card in detail_cards(themes, json.loads((FOLIO / 'highlights.json').read_text()))],
                             *[(f'social-{slug}', social_svg(slug, mode)) for slug, _, _ in SOCIALS],

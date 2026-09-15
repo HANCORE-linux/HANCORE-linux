@@ -5,13 +5,11 @@
     <source media="(prefers-color-scheme: dark)" srcset="./folio/assets/wordmark-core-dark.png" />
     <img src="./folio/assets/wordmark-core-light.png" alt="HANCORE" width="220" height="88" />
   </picture>
-  <br />
-  <picture><source media="(prefers-color-scheme: dark)" srcset="./folio/assets/label-subtitle-dark.png" /><img src="./folio/assets/label-subtitle-light.png" alt="Linux themes &amp; interfaces." width="248" height="28" /></picture>
 </p>
 
-<p align="center">Mechanical engineer by trade, open-source enthusiast at heart.<br />Curious about technology, full of ideas, and building for the Omarchy community.</p>
+<p align="center"><picture><source media="(min-width: 1280px) and (prefers-color-scheme: dark)" srcset="./folio/assets/bio-wide-dark.png" width="744" height="76" /><source media="(min-width: 1280px) and (prefers-color-scheme: light)" srcset="./folio/assets/bio-wide-light.png" width="744" height="76" /><source media="(prefers-color-scheme: dark)" srcset="./folio/assets/bio-narrow-dark.png" /><img src="./folio/assets/bio-narrow-light.png" width="280" height="161" alt="Mechanical engineer by trade, with a love for design and development. Curious about technology, full of ideas, and building for the Omarchy community." /></picture></p>
 
-<p align="center"><a href="https://github.com/HANCORE-linux?tab=repositories" title="Public repositories + Omarchy Plugin Marketplace. Forks excluded. Snapshot: 2026-09-15. Stars per project, not unique people."><picture><source media="(prefers-color-scheme: dark)" srcset="./folio/assets/total-stars-dark.png" /><img src="./folio/assets/total-stars-light.png" width="174" height="36" alt="Total project stars: 1,995; public non-fork repositories + Omarchy Plugin Marketplace; checked 2026-09-15" /></picture></a></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="./folio/assets/label-subtitle-dark.png" /><img src="./folio/assets/label-subtitle-light.png" alt="Linux themes &amp; interfaces." width="248" height="28" /></picture></p>
 <!-- END GENERATED: identity -->
 
 <!-- BEGIN GENERATED: projects -->
@@ -31,7 +29,7 @@
 <!-- END GENERATED: popular-themes -->
 
 <!-- BEGIN GENERATED: theme-index -->
-<!-- The archive link is the final node of the connected theme group above. -->
+<p align="center"><a href="https://github.com/HANCORE-linux?tab=repositories" title="Public repositories + Omarchy Plugin Marketplace. Forks excluded. Snapshot: 2026-09-15. Stars per project, not unique people."><picture><source media="(prefers-color-scheme: dark)" srcset="./folio/assets/total-stars-dark.png" /><img src="./folio/assets/total-stars-light.png" width="261" height="54" alt="Total project stars: 1,995; public non-fork repositories + Omarchy Plugin Marketplace; checked 2026-09-15" /></picture></a></p>
 <!-- END GENERATED: theme-index -->
 
 </div>

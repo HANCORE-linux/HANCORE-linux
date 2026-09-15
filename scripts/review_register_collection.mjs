@@ -70,16 +70,41 @@ try {
     fs.writeFileSync(path.join(out,name+'.png'),Buffer.from(shot.data,'base64'));
   };
   await call('Page.enable');await call('Runtime.enable');
+  // Measure every biography line with the bundled variable font, not a fallback.
+  // The image can load successfully even when its lettering exceeds the frame.
+  const bioFont=fs.readFileSync(path.join(root,'folio/type/plex-sans/IBMPlexSans.ttf')).toString('base64');
+  const bioSources=['wide','narrow'].flatMap(size=>['dark','light'].map(mode=>({size,mode,svg:fs.readFileSync(path.join(root,`folio/bio-${size}-${mode}.svg`),'utf8')})));
+  const acknowledged=JSON.parse(fs.readFileSync(path.join(root,'folio/acknowledgements.json'),'utf8')).people;
+  bioSources.push(...acknowledged.flatMap(person=>['dark','light'].map(mode=>({size:'thanks-'+person.slug,mode,svg:fs.readFileSync(path.join(root,`folio/thanks-${person.slug}-${mode}.svg`),'utf8')}))));
+  const bioBounds=await evaluate(`(async()=>{
+    const font=new FontFace('Bio Review','url(data:font/ttf;base64,${bioFont})',{weight:'100 900'});
+    document.fonts.add(await font.load());
+    return ${JSON.stringify(bioSources)}.map(source=>{
+      const svg=new DOMParser().parseFromString(source.svg,'image/svg+xml').documentElement;
+      svg.querySelectorAll('image').forEach(node=>node.remove());
+      document.body.appendChild(svg);
+      const width=svg.viewBox.baseVal.width,height=svg.viewBox.baseVal.height;
+      const lines=[...svg.querySelectorAll('text')].map(node=>{
+        node.setAttribute('font-family','Bio Review');
+        const b=node.getBBox();return {text:node.textContent,x:b.x,y:b.y,right:b.x+b.width,bottom:b.y+b.height};
+      });
+      svg.remove();return {size:source.size,mode:source.mode,width,height,lines};
+    });
+  })()`);
+  for(const bio of bioBounds)for(const line of bio.lines)assert(line.x>=(bio.size.startsWith('thanks-')?184:44)&&line.right<=bio.width-40&&line.y>=24&&line.bottom<=bio.height-40,'Card lettering exceeds its safe frame: '+JSON.stringify({size:bio.size,mode:bio.mode,...line}));
+  console.log('OK every biography and acknowledgement line fits with the bundled Plex font');
   if(!process.argv.includes('--register-only')) {
     for(const [width,mode,view] of [[1440,'dark','profile'],[1440,'light','profile'],[1440,'dark','readme'],[1280,'dark','profile'],[1279,'light','profile'],[1024,'dark','profile'],[900,'light','profile'],[768,'dark','profile'],[390,'dark','profile'],[390,'light','readme'],[320,'light','readme']]) {
       await navigate('folio.html',width,mode,view);
       const m=await metrics();valid(m,width,mode);
-      assert(m.images.length===22&&m.links.length===19,'Main profile count');
+      assert(m.images.length===23&&m.links.length===19,'Main profile count');
       const totalBadge=m.images.find(i=>i.src.endsWith('/total-stars-'+mode+'.png'));
-      assert(totalBadge&&totalBadge.declaredHeight==='36'&&Number(totalBadge.declaredWidth)===totals.badge.width+24,'Small total-star badge');
+      assert(totalBadge&&totalBadge.declaredHeight==='54'&&Number(totalBadge.declaredWidth)===Math.round((totals.badge.width+24)*1.5),'Larger total-star badge');
       assert(totalBadge.alt.includes(totals.total_stars.toLocaleString('en-US'))&&totalBadge.alt.includes('non-fork')&&totalBadge.alt.includes('Omarchy Plugin Marketplace')&&totalBadge.alt.includes('checked '),'Transparent total-star scope/date');
-      const bio=await evaluate('document.querySelector("article").textContent');
-      assert(summary.bio.every(line=>bio.includes(line)),'Missing readable bio');
+      const bio=m.images.find(i=>i.src.includes('/bio-'));
+      assert(bio&&bio.alt===summary.bio.join(' '),'Bio wording and accessible alternative');
+      assert(bio.src.includes('/bio-wide-')===(width>=1280),'Bio must reflow on narrow screens');
+      assert(bio.width>=(width>=1280?700:230),'Bio text scaled too small');
       const cards=m.images.filter(i=>i.fallback.includes('/collection/assets/'));
       assert(cards.length===6&&cards.every((i,n)=>i.fallback.endsWith('/'+popular[n][0]+'-light.png')),'Popular order/count');
       assert(cards.every(i=>i.src.includes('/connected-theme-')===(width>=1280)),'Popular connector breakpoint');
@@ -98,6 +123,7 @@ try {
       const labels=m.images.filter(i=>i.src.includes('/label-'));
       assert(labels.length===2&&labels.every(i=>i.declaredWidth==='248'&&i.declaredHeight==='28'),'Readable section labels');
       assert(labels.map(i=>i.alt).join('|')==='Linux themes & interfaces.|Most starred themes','Section label text');
+      assert(bio.y+bio.height<=labels[0].y&&labels[0].y+labels[0].height<=projects[0].y,'Subtitle must follow the personal text, before projects');
       for(const url of ['https://github.com/HANCORE-linux/OmaQ','https://github.com/omacom/omarchy-plugin-marketplace','https://github.com/HANCORE-linux/waybar-themes','https://github.com/HANCORE-linux/quickshell-dots'])assert(m.links.includes(url),'Lost project '+url);
       const details=m.images.filter(i=>i.fallback.includes('/info-'));
       assert(details.length===6&&details.every(i=>i.declaredWidth==='248'&&i.declaredHeight==='76'),'Info cards or archive card missing');
@@ -118,9 +144,11 @@ try {
       const socials=m.images.filter(i=>i.src.includes('/social-'));
       assert(socials.length===3&&socials.every(i=>i.declaredWidth==='44'&&i.declaredHeight==='44'),'Missing accessible footer icons');
       assert(socials.map(i=>i.alt).join(',')==='Discord,Ko-fi,Acknowledgements','Footer icon order');
+      const archiveCard=details.find(i=>i.alt==='All 27 themes — Open collection →');
+      assert(archiveCard.y+archiveCard.height<=totalBadge.y&&totalBadge.y+totalBadge.height<=socials[0].y,'Total stars must sit below the archive and above the social icons');
       assert(new Set(socials.map(i=>i.y)).size===1&&socials[2].x>socials[1].x,'Acknowledgements must sit to the right of Ko-fi');
       if(width===1440) {
-        assert(m.articleHeight<1660,'Main profile too tall with compact bio and total badge');
+        assert(m.articleHeight<1730,'Main profile too tall with readable bio and total badge');
         assert(new Set(cards.map(i=>Math.round(i.y))).size===2,'Expected 3×2 compact grid');
         assert(new Set(projects.map(i=>Math.round(i.y))).size===1,'Project row changed');
       }
@@ -135,8 +163,8 @@ try {
       const m=await metrics();valid(m,width,mode);
       const archive=route==='collection.html';
       const thanks=route==='folio-acknowledgements.html';
-      assert(m.images.length===(archive?28:thanks?1:22),'Unexpected image count '+route);
-      assert(m.links.length===(archive?29:thanks?8:19),'Unexpected links '+route);
+      assert(m.images.length===(archive?28:thanks?acknowledged.length+1:23),'Unexpected image count '+route);
+      assert(m.links.length===(archive?29:thanks?acknowledged.length+1:19),'Unexpected links '+route);
       if(archive) {
         const archiveCards=m.images.filter(i=>i.src.includes('/collection/assets/'));
         const label=m.images.find(i=>i.src.endsWith('/label-archive-'+mode+'.png'));
@@ -154,8 +182,15 @@ try {
         for(const theme of themes)assert(m.links.includes('https://github.com/HANCORE-linux/omarchy-'+theme.slug+'-theme'),'Missing archive link '+theme.slug);
       } else if(thanks) {
         assert(m.images[0].alt==='Acknowledgements'&&m.images[0].src.endsWith('/label-acknowledgements-'+mode+'.png'),'Acknowledgements heading');
-        const items=await evaluate('[...document.querySelectorAll("article li")].map(li=>li.textContent.trim())');
-        assert(items.join('|')==='Amit / Content Creator|OldJobobo / Minister of Taste|Miqim / Visual Stylist|Bypass / Theme-hook-script|bjarneo / Aether|Taha / Omarchist|DHH / Omarchy','Exact acknowledgements and order');
+        const cards=m.images.slice(1);
+        const items=cards.map(i=>i.alt);
+        assert(items.join('|')==='Amit / Content Creator|OldJobobo / Minister of Taste|Miqim / Visual Stylist|Bypass / Theme-hook-script|bjarneo / Aether|Taha / Omarchist|DHH / Omarchy|Ryan Hughes / Omarchy-dev','Exact acknowledgements and order');
+        assert(cards.every(i=>i.declaredWidth==='248'&&i.declaredHeight==='89'&&i.src.includes('/thanks-')),'Individual acknowledgement mounts');
+        assert(new Set(cards.map(i=>i.y)).size===acknowledged.length&&new Set(cards.map(i=>i.x)).size===1,'Exactly one person per row at every viewport');
+        const people=JSON.parse(fs.readFileSync(path.join(root,'folio/acknowledgements.json'),'utf8')).people;
+        assert(people.every((person,n)=>m.links[n+1]===person.url),'Preserve each person or project link');
+        assert(await evaluate('document.querySelector(\'article img[alt="DHH / Omarchy"]\').closest("a").href === "https://github.com/dhh"'),'DHH must link to his personal profile');
+        assert(await evaluate('document.querySelector(\'article img[alt="Ryan Hughes / Omarchy-dev"]\').closest("a").href === "https://github.com/ryanrhughes"'),'Ryan must link to the requested profile');
         assert(!await evaluate('/Credits|Contributions/.test(document.querySelector("article").textContent)'),'Wrong acknowledgements label');
         assert(!await evaluate('!!document.querySelector(".folio-pins")'),'Acknowledgements should not show profile pins');
       } else if(route==='identity.html') {
@@ -183,8 +218,8 @@ try {
   await call('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',text:'\r',windowsVirtualKeyCode:13});
   await call('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});await loaded();
   assert(await evaluate('location.pathname==="/folio-acknowledgements.html"&&location.search.includes("theme=dark")&&location.search.includes("view=readme")'),'Acknowledgements keyboard link');
-  await evaluate('document.querySelector("article a[href*=folio]").click()');await loaded();
-  assert(await evaluate('location.pathname==="/folio.html"'),'Acknowledgements return link');
+  assert(await evaluate(`[...document.querySelectorAll('article a')].filter(a=>a.textContent.includes('Back to profile')).length===1 && [...document.querySelectorAll('article a')].filter(a=>a.textContent.includes('Back to profile')).every(a=>a.href==='https://github.com/HANCORE-linux')`),'Acknowledgements return link must open the real GitHub profile');
+  await navigate('folio.html',1440,'dark');
   for(const {id} of identity.variants) {
     await evaluate(`document.querySelector('#preview-wordmark').value='${id}';document.querySelector('#preview-wordmark').dispatchEvent(new Event('change'))`);await loaded();
     assert(await evaluate(`document.querySelector('article img').currentSrc.endsWith('wordmark-${id}-dark.png')`),'Wordmark selector '+id);
@@ -205,6 +240,8 @@ try {
     await call('Emulation.setEmulatedMedia',{features:[{name:'prefers-color-scheme',value:mode}]});
     await navigate('folio.html',width,mode);
     const m=await metrics();
+    const nativeBio=m.images.find(i=>i.src.includes('/bio-'));
+    assert(nativeBio?.loaded&&nativeBio.src.includes('/bio-wide-')===(width>=1280),'Bio reflow without scripts');
     const projects=m.images.filter(i=>/\/(?:connected-)?(shibumi|omaq|marketplace)-(dark|light)\.png$/.test(i.src));
     assert(projects.length===3&&projects.every(i=>i.loaded&&i.src.endsWith('-'+mode+'.png')&&i.src.includes('/connected-')===(width>=1280)),'No-JS native picture selection');
     if(width>=1280) {

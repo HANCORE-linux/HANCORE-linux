@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3744" height="384" viewBox="0 0 1872 192">
+  <title>Mechanical engineer by trade, with a love for design and development. — Curious about technology, full of ideas, and building for the Omarchy community.</title>
+  <defs><filter id="float" x="-15%" y="-50%" width="130%" height="210%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="8" /><feOffset dy="10" /></filter></defs>
+  <path d="M24 16H1848V142L1826 164H24Z" fill="#000000" opacity="0.19" filter="url(#float)" />
+  <path d="M24 16H1848V142L1826 164H24Z" fill="#e9e7e0" stroke="#c6c5bf" stroke-width="1.5" />
+  <text x="936" y="72" text-anchor="middle" fill="#262522" font-family="IBM Plex Sans" font-size="46" font-weight="600">Mechanical engineer by trade, with a love for design and development.</text>
+  <text x="936" y="126" text-anchor="middle" fill="#50565b" font-family="IBM Plex Sans" font-size="46" font-weight="500">Curious about technology, full of ideas, and building for the Omarchy community.</text>
+
+</svg>

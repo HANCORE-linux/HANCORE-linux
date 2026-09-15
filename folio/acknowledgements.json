@@ -1,0 +1,12 @@
+{
+  "people": [
+    {"slug": "amit", "name": "Amit", "role": "Content Creator", "github": "vyrx-dev", "url": "https://github.com/vyrx-dev"},
+    {"slug": "oldjobobo", "name": "OldJobobo", "role": "Minister of Taste", "github": "OldJobobo", "url": "https://github.com/OldJobobo"},
+    {"slug": "miqim", "name": "Miqim", "role": "Visual Stylist", "github": "tahfizhabib", "url": "https://github.com/tahfizhabib"},
+    {"slug": "bypass", "name": "Bypass", "role": "Theme-hook-script", "github": "imbypass", "url": "https://github.com/imbypass/omarchy-theme-hook"},
+    {"slug": "bjarneo", "name": "bjarneo", "role": "Aether", "github": "bjarneo", "url": "https://github.com/bjarneo/aether"},
+    {"slug": "taha", "name": "Taha", "role": "Omarchist", "github": "tahayvr", "url": "https://github.com/tahayvr/omarchist"},
+    {"slug": "dhh", "name": "DHH", "role": "Omarchy", "github": "dhh", "url": "https://github.com/dhh"},
+    {"slug": "ryan-hughes", "name": "Ryan Hughes", "role": "Omarchy-dev", "github": "ryanrhughes", "url": "https://github.com/ryanrhughes"}
+  ]
+}

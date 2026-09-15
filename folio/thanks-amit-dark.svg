@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="448" viewBox="0 0 624 224">
+  <title>Amit / Content Creator; public GitHub avatar</title>
+  <defs><filter id="float" x="-15%" y="-50%" width="130%" height="210%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="8" /><feOffset dy="10" /></filter></defs>
+  <path d="M24 16H600V174L578 196H24Z" fill="#000000" opacity="0.48" filter="url(#float)" />
+  <path d="M24 16H600V174L578 196H24Z" fill="#191c1e" stroke="#353a3d" stroke-width="1.5" />
+  <image x="36" y="42" width="128" height="128" xlink:href="sources/avatar-amit.png" />
+  <text x="392" y="96" text-anchor="middle" fill="#e8e3d9" font-family="IBM Plex Sans" font-size="46" font-weight="600">Amit</text>
+  <text x="392" y="150" text-anchor="middle" fill="#bfc4c9" font-family="IBM Plex Sans" font-size="40" font-weight="500">Content Creator</text>
+</svg>

@@ -23,6 +23,10 @@ not relicense third-party fonts, brand marks or imagery.
 - The local preview uses `github-markdown-css`, with its MIT notice retained
   at `scripts/preview/LICENSE-github-markdown-css`. Preview controls, local
   HTML, caches and browser review screenshots are not the GitHub profile.
+- Acknowledgement portraits are the linked contributors' public GitHub avatars.
+  Their original PNG/JPEG bytes, public URLs and hashes are recorded in
+  `folio/avatar-sources.json`. They remain square and unretouched inside the
+  cards. Portrait rights stay with their respective owners, outside this MIT license.
 
 The user-specified acknowledgements appear on the separate
 [Acknowledgements](../ACKNOWLEDGEMENTS.md) page. These notices preserve the
