@@ -28,11 +28,65 @@ does not commit, push, change GitHub account settings or refresh source data.
 Commit and push only after explicit approval. Do not edit the generated root
 pages directly; the read-only export check detects drift from the folio.
 
+The daily star-refresh workflow is the explicitly approved exception: once
+published to `main`, it may commit and push verified star-only refreshes.
+
 Requirements: Python 3.11+, ImageMagick, librsvg (`rsvg-convert`) and
 Fontconfig. Bundled, unmodified fonts carry their SIL OFL notices. A normal
 image build is offline and validates original sources by hash. Star counts
 and rankings are dated snapshots, not live counters; palettes come from the
 actual theme color00–07 configurations.
+
+## Daily star refresh
+
+`.github/workflows/profile-stars.yml` runs at 04:17 UTC each day (05:17 CET /
+06:17 CEST), with a manual **Run workflow** option. It activates after the
+workflow is published to the default branch. No local computer, cron job or
+personal access token is needed.
+Manual runs also exercise the full build when numbers are unchanged, but do not
+publish those unchanged snapshots.
+
+- Total: all public, non-fork repositories owned by `HANCORE-linux`, plus
+  `omacom/omarchy-plugin-marketplace`. Deduplicate by repository ID. These are
+  project stars, not unique people or exclusively account-owned stars.
+- All 27 theme counts and the top-six selection use the same GitHub API
+  snapshot. Ties sort by repository name; only themes above 30 stars qualify.
+- Exact counts are rendered with static black/orange Shields badges, retaining
+  the existing shadow and chamfer. The build preserves screenshots and palettes.
+- When the ranking changes, existing hash-verified screenshots are reused.
+  Only obsolete generated top-six exports are retired; originals remain cached.
+- An unchanged snapshot causes no file changes and no commit, including no
+  date-only commits. Dates in the README therefore describe the last changed
+  snapshot; successful unchanged checks are visible in Actions history.
+- All downloads must succeed and validate before source writes. A failed fetch,
+  build or check prevents publication and leaves the last published state intact.
+- Only the canonical repository's `main` can publish, using the Actions bot's
+  noreply email. No PR trigger, persistent checkout credential or force push.
+  Concurrent human pushes cause a safe non-fast-forward failure; retry manually
+  or wait for the next daily run. Branch rules must permit this bot push.
+
+Local refresh and CI-equivalent checks (no publication):
+
+```bash
+python -m unittest discover -s tests -p 'test_profile_stars.py' -v
+python scripts/refresh_profile_stars.py
+python scripts/build_folio.py
+python scripts/check_folio.py --assets-only
+python scripts/export_profile.py --write
+python scripts/export_profile.py --check
+```
+
+The local preview can then be rerendered as above. A short native bio and total
+badge are configured in `folio/profile-summary.json`; the total's complete
+public repository list and provenance live in `folio/total-stars.json`.
+Both archive return links target `https://github.com/HANCORE-linux`, not the
+repository's README view.
+
+GitHub can delay scheduled jobs. In public repositories it can disable schedules
+after 60 days without repository activity; re-enable the workflow in Actions if
+needed. See the [schedule documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
+Actions are pinned to verified commit SHAs; the only write permission is
+`contents: write` on this publishing job.
 
 ## Local preview
 

@@ -1,24 +1,67 @@
 {
   "verified_on": "2026-09-15",
-  "source": "https://api.github.com/users/HANCORE-linux/repos?sort=created&direction=desc&per_page=100",
+  "source": "https://api.github.com/users/HANCORE-linux/repos?type=owner&per_page=100&page=1",
   "selection": "Non-fork public omarchy-*-theme repositories, stars strictly greater than 30, descending by stars, repository-name tie break, at most six.",
   "minimum_stars_exclusive": 30,
   "limit": 6,
   "star_snapshot": {
-    "solitude": 61, "blackturq": 52, "blackgold": 47, "mechanoonna": 47,
-    "batou": 38, "lasthorizon": 36, "harbordark": 35, "inkypinky": 34,
-    "greek-noir": 30, "dos-moos": 25, "shadesofjade": 24, "kanso": 23,
-    "turbonite": 23, "moodpeak": 22, "sapphire": 21, "harbor": 20,
-    "demon": 17, "thegreek": 17, "oxocarbon": 16, "saga": 15,
-    "whitegold": 14, "oxford": 13, "roseofdune": 13, "blackmoney": 12,
-    "velvetnight": 12, "ryu": 9, "banish": 1
+    "blackturq": 52,
+    "blackgold": 47,
+    "demon": 17,
+    "inkypinky": 34,
+    "oxford": 14,
+    "roseofdune": 13,
+    "moodpeak": 23,
+    "thegreek": 18,
+    "batou": 38,
+    "sapphire": 21,
+    "mechanoonna": 48,
+    "blackmoney": 12,
+    "shadesofjade": 24,
+    "lasthorizon": 36,
+    "velvetnight": 12,
+    "whitegold": 14,
+    "harbordark": 36,
+    "harbor": 20,
+    "solitude": 61,
+    "oxocarbon": 16,
+    "turbonite": 23,
+    "greek-noir": 30,
+    "saga": 15,
+    "kanso": 24,
+    "ryu": 9,
+    "dos-moos": 25,
+    "banish": 4
   },
   "previews": {
-    "solitude": {"branch": "main", "git_blob": "9b38f3186523d4a0b31d33227122da4c2aa925a2"},
-    "blackturq": {"branch": "main", "git_blob": "a2efb216eceaad8d50d144b0a7336759256dae62"},
-    "blackgold": {"branch": "V2-Blackgold", "git_blob": "a6d0713d55cff1c2136035b4654db3135b87cf81"},
-    "mechanoonna": {"branch": "mechanoonna-v2", "git_blob": "c3b5b699afc4b9fb70f1f0076c669921b259649a"},
-    "batou": {"branch": "main", "git_blob": "c4933b628e1f766bb83a6d5c2283ab5b0b18ccca"},
-    "lasthorizon": {"branch": "v2.0.0", "git_blob": "6b5db66b1dacdbcfc1937b5e16ee3acc9469d6e8"}
+    "solitude": {
+      "branch": "main",
+      "git_blob": "9b38f3186523d4a0b31d33227122da4c2aa925a2"
+    },
+    "blackturq": {
+      "branch": "main",
+      "git_blob": "a2efb216eceaad8d50d144b0a7336759256dae62"
+    },
+    "blackgold": {
+      "branch": "V2-Blackgold",
+      "git_blob": "a6d0713d55cff1c2136035b4654db3135b87cf81"
+    },
+    "mechanoonna": {
+      "branch": "mechanoonna-v2",
+      "git_blob": "c3b5b699afc4b9fb70f1f0076c669921b259649a"
+    },
+    "batou": {
+      "branch": "main",
+      "git_blob": "c4933b628e1f766bb83a6d5c2283ab5b0b18ccca"
+    },
+    "lasthorizon": {
+      "branch": "v2.0.0",
+      "git_blob": "6b5db66b1dacdbcfc1937b5e16ee3acc9469d6e8"
+    },
+    "harbordark": {
+      "branch": "HEAD",
+      "git_blob": "fd4d09d8fbd64da21d7e00b3f6259222c253a545",
+      "note": "Reused hash-verified archive screenshot; no new image download."
+    }
   }
 }

@@ -11,6 +11,8 @@ const profile=fs.mkdtempSync(path.join(os.tmpdir(),'hancore-folio-browser-'));
 const base='http://127.0.0.1:8767';
 const themes=JSON.parse(fs.readFileSync(path.join(root,'data/themes.json'),'utf8')).sort((a,b)=>a.name.toLowerCase()<b.name.toLowerCase()?-1:1);
 const identity=JSON.parse(fs.readFileSync(path.join(root,'folio/identity.json'),'utf8'));
+const summary=JSON.parse(fs.readFileSync(path.join(root,'folio/profile-summary.json'),'utf8'));
+const totals=JSON.parse(fs.readFileSync(path.join(root,'folio/total-stars.json'),'utf8'));
 const config=JSON.parse(fs.readFileSync(path.join(root,'folio/popular-themes.json'),'utf8'));
 const popular=Object.entries(config.star_snapshot).filter(([,stars])=>stars>30).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0])).slice(0,6);
 const browser=spawn('chromium',['--headless','--disable-gpu','--no-first-run','--disable-extensions','--disable-background-networking','--user-data-dir='+profile,'--remote-debugging-port=0','about:blank'],{stdio:['ignore','ignore','pipe']});
@@ -72,7 +74,12 @@ try {
     for(const [width,mode,view] of [[1440,'dark','profile'],[1440,'light','profile'],[1440,'dark','readme'],[1280,'dark','profile'],[1279,'light','profile'],[1024,'dark','profile'],[900,'light','profile'],[768,'dark','profile'],[390,'dark','profile'],[390,'light','readme'],[320,'light','readme']]) {
       await navigate('folio.html',width,mode,view);
       const m=await metrics();valid(m,width,mode);
-      assert(m.images.length===21&&m.links.length===18,'Main profile count');
+      assert(m.images.length===22&&m.links.length===19,'Main profile count');
+      const totalBadge=m.images.find(i=>i.src.endsWith('/total-stars-'+mode+'.png'));
+      assert(totalBadge&&totalBadge.declaredHeight==='36'&&Number(totalBadge.declaredWidth)===totals.badge.width+24,'Small total-star badge');
+      assert(totalBadge.alt.includes(totals.total_stars.toLocaleString('en-US'))&&totalBadge.alt.includes('non-fork')&&totalBadge.alt.includes('Omarchy Plugin Marketplace')&&totalBadge.alt.includes('checked '),'Transparent total-star scope/date');
+      const bio=await evaluate('document.querySelector("article").textContent');
+      assert(summary.bio.every(line=>bio.includes(line)),'Missing readable bio');
       const cards=m.images.filter(i=>i.fallback.includes('/collection/assets/'));
       assert(cards.length===6&&cards.every((i,n)=>i.fallback.endsWith('/'+popular[n][0]+'-light.png')),'Popular order/count');
       assert(cards.every(i=>i.src.includes('/connected-theme-')===(width>=1280)),'Popular connector breakpoint');
@@ -113,7 +120,7 @@ try {
       assert(socials.map(i=>i.alt).join(',')==='Discord,Ko-fi,Acknowledgements','Footer icon order');
       assert(new Set(socials.map(i=>i.y)).size===1&&socials[2].x>socials[1].x,'Acknowledgements must sit to the right of Ko-fi');
       if(width===1440) {
-        assert(m.articleHeight<1560,'Main profile too tall');
+        assert(m.articleHeight<1660,'Main profile too tall with compact bio and total badge');
         assert(new Set(cards.map(i=>Math.round(i.y))).size===2,'Expected 3×2 compact grid');
         assert(new Set(projects.map(i=>Math.round(i.y))).size===1,'Project row changed');
       }
@@ -128,8 +135,8 @@ try {
       const m=await metrics();valid(m,width,mode);
       const archive=route==='collection.html';
       const thanks=route==='folio-acknowledgements.html';
-      assert(m.images.length===(archive?28:thanks?1:21),'Unexpected image count '+route);
-      assert(m.links.length===(archive?29:thanks?8:18),'Unexpected links '+route);
+      assert(m.images.length===(archive?28:thanks?1:22),'Unexpected image count '+route);
+      assert(m.links.length===(archive?29:thanks?8:19),'Unexpected links '+route);
       if(archive) {
         const archiveCards=m.images.filter(i=>i.src.includes('/collection/assets/'));
         const label=m.images.find(i=>i.src.endsWith('/label-archive-'+mode+'.png'));
@@ -170,8 +177,8 @@ try {
   await call('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',text:'\r',windowsVirtualKeyCode:13});
   await call('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});await loaded();
   assert(await evaluate('location.pathname==="/collection.html"&&location.search.includes("theme=dark")'),'Native archive link');
-  await evaluate('document.querySelector("article a[href*=folio]").click()');await loaded();
-  assert(await evaluate('location.pathname==="/folio.html"'),'Back to profile');
+  assert(await evaluate(`[...document.querySelectorAll('article a')].filter(a=>a.textContent.includes('Back to profile')).length===2 && [...document.querySelectorAll('article a')].filter(a=>a.textContent.includes('Back to profile')).every(a=>a.href==='https://github.com/HANCORE-linux')`),'Both archive return links must open the real GitHub profile');
+  await navigate('folio.html',1440,'dark');
   await evaluate('document.querySelector("article a[title=Acknowledgements]").focus()');
   await call('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',text:'\r',windowsVirtualKeyCode:13});
   await call('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});await loaded();

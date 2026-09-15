@@ -6,11 +6,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-banish-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
-        "stars": 3,
+        "url": "https://img.shields.io/badge/stars-4-df6124?style=flat-square&labelColor=000000",
+        "stars": 4,
         "width": 54,
         "height": 20,
-        "sha256": "58ee73a20fd164d3ba5d714b518c8a2d796718bf347b705980adde2031b48b70"
+        "sha256": "07bb0fb72a5d4658be80ea52408438b44fd3d95bc4eb6e92ca3a336b04d3d751",
+        "api_snapshot": true
       },
       "sha256": "c2a94e406c538f28be5868026201d6848079042780f861933134505df0550489"
     },
@@ -19,11 +20,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-blackmoney-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-12-df6124?style=flat-square&labelColor=000000",
         "stars": 12,
         "width": 60,
         "height": 20,
-        "sha256": "60fdb427d3268365ed83856f06ce34dddf42123551ee9a4ea9143b6b06ec2a12"
+        "sha256": "d268d435211d46d385b2cc6bafc5e0bebbe802f60bed84c75066199c697345eb",
+        "api_snapshot": true
       },
       "sha256": "205b821004115c6eaf9363e37d5533af06d733667494b3b2bdfebc4e4eb5ff52"
     },
@@ -32,11 +34,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-demon-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-17-df6124?style=flat-square&labelColor=000000",
         "stars": 17,
         "width": 60,
         "height": 20,
-        "sha256": "c3ff0d9bd414018fa00b169de0b83d22d0bd7a5ba3eae106fbe8bf276d009c56"
+        "sha256": "dc7a98953f74b71eef6bf3b75596d50f53dec558797e5f6e66d68534eb05d666",
+        "api_snapshot": true
       },
       "sha256": "e26fc0e282f4abda51ade9ca96dad23c9db1ce4ae3f967654610bc55f69609a9"
     },
@@ -45,11 +48,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-dos-moos-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-25-df6124?style=flat-square&labelColor=000000",
         "stars": 25,
         "width": 60,
         "height": 20,
-        "sha256": "69dc40ea9f6d50002393ce72766017c3b7be232311623725102fa828e100c0f4"
+        "sha256": "a71ae520b6b90833286dab8fcd199c3aab48b6855685303e1d32282061e3e6bb",
+        "api_snapshot": true
       },
       "sha256": "70d3b30de641902cb30e54fb4743ab778f63f3933fcf81969653b6fe455b6b79"
     },
@@ -58,11 +62,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-greek-noir-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-30-df6124?style=flat-square&labelColor=000000",
         "stars": 30,
         "width": 60,
         "height": 20,
-        "sha256": "87de69659d8c679be3b641fe9fd4668207a48e6754be2d6e9ed270e0692e7482"
+        "sha256": "570fa37fcebcbda709c8966e3fdd0e9a4078f3640e9427e21ecf2f11efd2a2f7",
+        "api_snapshot": true
       },
       "sha256": "3b86a3bc49c754a207ee339b50e92f961f2ca2e36f9ff79bdb1a57c9beab2e52"
     },
@@ -71,11 +76,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-harbor-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-20-df6124?style=flat-square&labelColor=000000",
         "stars": 20,
         "width": 60,
         "height": 20,
-        "sha256": "8dd1d42844226698ebe925393d029e7ffe8a14c6a954b0aa6157b53e604e8889"
+        "sha256": "0aaa86bc0e8bdca3db4ef54e66f1b5a1e5b4db4e338bfd1b302ef320adee0d00",
+        "api_snapshot": true
       },
       "sha256": "8142137f671d39608135175617efe3feff990aadfeba5e491062f64b37b3fc48"
     },
@@ -84,11 +90,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-harbordark-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
-        "stars": 35,
+        "url": "https://img.shields.io/badge/stars-36-df6124?style=flat-square&labelColor=000000",
+        "stars": 36,
         "width": 60,
         "height": 20,
-        "sha256": "eae714d67c9b45a0f633481bbd6ff0cfdb540d79a57d70e03d46a69e59707cc5"
+        "sha256": "70dfa091e93a02c41b0d9c1413ab3c030d6c062c4fb08b23af78f5999f0202c5",
+        "api_snapshot": true
       },
       "sha256": "e343daf061fe34de6a382e370c79fa753eb66afebd317a3fc4b665ce8377dbe6"
     },
@@ -97,11 +104,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-inkypinky-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-34-df6124?style=flat-square&labelColor=000000",
         "stars": 34,
         "width": 60,
         "height": 20,
-        "sha256": "7e5974e41e6967c6040e4cd1f0bfd0c9a1b0d8dda5e76fa62ccff20476993697"
+        "sha256": "fafa69918567f8f995c3cee5634953f920459052fd8402c932b0b1acc5192558",
+        "api_snapshot": true
       },
       "sha256": "f76d687fd5f514c87b898b1f79f8582a7df1097edd617ad262ba8da708bbeb0c"
     },
@@ -110,11 +118,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-kanso-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
-        "stars": 23,
+        "url": "https://img.shields.io/badge/stars-24-df6124?style=flat-square&labelColor=000000",
+        "stars": 24,
         "width": 60,
         "height": 20,
-        "sha256": "eb8bbaebca5b7ceb45e8d90d5baae7eeea8117806ed5d1d437ec927490514f2c"
+        "sha256": "cfaa957cbcd11461e68f6467428bf40f1a1c128ba4711a4d4dc8098416a58b86",
+        "api_snapshot": true
       },
       "sha256": "475ab4c7ad77f50b781a74fa1d35340f2e3365aa1a26983076ff826b81f341fd"
     },
@@ -123,11 +132,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-moodpeak-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-23-df6124?style=flat-square&labelColor=000000",
         "stars": 23,
         "width": 60,
         "height": 20,
-        "sha256": "43df2fafd5fdcd6d102dec8125a82e37722e6a755a239012a136cd155fe98f99"
+        "sha256": "4d2c423f0096fdf78f333039118c3d04b700b2a18dc521671974f52998c5e3d4",
+        "api_snapshot": true
       },
       "sha256": "afeb1d73dd30eca162cee0f1a5bf733f38ef246ae0063d4ae3f4a435224534fa"
     },
@@ -136,11 +146,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-oxford-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
-        "stars": 13,
+        "url": "https://img.shields.io/badge/stars-14-df6124?style=flat-square&labelColor=000000",
+        "stars": 14,
         "width": 60,
         "height": 20,
-        "sha256": "95f2add6e68af903909f30a73d93d937e0bcdcec788cedfce75eccac3f7a12b0"
+        "sha256": "3bc06b9de3bc8743b1ee5419409007aa3df4838da6b61c5abbd186ac4617becc",
+        "api_snapshot": true
       },
       "sha256": "0025c71f8229948868bf8a6a168bbd46bf29e0593a7107398bbf37b5d5cdd248"
     },
@@ -149,11 +160,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-oxocarbon-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-16-df6124?style=flat-square&labelColor=000000",
         "stars": 16,
         "width": 60,
         "height": 20,
-        "sha256": "5d9de544a2de7cc4711d6797675c11d63622556e2f713638009bbdfed0cf8352"
+        "sha256": "3013f4616dd84eaf73474716e8814fe09702a2d855928405028942efe2ebd382",
+        "api_snapshot": true
       },
       "sha256": "14d0ffcdbd524b810d88fce05934af0c1a1571bdebb30a36428befd421aee9aa"
     },
@@ -162,11 +174,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-roseofdune-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-13-df6124?style=flat-square&labelColor=000000",
         "stars": 13,
         "width": 60,
         "height": 20,
-        "sha256": "fde39b7c88b20387806310e7ae38ff48cb0a4ccf52630db8bd5f6f526c0f9724"
+        "sha256": "209e674fcb1679109f697eb857935f19818b6719e6fe36eb7b1bb4aee5325001",
+        "api_snapshot": true
       },
       "sha256": "81d439c91056fc581eccfa8806e0b44f53139aa75b75774b4158ab68777c5c80"
     },
@@ -175,11 +188,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-ryu-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-9-df6124?style=flat-square&labelColor=000000",
         "stars": 9,
         "width": 54,
         "height": 20,
-        "sha256": "59adaeec23072b829d39ca7cb5e52765b0a99441eba39cc228fcddcac54235a1"
+        "sha256": "2093d20d9574cf42f99c991556fd91d9fee464f3938961df7cc98f379bbdd02a",
+        "api_snapshot": true
       },
       "sha256": "778151050d3cb8873863e71eacba98bd2b867fde925d6bfa6c852974894b38e5"
     },
@@ -188,11 +202,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-saga-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-15-df6124?style=flat-square&labelColor=000000",
         "stars": 15,
         "width": 60,
         "height": 20,
-        "sha256": "4dff5748e61cb79e8e4088b564c53f481e6327c76a6b670b97e98b0b62db7cf1"
+        "sha256": "a99d88750201059ff3ea6e60d438e689a508d32c642b303ab290f6ef954d81fb",
+        "api_snapshot": true
       },
       "sha256": "37dafe1d51aad28526f266d11058dcd424a0072f508a14c48cfa22f010f71858"
     },
@@ -201,11 +216,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-sapphire-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-21-df6124?style=flat-square&labelColor=000000",
         "stars": 21,
         "width": 60,
         "height": 20,
-        "sha256": "66e8ba2c494b79bd94548ac30a2e55157a83babacf31ad9d6c2e8d496ceb769f"
+        "sha256": "039d99ea1054a383a11acb31feda77d838c11982bd659f1cbd7ed5b064e39d24",
+        "api_snapshot": true
       },
       "sha256": "1566f75a04bad83668b1e423f7e9a248474238b25e8bd66cee49ca94dccf6422"
     },
@@ -214,11 +230,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-shadesofjade-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-24-df6124?style=flat-square&labelColor=000000",
         "stars": 24,
         "width": 60,
         "height": 20,
-        "sha256": "3974ef6b37f6fa91e9c48e215df3c244f85a22fe8e6e411b1256ba03f6a6ed58"
+        "sha256": "cfaa957cbcd11461e68f6467428bf40f1a1c128ba4711a4d4dc8098416a58b86",
+        "api_snapshot": true
       },
       "sha256": "b82bafca75794cdba6151c7e4548a5a210644491f9cc06362a67395d5bd4a5da"
     },
@@ -227,11 +244,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-thegreek-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
-        "stars": 17,
+        "url": "https://img.shields.io/badge/stars-18-df6124?style=flat-square&labelColor=000000",
+        "stars": 18,
         "width": 60,
         "height": 20,
-        "sha256": "c142a38ddef442705e4ce5cf3a1c7669e8d338f219b03e65d71546ca4200e773"
+        "sha256": "ac4cd847e99d90f5b9ca900a87d555cbd40c156998fcfaf2f5f3feb273ecf3be",
+        "api_snapshot": true
       },
       "sha256": "6761c8ec1403a5ed1f35cccf4a4354e5804b8fb9c97486b02ff6117e8a5177d5"
     },
@@ -240,11 +258,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-turbonite-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-23-df6124?style=flat-square&labelColor=000000",
         "stars": 23,
         "width": 60,
         "height": 20,
-        "sha256": "61d9be2eda2f0f90d197ac228198126bfe90eb83af45ee0d0640cca4263312c9"
+        "sha256": "4d2c423f0096fdf78f333039118c3d04b700b2a18dc521671974f52998c5e3d4",
+        "api_snapshot": true
       },
       "sha256": "72acb65625bcdde7875bde20ea469a5f65d257ed063a2688415312a4db891fb9"
     },
@@ -253,11 +272,12 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-velvetnight-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-12-df6124?style=flat-square&labelColor=000000",
         "stars": 12,
         "width": 60,
         "height": 20,
-        "sha256": "09eed7074ccdebe4d10738502706de8ccb70e44e2838bf2bd56af81662864ced"
+        "sha256": "d268d435211d46d385b2cc6bafc5e0bebbe802f60bed84c75066199c697345eb",
+        "api_snapshot": true
       },
       "sha256": "84deca5668354f3bf9f7bda03e49b9eece4634f5ed3365c45e913753fcea659d"
     },
@@ -266,13 +286,31 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-whitegold-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+        "url": "https://img.shields.io/badge/stars-14-df6124?style=flat-square&labelColor=000000",
         "stars": 14,
         "width": 60,
         "height": 20,
-        "sha256": "bf5125f3e6d0e2740a49254d1aed2c71a91e655a0641308f2c06bc264276ba06"
+        "sha256": "3bc06b9de3bc8743b1ee5419409007aa3df4838da6b61c5abbd186ac4617becc",
+        "api_snapshot": true
       },
       "sha256": "6fc7a6f3cb748b4ec4fbb0fd91dd3306f6759ac0844c506a41d069ed66af4ce5"
+    },
+    "lasthorizon": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-lasthorizon-theme/v2.0.0/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "8981f8ff1b40e31976f810bbcc45fadc7ecaa0b67c19f48aeebcaca8917273c0",
+      "git_blob": "6b5db66b1dacdbcfc1937b5e16ee3acc9469d6e8",
+      "note": "Reused preserved popular screenshot; no new image download.",
+      "badge": {
+        "url": "https://img.shields.io/badge/stars-36-df6124?style=flat-square&labelColor=000000",
+        "stars": 36,
+        "width": 60,
+        "height": 20,
+        "sha256": "70dfa091e93a02c41b0d9c1413ab3c030d6c062c4fb08b23af78f5999f0202c5",
+        "api_snapshot": true
+      }
     }
-  }
+  },
+  "badges_fetched_at": "2026-09-15T19:01:20.065628+00:00"
 }

@@ -10,11 +10,17 @@ from urllib.request import Request, urlopen
 from build_folio import FOLIO, badge_url, popular_works, theme_url
 
 
-def fetch(work):
+def fetch(work, stars=None):
     slug = work['theme_slug']
-    url = badge_url(slug)
+    url = badge_url(slug, stars)
     with urlopen(Request(url, headers={'User-Agent': 'HANCORE-profile-preview'}), timeout=30) as response:
         data = response.read(100_001)
+    return validate_badge(work, data, stars)
+
+
+def validate_badge(work, data, stars=None):
+    slug = work['theme_slug']
+    url = badge_url(slug, stars)
     assert len(data) < 100_000, 'Unexpected badge size'
     svg = ET.fromstring(data)
     assert svg.tag == '{http://www.w3.org/2000/svg}svg'
@@ -24,6 +30,8 @@ def fetch(work):
     assert len(labels) == 2 and labels[0] == 'stars', f'Unexpected badge labels: {labels}'
     count = re.fullmatch(r'([0-9,]+)', labels[1])
     assert count, f'Shields returned no star count for {slug}'
+    if stars is not None:
+        assert int(count[1].replace(',', '')) == stars, 'Badge disagrees with GitHub API'
     allowed = {'svg', 'g', 'rect', 'text', 'title', 'path', 'defs', 'clipPath', 'a'}
     for node in svg.iter():
         assert node.tag.rsplit('}', 1)[-1] in allowed, 'Unexpected badge element'
@@ -34,7 +42,7 @@ def fetch(work):
     assert b'#000000' in data and b'#df6124' in data, 'Badge colors changed'
     return slug, data, {'url': url, 'stars': int(count[1].replace(',', '')),
                         'width': int(svg.attrib['width']), 'height': 20,
-                        'sha256': hashlib.sha256(data).hexdigest()}
+                        'sha256': hashlib.sha256(data).hexdigest(), **({'api_snapshot': True} if stars is not None else {})}
 
 
 def main():

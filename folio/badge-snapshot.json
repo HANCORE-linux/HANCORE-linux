@@ -1,48 +1,54 @@
 {
-  "fetched_at": "2026-09-15T06:34:42.999633+00:00",
-  "note": "Public Shields snapshot. Exported shadow PNGs are not a live feed.",
+  "fetched_at": "2026-09-15T19:01:20.065628+00:00",
+  "note": "Exact public GitHub API counts, static Shields styling; refreshed daily by profile-stars.",
   "badges": {
     "solitude": {
-      "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-solitude-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+      "url": "https://img.shields.io/badge/stars-61-df6124?style=flat-square&labelColor=000000",
       "stars": 61,
       "width": 60,
       "height": 20,
-      "sha256": "0fd092ffe72299d71d2c07913279c984d33a9bd67f59c95d63b007cde4a94dc8"
+      "sha256": "a7e115015d102d29e66300aef0ee0154cdb1f06a4e2bf18cf7dbcbd846918e8d",
+      "api_snapshot": true
     },
     "blackturq": {
-      "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-blackturq-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+      "url": "https://img.shields.io/badge/stars-52-df6124?style=flat-square&labelColor=000000",
       "stars": 52,
       "width": 60,
       "height": 20,
-      "sha256": "2e98d00f5d1b502055b482f7d77d5f6d4ee585287e9c3b1496684737ffba3699"
-    },
-    "blackgold": {
-      "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-blackgold-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
-      "stars": 47,
-      "width": 60,
-      "height": 20,
-      "sha256": "2d3819421c0a914574082182ae0af0ff8f565f05123841a6a4d8db83d1bde3b3"
+      "sha256": "e8f34556f7a94f3c7c2a60eed6c1076713786060ffee4de8b1c7b428fe2113e1",
+      "api_snapshot": true
     },
     "mechanoonna": {
-      "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-mechanoonna-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+      "url": "https://img.shields.io/badge/stars-48-df6124?style=flat-square&labelColor=000000",
+      "stars": 48,
+      "width": 60,
+      "height": 20,
+      "sha256": "11313b5dbf3e03449c60f5f8128d215ba73cec6f54255d2ecee7d7bb0ce228b0",
+      "api_snapshot": true
+    },
+    "blackgold": {
+      "url": "https://img.shields.io/badge/stars-47-df6124?style=flat-square&labelColor=000000",
       "stars": 47,
       "width": 60,
       "height": 20,
-      "sha256": "5930690dc1aa708f6776ee51bb2a560ff4cecf0b542e6451df71c4a37ab63097"
+      "sha256": "8d8c385833d3bc2b159b4c8acced0c241fb899c60891997e8c4120624244416e",
+      "api_snapshot": true
     },
     "batou": {
-      "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-batou-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+      "url": "https://img.shields.io/badge/stars-38-df6124?style=flat-square&labelColor=000000",
       "stars": 38,
       "width": 60,
       "height": 20,
-      "sha256": "2ce7b2f4dd802526f4412a89dc55f4a5e3f0a377473447cb767fcba9ec3c4dc6"
+      "sha256": "b3217cf48c55b9e8b0c6c606d3ffd21f0326d175fe570bcadaca2b42391606d2",
+      "api_snapshot": true
     },
-    "lasthorizon": {
-      "url": "https://img.shields.io/github/stars/HANCORE-linux/omarchy-lasthorizon-theme?style=flat-square&label=stars&labelColor=000000&color=df6124",
+    "harbordark": {
+      "url": "https://img.shields.io/badge/stars-36-df6124?style=flat-square&labelColor=000000",
       "stars": 36,
       "width": 60,
       "height": 20,
-      "sha256": "fa77091c62bd52198169a52a50e4abd425874e3ad6d2f0d3a1f49d0964b4a5cb"
+      "sha256": "70dfa091e93a02c41b0d9c1413ab3c030d6c062c4fb08b23af78f5999f0202c5",
+      "api_snapshot": true
     }
   }
 }

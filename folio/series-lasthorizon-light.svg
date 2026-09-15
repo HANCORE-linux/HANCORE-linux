@@ -6,8 +6,8 @@
   </defs>
   <path d="M24 16H600V450L578 472H24Z" fill="#000000" opacity="0.19" filter="url(#float)" />
   <path d="M24 16H600V450L578 472H24Z" fill="#e9e7e0" stroke="#c6c5bf" stroke-width="1.5" />
-  <image x="32" y="24" width="560" height="315" xlink:href="sources/popular-lasthorizon.png" />
+  <image x="32" y="24" width="560" height="315" xlink:href="collection/sources/lasthorizon.png" />
   <text x="44" y="382" fill="#262522" font-family="IBM Plex Sans" font-size="38" font-weight="500">Last Horizon</text>
   <g id="ansi-palette"><title>ANSI color00–07, left to right</title><rect x="44" y="420" width="22" height="30" fill="#0c0b0c" /><rect x="66" y="420" width="22" height="30" fill="#c38b7b" /><rect x="88" y="420" width="22" height="30" fill="#87a9b0" /><rect x="110" y="420" width="22" height="30" fill="#6B5E73" /><rect x="132" y="420" width="22" height="30" fill="#b59790" /><rect x="154" y="420" width="22" height="30" fill="#c4d8e2" /><rect x="176" y="420" width="22" height="30" fill="#a5a0b6" /><rect x="198" y="420" width="22" height="30" fill="#cfd3cd" /><rect x="44" y="420" width="176" height="30" fill="none" stroke="#c6c5bf" stroke-width="1" /></g>
-  <image x="398.83870967741933" y="400" width="211.3548387096774" height="90.58064516129032" xlink:href="assets/badge-lasthorizon-light.png" />
+  <image x="398.83870967741933" y="400" width="211.3548387096774" height="90.58064516129032" xlink:href="collection/assets/badge-lasthorizon-light.png" />
 </svg>

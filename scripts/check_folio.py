@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Check independent README assets, provenance, links and preview freshness."""
+import argparse
 import hashlib
 from html.parser import HTMLParser
 import json
@@ -14,6 +15,7 @@ from folio_details import detail_cards, SOCIALS, SHIPS_WITH_ADVANCE, ACCENT_INK
 from folio_labels import labels, label_dimensions
 from folio_connections import specs as connection_specs, connected_picture
 from folio_register import contrast
+from folio_summary import summary_html, snapshot as total_snapshot, settings as summary_settings
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -199,6 +201,8 @@ def check_connections():
             assert image.get('{http://www.w3.org/1999/xlink}href') == f'{spec["source"]}-{mode}.png'
             assert [image.get(k) for k in ('x', 'y', 'width', 'height')] == [str(spec['x']), str(spec['y']), '624', str(spec['body_height'])]
             assert len(svg.findall('s:path', ns)) == 3
+            if spec['kind'] == 'bridge':
+                assert svg.findall('s:path', ns)[1].get('d') == '', 'No staggered ticks above Banish and Solitude'
             assert struct.unpack('>II', (ROOT / f'folio/assets/connected-{slug}-{mode}.png').read_bytes()[16:24]) == (spec['width'] * 2, spec['height'] * 2)
     from build_folio import FEATURED
     readme = (ROOT / 'folio/README.md').read_text()
@@ -210,6 +214,9 @@ def check_connections():
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--assets-only', action='store_true', help='Check publication without local browser/render caches')
+    args = parser.parse_args()
     subprocess.run([sys.executable,str(ROOT / 'scripts/build_folio.py'),'--check'],check=True)
     check_project_line()
     check_logo()
@@ -222,14 +229,33 @@ def main():
     snapshot = json.loads((ROOT / 'folio/badge-snapshot.json').read_text())
     for work in popular:
         slug = work['theme_slug']
-        assert snapshot['badges'][slug]['url'] == badge_url(slug)
+        record = snapshot['badges'][slug]
+        assert record['url'] == badge_url(slug, record['stars'] if record.get('api_snapshot') else None)
         assert isinstance(snapshot['badges'][slug]['stars'], int)
     themes = json.loads((ROOT / 'data/themes.json').read_text())
-    assert parsed.images == 15 + len(popular), parsed.images
+    assert parsed.images == 16 + len(popular), parsed.images
+    totals = total_snapshot()
+    if all(record.get('api_snapshot') for record in snapshot['badges'].values()):
+        archive_sources = json.loads((ROOT / 'folio/collection/sources.json').read_text())
+        ranking = json.loads((ROOT / 'folio/popular-themes.json').read_text())['star_snapshot']
+        repos = {repo['full_name']: repo['stars'] for repo in totals['repositories']}
+        for theme in themes:
+            slug = theme['slug']
+            record = snapshot['badges'].get(slug) or archive_sources['themes'][slug]['badge']
+            assert record['stars'] == ranking[slug] == repos[f'HANCORE-linux/omarchy-{slug}-theme'], f'Inconsistent star counts: {slug}'
+    assert summary_html() in (ROOT / 'folio/README.md').read_text()
+    assert len(summary_settings()['bio']) == 2
+    ns = {'s': 'http://www.w3.org/2000/svg'}
+    for mode in ('dark', 'light'):
+        svg = ET.parse(ROOT / f'folio/total-stars-{mode}.svg').getroot()
+        assert svg.find('s:image', ns).get('{http://www.w3.org/1999/xlink}href') == 'sources/badge-total-stars.svg'
+        assert svg.find('s:image', ns).get('clip-path') == 'url(#badge-cut)'
+        assert svg.find('s:defs/s:filter', ns).get('id') == 'float'
+        assert struct.unpack('>II', (ROOT / f'folio/assets/total-stars-{mode}.png').read_bytes()[16:24]) == ((totals['badge']['width'] + 24) * 4, 144)
     check_labels(len(themes))
     highlights = json.loads((ROOT / 'folio/highlights.json').read_text())
     check_detail_line(themes, highlights)
-    assert len(parsed.links) == len(popular) + 12, parsed.links
+    assert len(parsed.links) == len(popular) + 13, parsed.links
     assert 'https://github.com/HANCORE-linux/waybar-themes' in parsed.links
     assert 'https://github.com/omacom/omarchy-plugin-marketplace' in parsed.links
     assert parsed.tables == 0 and parsed.details == 0, 'The complete archive must be a separate page'
@@ -247,6 +273,8 @@ def main():
     archive.feed((ROOT / 'folio/THEMES.md').read_text())
     assert archive.images == 28 and len(archive.links) == 29
     assert archive.tables == 0 and archive.details == 0
+    assert archive.links.count('https://github.com/HANCORE-linux') == 2
+    assert './README.md' not in archive.links
     for theme in themes:
         assert archive.links.count(theme_url(theme['slug'])) == 1, theme['name']
     assert highlights['chat']['url'] in parsed.links
@@ -258,6 +286,7 @@ def main():
                        for mode in ['dark', 'light']}
     expected_assets.update(f'badge-{work["theme_slug"]}-{mode}.png' for work in popular for mode in ['dark','light'])
     expected_assets.add('omarchy-wordmark-orange.png')
+    expected_assets.update(f'total-stars-{mode}.png' for mode in ('dark', 'light'))
     expected_assets.update(f'palette-{theme["slug"]}.png' for theme in themes)
     expected_assets.update(f'info-{card["slug"]}-{mode}.png' for card in detail_cards(themes, highlights) for mode in ('dark', 'light'))
     expected_assets.update(f'social-{slug}-{mode}.png' for slug, _, _ in SOCIALS for mode in ('dark', 'light'))
@@ -266,6 +295,10 @@ def main():
     original = (ROOT / 'folio/sources/omarchy-wordmark.svg').read_text()
     assert (ROOT / 'folio/omarchy-wordmark-orange.svg').read_text() == original.replace('fill="#9ece6a"', 'fill="#df6124"')
     assert {p.name for p in (ROOT / 'folio/assets').glob('*.png')} == expected_assets
+    if args.assets_only:
+        subprocess.run([sys.executable, str(ROOT / 'scripts/build_theme_registers.py'), '--check'], check=True)
+        print(f'OK {parsed.images} accessible images, {len(parsed.links)} links, {len(expected_assets)} assets; local rendering not required')
+        return
     manifest = json.loads((ROOT / '.review/folio-manifest.json').read_text())
     assert manifest['renderer'].startswith('GitHub Markdown'), 'Preview is not GitHub-rendered'
     for section in ['inputs','outputs']:

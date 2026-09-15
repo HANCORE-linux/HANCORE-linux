@@ -1,0 +1,81 @@
+name: Refresh profile stars
+
+on:
+  schedule:
+    - cron: '17 4 * * *' # Daily 04:17 UTC (05:17 CET / 06:17 CEST).
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-stars-main
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'HANCORE-linux/HANCORE-linux' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Check out profile
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+
+      - name: Test star snapshot logic
+        run: python -m unittest discover -s tests -p 'test_profile_stars.py' -v
+
+      - name: Fetch and validate current stars
+        id: stars
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python scripts/refresh_profile_stars.py
+          if git diff --quiet -- folio; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            echo 'Counts and scope unchanged; nothing to publish.'
+          else
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install image build tools
+        if: steps.stars.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y librsvg2-bin fontconfig imagemagick fonts-dejavu-core
+
+      - name: Rebuild and verify native profile
+        if: steps.stars.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          python scripts/build_folio.py
+          python scripts/check_folio.py --assets-only
+          python scripts/export_profile.py --write
+          python scripts/export_profile.py --check
+
+      - name: Commit and push verified changes
+        if: steps.stars.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GIT_TERMINAL_PROMPT: '0'
+        run: |
+          # Stage only the generated profile and its source snapshots, never tools/workflows.
+          git add -- README.md THEMES.md ACKNOWLEDGEMENTS.md folio
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'chore: refresh profile stars'
+          # Token supplied by gh only to GitHub; no persistent Git credentials or PAT.
+          # A concurrent human push causes a safe non-fast-forward failure, never a force push.
+          git -c credential.helper= -c 'credential.https://github.com.helper=!gh auth git-credential' \
+              push origin HEAD:main

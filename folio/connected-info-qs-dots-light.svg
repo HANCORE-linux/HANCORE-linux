@@ -2,7 +2,7 @@
   <title>info-qs-dots — independent card with decorative connection route</title>
   <image x="0" y="40" width="624" height="192" xlink:href="assets/info-qs-dots-light.png" />
   <path d="M0 0V272M624 0V272M624 120H600" fill="none" stroke="#a1a6ab" stroke-width="2.5" />
-  <path d="M624 24V60" fill="none" stroke="#41474d" stroke-width="3.5" />
+  <path d="" fill="none" stroke="#41474d" stroke-width="3.5" />
   <path d="M600 113V127" fill="none" stroke="#41474d" stroke-width="3" />
   
 </svg>

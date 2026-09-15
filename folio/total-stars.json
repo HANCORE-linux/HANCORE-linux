@@ -1,0 +1,371 @@
+{
+  "fetched_at": "2026-09-15T18:47:52.654443+00:00",
+  "account": "HANCORE-linux",
+  "extra_repositories": [
+    "omacom/omarchy-plugin-marketplace"
+  ],
+  "exclude_forks": true,
+  "sources": [
+    "https://api.github.com/users/HANCORE-linux/repos?type=owner&per_page=100&page=1",
+    "https://api.github.com/repos/omacom/omarchy-plugin-marketplace"
+  ],
+  "repositories": [
+    {
+      "id": 1249470760,
+      "full_name": "HANCORE-linux/cliamp-plugin-nightrider",
+      "url": "https://github.com/HANCORE-linux/cliamp-plugin-nightrider",
+      "stars": 16,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1283082728,
+      "full_name": "HANCORE-linux/GitHub-Traffic-Board",
+      "url": "https://github.com/HANCORE-linux/GitHub-Traffic-Board",
+      "stars": 5,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1106981256,
+      "full_name": "HANCORE-linux/HANCORE-linux",
+      "url": "https://github.com/HANCORE-linux/HANCORE-linux",
+      "stars": 12,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1338810088,
+      "full_name": "HANCORE-linux/OmaQ",
+      "url": "https://github.com/HANCORE-linux/OmaQ",
+      "stars": 18,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1370509138,
+      "full_name": "HANCORE-linux/omarchy-banish-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-banish-theme",
+      "stars": 4,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1079497170,
+      "full_name": "HANCORE-linux/omarchy-batou-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-batou-theme",
+      "stars": 38,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1056349329,
+      "full_name": "HANCORE-linux/omarchy-blackgold-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-blackgold-theme",
+      "stars": 47,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1069244072,
+      "full_name": "HANCORE-linux/omarchy-blackmoney-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-blackmoney-theme",
+      "stars": 12,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1059027884,
+      "full_name": "HANCORE-linux/omarchy-blackturq-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-blackturq-theme",
+      "stars": 52,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1334856361,
+      "full_name": "HANCORE-linux/omarchy-bongocat",
+      "url": "https://github.com/HANCORE-linux/omarchy-bongocat",
+      "stars": 15,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1071759387,
+      "full_name": "HANCORE-linux/omarchy-demon-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-demon-theme",
+      "stars": 17,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1277735693,
+      "full_name": "HANCORE-linux/omarchy-dos-moos-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-dos-moos-theme",
+      "stars": 25,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1172978579,
+      "full_name": "HANCORE-linux/omarchy-greek-noir-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-greek-noir-theme",
+      "stars": 30,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1118461330,
+      "full_name": "HANCORE-linux/omarchy-harbor-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-harbor-theme",
+      "stars": 20,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1123367619,
+      "full_name": "HANCORE-linux/omarchy-harbordark-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-harbordark-theme",
+      "stars": 36,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1083071475,
+      "full_name": "HANCORE-linux/omarchy-inkypinky-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-inkypinky-theme",
+      "stars": 34,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1231346774,
+      "full_name": "HANCORE-linux/omarchy-kanso-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-kanso-theme",
+      "stars": 24,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1087643929,
+      "full_name": "HANCORE-linux/omarchy-lasthorizon-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-lasthorizon-theme",
+      "stars": 36,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1091747360,
+      "full_name": "HANCORE-linux/omarchy-mechanoonna-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-mechanoonna-theme",
+      "stars": 48,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1098586772,
+      "full_name": "HANCORE-linux/omarchy-moodpeak-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-moodpeak-theme",
+      "stars": 23,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1106509309,
+      "full_name": "HANCORE-linux/omarchy-oxford-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-oxford-theme",
+      "stars": 14,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1129100199,
+      "full_name": "HANCORE-linux/omarchy-oxocarbon-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-oxocarbon-theme",
+      "stars": 16,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1074284041,
+      "full_name": "HANCORE-linux/omarchy-roseofdune-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-roseofdune-theme",
+      "stars": 13,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1235573385,
+      "full_name": "HANCORE-linux/omarchy-ryu-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-ryu-theme",
+      "stars": 9,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1203220387,
+      "full_name": "HANCORE-linux/omarchy-saga-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-saga-theme",
+      "stars": 15,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1071017024,
+      "full_name": "HANCORE-linux/omarchy-sapphire-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-sapphire-theme",
+      "stars": 21,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1069401218,
+      "full_name": "HANCORE-linux/omarchy-shadesofjade-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-shadesofjade-theme",
+      "stars": 24,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1169546307,
+      "full_name": "HANCORE-linux/omarchy-solitude-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-solitude-theme",
+      "stars": 61,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1083832669,
+      "full_name": "HANCORE-linux/omarchy-thegreek-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-thegreek-theme",
+      "stars": 18,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1189693514,
+      "full_name": "HANCORE-linux/omarchy-turbonite-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-turbonite-theme",
+      "stars": 23,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1115942253,
+      "full_name": "HANCORE-linux/omarchy-velvetnight-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-velvetnight-theme",
+      "stars": 12,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1076439232,
+      "full_name": "HANCORE-linux/omarchy-whitegold-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-whitegold-theme",
+      "stars": 14,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1258696184,
+      "full_name": "HANCORE-linux/quickshell-dots",
+      "url": "https://github.com/HANCORE-linux/quickshell-dots",
+      "stars": 189,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1302068770,
+      "full_name": "HANCORE-linux/Shibumi-Shell",
+      "url": "https://github.com/HANCORE-linux/Shibumi-Shell",
+      "stars": 156,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1051865105,
+      "full_name": "HANCORE-linux/waybar-themes",
+      "url": "https://github.com/HANCORE-linux/waybar-themes",
+      "stars": 617,
+      "fork": false,
+      "private": false
+    },
+    {
+      "id": 1314624489,
+      "full_name": "omacom/omarchy-plugin-marketplace",
+      "url": "https://github.com/omacom/omarchy-plugin-marketplace",
+      "stars": 281,
+      "fork": false,
+      "private": false
+    }
+  ],
+  "excluded_forks": [
+    {
+      "id": 1249450915,
+      "full_name": "HANCORE-linux/cliamp",
+      "url": "https://github.com/HANCORE-linux/cliamp",
+      "stars": 1,
+      "fork": true,
+      "private": false
+    },
+    {
+      "id": 1230354537,
+      "full_name": "HANCORE-linux/omarchy",
+      "url": "https://github.com/HANCORE-linux/omarchy",
+      "stars": 0,
+      "fork": true,
+      "private": false
+    },
+    {
+      "id": 1248627142,
+      "full_name": "HANCORE-linux/omarchy-aamis-theme",
+      "url": "https://github.com/HANCORE-linux/omarchy-aamis-theme",
+      "stars": 0,
+      "fork": true,
+      "private": false
+    },
+    {
+      "id": 1356556342,
+      "full_name": "HANCORE-linux/omarchy-plugin-registry",
+      "url": "https://github.com/HANCORE-linux/omarchy-plugin-registry",
+      "stars": 0,
+      "fork": true,
+      "private": false
+    },
+    {
+      "id": 1360155962,
+      "full_name": "HANCORE-linux/omarchy-site",
+      "url": "https://github.com/HANCORE-linux/omarchy-site",
+      "stars": 0,
+      "fork": true,
+      "private": false
+    },
+    {
+      "id": 1206362452,
+      "full_name": "HANCORE-linux/saga-vscode-theme",
+      "url": "https://github.com/HANCORE-linux/saga-vscode-theme",
+      "stars": 0,
+      "fork": true,
+      "private": false
+    },
+    {
+      "id": 1264414582,
+      "full_name": "HANCORE-linux/theme-hook-plugin-manager",
+      "url": "https://github.com/HANCORE-linux/theme-hook-plugin-manager",
+      "stars": 0,
+      "fork": true,
+      "private": false
+    }
+  ],
+  "owned_stars": 1714,
+  "extra_stars": 281,
+  "total_stars": 1995,
+  "note": "Dated public project-star sum, not unique supporters.",
+  "badge": {
+    "url": "https://img.shields.io/badge/total%20project%20stars-1%2C995-df6124?style=flat-square&labelColor=000000",
+    "width": 150,
+    "height": 20,
+    "stars": 1995,
+    "sha256": "65d9a3877025fbdcd839ccbb5092d2da3465c2654e08c5d1c2d06921659c35f3"
+  }
+}

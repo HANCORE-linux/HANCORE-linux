@@ -40,7 +40,8 @@ def connected_svg(spec, mode):
     elif kind == 'bridge':
         # The three rails run in the transparent margins beside the two cards.
         route = 'M312 0V272M936 0V272M312 120H336' if column == 0 else 'M0 0V272M624 0V272M624 120H600'
-        segment = 'M312 204V240' if column == 0 else 'M624 24V60'
+        # Keep the outer rails quiet: their former bright segments were staggered.
+        segment = ''
         terminals = 'M336 113V127' if column == 0 else 'M600 113V127'
     elif kind == 'theme-bottom':
         route = 'M312 0V56' + ['M312 512V584H624', 'M312 512V612M0 584H624', 'M312 512V584H0'][column]

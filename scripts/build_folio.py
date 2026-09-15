@@ -12,12 +12,13 @@ import subprocess
 import tempfile
 import tomllib
 from xml.sax.saxutils import escape
-from urllib.parse import urlencode
+from urllib.parse import quote, urlencode
 from folio_identity import logo_svg, signet_svg
 from folio_badges import badge_svg
 from folio_details import detail_cards, detail_svg, social_svg, SOCIALS
 from folio_labels import labels, label_svg, label_picture
 from folio_connections import connected_svg, connected_picture, specs as connection_specs
+from folio_summary import summary_html, snapshot as total_snapshot
 
 ROOT = Path(__file__).resolve().parents[1]
 FOLIO = ROOT / 'folio'
@@ -67,6 +68,8 @@ def inputs():
     return [ROOT / 'scripts/build_folio.py', ROOT / 'scripts/folio_identity.py', ROOT / 'scripts/folio_badges.py', ROOT / 'scripts/folio_details.py', ROOT / 'scripts/folio_labels.py', ROOT / 'scripts/folio_connections.py', ROOT / 'data/themes.json', FOLIO / 'highlights.json',
             FOLIO / 'social-sources.json', FOLIO / 'sources/kofi-icon.avif', FOLIO / 'ACKNOWLEDGEMENTS.md',
             FOLIO / 'popular-themes.json', FOLIO / 'identity.json',
+            ROOT / 'scripts/folio_summary.py', ROOT / 'scripts/refresh_folio_totals.py',
+            FOLIO / 'profile-summary.json', FOLIO / 'total-stars.json',
             FOLIO / 'badge-snapshot.json', *sorted((FOLIO / 'sources').glob('*.svg')),
             FOLIO / 'palettes.json', *sorted((FOLIO / 'sources/palettes').glob('*.toml')),
             ROOT / 'assets/sources/rise-carousel.webp',
@@ -87,8 +90,12 @@ def identities():
     return json.loads((FOLIO / 'identity.json').read_text())
 
 
-def badge_url(slug):
+def badge_url(slug, stars=None):
     identity = identities()
+    if stars is not None:
+        assert type(stars) is int and stars >= 0
+        query = urlencode({'style': identity['badge_style'], 'labelColor': identity['badge_label_color']})
+        return f'https://img.shields.io/badge/stars-{quote(f"{stars:,}")}-{identity["badge_color"]}?{query}'
     query = urlencode({'style': identity['badge_style'], 'label': 'stars',
                        'labelColor': identity['badge_label_color'], 'color': identity['badge_color']})
     return f'https://img.shields.io/github/stars/HANCORE-linux/omarchy-{slug}-theme?{query}'
@@ -129,7 +136,7 @@ def readme_content(markdown):
   </picture>
   <br />
   {label_picture('subtitle', len(themes))}
-</p>'''
+</p>\n\n{summary_html()}'''
     details = detail_cards(themes, highlights)
     connections = {s['slug']: s for s in connection_specs(popular_works(), details)}
     project_rows = [''.join(connected_picture(connections[slug], url, alt) for slug, url, alt in FEATURED)]
@@ -237,7 +244,7 @@ def signature(ink):
 def shadow_badge(slug, record, mode):
     source = FOLIO / 'sources' / f'badge-{slug}.svg'
     assert checksum(source) == record['sha256'], f'Badge source changed: {slug}'
-    assert record['url'] == badge_url(slug), 'Badge source does not match the selected palette'
+    assert record['url'] == badge_url(slug, record['stars'] if record.get('api_snapshot') else None), 'Badge source does not match the selected palette'
     return badge_svg(slug, record, mode, f'sources/badge-{slug}.svg')
 
 
@@ -310,6 +317,13 @@ def main():
             subprocess.run(['rsvg-convert', str(svg), '-o', str(png)], check=True)
             outputs.extend([svg, png])
     works = WORKS + popular_works()
+    total = total_snapshot()
+    for mode in INK:
+        svg = FOLIO / f'total-stars-{mode}.svg'
+        png = FOLIO / 'assets' / f'total-stars-{mode}.png'
+        svg.write_text(badge_svg('total project stars', total['badge'], mode, 'sources/badge-total-stars.svg'))
+        subprocess.run(['rsvg-convert', str(svg), '-o', str(png)], check=True)
+        outputs.extend([svg, png])
     with tempfile.TemporaryDirectory(prefix='hancore-folio-fonts-') as temp:
         cfg = Path(temp) / 'fonts.conf'
         cfg.write_text(f'<?xml version="1.0"?><!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd"><fontconfig><dir>{escape(str(FOLIO / "type"))}</dir><cachedir>{escape(temp)}/cache</cachedir></fontconfig>')
@@ -332,10 +346,25 @@ def main():
                 subprocess.run(['rsvg-convert', str(svg), '-o', str(png)], env=env, check=True)
                 outputs.extend([svg, png])
     # Theme wrappers must be composed after the current collection exports.
+    connections = connection_specs(popular_works(), detail_cards(themes, json.loads((FOLIO / 'highlights.json').read_text())))
+    # Ranking changes retire only known generated exports, never screenshot sources.
+    if manifest_path.exists():
+        previous = json.loads(manifest_path.read_text())['outputs']
+        current = {str(path.relative_to(ROOT)) for path in outputs}
+        current.update(f'folio/{prefix}connected-{spec["slug"]}-{mode}.{extension}'
+                       for spec in connections for mode in INK
+                       for prefix, extension in [('', 'svg'), ('assets/', 'png')])
+        for name in previous.keys() - current:
+            path = ROOT / name
+            assert re.fullmatch(r'folio/(assets/)?(?:popular|badge|connected-theme)-[a-z0-9-]+-(?:dark|light)\.(?:svg|png)', name), name
+            assert path.resolve().is_relative_to(FOLIO.resolve()) and not path.is_symlink()
+            if path.exists():
+                assert checksum(path) == previous[name], f'Preserve edited export: {name}'
+                path.unlink()
     from build_theme_registers import build
     build()
     for mode in INK:
-        for spec in connection_specs(popular_works(), detail_cards(themes, json.loads((FOLIO / 'highlights.json').read_text()))):
+        for spec in connections:
             svg = FOLIO / f'connected-{spec["slug"]}-{mode}.svg'
             png = FOLIO / 'assets' / f'connected-{spec["slug"]}-{mode}.png'
             svg.write_text(connected_svg(spec, mode))

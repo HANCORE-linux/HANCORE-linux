@@ -48,7 +48,7 @@ class References(HTMLParser):
 
 
 def verify(documents):
-    expected_counts = {'README.md': (21, 18), 'THEMES.md': (28, 29),
+    expected_counts = {'README.md': (22, 19), 'THEMES.md': (28, 29),
                        'ACKNOWLEDGEMENTS.md': (1, 8)}
     references = set()
     for name, source in documents.items():
@@ -59,6 +59,9 @@ def verify(documents):
         if name == 'README.md':
             assert './THEMES.md' in parsed.links and './ACKNOWLEDGEMENTS.md' in parsed.links
             assert 'https://github.com/omacom/omarchy-plugin-marketplace' in parsed.links
+        elif name == 'THEMES.md':
+            assert parsed.links.count('https://github.com/HANCORE-linux') == 2
+            assert './README.md' not in parsed.links
         else:
             assert './README.md' in parsed.links
     return references
