@@ -99,7 +99,7 @@ try {
       const m=await metrics();valid(m,width,mode);
       assert(m.images.length===23&&m.links.length===19,'Main profile count');
       const totalBadge=m.images.find(i=>i.src.endsWith('/total-stars-'+mode+'.png'));
-      assert(totalBadge&&totalBadge.declaredHeight==='54'&&Number(totalBadge.declaredWidth)===Math.round((totals.badge.width+24)*1.5),'Larger total-star badge');
+      assert(totalBadge&&totalBadge.declaredHeight==='44'&&Number(totalBadge.declaredWidth)===Math.round((totals.badge.width+24)*44/36),'Compact total-star badge');
       assert(totalBadge.alt.includes(totals.total_stars.toLocaleString('en-US'))&&totalBadge.alt.includes('non-fork')&&totalBadge.alt.includes('Omarchy Plugin Marketplace')&&totalBadge.alt.includes('checked '),'Transparent total-star scope/date');
       const bio=m.images.find(i=>i.src.includes('/bio-'));
       assert(bio&&bio.alt===summary.bio.join(' '),'Bio wording and accessible alternative');
@@ -143,7 +143,7 @@ try {
       } else assert(!m.images.some(i=>i.src.includes('/connected-')),'Narrow layouts must use original cards');
       const socials=m.images.filter(i=>i.src.includes('/social-'));
       assert(socials.length===3&&socials.every(i=>i.declaredWidth==='44'&&i.declaredHeight==='44'),'Missing accessible footer icons');
-      assert(socials.map(i=>i.alt).join(',')==='Discord,Ko-fi,Acknowledgements','Footer icon order');
+      assert(socials.map(i=>i.alt).join(',')==='Discord,Ko-fi,Inspired by','Footer icon order');
       const archiveCard=details.find(i=>i.alt==='All 27 themes — Open collection →');
       assert(archiveCard.y+archiveCard.height<=totalBadge.y&&totalBadge.y+totalBadge.height<=socials[0].y,'Total stars must sit below the archive and above the social icons');
       assert(new Set(socials.map(i=>i.y)).size===1&&socials[2].x>socials[1].x,'Acknowledgements must sit to the right of Ko-fi');
@@ -181,12 +181,28 @@ try {
         if(width<=390)assert(rowSizes.every(n=>n===1),'Archive mobile wrapping');
         for(const theme of themes)assert(m.links.includes('https://github.com/HANCORE-linux/omarchy-'+theme.slug+'-theme'),'Missing archive link '+theme.slug);
       } else if(thanks) {
-        assert(m.images[0].alt==='Acknowledgements'&&m.images[0].src.endsWith('/label-acknowledgements-'+mode+'.png'),'Acknowledgements heading');
+        assert(m.images[0].alt==='Inspired by'&&m.images[0].src.endsWith('/label-acknowledgements-'+mode+'.png'),'Inspired by heading');
         const cards=m.images.slice(1);
         const items=cards.map(i=>i.alt);
         assert(items.join('|')==='Amit / Content Creator|OldJobobo / Minister of Taste|Miqim / Visual Stylist|Bypass / Theme-hook-script|bjarneo / Aether|Taha / Omarchist|DHH / Omarchy|Ryan Hughes / Omarchy-dev','Exact acknowledgements and order');
         assert(cards.every(i=>i.declaredWidth==='248'&&i.declaredHeight==='89'&&i.src.includes('/thanks-')),'Individual acknowledgement mounts');
-        assert(new Set(cards.map(i=>i.y)).size===acknowledged.length&&new Set(cards.map(i=>i.x)).size===1,'Exactly one person per row at every viewport');
+        const rowSizes=Object.values(cards.reduce((rows,i)=>{const y=Math.round(i.y);rows[y]=(rows[y]||0)+1;return rows;},{}));
+        if(width>=390)assert(cards.every(i=>i.width===248&&i.height===89),'Keep inspiration cards at their original size');
+        else assert(cards.every(i=>i.width>=230&&i.width<=248&&Math.abs(i.height-i.width*224/624)<1),'Only fit the cards proportionally to very narrow screens');
+        if(width===1440) {
+          assert(rowSizes.join(',')==='3,3,2','Eight inspiration cards in three centered rows');
+          assert(m.articleHeight<500,'Compact inspiration page should not need a long scroll');
+        }
+        if(width<=390)assert(rowSizes.every(n=>n===1),'Inspiration cards wrap on mobile');
+        for(const y of new Set(cards.map(i=>Math.round(i.y)))) {
+          const row=cards.filter(i=>Math.round(i.y)===y);
+          // The heading shares the content center; innerWidth includes the
+          // scrollbar on tall mobile pages and is not the content width.
+          const headingCenter=m.images[0].x+m.images[0].width/2;
+          const rowCenter=(row[0].x+row.at(-1).x+row.at(-1).width)/2;
+          assert(Math.abs(rowCenter-headingCenter)<1,'Center every inspiration row with its heading');
+          for(let n=1;n<row.length;n++)assert(row[n].x>=row[n-1].x+row[n-1].width,'No overlapping inspiration cards');
+        }
         const people=JSON.parse(fs.readFileSync(path.join(root,'folio/acknowledgements.json'),'utf8')).people;
         assert(people.every((person,n)=>m.links[n+1]===person.url),'Preserve each person or project link');
         assert(await evaluate('document.querySelector(\'article img[alt="DHH / Omarchy"]\').closest("a").href === "https://github.com/dhh"'),'DHH must link to his personal profile');
@@ -214,7 +230,7 @@ try {
   assert(await evaluate('location.pathname==="/collection.html"&&location.search.includes("theme=dark")'),'Native archive link');
   assert(await evaluate(`[...document.querySelectorAll('article a')].filter(a=>a.textContent.includes('Back to profile')).length===2 && [...document.querySelectorAll('article a')].filter(a=>a.textContent.includes('Back to profile')).every(a=>a.href==='https://github.com/HANCORE-linux')`),'Both archive return links must open the real GitHub profile');
   await navigate('folio.html',1440,'dark');
-  await evaluate('document.querySelector("article a[title=Acknowledgements]").focus()');
+  await evaluate('document.querySelector(\'article a[title="Inspired by"]\').focus()');
   await call('Input.dispatchKeyEvent',{type:'keyDown',key:'Enter',code:'Enter',text:'\r',windowsVirtualKeyCode:13});
   await call('Input.dispatchKeyEvent',{type:'keyUp',key:'Enter',code:'Enter',windowsVirtualKeyCode:13});await loaded();
   assert(await evaluate('location.pathname==="/folio-acknowledgements.html"&&location.search.includes("theme=dark")&&location.search.includes("view=readme")'),'Acknowledgements keyboard link');

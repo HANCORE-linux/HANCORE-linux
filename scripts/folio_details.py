@@ -4,7 +4,7 @@ from xml.sax.saxutils import escape
 SOCIALS = [
     ('discord', 'Discord', 'https://discord.com/users/816417588610334741'),
     ('kofi', 'Ko-fi', 'https://ko-fi.com/hancore'),
-    ('acknowledgements', 'Acknowledgements', './ACKNOWLEDGEMENTS.md'),
+    ('acknowledgements', 'Inspired by', './ACKNOWLEDGEMENTS.md'),
 ]
 
 # Pango advance of the bundled IBM Plex Sans Medium at 34 px, unhinted.
@@ -57,7 +57,7 @@ def social_svg(slug, mode):
     if slug == 'acknowledgements':
         ink = '#e8e3d9' if mode == 'dark' else '#262522'
         return f'''<svg xmlns="http://www.w3.org/2000/svg" width="176" height="176" viewBox="0 0 44 44">
-  <title>Acknowledgements</title>
+  <title>Inspired by</title>
   <g fill="none" stroke="{ink}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <path d="M22 12C18 9 12 9 6 10V33C12 32 18 32 22 35C26 32 32 32 38 33V10C32 9 26 9 22 12Z" />
     <path d="M22 12V35M11 18H17M11 23H17" />

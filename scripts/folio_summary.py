@@ -80,5 +80,5 @@ def total_badge_html():
     note = f"Public repositories + Omarchy Plugin Marketplace. Forks excluded. Snapshot: {stamp}. Stars per project, not unique people."
     return (f'<p align="center"><a href="https://github.com/{config["account"]}?tab=repositories" title="{escape(note, quote=True)}">'
             '<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/total-stars-dark.png" />'
-            f'<img src="./assets/total-stars-light.png" width="{round((data["badge"]["width"] + 24) * 1.5)}" height="54" '
+            f'<img src="./assets/total-stars-light.png" width="{round((data["badge"]["width"] + 24) * 44 / 36)}" height="44" '
             f'alt="{escape(alt, quote=True)}" /></picture></a></p>')

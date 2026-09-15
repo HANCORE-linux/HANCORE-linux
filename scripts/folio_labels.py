@@ -11,7 +11,7 @@ def labels(theme_count):
         'subtitle': ('Linux themes & interfaces.',),
         'popular': ('Most starred themes',),
         'archive': ('Theme archive', f'{theme_count} themes · color00–07 · A–Z'),
-        'acknowledgements': ('Acknowledgements',),
+        'acknowledgements': ('Inspired by',),
     }
 
 

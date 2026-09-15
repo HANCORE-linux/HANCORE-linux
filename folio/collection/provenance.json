@@ -3,7 +3,7 @@
     "scripts/build_theme_registers.py": "f2de4e1e6ef40aaaf3f0fc73274a02b0ce324934047fa5b2436b5cbf096b6dfc",
     "scripts/folio_register.py": "8aa377d55008d62a3b4f899857dab31f0af8f9d23d864400643b326083d0c663",
     "scripts/folio_badges.py": "a4df8ce4878ee864476c76d052450e0162165e3355f8d81a6ea071eb42593900",
-    "scripts/folio_labels.py": "9db794d01f08e314b3ed8fb565ced317fb68be22f4e17ee3140bba7840499a13",
+    "scripts/folio_labels.py": "9aae654ab090e708c10a6a0011e0cacf35616d67da6e9f966065720fc05ce817",
     "data/themes.json": "7c251f001507dea7489dac3ffd63da10e14590bff9d8fc711d09c86ff733c545",
     "folio/assets/label-archive-dark.png": "6fb0b691f2832d13b2f8e6f2aa15a5e18c7ea66411d7e1a5cea6582cfb2660a2",
     "folio/assets/label-archive-light.png": "efd3ac05647dcf4c4f0f9e4689000cb86298f0d16e07a3df87c6060073a94475",

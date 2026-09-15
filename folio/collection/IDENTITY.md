@@ -30,7 +30,7 @@
 <!-- END GENERATED: popular-themes -->
 
 <!-- BEGIN GENERATED: theme-index -->
-<p align="center"><a href="https://github.com/HANCORE-linux?tab=repositories" title="Public repositories + Omarchy Plugin Marketplace. Forks excluded. Snapshot: 2026-09-15. Stars per project, not unique people."><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/total-stars-dark.png" /><img src="../assets/total-stars-light.png" width="261" height="54" alt="Total project stars: 1,995; public non-fork repositories + Omarchy Plugin Marketplace; checked 2026-09-15" /></picture></a></p>
+<p align="center"><a href="https://github.com/HANCORE-linux?tab=repositories" title="Public repositories + Omarchy Plugin Marketplace. Forks excluded. Snapshot: 2026-09-15. Stars per project, not unique people."><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/total-stars-dark.png" /><img src="../assets/total-stars-light.png" width="213" height="44" alt="Total project stars: 1,995; public non-fork repositories + Omarchy Plugin Marketplace; checked 2026-09-15" /></picture></a></p>
 <!-- END GENERATED: theme-index -->
 
 </div>
@@ -39,6 +39,6 @@
 <p align="center">
   <a href="https://discord.com/users/816417588610334741" title="Discord"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/social-discord-dark.png" /><img src="../assets/social-discord-light.png" alt="Discord" width="44" height="44" /></picture></a>
   <a href="https://ko-fi.com/hancore" title="Ko-fi"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/social-kofi-dark.png" /><img src="../assets/social-kofi-light.png" alt="Ko-fi" width="44" height="44" /></picture></a>
-  <a href="../ACKNOWLEDGEMENTS.md" title="Acknowledgements"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/social-acknowledgements-dark.png" /><img src="../assets/social-acknowledgements-light.png" alt="Acknowledgements" width="44" height="44" /></picture></a>
+  <a href="../ACKNOWLEDGEMENTS.md" title="Inspired by"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/social-acknowledgements-dark.png" /><img src="../assets/social-acknowledgements-light.png" alt="Inspired by" width="44" height="44" /></picture></a>
 </p>
 <!-- END GENERATED: social -->

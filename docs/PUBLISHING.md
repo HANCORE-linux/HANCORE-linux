@@ -81,16 +81,20 @@ The local preview can then be rerendered as above. The bio and total badge are
 configured in `folio/profile-summary.json`. The bio uses the same chamfered
 mount and IBM Plex Sans as the cards, at about 18 px: two lines on wide screens,
 six reflowed lines on narrow screens, with the full wording in image alt text.
-The subtitle follows the bio. The larger total badge (54 px canvas height,
-about 16.5 px lettering) sits directly below the archive CTA, before social icons.
+The subtitle follows the bio. The total badge (44 px canvas height,
+about 13.4 px lettering) sits directly below the archive CTA, before social icons.
 These use native Markdown pictures, not README CSS. The total's complete
 public repository list and provenance live in `folio/total-stars.json`.
 All three return links (archive top/bottom and acknowledgements) target
 `https://github.com/HANCORE-linux`, not the repository's README view.
 
-The separate acknowledgements page uses one linked card per person, vertically
-stacked at every screen size. Each card has a square public GitHub portrait on
-the left and centered Plex name/role to its right. Names, roles and original
+The separate page is titled “Inspired by”; its filename stays
+`ACKNOWLEDGEMENTS.md` to preserve existing links. Its eight individually linked
+cards form three centered rows (3–3–2) on desktop and wrap on narrow screens.
+Their native size stays 248 × 89 px; GitHub may scale them slightly to fit the
+smallest mobile content areas. The footer icon uses the same
+“Inspired by” tooltip and accessible label. Each card has a square public GitHub
+portrait on the left and centered Plex name/role to its right. Names, roles and original
 destinations are configured in `folio/acknowledgements.json`. Portrait sources
 are preserved and checked by hash; the daily star job does not refetch them.
 

@@ -31,6 +31,21 @@ class Links(HTMLParser):
 
 
 class ProfileNavigationTests(unittest.TestCase):
+    def test_inspired_by_keeps_three_rows_and_the_existing_page_link(self):
+        for prefix in ('', 'folio/'):
+            with self.subTest(prefix=prefix):
+                page = (ROOT / (prefix + 'ACKNOWLEDGEMENTS.md')).read_text()
+                rows = [Links(part).links for part in page.split('</p>')]
+                rows = [row for row in rows if any(link['alt'] for link in row)]
+                self.assertEqual([len(row) for row in rows], [3, 3, 2])
+                self.assertIn('alt="Inspired by"', page)
+                self.assertNotIn('alt="Acknowledgements"', page)
+                self.assertEqual(page.count('width="248" height="89"'), 8)
+                profile = (ROOT / (prefix + 'README.md')).read_text()
+                link, = [link for link in Links(profile).links if link['alt'] == 'Inspired by']
+                self.assertEqual(link['href'], './ACKNOWLEDGEMENTS.md')
+                self.assertIn('title="Inspired by"', profile)
+
     def test_every_return_link_opens_the_account_profile(self):
         for prefix in ('', 'folio/'):
             for name, count in [('README.md', 0), ('THEMES.md', 2), ('ACKNOWLEDGEMENTS.md', 1)]:

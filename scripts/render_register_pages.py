@@ -19,7 +19,7 @@ def render_pages():
         ('collection.html', 'THEMES.md', (FOLIO / 'THEMES.md').read_text()),
         ('identity.html', 'HANCORE · Namensstudie', identity),
         ('register-profile.html', 'README · Registerserie', profile),
-        ('folio-acknowledgements.html', 'ACKNOWLEDGEMENTS.md', (FOLIO / 'ACKNOWLEDGEMENTS.md').read_text()),
+        ('folio-acknowledgements.html', 'Inspired by', (FOLIO / 'ACKNOWLEDGEMENTS.md').read_text()),
     ]:
         resolved = markdown.replace('"./assets/', '"./folio/assets/').replace('"./collection/', '"./folio/collection/')
         resolved = resolved.replace('"./README.md"', '"./folio.html"').replace('"./THEMES.md"', '"./collection.html?view=readme"')
