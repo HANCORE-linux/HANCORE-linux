@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="696" height="144" viewBox="0 0 174 36">
-  <title>GitHub stars — total project stars: 1995; dated snapshot</title>
+  <title>GitHub stars — total project stars: 2001; dated snapshot</title>
   <defs><filter id="float" x="-25%" y="-50%" width="150%" height="220%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="2.2" /><feOffset dy="3" /></filter><clipPath id="badge-cut"><path d="M12 4H162V20L158 24H12Z" /></clipPath></defs>
   <path d="M12 4H162V20L158 24H12Z" fill="#000000" opacity="0.24" filter="url(#float)" />
   <image x="12" y="4" width="150" height="20" xlink:href="sources/badge-total-stars.svg" clip-path="url(#badge-cut)" />

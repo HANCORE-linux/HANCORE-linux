@@ -1,12 +1,11 @@
 {
-  "fetched_at": "2026-09-15T18:47:52.654443+00:00",
   "account": "HANCORE-linux",
   "extra_repositories": [
     "omacom/omarchy-plugin-marketplace"
   ],
   "exclude_forks": true,
   "sources": [
-    "https://api.github.com/users/HANCORE-linux/repos?type=owner&per_page=100&page=1",
+    "https://api.github.com/users/HANCORE-linux/repos?type=owner&sort=full_name&per_page=100&page=1",
     "https://api.github.com/repos/omacom/omarchy-plugin-marketplace"
   ],
   "repositories": [
@@ -30,7 +29,7 @@
       "id": 1106981256,
       "full_name": "HANCORE-linux/HANCORE-linux",
       "url": "https://github.com/HANCORE-linux/HANCORE-linux",
-      "stars": 12,
+      "stars": 13,
       "fork": false,
       "private": false
     },
@@ -118,7 +117,7 @@
       "id": 1118461330,
       "full_name": "HANCORE-linux/omarchy-harbor-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-harbor-theme",
-      "stars": 20,
+      "stars": 21,
       "fork": false,
       "private": false
     },
@@ -270,7 +269,7 @@
       "id": 1258696184,
       "full_name": "HANCORE-linux/quickshell-dots",
       "url": "https://github.com/HANCORE-linux/quickshell-dots",
-      "stars": 189,
+      "stars": 192,
       "fork": false,
       "private": false
     },
@@ -278,7 +277,7 @@
       "id": 1302068770,
       "full_name": "HANCORE-linux/Shibumi-Shell",
       "url": "https://github.com/HANCORE-linux/Shibumi-Shell",
-      "stars": 156,
+      "stars": 157,
       "fork": false,
       "private": false
     },
@@ -357,15 +356,16 @@
       "private": false
     }
   ],
-  "owned_stars": 1714,
+  "owned_stars": 1720,
   "extra_stars": 281,
-  "total_stars": 1995,
+  "total_stars": 2001,
+  "fetched_at": "2026-09-16T09:16:57.153752+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-1%2C995-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C001-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 1995,
-    "sha256": "65d9a3877025fbdcd839ccbb5092d2da3465c2654e08c5d1c2d06921659c35f3"
+    "stars": 2001,
+    "sha256": "f1ca1cb11caf23c2e698bf3d3720b3646da20fbc9103ec4ad705f067d7cd8724"
   }
 }

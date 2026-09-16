@@ -1,6 +1,6 @@
 {
-  "verified_on": "2026-09-15",
-  "source": "https://api.github.com/users/HANCORE-linux/repos?type=owner&per_page=100&page=1",
+  "verified_on": "2026-09-16",
+  "source": "https://api.github.com/users/HANCORE-linux/repos?type=owner&sort=full_name&per_page=100&page=1",
   "selection": "Non-fork public omarchy-*-theme repositories, stars strictly greater than 30, descending by stars, repository-name tie break, at most six.",
   "minimum_stars_exclusive": 30,
   "limit": 6,
@@ -22,7 +22,7 @@
     "velvetnight": 12,
     "whitegold": 14,
     "harbordark": 36,
-    "harbor": 20,
+    "harbor": 21,
     "solitude": 61,
     "oxocarbon": 16,
     "turbonite": 23,
