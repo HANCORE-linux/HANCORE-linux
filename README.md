@@ -29,7 +29,7 @@
 <!-- END GENERATED: popular-themes -->
 
 <!-- BEGIN GENERATED: theme-index -->
-<p align="center"><a href="https://github.com/HANCORE-linux?tab=repositories" title="Public repositories + Omarchy Plugin Marketplace. Forks excluded. Snapshot: 2026-09-16. Stars per project, not unique people."><picture><source media="(prefers-color-scheme: dark)" srcset="./folio/assets/total-stars-dark.svg" /><img src="./folio/assets/total-stars-light.svg" width="213" height="44" alt="Total project stars: 2,001; public non-fork repositories + Omarchy Plugin Marketplace; checked 2026-09-16" /></picture></a></p>
+<p align="center"><a href="https://github.com/HANCORE-linux?tab=repositories" title="Public repositories + Omarchy Plugin Marketplace. Forks excluded. Snapshot: 2026-09-16. Stars per project, not unique people."><picture><source media="(prefers-color-scheme: dark)" srcset="./folio/assets/total-stars-dark.svg" /><img src="./folio/assets/total-stars-light.svg" width="213" height="44" alt="Total project stars: 2,003; public non-fork repositories + Omarchy Plugin Marketplace; checked 2026-09-16" /></picture></a></p>
 <!-- END GENERATED: theme-index -->
 
 </div>

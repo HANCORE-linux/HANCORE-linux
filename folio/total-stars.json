@@ -165,7 +165,7 @@
       "id": 1098586772,
       "full_name": "HANCORE-linux/omarchy-moodpeak-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-moodpeak-theme",
-      "stars": 23,
+      "stars": 24,
       "fork": false,
       "private": false
     },
@@ -293,7 +293,7 @@
       "id": 1314624489,
       "full_name": "omacom/omarchy-plugin-marketplace",
       "url": "https://github.com/omacom/omarchy-plugin-marketplace",
-      "stars": 281,
+      "stars": 282,
       "fork": false,
       "private": false
     }
@@ -356,16 +356,16 @@
       "private": false
     }
   ],
-  "owned_stars": 1720,
-  "extra_stars": 281,
-  "total_stars": 2001,
-  "fetched_at": "2026-09-16T09:16:57.153752+00:00",
+  "owned_stars": 1721,
+  "extra_stars": 282,
+  "total_stars": 2003,
+  "fetched_at": "2026-09-16T11:38:12.358358+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C001-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C003-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2001,
-    "sha256": "f1ca1cb11caf23c2e698bf3d3720b3646da20fbc9103ec4ad705f067d7cd8724"
+    "stars": 2003,
+    "sha256": "3d549ee62492035a6ae6965bae61b916089f3ed5d0863ca99173b41b76aee522"
   }
 }

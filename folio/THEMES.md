@@ -39,7 +39,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/HANCORE-linux/omarchy-moodpeak-theme"><picture><source media="(prefers-color-scheme: dark)" srcset="./collection/assets/moodpeak-dark.svg" /><img src="./collection/assets/moodpeak-light.svg" alt="Moodpeak — full desktop preview; exact ANSI colors 00–07, left to right; 23 GitHub stars, checked 2026-09-16" title="Star snapshot · 2026-09-16" width="396" height="312" /></picture></a>
+  <a href="https://github.com/HANCORE-linux/omarchy-moodpeak-theme"><picture><source media="(prefers-color-scheme: dark)" srcset="./collection/assets/moodpeak-dark.svg" /><img src="./collection/assets/moodpeak-light.svg" alt="Moodpeak — full desktop preview; exact ANSI colors 00–07, left to right; 24 GitHub stars, checked 2026-09-16" title="Star snapshot · 2026-09-16" width="396" height="312" /></picture></a>
   <a href="https://github.com/HANCORE-linux/omarchy-oxford-theme"><picture><source media="(prefers-color-scheme: dark)" srcset="./collection/assets/oxford-dark.svg" /><img src="./collection/assets/oxford-light.svg" alt="Oxford — full desktop preview; exact ANSI colors 00–07, left to right; 14 GitHub stars, checked 2026-09-16" title="Star snapshot · 2026-09-16" width="396" height="312" /></picture></a>
 </p>
 
