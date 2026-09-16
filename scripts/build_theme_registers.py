@@ -16,7 +16,7 @@ from xml.sax.saxutils import escape
 
 from build_folio import ROOT, FOLIO, INK, checksum, popular_works, theme_url
 from folio_register import register_svg, identity_svg, THEME_LABELS, contrast
-from folio_badges import badge_svg
+from folio_badges import badge_svg, render_badge, BADGE_FONT
 from folio_labels import label_picture
 from refresh_folio_badges import fetch as fetch_badge
 
@@ -93,7 +93,7 @@ def build():
                     content = badge_svg(slug, badge, mode, f'collection/sources/badge-{slug}.svg')
                     svg = FOLIO / f'series-badge-{slug}-{mode}.svg'
                     svg.write_text(content)
-                    subprocess.run(['rsvg-convert', str(svg), '-o', str(FOLIO / badge_source)], check=True)
+                    render_badge(svg, FOLIO / badge_source)
                     outputs.extend([svg, FOLIO / badge_source])
                 svg = FOLIO / f'series-{slug}-{mode}.svg'
                 png = COLLECTION / f'assets/{slug}-{mode}.png'
@@ -118,6 +118,7 @@ def build():
     outputs.append(archive)
     sources = [Path(__file__).resolve(), ROOT / 'scripts/folio_register.py', ROOT / 'scripts/folio_badges.py', ROOT / 'scripts/folio_labels.py', ROOT / 'data/themes.json',
                *sorted((FOLIO / 'assets').glob('label-archive-*.png')),
+               ROOT / 'scripts/folio_vectors.py', BADGE_FONT,
                FOLIO / 'badge-snapshot.json', FOLIO / 'palettes.json', COLLECTION / 'sources.json',
                *sorted((COLLECTION / 'sources').glob('*')), *sorted((FOLIO / 'assets').glob('badge-*.png')),
                *sorted((FOLIO / 'sources').glob('popular-*.png')), FOLIO / 'type/plex-sans/IBMPlexSans.ttf']
@@ -174,8 +175,10 @@ def check():
             if not badge_path.exists():
                 badge_path = FOLIO / f'series-badge-{slug}-{mode}.svg'
             badge_svg_root = ET.parse(badge_path).getroot()
-            badge_image = badge_svg_root.find('s:image', ns)
-            assert badge_image.get('clip-path') == 'url(#badge-cut)'
+            badge_group = badge_svg_root.find('s:g', ns)
+            assert badge_group.get('clip-path') == 'url(#badge-cut)'
+            badge_image = badge_group.find('s:svg', ns)
+            assert badge_svg_root.find('.//s:image', ns) is None, 'Badges must stay vector-native'
             width = int(badge_image.get('width'))
             cut = badge_svg_root.find('.//s:clipPath[@id="badge-cut"]/s:path', ns)
             assert cut.get('d') == f'M12 4H{12 + width}V20L{8 + width} 24H12Z', 'Badge corner must be a 45-degree cut'

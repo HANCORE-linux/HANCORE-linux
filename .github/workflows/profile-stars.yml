@@ -60,6 +60,8 @@ jobs:
           python scripts/check_folio.py --assets-only
           python scripts/export_profile.py --write
           python scripts/export_profile.py --check
+          # Includes pixel comparisons against directly rendered vector sources.
+          python -m unittest discover -s tests -v
 
       - name: Commit and push verified changes
         if: steps.stars.outputs.changed == 'true'

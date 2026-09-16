@@ -38,6 +38,16 @@ image build is offline and validates original sources by hash. Star counts
 and rankings are dated snapshots, not live counters; palettes come from the
 actual theme color00–07 configurations.
 
+Small badge and Discord SVGs are embedded as vector geometry, never as SVG
+`<image>` resources: Ubuntu 24.04's librsvg otherwise rasterizes them at low
+resolution before enlarging them. Badges use bundled Liberation Sans Regular
+with an isolated, checksum-verified Fontconfig environment, matching the
+approved local font instead of depending on host fallbacks. Shadows, chamfers,
+output dimensions and Markdown display sizes remain unchanged.
+After building, run `python -m unittest discover -s tests -v`. The rendering
+tests compare every shipped badge and both Discord icons with independently
+rendered full-resolution vector sources. CI runs these checks before publishing.
+
 ## Daily star refresh
 
 `.github/workflows/profile-stars.yml` runs at 04:17 UTC each day (05:17 CET /

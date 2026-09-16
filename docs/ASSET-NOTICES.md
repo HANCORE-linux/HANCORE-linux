@@ -4,7 +4,12 @@ The repository's MIT license covers its original code and artwork. It does
 not relicense third-party fonts, brand marks or imagery.
 
 - Bundled, unmodified typefaces retain their SIL Open Font License notices
-  under `folio/type/`. The profile uses IBM Plex Sans; other fonts belong to
+  under `folio/type/`. The profile uses IBM Plex Sans and its star badges use
+  Liberation Sans Regular (unmodified Liberation Fonts 2.1.5, from the Arch
+  `ttf-liberation` package; https://github.com/liberationfonts/liberation-fonts).
+  Its OFL and fixed font checksum are bundled with the export tooling. This
+  preserves the original local badge rendering without system font fallback.
+  Other fonts belong to
   preserved design studies.
 - Omarchy's official wordmark retains its original geometry. The derived
   orange version changes only its fill. The brand remains its owner's

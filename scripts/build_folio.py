@@ -14,7 +14,7 @@ import tomllib
 from xml.sax.saxutils import escape
 from urllib.parse import quote, urlencode
 from folio_identity import logo_svg, signet_svg
-from folio_badges import badge_svg
+from folio_badges import badge_svg, render_badge
 from folio_details import detail_cards, detail_svg, social_svg, SOCIALS
 from folio_labels import labels, label_svg, label_picture
 from folio_connections import connected_svg, connected_picture, specs as connection_specs
@@ -67,7 +67,7 @@ def checksum(path):
 
 def inputs():
     return [ROOT / 'scripts/build_folio.py', ROOT / 'scripts/folio_identity.py', ROOT / 'scripts/folio_badges.py', ROOT / 'scripts/folio_details.py', ROOT / 'scripts/folio_labels.py', ROOT / 'scripts/folio_connections.py', ROOT / 'data/themes.json', FOLIO / 'highlights.json',
-            FOLIO / 'social-sources.json', FOLIO / 'sources/kofi-icon.avif', FOLIO / 'ACKNOWLEDGEMENTS.md',
+            ROOT / 'scripts/folio_vectors.py', FOLIO / 'social-sources.json', FOLIO / 'sources/kofi-icon.avif', FOLIO / 'ACKNOWLEDGEMENTS.md',
             FOLIO / 'popular-themes.json', FOLIO / 'identity.json',
             ROOT / 'scripts/folio_summary.py', ROOT / 'scripts/refresh_folio_totals.py',
             ROOT / 'scripts/folio_acknowledgements.py', FOLIO / 'acknowledgements.json', FOLIO / 'avatar-sources.json',
@@ -310,14 +310,14 @@ def main():
         subprocess.run(['rsvg-convert', str(svg), '-o', str(png)], check=True)
         outputs.extend([svg, png])
     snapshot = json.loads((FOLIO / 'badge-snapshot.json').read_text())
-    # Use the system's standard badge font fallback, not the isolated display fonts.
+    # Bundle the approved badge font; host fallback fonts differ on Ubuntu.
     for work in popular_works():
         slug = work['theme_slug']
         for mode in INK:
             svg = FOLIO / f'badge-{slug}-{mode}.svg'
             png = FOLIO / 'assets' / f'badge-{slug}-{mode}.png'
             svg.write_text(shadow_badge(slug, snapshot['badges'][slug], mode))
-            subprocess.run(['rsvg-convert', str(svg), '-o', str(png)], check=True)
+            render_badge(svg, png)
             outputs.extend([svg, png])
     works = WORKS + popular_works()
     total = total_snapshot()
@@ -325,7 +325,7 @@ def main():
         svg = FOLIO / f'total-stars-{mode}.svg'
         png = FOLIO / 'assets' / f'total-stars-{mode}.png'
         svg.write_text(badge_svg('total project stars', total['badge'], mode, 'sources/badge-total-stars.svg'))
-        subprocess.run(['rsvg-convert', str(svg), '-o', str(png)], check=True)
+        render_badge(svg, png)
         outputs.extend([svg, png])
     with tempfile.TemporaryDirectory(prefix='hancore-folio-fonts-') as temp:
         cfg = Path(temp) / 'fonts.conf'

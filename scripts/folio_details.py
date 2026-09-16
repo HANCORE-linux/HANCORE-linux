@@ -1,5 +1,6 @@
 """Small linked information mounts and accessible footer-icon compositions."""
 from xml.sax.saxutils import escape
+from folio_vectors import inline_svg
 
 SOCIALS = [
     ('discord', 'Discord', 'https://discord.com/users/816417588610334741'),
@@ -68,7 +69,9 @@ def social_svg(slug, mode):
     source = f'sources/discord-symbol-{"white" if mode == "dark" else "black"}.svg' if slug == 'discord' else 'sources/kofi-icon.png'
     y, height = (10, 24) if slug == 'discord' else (6, 32)
     label = dict((slug, label) for slug, label, _ in SOCIALS)[slug]
+    content = (inline_svg(source, x=6, y=y, width=32, height=height) if slug == 'discord'
+               else f'<image x="6" y="{y}" width="32" height="{height}" xlink:href="{source}" />')
     return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="176" height="176" viewBox="0 0 44 44">
   <title>{escape(label)}</title>
-  <image x="6" y="{y}" width="32" height="{height}" xlink:href="{source}" />
+  {content}
 </svg>'''

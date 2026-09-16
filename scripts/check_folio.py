@@ -264,8 +264,9 @@ def main():
             assert all(contrast(paths[1].get('fill'), line.get('fill')) >= 4.5 for line in lines)
             assert struct.unpack('>II', (ROOT / f'folio/assets/bio-{size}-{mode}.png').read_bytes()[16:24]) == (width * 2, height * 2)
         svg = ET.parse(ROOT / f'folio/total-stars-{mode}.svg').getroot()
-        assert svg.find('s:image', ns).get('{http://www.w3.org/1999/xlink}href') == 'sources/badge-total-stars.svg'
-        assert svg.find('s:image', ns).get('clip-path') == 'url(#badge-cut)'
+        assert svg.find('s:g/s:svg', ns).get('data-source') == 'sources/badge-total-stars.svg'
+        assert svg.find('s:g', ns).get('clip-path') == 'url(#badge-cut)'
+        assert svg.find('.//s:image', ns) is None, 'Total badge must stay vector-native'
         assert svg.find('s:defs/s:filter', ns).get('id') == 'float'
         assert struct.unpack('>II', (ROOT / f'folio/assets/total-stars-{mode}.png').read_bytes()[16:24]) == ((totals['badge']['width'] + 24) * 4, 144)
     check_labels(len(themes))
