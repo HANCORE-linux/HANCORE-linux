@@ -47,6 +47,8 @@ def main():
              'scripts/preview/preview.css','scripts/preview/preview.js','scripts/preview/github-markdown.min.css','scripts/preview/github-markdown-themes.css']
     names.extend(str(p.relative_to(ROOT)) for p in sorted((ROOT / 'folio/assets').glob('*.png')))
     names.extend(str(p.relative_to(ROOT)) for p in sorted((ROOT / 'folio/collection/assets').glob('*.png')))
+    names.extend(str(p.relative_to(ROOT)) for p in sorted((ROOT / 'folio/assets').glob('*.svg')))
+    names.extend(str(p.relative_to(ROOT)) for p in sorted((ROOT / 'folio/collection/assets').glob('*.svg')))
     checksum = lambda name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest()
     manifest = {'renderer':renderer,'inputs':{p:checksum(p) for p in names},'outputs':{'folio.html':checksum('folio.html')}}
     (ROOT / '.review/folio-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')

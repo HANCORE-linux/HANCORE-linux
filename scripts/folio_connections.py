@@ -66,10 +66,11 @@ def connected_picture(spec, url, alt, title=None):
     height = round(spec['height'] * 248 / 624)
     fallback_height = round(spec['body_height'] * 248 / 624)
     slug = spec['slug']
+    extension = 'svg' if spec['kind'].startswith('theme-') else 'png'
     tooltip = f' title="{escape(title, quote=True)}"' if title else ''
     return (f'<a href="{escape(url, quote=True)}"><picture>'
-            f'<source media="(min-width: {WIDE_MIN}px) and (prefers-color-scheme: dark)" srcset="./assets/connected-{slug}-dark.png" width="{width}" height="{height}" />'
-            f'<source media="(min-width: {WIDE_MIN}px) and (prefers-color-scheme: light)" srcset="./assets/connected-{slug}-light.png" width="{width}" height="{height}" />'
-            f'<source media="(prefers-color-scheme: dark)" srcset="./{spec["source"]}-dark.png" />'
-            f'<img src="./{spec["source"]}-light.png" alt="{escape(alt, quote=True)}" width="248" height="{fallback_height}" align="top"{tooltip} />'
+            f'<source media="(min-width: {WIDE_MIN}px) and (prefers-color-scheme: dark)" srcset="./assets/connected-{slug}-dark.{extension}" width="{width}" height="{height}" />'
+            f'<source media="(min-width: {WIDE_MIN}px) and (prefers-color-scheme: light)" srcset="./assets/connected-{slug}-light.{extension}" width="{width}" height="{height}" />'
+            f'<source media="(prefers-color-scheme: dark)" srcset="./{spec["source"]}-dark.{extension}" />'
+            f'<img src="./{spec["source"]}-light.{extension}" alt="{escape(alt, quote=True)}" width="248" height="{fallback_height}" align="top"{tooltip} />'
             '</picture></a>')

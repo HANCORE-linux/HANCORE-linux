@@ -17,6 +17,7 @@ from xml.sax.saxutils import escape
 from build_folio import ROOT, FOLIO, INK, checksum, popular_works, theme_url
 from folio_register import register_svg, identity_svg, THEME_LABELS, contrast
 from folio_badges import badge_svg, render_badge, BADGE_FONT
+from folio_badge_delivery import publish_theme
 from folio_labels import label_picture
 from refresh_folio_badges import fetch as fetch_badge
 
@@ -64,7 +65,7 @@ def picture(theme, width=396, prefix='./collection/assets/'):
         badge, stamp = source['themes'][slug]['badge'], source.get('badges_fetched_at', source['fetched_at'])[:10]
     status = f'{THEME_LABELS[slug]}; ' if slug in THEME_LABELS else ''
     alt = escape(f'{name} — {status}full desktop preview; exact ANSI colors 00–07, left to right; {badge["stars"]} GitHub stars, checked {stamp}', {'"': '&quot;'})
-    return f'<a href="{theme_url(slug)}"><picture><source media="(prefers-color-scheme: dark)" srcset="{prefix}{slug}-dark.png" /><img src="{prefix}{slug}-light.png" alt="{alt}" title="Star snapshot · {stamp}" width="{width}" height="{round(width*492/624)}" /></picture></a>'
+    return f'<a href="{theme_url(slug)}"><picture><source media="(prefers-color-scheme: dark)" srcset="{prefix}{slug}-dark.svg" /><img src="{prefix}{slug}-light.svg" alt="{alt}" title="Star snapshot · {stamp}" width="{width}" height="{round(width*492/624)}" /></picture></a>'
 
 
 def build():
@@ -100,6 +101,10 @@ def build():
                 svg.write_text(register_svg(mode, palettes[slug]['colors'], badge, slug=slug, name=theme['name'], source=source, badge_source=badge_source))
                 subprocess.run(['rsvg-convert', str(svg), '-o', str(png)], env=env, check=True)
                 outputs.extend([svg, png])
+                public_svg = png.with_suffix('.svg')
+                badge_svg_path = FOLIO / f'{"badge" if popular else "series-badge"}-{slug}-{mode}.svg'
+                publish_theme(svg, badge_svg_path, public_svg, env)
+                outputs.append(public_svg)
         for mode, ink in INK.items():
             svg = FOLIO / f'series-identity-{mode}.svg'
             png = COLLECTION / f'assets/identity-{mode}.png'
@@ -118,7 +123,7 @@ def build():
     outputs.append(archive)
     sources = [Path(__file__).resolve(), ROOT / 'scripts/folio_register.py', ROOT / 'scripts/folio_badges.py', ROOT / 'scripts/folio_labels.py', ROOT / 'data/themes.json',
                *sorted((FOLIO / 'assets').glob('label-archive-*.png')),
-               ROOT / 'scripts/folio_vectors.py', BADGE_FONT,
+               ROOT / 'scripts/folio_vectors.py', ROOT / 'scripts/folio_badge_delivery.py', BADGE_FONT,
                FOLIO / 'badge-snapshot.json', FOLIO / 'palettes.json', COLLECTION / 'sources.json',
                *sorted((COLLECTION / 'sources').glob('*')), *sorted((FOLIO / 'assets').glob('badge-*.png')),
                *sorted((FOLIO / 'sources').glob('popular-*.png')), FOLIO / 'type/plex-sans/IBMPlexSans.ttf']

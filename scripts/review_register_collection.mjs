@@ -62,7 +62,7 @@ try {
   const valid=(m,width,mode)=>{
     assert(m.scroll<=width,'Page overflow '+width);
     assert(m.images.every(i=>i.loaded),'Missing images '+JSON.stringify(m.images.filter(i=>!i.loaded)));
-    assert(m.images.filter(i=>i.themed).every(i=>i.src.endsWith('-'+mode+'.png')),'Wrong image mode');
+    assert(m.images.filter(i=>i.themed).every(i=>i.src.endsWith('-'+mode+'.png')||i.src.endsWith('-'+mode+'.svg')),'Wrong image mode');
     assert(!m.tables&&!m.details,'The old inline archive should not remain');
   };
   const save=async(name,m)=>{
@@ -98,7 +98,7 @@ try {
       await navigate('folio.html',width,mode,view);
       const m=await metrics();valid(m,width,mode);
       assert(m.images.length===23&&m.links.length===19,'Main profile count');
-      const totalBadge=m.images.find(i=>i.src.endsWith('/total-stars-'+mode+'.png'));
+      const totalBadge=m.images.find(i=>i.src.endsWith('/total-stars-'+mode+'.svg'));
       assert(totalBadge&&totalBadge.declaredHeight==='44'&&Number(totalBadge.declaredWidth)===Math.round((totals.badge.width+24)*44/36),'Compact total-star badge');
       assert(totalBadge.alt.includes(totals.total_stars.toLocaleString('en-US'))&&totalBadge.alt.includes('non-fork')&&totalBadge.alt.includes('Omarchy Plugin Marketplace')&&totalBadge.alt.includes('checked '),'Transparent total-star scope/date');
       const bio=m.images.find(i=>i.src.includes('/bio-'));
@@ -106,7 +106,7 @@ try {
       assert(bio.src.includes('/bio-wide-')===(width>=1280),'Bio must reflow on narrow screens');
       assert(bio.width>=(width>=1280?700:230),'Bio text scaled too small');
       const cards=m.images.filter(i=>i.fallback.includes('/collection/assets/'));
-      assert(cards.length===6&&cards.every((i,n)=>i.fallback.endsWith('/'+popular[n][0]+'-light.png')),'Popular order/count');
+      assert(cards.length===6&&cards.every((i,n)=>i.fallback.endsWith('/'+popular[n][0]+'-light.svg')),'Popular order/count');
       assert(cards.every(i=>i.src.includes('/connected-theme-')===(width>=1280)),'Popular connector breakpoint');
       assert(cards.every(i=>i.declaredWidth==='248'&&i.declaredHeight==='196'),'Profile card dimensions changed');
       assert(cards.every(i=>i.alt.includes('ANSI colors 00–07')&&i.alt.includes('GitHub stars, checked ')),'Accessible palettes/badges');
@@ -170,12 +170,12 @@ try {
         const label=m.images.find(i=>i.src.endsWith('/label-archive-'+mode+'.png'));
         assert(label?.declaredWidth==='280'&&label.declaredHeight==='76'&&label.alt==='Theme archive — 27 themes · color00–07 · A–Z','Readable archive heading tile');
         assert(label.y+label.height<=archiveCards[0].y,'Archive header tile overlaps the themes');
-        assert(archiveCards.length===27&&archiveCards.every((i,n)=>i.src.endsWith('/'+themes[n].slug+'-'+mode+'.png')),'Archive A–Z order');
+        assert(archiveCards.length===27&&archiveCards.every((i,n)=>i.src.endsWith('/'+themes[n].slug+'-'+mode+'.svg')),'Archive A–Z order');
         assert(new Set(archiveCards.map(i=>i.src)).size===27,'Repeated archive card');
         assert(archiveCards.every(i=>i.declaredWidth==='396'&&i.declaredHeight==='312'),'Large archive dimensions');
         assert(archiveCards.every(i=>i.alt.includes('ANSI colors 00–07')&&i.alt.includes('GitHub stars, checked ')),'Archive alt text');
         const newCards=archiveCards.filter(i=>i.alt.includes('— NEW;'));
-        assert(newCards.length===1&&newCards[0].src.endsWith('/banish-'+mode+'.png'),'Only Banish should be marked NEW');
+        assert(newCards.length===1&&newCards[0].src.endsWith('/banish-'+mode+'.svg'),'Only Banish should be marked NEW');
         const rowSizes=Object.values(archiveCards.reduce((rows,i)=>{const y=Math.round(i.y);rows[y]=(rows[y]||0)+1;return rows;},{}));
         if(width===1440)assert(rowSizes.length===14&&rowSizes.filter(n=>n===2).length===13,'Archive must have two large cards per row');
         if(width<=390)assert(rowSizes.every(n=>n===1),'Archive mobile wrapping');
@@ -241,7 +241,7 @@ try {
     assert(await evaluate(`document.querySelector('article img').currentSrc.endsWith('wordmark-${id}-dark.png')`),'Wordmark selector '+id);
   }
   await evaluate('document.querySelector("#preview-theme").value="light";document.querySelector("#preview-theme").dispatchEvent(new Event("change"))');await loaded();
-  assert(await evaluate('[...document.querySelectorAll("article picture:has(source) img")].every(i=>i.currentSrc.endsWith("-light.png"))'),'Theme control');
+  assert(await evaluate('[...document.querySelectorAll("article picture:has(source) img")].every(i=>i.currentSrc.endsWith("-light.png")||i.currentSrc.endsWith("-light.svg"))'),'Theme control');
   for(const mode of ['dark','light']) {
     await navigate('register.html',390,mode);
     const m=await metrics();valid(m,390,mode);

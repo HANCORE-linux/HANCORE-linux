@@ -31,6 +31,9 @@ PUBLIC.update(f'folio/assets/connected-{spec["slug"]}-{mode}.png' for spec in co
 PUBLIC.update(f'folio/assets/label-{slug}-{mode}.png' for slug in ['subtitle', 'popular', 'archive', 'acknowledgements'] for mode in ['dark', 'light'])
 PUBLIC.update(f'folio/assets/info-{slug}-{mode}.png' for slug in ['waybar', 'qs-dots', 'archive', *[t['slug'] for t in json.loads((ROOT / 'data/themes.json').read_text())]] for mode in ['dark', 'light'])
 PUBLIC.update(f'folio/assets/social-{slug}-{mode}.png' for slug in ['discord', 'kofi', 'acknowledgements'] for mode in ['dark', 'light'])
+PUBLIC.update(f'folio/collection/assets/{theme["slug"]}-{mode}.svg' for theme in json.loads((ROOT / 'data/themes.json').read_text()) for mode in ['dark', 'light'])
+PUBLIC.update(f'folio/assets/total-stars-{mode}.svg' for mode in ['dark', 'light'])
+PUBLIC.update(f'folio/assets/connected-theme-{work["theme_slug"]}-{mode}.svg' for work in popular_works() for mode in ['dark', 'light'])
 
 
 class FolioHandler(Handler):

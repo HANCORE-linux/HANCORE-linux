@@ -15,6 +15,7 @@ from xml.sax.saxutils import escape
 from urllib.parse import quote, urlencode
 from folio_identity import logo_svg, signet_svg
 from folio_badges import badge_svg, render_badge
+from folio_badge_delivery import publish_total, publish_connected
 from folio_details import detail_cards, detail_svg, social_svg, SOCIALS
 from folio_labels import labels, label_svg, label_picture
 from folio_connections import connected_svg, connected_picture, specs as connection_specs
@@ -67,7 +68,7 @@ def checksum(path):
 
 def inputs():
     return [ROOT / 'scripts/build_folio.py', ROOT / 'scripts/folio_identity.py', ROOT / 'scripts/folio_badges.py', ROOT / 'scripts/folio_details.py', ROOT / 'scripts/folio_labels.py', ROOT / 'scripts/folio_connections.py', ROOT / 'data/themes.json', FOLIO / 'highlights.json',
-            ROOT / 'scripts/folio_vectors.py', FOLIO / 'social-sources.json', FOLIO / 'sources/kofi-icon.avif', FOLIO / 'ACKNOWLEDGEMENTS.md',
+            ROOT / 'scripts/folio_vectors.py', ROOT / 'scripts/folio_badge_delivery.py', FOLIO / 'social-sources.json', FOLIO / 'sources/kofi-icon.avif', FOLIO / 'ACKNOWLEDGEMENTS.md',
             FOLIO / 'popular-themes.json', FOLIO / 'identity.json',
             ROOT / 'scripts/folio_summary.py', ROOT / 'scripts/refresh_folio_totals.py',
             ROOT / 'scripts/folio_acknowledgements.py', FOLIO / 'acknowledgements.json', FOLIO / 'avatar-sources.json',
@@ -327,6 +328,9 @@ def main():
         svg.write_text(badge_svg('total project stars', total['badge'], mode, 'sources/badge-total-stars.svg'))
         render_badge(svg, png)
         outputs.extend([svg, png])
+        public_svg = png.with_suffix('.svg')
+        publish_total(svg, public_svg)
+        outputs.append(public_svg)
     with tempfile.TemporaryDirectory(prefix='hancore-folio-fonts-') as temp:
         cfg = Path(temp) / 'fonts.conf'
         cfg.write_text(f'<?xml version="1.0"?><!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd"><fontconfig><dir>{escape(str(FOLIO / "type"))}</dir><cachedir>{escape(temp)}/cache</cachedir></fontconfig>')
@@ -359,6 +363,8 @@ def main():
         current.update(f'folio/{prefix}connected-{spec["slug"]}-{mode}.{extension}'
                        for spec in connections for mode in INK
                        for prefix, extension in [('', 'svg'), ('assets/', 'png')])
+        current.update(f'folio/assets/connected-{spec["slug"]}-{mode}.svg'
+                       for spec in connections if spec['kind'].startswith('theme-') for mode in INK)
         for name in previous.keys() - current:
             path = ROOT / name
             assert re.fullmatch(r'folio/(assets/)?(?:popular|badge|connected-theme)-[a-z0-9-]+-(?:dark|light)\.(?:svg|png)', name), name
@@ -375,6 +381,10 @@ def main():
             svg.write_text(connected_svg(spec, mode))
             subprocess.run(['rsvg-convert', str(svg), '-o', str(png)], check=True)
             outputs.extend([svg, png])
+            if spec['kind'].startswith('theme-'):
+                public_svg = png.with_suffix('.svg')
+                publish_connected(svg, FOLIO / f'{spec["source"]}-{mode}.svg', public_svg)
+                outputs.append(public_svg)
     manifest = {
         'description': 'Native SVG viewport crops of unchanged screenshot sources; no generative imagery.',
         'works': works,
@@ -389,7 +399,7 @@ def main():
     manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
     readme = FOLIO / 'README.md'
     readme.write_text(readme_content(readme.read_text()))
-    print(f'OK exported {len(outputs) // 2} base PNGs, highlights and archive link')
+    print('OK exported profile PNG references and self-contained vector-lettered badges, highlights and archive link')
 
 
 if __name__ == '__main__':

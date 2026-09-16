@@ -48,6 +48,16 @@ After building, run `python -m unittest discover -s tests -v`. The rendering
 tests compare every shipped badge and both Discord icons with independently
 rendered full-resolution vector sources. CI runs these checks before publishing.
 
+Theme cards and the total-star badge are published as self-contained SVG images.
+Only the badge lettering remains vector geometry until browser display; all
+other card pixels (including Plex captions, palettes, screenshots and shadows)
+retain the existing PNG rendering. Liberation Sans glyphs are outlined offline
+with the existing librsvg/Cairo toolchain, so no font download or fallback is
+needed. Embedded PNG backgrounds contain no badge lettering. Original PNGs stay
+as regression references. Image dimensions, independent links, colors and font
+weights do not change. Tests verify every card's unchanged background/caption
+pixels and compare the outlines to the original badge at 1× and 2× display scale.
+
 ## Daily star refresh
 
 `.github/workflows/profile-stars.yml` runs at 04:17 UTC each day (05:17 CET /

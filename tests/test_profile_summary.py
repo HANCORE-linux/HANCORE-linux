@@ -34,8 +34,8 @@ class TotalBadgeTests(unittest.TestCase):
                 self.assertEqual(image['height'], '44')
                 self.assertEqual(image['alt'], f'Total project stars: {stars:,}; public non-fork repositories + Omarchy Plugin Marketplace; checked 2026-09-15')
                 self.assertIn('href="https://github.com/HANCORE-linux?tab=repositories"', html)
-                self.assertIn('srcset="./assets/total-stars-dark.png"', html)
-                self.assertEqual(image['src'], './assets/total-stars-light.png')
+                self.assertIn('srcset="./assets/total-stars-dark.svg"', html)
+                self.assertEqual(image['src'], './assets/total-stars-light.svg')
 
 
 if __name__ == '__main__':

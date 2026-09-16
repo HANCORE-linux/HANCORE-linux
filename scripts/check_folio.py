@@ -15,6 +15,7 @@ from folio_details import detail_cards, SOCIALS, SHIPS_WITH_ADVANCE, ACCENT_INK
 from folio_labels import labels, label_dimensions
 from folio_connections import specs as connection_specs, connected_picture
 from folio_register import contrast
+from folio_badge_delivery import validate_public
 from folio_summary import summary_html, total_badge_html, snapshot as total_snapshot, settings as summary_settings
 from folio_acknowledgements import people as acknowledged_people, acknowledgement_markdown
 
@@ -247,7 +248,7 @@ def main():
     readme = (ROOT / 'folio/README.md').read_text()
     assert summary_html() in readme and total_badge_html() in readme
     assert readme.index('bio-wide-dark.png') < readme.index('label-subtitle-dark.png') < readme.index('connected-shibumi-dark.png')
-    assert readme.index('connected-info-archive-dark.png') < readme.index('total-stars-dark.png') < readme.index('social-discord-dark.png')
+    assert readme.index('connected-info-archive-dark.png') < readme.index('total-stars-dark.svg') < readme.index('social-discord-dark.png')
     assert len(summary_settings()['bio']) == 2
     ns = {'s': 'http://www.w3.org/2000/svg'}
     for mode in ('dark', 'light'):
@@ -334,6 +335,11 @@ def main():
     original = (ROOT / 'folio/sources/omarchy-wordmark.svg').read_text()
     assert (ROOT / 'folio/omarchy-wordmark-orange.svg').read_text() == original.replace('fill="#9ece6a"', 'fill="#df6124"')
     assert {p.name for p in (ROOT / 'folio/assets').glob('*.png')} == expected_assets
+    expected_svg = {f'total-stars-{mode}.svg' for mode in ('dark', 'light')}
+    expected_svg.update(f'connected-theme-{work["theme_slug"]}-{mode}.svg' for work in popular for mode in ('dark', 'light'))
+    assert {p.name for p in (ROOT / 'folio/assets').glob('*.svg')} == expected_svg
+    for path in [*sorted((ROOT / 'folio/assets').glob('*.svg')), *sorted((ROOT / 'folio/collection/assets').glob('*.svg'))]:
+        validate_public(ET.parse(path).getroot())
     if args.assets_only:
         subprocess.run([sys.executable, str(ROOT / 'scripts/build_theme_registers.py'), '--check'], check=True)
         print(f'OK {parsed.images} accessible images, {len(parsed.links)} links, {len(expected_assets)} assets; local rendering not required')
