@@ -286,7 +286,7 @@ def main():
     assert thanks_source == acknowledgement_markdown() and '<li>' not in thanks_source
     assert thanks.links.count('https://github.com/HANCORE-linux') == 1 and './README.md' not in thanks.links
     assert 'https://github.com/dhh' in thanks.links and 'https://github.com/basecamp/omarchy' not in thanks.links
-    for name, role in [('Amit', 'Content Creator'), ('OldJobobo', 'Minister of Taste'), ('Miqim', 'Visual Stylist'), ('Bypass', 'Theme-hook-script'), ('bjarneo', 'Aether'), ('Taha', 'Omarchist'), ('DHH', 'Omarchy'), ('Ryan Hughes', 'Omarchy-dev')]:
+    for name, role in [('Amit', 'TUI developer'), ('OldJobobo', 'Minister of Taste'), ('Miqim', 'Visual Stylist'), ('Bypass', 'Theme-hook-script'), ('bjarneo', 'Aether'), ('Taha', 'Omarchist'), ('DHH', 'Omarchy'), ('Ryan Hughes', 'Omarchy-dev')]:
         assert f'alt="{name} / {role}"' in thanks_source
     avatars = json.loads((ROOT / 'folio/avatar-sources.json').read_text())['avatars']
     for person in acknowledged_people():

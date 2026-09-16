@@ -184,7 +184,7 @@ try {
         assert(m.images[0].alt==='Inspired by'&&m.images[0].src.endsWith('/label-acknowledgements-'+mode+'.png'),'Inspired by heading');
         const cards=m.images.slice(1);
         const items=cards.map(i=>i.alt);
-        assert(items.join('|')==='Amit / Content Creator|OldJobobo / Minister of Taste|Miqim / Visual Stylist|Bypass / Theme-hook-script|bjarneo / Aether|Taha / Omarchist|DHH / Omarchy|Ryan Hughes / Omarchy-dev','Exact acknowledgements and order');
+        assert(items.join('|')==='Amit / TUI developer|OldJobobo / Minister of Taste|Miqim / Visual Stylist|Bypass / Theme-hook-script|bjarneo / Aether|Taha / Omarchist|DHH / Omarchy|Ryan Hughes / Omarchy-dev','Exact acknowledgements and order');
         assert(cards.every(i=>i.declaredWidth==='248'&&i.declaredHeight==='89'&&i.src.includes('/thanks-')),'Individual acknowledgement mounts');
         const rowSizes=Object.values(cards.reduce((rows,i)=>{const y=Math.round(i.y);rows[y]=(rows[y]||0)+1;return rows;},{}));
         if(width>=390)assert(cards.every(i=>i.width===248&&i.height===89),'Keep inspiration cards at their original size');

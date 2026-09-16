@@ -1,6 +1,6 @@
 {
   "people": [
-    {"slug": "amit", "name": "Amit", "role": "Content Creator", "github": "vyrx-dev", "url": "https://github.com/vyrx-dev"},
+    {"slug": "amit", "name": "Amit", "role": "TUI developer", "github": "vyrx-dev", "url": "https://github.com/vyrx-dev"},
     {"slug": "oldjobobo", "name": "OldJobobo", "role": "Minister of Taste", "github": "OldJobobo", "url": "https://github.com/OldJobobo"},
     {"slug": "miqim", "name": "Miqim", "role": "Visual Stylist", "github": "tahfizhabib", "url": "https://github.com/tahfizhabib"},
     {"slug": "bypass", "name": "Bypass", "role": "Theme-hook-script", "github": "imbypass", "url": "https://github.com/imbypass/omarchy-theme-hook"},
