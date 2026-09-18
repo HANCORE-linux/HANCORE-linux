@@ -1,12 +1,12 @@
 {
-  "verified_on": "2026-09-17",
+  "verified_on": "2026-09-18",
   "source": "https://api.github.com/users/HANCORE-linux/repos?type=owner&sort=full_name&per_page=100&page=1",
   "selection": "Non-fork public omarchy-*-theme repositories, stars strictly greater than 30, descending by stars, repository-name tie break, at most six.",
   "minimum_stars_exclusive": 30,
   "limit": 6,
   "star_snapshot": {
     "blackturq": 52,
-    "blackgold": 47,
+    "blackgold": 48,
     "demon": 17,
     "inkypinky": 36,
     "oxford": 14,
@@ -15,7 +15,7 @@
     "thegreek": 18,
     "batou": 38,
     "sapphire": 21,
-    "mechanoonna": 49,
+    "mechanoonna": 50,
     "blackmoney": 12,
     "shadesofjade": 24,
     "lasthorizon": 36,
