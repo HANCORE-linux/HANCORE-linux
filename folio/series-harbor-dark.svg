@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="984" viewBox="0 0 624 492">
   <title>Harbor — chamfered theme mount</title>
-  <desc>Full original desktop, exact ANSI colors 0 through 7, and 21 GitHub stars from the dated snapshot. Static linked image.</desc>
+  <desc>Full original desktop, exact ANSI colors 0 through 7, and 22 GitHub stars from the dated snapshot. Static linked image.</desc>
   <defs>
     <filter id="float" x="-15%" y="-15%" width="130%" height="140%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="8" /><feOffset dy="10" /></filter>
   </defs>
