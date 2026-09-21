@@ -104,11 +104,11 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/badge/stars-36-df6124?style=flat-square&labelColor=000000",
-        "stars": 36,
+        "url": "https://img.shields.io/badge/stars-35-df6124?style=flat-square&labelColor=000000",
+        "stars": 35,
         "width": 60,
         "height": 20,
-        "sha256": "70dfa091e93a02c41b0d9c1413ab3c030d6c062c4fb08b23af78f5999f0202c5",
+        "sha256": "71c7c7b53802d2355c74c461c7013b7bb1222542bf0e893bde2736ffc63928e5",
         "api_snapshot": true
       },
       "sha256": "f76d687fd5f514c87b898b1f79f8582a7df1097edd617ad262ba8da708bbeb0c"
@@ -312,5 +312,5 @@
       }
     }
   },
-  "badges_fetched_at": "2026-09-20T09:16:05.080465+00:00"
+  "badges_fetched_at": "2026-09-21T09:54:27.183531+00:00"
 }
