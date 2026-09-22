@@ -141,7 +141,7 @@
       "id": 1231346774,
       "full_name": "HANCORE-linux/omarchy-kanso-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-kanso-theme",
-      "stars": 27,
+      "stars": 28,
       "fork": false,
       "private": false
     },
@@ -253,7 +253,7 @@
       "id": 1115942253,
       "full_name": "HANCORE-linux/omarchy-velvetnight-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-velvetnight-theme",
-      "stars": 12,
+      "stars": 13,
       "fork": false,
       "private": false
     },
@@ -269,7 +269,7 @@
       "id": 1258696184,
       "full_name": "HANCORE-linux/quickshell-dots",
       "url": "https://github.com/HANCORE-linux/quickshell-dots",
-      "stars": 197,
+      "stars": 199,
       "fork": false,
       "private": false
     },
@@ -277,7 +277,7 @@
       "id": 1302068770,
       "full_name": "HANCORE-linux/Shibumi-Shell",
       "url": "https://github.com/HANCORE-linux/Shibumi-Shell",
-      "stars": 170,
+      "stars": 174,
       "fork": false,
       "private": false
     },
@@ -285,7 +285,7 @@
       "id": 1051865105,
       "full_name": "HANCORE-linux/waybar-themes",
       "url": "https://github.com/HANCORE-linux/waybar-themes",
-      "stars": 623,
+      "stars": 624,
       "fork": false,
       "private": false
     },
@@ -293,7 +293,7 @@
       "id": 1314624489,
       "full_name": "omacom/omarchy-plugin-marketplace",
       "url": "https://github.com/omacom/omarchy-plugin-marketplace",
-      "stars": 293,
+      "stars": 294,
       "fork": false,
       "private": false
     }
@@ -356,16 +356,16 @@
       "private": false
     }
   ],
-  "owned_stars": 1777,
-  "extra_stars": 293,
-  "total_stars": 2070,
-  "fetched_at": "2026-09-21T09:54:26.998024+00:00",
+  "owned_stars": 1786,
+  "extra_stars": 294,
+  "total_stars": 2080,
+  "fetched_at": "2026-09-22T09:17:26.707545+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C070-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C080-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2070,
-    "sha256": "7798e56c102bd8837bf21e03070a7bac38eded137fe4082946c7083971f56151"
+    "stars": 2080,
+    "sha256": "15fa778dc8b5bc09ec99dd4a359f7ddc1fc0fec341ae6f7930e6618b8a0be3e2"
   }
 }
