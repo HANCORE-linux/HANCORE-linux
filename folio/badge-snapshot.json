@@ -1,21 +1,29 @@
 {
-  "fetched_at": "2026-09-26T09:20:04.688982+00:00",
+  "fetched_at": "2026-09-27T09:59:32.961779+00:00",
   "note": "Exact public GitHub API counts, static Shields styling; refreshed daily by profile-stars.",
   "badges": {
     "solitude": {
-      "url": "https://img.shields.io/badge/stars-65-df6124?style=flat-square&labelColor=000000",
-      "stars": 65,
+      "url": "https://img.shields.io/badge/stars-67-df6124?style=flat-square&labelColor=000000",
+      "stars": 67,
       "width": 60,
       "height": 20,
-      "sha256": "c47eff66a051ce5e99c32f47bcbf86d734bd70074e5dedead389b2c4d7e7f0ec",
+      "sha256": "8706efb492386ae23866014bb6694a9dcf8bdd41ed1075fa210e3bfc6ca3443f",
       "api_snapshot": true
     },
     "blackturq": {
-      "url": "https://img.shields.io/badge/stars-55-df6124?style=flat-square&labelColor=000000",
-      "stars": 55,
+      "url": "https://img.shields.io/badge/stars-56-df6124?style=flat-square&labelColor=000000",
+      "stars": 56,
       "width": 60,
       "height": 20,
-      "sha256": "03996bec9408cf8bde0f513d576cbae5b1f32bfdd0b763e372da51caa4317297",
+      "sha256": "546d0e2cd9920be64bced68bb4a987172f14504c2165b35be6607e65c09ec4b1",
+      "api_snapshot": true
+    },
+    "blackgold": {
+      "url": "https://img.shields.io/badge/stars-51-df6124?style=flat-square&labelColor=000000",
+      "stars": 51,
+      "width": 60,
+      "height": 20,
+      "sha256": "83ee8315e11874b4f54f8bcfc1e0f525137c8a052b326a8837300cd6440706c8",
       "api_snapshot": true
     },
     "mechanoonna": {
@@ -24,14 +32,6 @@
       "width": 60,
       "height": 20,
       "sha256": "83ee8315e11874b4f54f8bcfc1e0f525137c8a052b326a8837300cd6440706c8",
-      "api_snapshot": true
-    },
-    "blackgold": {
-      "url": "https://img.shields.io/badge/stars-50-df6124?style=flat-square&labelColor=000000",
-      "stars": 50,
-      "width": 60,
-      "height": 20,
-      "sha256": "1f55dd1231ca9b8fc2caeb22f2efa46f439b6e07709a375bdd460c13a99ab182",
       "api_snapshot": true
     },
     "batou": {
