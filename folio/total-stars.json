@@ -37,7 +37,7 @@
       "id": 1338810088,
       "full_name": "HANCORE-linux/OmaQ",
       "url": "https://github.com/HANCORE-linux/OmaQ",
-      "stars": 32,
+      "stars": 37,
       "fork": false,
       "private": false
     },
@@ -157,7 +157,7 @@
       "id": 1091747360,
       "full_name": "HANCORE-linux/omarchy-mechanoonna-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-mechanoonna-theme",
-      "stars": 51,
+      "stars": 52,
       "fork": false,
       "private": false
     },
@@ -213,7 +213,7 @@
       "id": 1071017024,
       "full_name": "HANCORE-linux/omarchy-sapphire-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-sapphire-theme",
-      "stars": 22,
+      "stars": 23,
       "fork": false,
       "private": false
     },
@@ -269,7 +269,7 @@
       "id": 1258696184,
       "full_name": "HANCORE-linux/quickshell-dots",
       "url": "https://github.com/HANCORE-linux/quickshell-dots",
-      "stars": 204,
+      "stars": 205,
       "fork": false,
       "private": false
     },
@@ -277,7 +277,7 @@
       "id": 1302068770,
       "full_name": "HANCORE-linux/Shibumi-Shell",
       "url": "https://github.com/HANCORE-linux/Shibumi-Shell",
-      "stars": 200,
+      "stars": 202,
       "fork": false,
       "private": false
     },
@@ -285,7 +285,7 @@
       "id": 1051865105,
       "full_name": "HANCORE-linux/waybar-themes",
       "url": "https://github.com/HANCORE-linux/waybar-themes",
-      "stars": 632,
+      "stars": 634,
       "fork": false,
       "private": false
     },
@@ -293,7 +293,7 @@
       "id": 1314624489,
       "full_name": "omacom/omarchy-plugin-marketplace",
       "url": "https://github.com/omacom/omarchy-plugin-marketplace",
-      "stars": 322,
+      "stars": 326,
       "fork": false,
       "private": false
     }
@@ -356,16 +356,16 @@
       "private": false
     }
   ],
-  "owned_stars": 1867,
-  "extra_stars": 322,
-  "total_stars": 2189,
-  "fetched_at": "2026-10-01T10:55:45.217455+00:00",
+  "owned_stars": 1879,
+  "extra_stars": 326,
+  "total_stars": 2205,
+  "fetched_at": "2026-10-02T10:29:08.775930+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C189-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C205-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2189,
-    "sha256": "0868e7007fcca246d3e41fd1f206812b1b93e76885c093498c80bd55789ba859"
+    "stars": 2205,
+    "sha256": "f75f33415e720ffdacdec0d8f6e03b3de0b2dc904761e92c6d9604e87e97ce7b"
   }
 }
