@@ -74,7 +74,17 @@
       "height": 256,
       "sha256": "3af988004b7b71bb87ad354a784f153f810ae59da665608eda3915cd251cfca8",
       "fetched_at": "2026-09-15T19:38:27.154106+00:00"
+    },
+    "manuel": {
+      "github": "imanubdesigner",
+      "github_id": 146331681,
+      "url": "https://avatars.githubusercontent.com/u/146331681?v=4&s=256",
+      "path": "sources/avatar-manuel.png",
+      "width": 256,
+      "height": 256,
+      "sha256": "1359b120ca775301322fb0865d60a0aa98dcf9516bee65f2cb19e53d0c7c93bb",
+      "fetched_at": "2026-10-03T08:25:13.762512+00:00"
     }
   },
-  "last_updated": "2026-09-15T19:38:27.154106+00:00"
+  "last_updated": "2026-10-03T08:25:13.762512+00:00"
 }

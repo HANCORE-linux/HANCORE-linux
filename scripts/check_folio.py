@@ -17,7 +17,7 @@ from folio_connections import specs as connection_specs, connected_picture
 from folio_register import contrast
 from folio_badge_delivery import validate_public
 from folio_summary import summary_html, total_badge_html, snapshot as total_snapshot, settings as summary_settings
-from folio_acknowledgements import people as acknowledged_people, acknowledgement_markdown
+from folio_acknowledgements import people as acknowledged_people, origin as acknowledged_origin, acknowledgement_markdown, ORIGIN_SLUG, ORIGIN_HEIGHT
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -157,7 +157,7 @@ def check_detail_line(themes, highlights):
             svg = ET.parse(ROOT / f'folio/social-{slug}-{mode}.svg').getroot()
             assert svg.find('s:title', ns).text == label
             assert not svg.findall('.//s:filter', ns), 'Official social logos are not filtered'
-    print('OK six compact info/archive cards, exact orange Omarchy wordmark, two official social icons and original acknowledgements icon')
+    print('OK six compact info/archive cards, exact orange Omarchy wordmark, four official social icons and original acknowledgements icon')
 
 
 def check_labels(theme_count):
@@ -235,7 +235,7 @@ def main():
         assert record['url'] == badge_url(slug, record['stars'] if record.get('api_snapshot') else None)
         assert isinstance(snapshot['badges'][slug]['stars'], int)
     themes = json.loads((ROOT / 'data/themes.json').read_text())
-    assert parsed.images == 17 + len(popular), parsed.images
+    assert parsed.images == 19 + len(popular), parsed.images
     totals = total_snapshot()
     if all(record.get('api_snapshot') for record in snapshot['badges'].values()):
         archive_sources = json.loads((ROOT / 'folio/collection/sources.json').read_text())
@@ -273,7 +273,7 @@ def main():
     check_labels(len(themes))
     highlights = json.loads((ROOT / 'folio/highlights.json').read_text())
     check_detail_line(themes, highlights)
-    assert len(parsed.links) == len(popular) + 13, parsed.links
+    assert len(parsed.links) == len(popular) + 15, parsed.links
     assert 'https://github.com/HANCORE-linux/waybar-themes' in parsed.links
     assert 'https://github.com/omacom/omarchy-plugin-marketplace' in parsed.links
     assert parsed.tables == 0 and parsed.details == 0, 'The complete archive must be a separate page'
@@ -282,11 +282,23 @@ def main():
     thanks_source = (ROOT / 'folio/ACKNOWLEDGEMENTS.md').read_text()
     thanks = Check()
     thanks.feed(thanks_source)
-    assert thanks.images == len(acknowledged_people()) + 1 and len(thanks.links) == len(acknowledged_people()) + 1
+    assert thanks.images == len(acknowledged_people()) + 2 and len(thanks.links) == len(acknowledged_people()) + 2
+    source = acknowledged_origin()
+    creator = next(person for person in acknowledged_people() if person['slug'] == source['creator'])
+    assert thanks.links[1:3] == [source['url'], creator['url']], 'Omarchy and its creator come first'
+    assert f'alt="{source["name"]}" align="top" /></picture></a><br /><a href="{creator["url"]}">' in thanks_source, 'The origin route needs one joined paragraph'
+    for mode in ('dark', 'light'):
+        svg = ET.parse(ROOT / f'folio/{ORIGIN_SLUG}-{mode}.svg').getroot()
+        assert svg.get('viewBox') == f'0 0 624 {ORIGIN_HEIGHT}' and svg.find('.//s:image', ns) is None, 'Keep the wordmark vector-native'
+        route = svg.findall('s:path', ns)[0].get('d')
+        assert route.startswith('M312 ') and route.endswith(f'V{ORIGIN_HEIGHT}'), 'The origin route must reach the lower edge'
+        joined = ET.parse(ROOT / f'folio/thanks-{creator["slug"]}-{mode}.svg').getroot()
+        assert [path.get('d') for path in joined.findall('s:path', ns)[2:]] == ['M312 0V16', 'M301 16H323'], 'The route must continue into the creator card'
+        assert struct.unpack('>II', (ROOT / f'folio/assets/{ORIGIN_SLUG}-{mode}.png').read_bytes()[16:24]) == (1248, ORIGIN_HEIGHT * 2)
     assert thanks_source == acknowledgement_markdown() and '<li>' not in thanks_source
     assert thanks.links.count('https://github.com/HANCORE-linux') == 1 and './README.md' not in thanks.links
     assert 'https://github.com/dhh' in thanks.links and 'https://github.com/basecamp/omarchy' not in thanks.links
-    for name, role in [('Amit', 'TUI developer'), ('OldJobobo', 'Minister of Taste'), ('Miqim', 'Visual Stylist'), ('Bypass', 'Theme-hook-script'), ('bjarneo', 'Aether'), ('Taha', 'Omarchist'), ('DHH', 'Omarchy'), ('Ryan Hughes', 'Omarchy-dev')]:
+    for name, role in [('Amit', 'TUI developer'), ('OldJobobo', 'Minister of Taste'), ('Miqim', 'Visual Stylist'), ('Bypass', 'Theme-hook-script'), ('bjarneo', 'Aether'), ('Taha', 'Omarchist'), ('DHH', 'Omarchy'), ('Ryan Hughes', 'Omarchy-dev'), ('Manuel', 'Web Designer')]:
         assert f'alt="{name} / {role}"' in thanks_source
     avatars = json.loads((ROOT / 'folio/avatar-sources.json').read_text())['avatars']
     for person in acknowledged_people():
@@ -327,6 +339,7 @@ def main():
     expected_assets.update(f'total-stars-{mode}.png' for mode in ('dark', 'light'))
     expected_assets.update(f'bio-{size}-{mode}.png' for size in ('wide', 'narrow') for mode in ('dark', 'light'))
     expected_assets.update(f'thanks-{person["slug"]}-{mode}.png' for person in acknowledged_people() for mode in ('dark', 'light'))
+    expected_assets.update(f'{ORIGIN_SLUG}-{mode}.png' for mode in ('dark', 'light'))
     expected_assets.update(f'palette-{theme["slug"]}.png' for theme in themes)
     expected_assets.update(f'info-{card["slug"]}-{mode}.png' for card in detail_cards(themes, highlights) for mode in ('dark', 'light'))
     expected_assets.update(f'social-{slug}-{mode}.png' for slug, _, _ in SOCIALS for mode in ('dark', 'light'))

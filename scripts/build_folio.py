@@ -20,7 +20,7 @@ from folio_details import detail_cards, detail_svg, social_svg, SOCIALS
 from folio_labels import labels, label_svg, label_picture
 from folio_connections import connected_svg, connected_picture, specs as connection_specs
 from folio_summary import bio_svg, summary_html, total_badge_html, snapshot as total_snapshot
-from folio_acknowledgements import people as acknowledged_people, acknowledgement_svg, acknowledgement_markdown
+from folio_acknowledgements import people as acknowledged_people, acknowledgement_svg, acknowledgement_markdown, origin_svg, ORIGIN_SLUG
 
 ROOT = Path(__file__).resolve().parents[1]
 FOLIO = ROOT / 'folio'
@@ -344,6 +344,7 @@ def main():
             compositions = [('signature', signature(ink)), ('mark-logo', logo_svg(ink, mark=True)), ('mark-core', signet_svg(mark=True)),
                             ('bio-wide', bio_svg(mode)), ('bio-narrow', bio_svg(mode, wide=False)), *[(w['slug'], tile(w, ink)) for w in works],
                             *[(f'thanks-{person["slug"]}', acknowledgement_svg(person, mode)) for person in acknowledged_people()],
+                            (ORIGIN_SLUG, origin_svg(mode)),
                             *[(f'label-{slug}', label_svg(lines, ink, slug)) for slug, lines in labels(len(themes)).items()],
                             *[(f'info-{card["slug"]}', detail_svg(card, mode)) for card in detail_cards(themes, json.loads((FOLIO / 'highlights.json').read_text()))],
                             *[(f'social-{slug}', social_svg(slug, mode)) for slug, _, _ in SOCIALS],

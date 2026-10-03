@@ -31,16 +31,18 @@ class Links(HTMLParser):
 
 
 class ProfileNavigationTests(unittest.TestCase):
-    def test_inspired_by_keeps_three_rows_and_the_existing_page_link(self):
+    def test_inspired_by_starts_at_omarchy_and_pairs_the_cards(self):
         for prefix in ('', 'folio/'):
             with self.subTest(prefix=prefix):
                 page = (ROOT / (prefix + 'ACKNOWLEDGEMENTS.md')).read_text()
                 rows = [Links(part).links for part in page.split('</p>')]
                 rows = [row for row in rows if any(link['alt'] for link in row)]
-                self.assertEqual([len(row) for row in rows], [3, 3, 2])
+                self.assertEqual([len(row) for row in rows], [2, 2, 2, 2, 2])
+                self.assertEqual([link['alt'] for link in rows[0]], ['Omarchy', 'DHH / Omarchy'])
+                self.assertEqual(rows[0][0]['href'], 'https://omarchy.org')
                 self.assertIn('alt="Inspired by"', page)
                 self.assertNotIn('alt="Acknowledgements"', page)
-                self.assertEqual(page.count('width="248" height="89"'), 8)
+                self.assertEqual(page.count('width="248" height="89"'), 9)
                 profile = (ROOT / (prefix + 'README.md')).read_text()
                 link, = [link for link in Links(profile).links if link['alt'] == 'Inspired by']
                 self.assertEqual(link['href'], './ACKNOWLEDGEMENTS.md')

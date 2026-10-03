@@ -36,7 +36,9 @@
 <!-- BEGIN GENERATED: social -->
 <p align="center">
   <a href="https://discord.com/users/816417588610334741" title="Discord"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/social-discord-dark.png" /><img src="./assets/social-discord-light.png" alt="Discord" width="44" height="44" /></picture></a>
+  <a href="https://x.com/hancore_linux" title="X"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/social-x-dark.png" /><img src="./assets/social-x-light.png" alt="X" width="44" height="44" /></picture></a>
   <a href="https://ko-fi.com/hancore" title="Ko-fi"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/social-kofi-dark.png" /><img src="./assets/social-kofi-light.png" alt="Ko-fi" width="44" height="44" /></picture></a>
+  <a href="https://buymeacoffee.com/hancore" title="Buy Me a Coffee"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/social-bmc-dark.png" /><img src="./assets/social-bmc-light.png" alt="Buy Me a Coffee" width="44" height="44" /></picture></a>
   <a href="./ACKNOWLEDGEMENTS.md" title="Inspired by"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/social-acknowledgements-dark.png" /><img src="./assets/social-acknowledgements-light.png" alt="Inspired by" width="44" height="44" /></picture></a>
 </p>
 <!-- END GENERATED: social -->

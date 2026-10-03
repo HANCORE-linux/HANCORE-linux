@@ -3,6 +3,9 @@ from html import escape
 
 PROJECTS = ('shibumi', 'omaq', 'marketplace')
 WIDE_MIN = 1280
+# Quiet routes; brighter signal segments and terminals.
+ROUTE_INK = {'dark': '#48525b', 'light': '#a1a6ab'}
+SIGNAL_INK = {'dark': '#e8e3d9', 'light': '#41474d'}
 
 
 def specs(popular, details):
@@ -25,8 +28,7 @@ def specs(popular, details):
 
 
 def connected_svg(spec, mode):
-    line = '#48525b' if mode == 'dark' else '#a1a6ab'
-    bright = '#e8e3d9' if mode == 'dark' else '#41474d'
+    line, bright = ROUTE_INK[mode], SIGNAL_INK[mode]
     kind, column = spec['kind'], spec['column']
     hub = ''
     if kind in ('project', 'theme-top'):

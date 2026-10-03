@@ -12,11 +12,12 @@ not relicense third-party fonts, brand marks or imagery.
   Other fonts belong to
   preserved design studies.
 - Omarchy's official wordmark retains its original geometry. The derived
-  orange version changes only its fill. The brand remains its owner's
+  orange version changes only its fill; it also opens the Inspired by page. The brand remains its owner's
   property and is not covered by this repository's MIT license.
-- Discord and Ko-fi symbols come from their official brand assets. Source
-  URLs and hashes are recorded in `folio/social-sources.json`. Transparent
-  spacing and the Ko-fi PNG conversion do not imply ownership of those marks.
+- Discord, X, Ko-fi and Buy Me a Coffee symbols come from their official
+  brand assets. Source URLs and hashes are recorded in
+  `folio/social-sources.json`. Transparent spacing, the Ko-fi PNG conversion
+  and the brands' own light/dark paints do not imply ownership of those marks.
 - Project and theme screenshots retain their original UI and wallpaper.
   Source URLs and hashes are recorded in `folio/provenance.json`,
   `folio/collection/sources.json`, `folio/popular-themes.json` and

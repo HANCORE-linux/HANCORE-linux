@@ -109,8 +109,9 @@ All three return links (archive top/bottom and acknowledgements) target
 `https://github.com/HANCORE-linux`, not the repository's README view.
 
 The separate page is titled “Inspired by”; its filename stays
-`ACKNOWLEDGEMENTS.md` to preserve existing links. Its eight individually linked
-cards form three centered rows (3–3–2) on desktop and wrap on narrow screens.
+`ACKNOWLEDGEMENTS.md` to preserve existing links. It opens with the orange
+Omarchy wordmark, joined by one route to DHH's card; the other eight
+individually linked cards follow in centered pairs and wrap on narrow screens.
 Their native size stays 248 × 89 px; GitHub may scale them slightly to fit the
 smallest mobile content areas. The footer icon uses the same
 “Inspired by” tooltip and accessible label. Each card has a square public GitHub

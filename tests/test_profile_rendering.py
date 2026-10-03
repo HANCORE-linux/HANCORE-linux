@@ -46,6 +46,12 @@ class VectorExportTests(unittest.TestCase):
             source = ET.parse(FOLIO / f'sources/discord-symbol-{"white" if mode == "dark" else "black"}.svg').getroot()
             self.assertEqual([p.attrib for p in discord.findall('s:svg/s:path', NS)],
                              [p.attrib for p in source.findall('s:path', NS)])
+            for slug in ('x', 'bmc'):
+                mark = ET.fromstring(social_svg(slug, mode))
+                self.assertIsNone(mark.find('.//s:image', NS))
+                original = ET.parse(FOLIO / f'sources/{slug}-logo.svg').getroot()
+                self.assertEqual([p.get('d') for p in mark.findall('s:svg/s:path', NS)],
+                                 [p.get('d') for p in original.findall('s:path', NS)])
 
     def test_shipped_badges_match_direct_vector_rendering(self):
         popular = set(json.loads((FOLIO / 'badge-snapshot.json').read_text())['badges'])

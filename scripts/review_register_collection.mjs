@@ -142,11 +142,11 @@ try {
         assert(m.images.filter(i=>i.src.includes('/connected-')).length===15,'Both complete connection networks and final archive node');
       } else assert(!m.images.some(i=>i.src.includes('/connected-')),'Narrow layouts must use original cards');
       const socials=m.images.filter(i=>i.src.includes('/social-'));
-      assert(socials.length===3&&socials.every(i=>i.declaredWidth==='44'&&i.declaredHeight==='44'),'Missing accessible footer icons');
-      assert(socials.map(i=>i.alt).join(',')==='Discord,Ko-fi,Inspired by','Footer icon order');
+      assert(socials.length===5&&socials.every(i=>i.declaredWidth==='44'&&i.declaredHeight==='44'),'Missing accessible footer icons');
+      assert(socials.map(i=>i.alt).join(',')==='Discord,X,Ko-fi,Buy Me a Coffee,Inspired by','Footer icon order');
       const archiveCard=details.find(i=>i.alt==='All 27 themes — Open collection →');
       assert(archiveCard.y+archiveCard.height<=totalBadge.y&&totalBadge.y+totalBadge.height<=socials[0].y,'Total stars must sit below the archive and above the social icons');
-      assert(new Set(socials.map(i=>i.y)).size===1&&socials[2].x>socials[1].x,'Acknowledgements must sit to the right of Ko-fi');
+      assert(new Set(socials.map(i=>i.y)).size===1&&socials.every((i,n)=>!n||i.x>socials[n-1].x),'Buy Me a Coffee follows Ko-fi; Inspired by stays last');
       if(width===1440) {
         assert(m.articleHeight<1730,'Main profile too tall with readable bio and total badge');
         assert(new Set(cards.map(i=>Math.round(i.y))).size===2,'Expected 3×2 compact grid');
@@ -163,8 +163,8 @@ try {
       const m=await metrics();valid(m,width,mode);
       const archive=route==='collection.html';
       const thanks=route==='folio-acknowledgements.html';
-      assert(m.images.length===(archive?28:thanks?acknowledged.length+1:23),'Unexpected image count '+route);
-      assert(m.links.length===(archive?29:thanks?acknowledged.length+1:19),'Unexpected links '+route);
+      assert(m.images.length===(archive?28:thanks?acknowledged.length+2:25),'Unexpected image count '+route);
+      assert(m.links.length===(archive?29:thanks?acknowledged.length+2:21),'Unexpected links '+route);
       if(archive) {
         const archiveCards=m.images.filter(i=>i.src.includes('/collection/assets/'));
         const label=m.images.find(i=>i.src.endsWith('/label-archive-'+mode+'.png'));
@@ -182,16 +182,18 @@ try {
         for(const theme of themes)assert(m.links.includes('https://github.com/HANCORE-linux/omarchy-'+theme.slug+'-theme'),'Missing archive link '+theme.slug);
       } else if(thanks) {
         assert(m.images[0].alt==='Inspired by'&&m.images[0].src.endsWith('/label-acknowledgements-'+mode+'.png'),'Inspired by heading');
-        const cards=m.images.slice(1);
+        const origin=m.images[1], cards=m.images.slice(2);
+        assert(origin.alt==='Omarchy'&&origin.src.endsWith('/origin-omarchy-'+mode+'.png')&&origin.declaredWidth==='248'&&origin.declaredHeight==='93','Omarchy origin mount');
+        assert(Math.abs(origin.x-cards[0].x)<1&&Math.abs(origin.y+origin.height-cards[0].y)<1,'The Omarchy route must join DHH without a gap');
         const items=cards.map(i=>i.alt);
-        assert(items.join('|')==='Amit / TUI developer|OldJobobo / Minister of Taste|Miqim / Visual Stylist|Bypass / Theme-hook-script|bjarneo / Aether|Taha / Omarchist|DHH / Omarchy|Ryan Hughes / Omarchy-dev','Exact acknowledgements and order');
+        assert(items.join('|')==='DHH / Omarchy|Bypass / Theme-hook-script|bjarneo / Aether|Taha / Omarchist|Amit / TUI developer|OldJobobo / Minister of Taste|Miqim / Visual Stylist|Ryan Hughes / Omarchy-dev|Manuel / Web Designer','Exact acknowledgements and order');
         assert(cards.every(i=>i.declaredWidth==='248'&&i.declaredHeight==='89'&&i.src.includes('/thanks-')),'Individual acknowledgement mounts');
         const rowSizes=Object.values(cards.reduce((rows,i)=>{const y=Math.round(i.y);rows[y]=(rows[y]||0)+1;return rows;},{}));
         if(width>=390)assert(cards.every(i=>i.width===248&&i.height===89),'Keep inspiration cards at their original size');
         else assert(cards.every(i=>i.width>=230&&i.width<=248&&Math.abs(i.height-i.width*224/624)<1),'Only fit the cards proportionally to very narrow screens');
         if(width===1440) {
-          assert(rowSizes.join(',')==='3,3,2','Eight inspiration cards in three centered rows');
-          assert(m.articleHeight<500,'Compact inspiration page should not need a long scroll');
+          assert(rowSizes.join(',')==='1,2,2,2,2','DHH below Omarchy, then centered pairs');
+          assert(m.articleHeight<900,'Compact inspiration page should not need a long scroll');
         }
         if(width<=390)assert(rowSizes.every(n=>n===1),'Inspiration cards wrap on mobile');
         for(const y of new Set(cards.map(i=>Math.round(i.y)))) {
@@ -204,7 +206,7 @@ try {
           for(let n=1;n<row.length;n++)assert(row[n].x>=row[n-1].x+row[n-1].width,'No overlapping inspiration cards');
         }
         const people=JSON.parse(fs.readFileSync(path.join(root,'folio/acknowledgements.json'),'utf8')).people;
-        assert(people.every((person,n)=>m.links[n+1]===person.url),'Preserve each person or project link');
+        assert(m.links[1]==='https://omarchy.org'&&people.every((person,n)=>m.links[n+2]===person.url),'Preserve each person or project link');
         assert(await evaluate('document.querySelector(\'article img[alt="DHH / Omarchy"]\').closest("a").href === "https://github.com/dhh"'),'DHH must link to his personal profile');
         assert(await evaluate('document.querySelector(\'article img[alt="Ryan Hughes / Omarchy-dev"]\').closest("a").href === "https://github.com/ryanrhughes"'),'Ryan must link to the requested profile');
         assert(!await evaluate('/Credits|Contributions/.test(document.querySelector("article").textContent)'),'Wrong acknowledgements label');

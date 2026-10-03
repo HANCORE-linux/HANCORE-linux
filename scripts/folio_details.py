@@ -4,7 +4,9 @@ from folio_vectors import inline_svg
 
 SOCIALS = [
     ('discord', 'Discord', 'https://discord.com/users/816417588610334741'),
+    ('x', 'X', 'https://x.com/hancore_linux'),
     ('kofi', 'Ko-fi', 'https://ko-fi.com/hancore'),
+    ('bmc', 'Buy Me a Coffee', 'https://buymeacoffee.com/hancore'),
     ('acknowledgements', 'Inspired by', './ACKNOWLEDGEMENTS.md'),
 ]
 
@@ -16,6 +18,13 @@ BRAND_GAP = 20
 # Text accent: the existing brand orange on dark mounts, a darker counterpart
 # on light mounts to retain at least 4.5:1 contrast at the compact label size.
 ACCENT_INK = {'dark': '#df6124', 'light': '#ac450f'}
+# Official vector marks: source, aspect ratio, optical height in the 44-unit
+# icon and per-mode paint. X uses its toolkit's white or black; Buy Me a Coffee
+# outlines its cup in white on dark grounds, as on its own black button.
+MARKS = {
+    'x': ('sources/x-logo.svg', 1200 / 1227, 24, {'light': ('fill="white"', 'fill="black"', 1)}),
+    'bmc': ('sources/bmc-logo.svg', 884 / 1279, 30, {'dark': ('fill="#0D0C22"', 'fill="#FFFFFF"', 13)}),
+}
 
 
 def detail_cards(themes, highlights):
@@ -65,12 +74,20 @@ def social_svg(slug, mode):
   </g>
   <path d="M30 26L25.6 21.6C22.8 18.5 27.4 15.8 30 18.5C32.6 15.8 37.2 18.5 34.4 21.6Z" fill="#df6124" />
 </svg>'''
-    assert slug in ('discord', 'kofi'), f'Unknown footer icon: {slug}'
-    source = f'sources/discord-symbol-{"white" if mode == "dark" else "black"}.svg' if slug == 'discord' else 'sources/kofi-icon.png'
-    y, height = (10, 24) if slug == 'discord' else (6, 32)
+    assert slug in ('discord', 'kofi', *MARKS), f'Unknown footer icon: {slug}'
     label = dict((slug, label) for slug, label, _ in SOCIALS)[slug]
-    content = (inline_svg(source, x=6, y=y, width=32, height=height) if slug == 'discord'
-               else f'<image x="6" y="{y}" width="32" height="{height}" xlink:href="{source}" />')
+    if slug == 'discord':
+        content = inline_svg(f'sources/discord-symbol-{"white" if mode == "dark" else "black"}.svg', x=6, y=10, width=32, height=24)
+    elif slug == 'kofi':
+        content = '<image x="6" y="6" width="32" height="32" xlink:href="sources/kofi-icon.png" />'
+    else:
+        source, ratio, height, paints = MARKS[slug]
+        width = height * ratio
+        content = inline_svg(source, x=round(22 - width / 2, 3), y=22 - height / 2, width=round(width, 3), height=height)
+        if mode in paints:
+            old, new, count = paints[mode]
+            assert content.count(old) == count, f'Unexpected {slug} paint'
+            content = content.replace(old, new)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="176" height="176" viewBox="0 0 44 44">
   <title>{escape(label)}</title>
   {content}
