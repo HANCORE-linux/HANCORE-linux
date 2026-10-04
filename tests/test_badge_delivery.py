@@ -26,7 +26,7 @@ def rgb(data, crop=None):
 class BadgeDeliveryTests(unittest.TestCase):
     def test_every_public_badge_is_self_contained_vector_lettering(self):
         paths = [*sorted((FOLIO / 'collection/assets').glob('*.svg')), *sorted((FOLIO / 'assets').glob('*.svg'))]
-        self.assertEqual(len(paths), 68)  # 54 archive cards, 12 connectors, 2 totals.
+        self.assertEqual(len(paths), 70)  # 56 archive cards, 12 connectors, 2 totals.
         for path in paths:
             with self.subTest(asset=path.name):
                 root = ET.parse(path).getroot()
@@ -90,7 +90,7 @@ class BadgeDeliveryTests(unittest.TestCase):
         for slug in snapshot:
             self.assertIn(f'connected-theme-{slug}-dark.svg', markdown)
             self.assertIn(f'collection/assets/{slug}-light.svg', markdown)
-        self.assertEqual((FOLIO / 'THEMES.md').read_text().count('width="396" height="312"'), 27)
+        self.assertEqual((FOLIO / 'THEMES.md').read_text().count('width="396" height="312"'), 28)
 
 
 if __name__ == '__main__':

@@ -368,7 +368,7 @@ def main():
                        for spec in connections if spec['kind'].startswith('theme-') for mode in INK)
         for name in previous.keys() - current:
             path = ROOT / name
-            assert re.fullmatch(r'folio/(assets/)?(?:popular|badge|connected-theme)-[a-z0-9-]+-(?:dark|light)\.(?:svg|png)', name), name
+            assert re.fullmatch(r'folio/(assets/)?(?:popular|badge|connected-theme|info|connected-info)-[a-z0-9-]+-(?:dark|light)\.(?:svg|png)', name), name
             assert path.resolve().is_relative_to(FOLIO.resolve()) and not path.is_symlink()
             if path.exists():
                 assert checksum(path) == previous[name], f'Preserve edited export: {name}'

@@ -129,7 +129,7 @@ def build():
                *sorted((FOLIO / 'sources').glob('popular-*.png')), FOLIO / 'type/plex-sans/IBMPlexSans.ttf']
     MANIFEST.write_text(json.dumps({'inputs': {str(p.relative_to(ROOT)): checksum(p) for p in sources},
                                     'outputs': {str(p.relative_to(ROOT)): checksum(p) for p in outputs}}, indent=2) + '\n')
-    print('OK 27 theme mounts in dark/light, separate two-column GitHub archive, historical identity study')
+    print('OK 28 theme mounts in dark/light, separate two-column GitHub archive, historical identity study')
 
 
 def check():
@@ -194,9 +194,9 @@ def check():
             for crop in ('1120x630+64+48', '290x90+864+826'):
                 spread = subprocess.check_output([shutil.which('magick') or 'convert', str(png), '-crop', crop, '+repage', '-format', '%[standard-deviation]', 'info:'], text=True)
                 assert float(spread) > 1000, f'Missing screenshot/badge: {slug}, {crop}'
-    assert (FOLIO / 'THEMES.md').read_text().count('width="396"') == 27
+    assert (FOLIO / 'THEMES.md').read_text().count('width="396"') == 28
     assert (FOLIO / 'THEMES.md').read_text().count('— NEW;') == 1
-    print('OK all 54 theme mounts match project frames; exact palettes, unfiltered desktops, captions and visible badges')
+    print('OK all 56 theme mounts match project frames; exact palettes, unfiltered desktops, captions and visible badges')
 
 
 if __name__ == '__main__':

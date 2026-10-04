@@ -310,6 +310,21 @@
         "sha256": "70dfa091e93a02c41b0d9c1413ab3c030d6c062c4fb08b23af78f5999f0202c5",
         "api_snapshot": true
       }
+    },
+    "labra": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-labra-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/badge/stars-1-df6124?style=flat-square&labelColor=000000",
+        "stars": 1,
+        "width": 54,
+        "height": 20,
+        "sha256": "a1b5849e2190b796320c22fdbdb87a22a6f88cb64ab99e8340e9d14b7ec419ae",
+        "api_snapshot": true
+      },
+      "sha256": "d17cf7253c9fa6d9fa5e9afb45f17fad43bac471bb1a6bc8b52107468f43be28",
+      "fetched_at": "2026-10-04T11:45:45.538050+00:00"
     }
   },
   "badges_fetched_at": "2026-10-04T10:33:54.043008+00:00"

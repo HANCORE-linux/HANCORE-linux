@@ -50,7 +50,7 @@ class References(HTMLParser):
 
 def verify(documents):
     acknowledgements_count = len(json.loads((ROOT / 'folio/acknowledgements.json').read_text())['people']) + 2
-    expected_counts = {'README.md': (25, 21), 'THEMES.md': (28, 29),
+    expected_counts = {'README.md': (25, 21), 'THEMES.md': (29, 30),
                        'ACKNOWLEDGEMENTS.md': (acknowledgements_count, acknowledgements_count)}
     references = set()
     for name, source in documents.items():

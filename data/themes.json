@@ -187,5 +187,11 @@
     "name": "Banish",
     "slug": "banish",
     "description": "Basalt, pink and cold ultraviolet"
+  },
+  {
+    "id": 28,
+    "name": "Labra",
+    "slug": "labra",
+    "description": "Moss black, hot pink and acid lime"
   }
 ]

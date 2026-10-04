@@ -60,7 +60,7 @@ class VectorExportTests(unittest.TestCase):
         cases += [(p, FOLIO / 'collection/assets' / p.stem)
                   for p in sorted((FOLIO / 'collection/sources').glob('badge-*.svg'))
                   if p.stem.removeprefix('badge-') not in popular]
-        self.assertEqual(len(cases), 28)  # 27 themes and the total, individually.
+        self.assertEqual(len(cases), 29)  # 28 themes and the total, individually.
         with tempfile.TemporaryDirectory() as temp, badge_environment() as env:
             direct, reference = Path(temp) / 'direct.svg', Path(temp) / 'direct.png'
             for source, target in cases:

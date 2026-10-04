@@ -204,7 +204,7 @@ def check_connections():
             assert [image.get(k) for k in ('x', 'y', 'width', 'height')] == [str(spec['x']), str(spec['y']), '624', str(spec['body_height'])]
             assert len(svg.findall('s:path', ns)) == 3
             if spec['kind'] == 'bridge':
-                assert svg.findall('s:path', ns)[1].get('d') == '', 'No staggered ticks above Banish and Solitude'
+                assert svg.findall('s:path', ns)[1].get('d') == '', 'No staggered ticks above the newest theme and Solitude'
             assert struct.unpack('>II', (ROOT / f'folio/assets/connected-{slug}-{mode}.png').read_bytes()[16:24]) == (spec['width'] * 2, spec['height'] * 2)
     from build_folio import FEATURED
     readme = (ROOT / 'folio/README.md').read_text()
@@ -321,7 +321,7 @@ def main():
     assert 'Credits' not in thanks_source and 'Contributions' not in thanks_source
     archive = Check()
     archive.feed((ROOT / 'folio/THEMES.md').read_text())
-    assert archive.images == 28 and len(archive.links) == 29
+    assert archive.images == 29 and len(archive.links) == 30
     assert archive.tables == 0 and archive.details == 0
     assert archive.links.count('https://github.com/HANCORE-linux') == 2
     assert './README.md' not in archive.links

@@ -379,6 +379,21 @@
         "#D8D1CC"
       ],
       "sha256": "b62730aaf48e6a41949948a63051689b013111eab7498e8a9bc4729cdc373771"
+    },
+    "labra": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-labra-theme/HEAD/colors.toml",
+      "colors": [
+        "#040704",
+        "#ee585d",
+        "#747f11",
+        "#d3dd2c",
+        "#e33d84",
+        "#d54a8e",
+        "#7d7a56",
+        "#D3D7B5"
+      ],
+      "sha256": "917af83a688b100688b5698429560f5fee56cc67f08bafd4f920470bf567f6af",
+      "fetched_at": "2026-10-04T11:45:45.538050+00:00"
     }
   }
 }

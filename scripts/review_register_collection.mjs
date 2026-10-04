@@ -127,8 +127,8 @@ try {
       for(const url of ['https://github.com/HANCORE-linux/OmaQ','https://github.com/omacom/omarchy-plugin-marketplace','https://github.com/HANCORE-linux/waybar-themes','https://github.com/HANCORE-linux/quickshell-dots'])assert(m.links.includes(url),'Lost project '+url);
       const details=m.images.filter(i=>i.fallback.includes('/info-'));
       assert(details.length===6&&details.every(i=>i.declaredWidth==='248'&&i.declaredHeight==='76'),'Info cards or archive card missing');
-      assert(details.some(i=>i.alt==='Banish — Newest theme.')&&details.filter(i=>i.alt.endsWith('Ships with Omarchy.')).length===2,'Lost latest/official notes');
-      assert(details.some(i=>i.alt==='All 27 themes — Open collection →'),'Archive link must be a card');
+      assert(details.some(i=>i.alt==='Labra — Newest theme.')&&details.filter(i=>i.alt.endsWith('Ships with Omarchy.')).length===2,'Lost latest/official notes');
+      assert(details.some(i=>i.alt==='All 28 themes — Open collection →'),'Archive link must be a card');
       if(width>=1280) {
         const bridge=details.slice(0,2), highlights=details.slice(2,5);
         assert(bridge.every(i=>i.width===372)&&new Set(bridge.map(i=>i.y)).size===1,'Two wide bridge slices');
@@ -144,7 +144,7 @@ try {
       const socials=m.images.filter(i=>i.src.includes('/social-'));
       assert(socials.length===5&&socials.every(i=>i.declaredWidth==='44'&&i.declaredHeight==='44'),'Missing accessible footer icons');
       assert(socials.map(i=>i.alt).join(',')==='Discord,X,Ko-fi,Buy Me a Coffee,Inspired by','Footer icon order');
-      const archiveCard=details.find(i=>i.alt==='All 27 themes — Open collection →');
+      const archiveCard=details.find(i=>i.alt==='All 28 themes — Open collection →');
       assert(archiveCard.y+archiveCard.height<=totalBadge.y&&totalBadge.y+totalBadge.height<=socials[0].y,'Total stars must sit below the archive and above the social icons');
       assert(new Set(socials.map(i=>i.y)).size===1&&socials.every((i,n)=>!n||i.x>socials[n-1].x),'Buy Me a Coffee follows Ko-fi; Inspired by stays last');
       if(width===1440) {
@@ -163,21 +163,21 @@ try {
       const m=await metrics();valid(m,width,mode);
       const archive=route==='collection.html';
       const thanks=route==='folio-acknowledgements.html';
-      assert(m.images.length===(archive?28:thanks?acknowledged.length+2:25),'Unexpected image count '+route);
-      assert(m.links.length===(archive?29:thanks?acknowledged.length+2:21),'Unexpected links '+route);
+      assert(m.images.length===(archive?29:thanks?acknowledged.length+2:25),'Unexpected image count '+route);
+      assert(m.links.length===(archive?30:thanks?acknowledged.length+2:21),'Unexpected links '+route);
       if(archive) {
         const archiveCards=m.images.filter(i=>i.src.includes('/collection/assets/'));
         const label=m.images.find(i=>i.src.endsWith('/label-archive-'+mode+'.png'));
-        assert(label?.declaredWidth==='280'&&label.declaredHeight==='76'&&label.alt==='Theme archive — 27 themes · color00–07 · A–Z','Readable archive heading tile');
+        assert(label?.declaredWidth==='280'&&label.declaredHeight==='76'&&label.alt==='Theme archive — 28 themes · color00–07 · A–Z','Readable archive heading tile');
         assert(label.y+label.height<=archiveCards[0].y,'Archive header tile overlaps the themes');
-        assert(archiveCards.length===27&&archiveCards.every((i,n)=>i.src.endsWith('/'+themes[n].slug+'-'+mode+'.svg')),'Archive A–Z order');
-        assert(new Set(archiveCards.map(i=>i.src)).size===27,'Repeated archive card');
+        assert(archiveCards.length===28&&archiveCards.every((i,n)=>i.src.endsWith('/'+themes[n].slug+'-'+mode+'.svg')),'Archive A–Z order');
+        assert(new Set(archiveCards.map(i=>i.src)).size===28,'Repeated archive card');
         assert(archiveCards.every(i=>i.declaredWidth==='396'&&i.declaredHeight==='312'),'Large archive dimensions');
         assert(archiveCards.every(i=>i.alt.includes('ANSI colors 00–07')&&i.alt.includes('GitHub stars, checked ')),'Archive alt text');
         const newCards=archiveCards.filter(i=>i.alt.includes('— NEW;'));
-        assert(newCards.length===1&&newCards[0].src.endsWith('/banish-'+mode+'.svg'),'Only Banish should be marked NEW');
+        assert(newCards.length===1&&newCards[0].src.endsWith('/labra-'+mode+'.svg'),'Only Labra should be marked NEW');
         const rowSizes=Object.values(archiveCards.reduce((rows,i)=>{const y=Math.round(i.y);rows[y]=(rows[y]||0)+1;return rows;},{}));
-        if(width===1440)assert(rowSizes.length===14&&rowSizes.filter(n=>n===2).length===13,'Archive must have two large cards per row');
+        if(width===1440)assert(rowSizes.length===14&&rowSizes.every(n=>n===2),'Archive must have two large cards per row');
         if(width<=390)assert(rowSizes.every(n=>n===1),'Archive mobile wrapping');
         for(const theme of themes)assert(m.links.includes('https://github.com/HANCORE-linux/omarchy-'+theme.slug+'-theme'),'Missing archive link '+theme.slug);
       } else if(thanks) {

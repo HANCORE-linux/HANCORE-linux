@@ -70,7 +70,7 @@ publish those unchanged snapshots.
 - Total: all public, non-fork repositories owned by `HANCORE-linux`, plus
   `omacom/omarchy-plugin-marketplace`. Deduplicate by repository ID. These are
   project stars, not unique people or exclusively account-owned stars.
-- All 27 theme counts and the top-six selection use the same GitHub API
+- All 28 theme counts and the top-six selection use the same GitHub API
   snapshot. Ties sort by repository name; only themes above 30 stars qualify.
 - Exact counts are rendered with static black/orange Shields badges, retaining
   the existing shadow and chamfer. The build preserves screenshots and palettes.
@@ -156,7 +156,7 @@ node scripts/review_folio.mjs
 
 - `folio/`: editable Markdown, SVG compositions, exported PNGs, bundled fonts,
   original screenshots and provenance manifests.
-- `folio/collection/`: all 27 theme-card exports and their verified sources.
+- `folio/collection/`: all 28 theme-card exports and their verified sources.
 - `data/`: theme catalogue and earlier source metadata.
 - `scripts/`: generators, root exporter and local preview tools.
 - `assets/`: original sources still used by the build, plus earlier studies.
