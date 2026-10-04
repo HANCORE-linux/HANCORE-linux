@@ -17,8 +17,10 @@ from xml.sax.saxutils import escape
 from build_folio import ROOT, FOLIO, INK, checksum, popular_works, theme_url
 from folio_register import register_svg, identity_svg, THEME_LABELS, contrast
 from folio_badges import badge_svg, render_badge, BADGE_FONT
-from folio_badge_delivery import publish_theme
-from folio_labels import label_picture
+from folio_archive_routes import kinds, height_px, slice_svg, head_svg, head_geometry
+from folio_badge_delivery import publish_theme, publish_connected
+from folio_connections import WIDE_MIN
+from folio_labels import label_picture, labels
 from refresh_folio_badges import fetch as fetch_badge
 
 COLLECTION = FOLIO / 'collection'
@@ -55,7 +57,7 @@ def fetch_sources():
     print(f'OK fetched {len(records)} public previews and matching black/orange star badges')
 
 
-def picture(theme, width=396, prefix='./collection/assets/'):
+def picture(theme, width=396, prefix='./collection/assets/', connected=None):
     slug, name = theme['slug'], theme['name']
     snapshot = json.loads((FOLIO / 'badge-snapshot.json').read_text())
     if slug in snapshot['badges']:
@@ -65,7 +67,14 @@ def picture(theme, width=396, prefix='./collection/assets/'):
         badge, stamp = source['themes'][slug]['badge'], source.get('badges_fetched_at', source['fetched_at'])[:10]
     status = f'{THEME_LABELS[slug]}; ' if slug in THEME_LABELS else ''
     alt = escape(f'{name} — {status}full desktop preview; exact ANSI colors 00–07, left to right; {badge["stars"]} GitHub stars, checked {stamp}', {'"': '&quot;'})
-    return f'<a href="{theme_url(slug)}"><picture><source media="(prefers-color-scheme: dark)" srcset="{prefix}{slug}-dark.svg" /><img src="{prefix}{slug}-light.svg" alt="{alt}" title="Star snapshot · {stamp}" width="{width}" height="{round(width*492/624)}" /></picture></a>'
+    wide = align = ''
+    plain, height = f'{prefix}{slug}', round(width * 492 / 624)
+    if connected:
+        # Wide views swap in the routed card; narrow views keep the same spacing
+        # without routes. Top alignment joins the rows of the single paragraph.
+        wide = ''.join(f'<source media="(min-width: {WIDE_MIN}px) and (prefers-color-scheme: {mode})" srcset="{prefix}connected-{slug}-{mode}.svg" width="{width}" height="{connected}" />' for mode in INK)
+        plain, height, align = f'{prefix}spaced-{slug}', height_px('blank'), ' align="top"'
+    return f'<a href="{theme_url(slug)}"><picture>{wide}<source media="(prefers-color-scheme: dark)" srcset="{plain}-dark.svg" /><img src="{plain}-light.svg" alt="{alt}" title="Star snapshot · {stamp}" width="{width}" height="{height}"{align} /></picture></a>'
 
 
 def build():
@@ -105,23 +114,45 @@ def build():
                 badge_svg_path = FOLIO / f'{"badge" if popular else "series-badge"}-{slug}-{mode}.svg'
                 publish_theme(svg, badge_svg_path, public_svg, env)
                 outputs.append(public_svg)
+        ordered = themes()
+        title = ' — '.join(labels(len(ordered))['archive'])
+        for row, kind in enumerate(kinds(len(ordered))):
+            for column, theme in enumerate(ordered[2 * row:2 * row + 2]):
+                for mode in INK:
+                    svg = FOLIO / f'connected-archive-{theme["slug"]}-{mode}.svg'
+                    public_svg = COLLECTION / f'assets/connected-{theme["slug"]}-{mode}.svg'
+                    svg.write_text(slice_svg(theme['slug'], theme['name'], mode, kind, column))
+                    publish_connected(svg, COLLECTION / f'assets/{theme["slug"]}-{mode}.svg', public_svg)
+                    outputs.extend([svg, public_svg])
+                    svg = FOLIO / f'spaced-archive-{theme["slug"]}-{mode}.svg'
+                    public_svg = COLLECTION / f'assets/spaced-{theme["slug"]}-{mode}.svg'
+                    svg.write_text(slice_svg(theme['slug'], theme['name'], mode, 'blank'))
+                    publish_connected(svg, COLLECTION / f'assets/{theme["slug"]}-{mode}.svg', public_svg)
+                    outputs.extend([svg, public_svg])
+        for mode in INK:
+            svg = FOLIO / f'connected-archive-head-{mode}.svg'
+            png = FOLIO / f'assets/connected-archive-head-{mode}.png'
+            svg.write_text(head_svg(mode, title))
+            subprocess.run(['rsvg-convert', str(svg), '-o', str(png)], check=True)
+            outputs.extend([svg, png])
         for mode, ink in INK.items():
             svg = FOLIO / f'series-identity-{mode}.svg'
             png = COLLECTION / f'assets/identity-{mode}.png'
             svg.write_text(identity_svg(ink))
             subprocess.run(['rsvg-convert', str(svg), '-o', str(png)], check=True)
             outputs.extend([svg, png])
-    rows = []
-    ordered = themes()
-    for offset in range(0, len(ordered), 2):
-        rows.append('<p align="center">\n  ' + '\n  '.join(picture(t) for t in ordered[offset:offset+2]) + '\n</p>')
+    # One paragraph: explicit breaks join the heading and rows without gaps, so
+    # wide-view routes meet at image edges; narrow views fall back to plain cards.
+    head = label_picture('archive', len(ordered), connected=('./assets/connected-archive-head', 2 * 396, head_geometry()[-1]))
+    rows = [''.join(picture(t, connected=height_px(kind)) for t in ordered[2 * row:2 * row + 2])
+            for row, kind in enumerate(kinds(len(ordered)))]
     archive = FOLIO / 'THEMES.md'
     archive.write_text('<!-- Generated by scripts/build_theme_registers.py. Native GitHub Markdown. -->\n'
                        '<p><a href="https://github.com/HANCORE-linux">← Back to profile</a></p>\n\n'
-                       + '<p align="center">' + label_picture('archive', len(ordered)) + '</p>\n\n'
-                       + '\n\n'.join(rows) + '\n\n<p><a href="https://github.com/HANCORE-linux">← Back to profile</a></p>\n')
+                       + '<p align="center">' + head + '<br />\n' + '<br />\n'.join(rows) + '</p>'
+                       + '\n\n<p><a href="https://github.com/HANCORE-linux">← Back to profile</a></p>\n')
     outputs.append(archive)
-    sources = [Path(__file__).resolve(), ROOT / 'scripts/folio_register.py', ROOT / 'scripts/folio_badges.py', ROOT / 'scripts/folio_labels.py', ROOT / 'data/themes.json',
+    sources = [Path(__file__).resolve(), ROOT / 'scripts/folio_register.py', ROOT / 'scripts/folio_badges.py', ROOT / 'scripts/folio_labels.py', ROOT / 'scripts/folio_archive_routes.py', ROOT / 'scripts/folio_connections.py', ROOT / 'data/themes.json',
                *sorted((FOLIO / 'assets').glob('label-archive-*.png')),
                ROOT / 'scripts/folio_vectors.py', ROOT / 'scripts/folio_badge_delivery.py', BADGE_FONT,
                FOLIO / 'badge-snapshot.json', FOLIO / 'palettes.json', COLLECTION / 'sources.json',
@@ -194,7 +225,13 @@ def check():
             for crop in ('1120x630+64+48', '290x90+864+826'):
                 spread = subprocess.check_output([shutil.which('magick') or 'convert', str(png), '-crop', crop, '+repage', '-format', '%[standard-deviation]', 'info:'], text=True)
                 assert float(spread) > 1000, f'Missing screenshot/badge: {slug}, {crop}'
-    assert (FOLIO / 'THEMES.md').read_text().count('width="396"') == 28
+    archive = (FOLIO / 'THEMES.md').read_text()
+    assert archive.count('width="396" height="335" align="top"') == 28 and archive.count('/connected-') == 2 * 28 + 2 and archive.count('/spaced-') == 2 * 28
+    for theme in themes():
+        for mode in INK:
+            routed = ET.parse(COLLECTION / f'assets/connected-{theme["slug"]}-{mode}.svg').getroot()
+            assert routed.find('s:svg[@id="badge-glyphs"]', ns) is None and routed.find('s:svg//s:svg[@id="badge-glyphs"]', ns) is not None, 'Routed card must embed the vector-lettered card'
+            assert routed.findall('s:path', ns)[0].get('d').startswith('M312 0V'), 'Route must enter at the upper edge'
     assert (FOLIO / 'THEMES.md').read_text().count('— NEW;') == 1
     print('OK all 56 theme mounts match project frames; exact palettes, unfiltered desktops, captions and visible badges')
 

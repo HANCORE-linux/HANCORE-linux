@@ -262,7 +262,7 @@
     "scripts/folio_identity.py": "b0a802e6b7166ba22022c0783f83a35c6aa579caa6481b3079ed9758aa1529cf",
     "scripts/folio_badges.py": "1226405ff666d14596e331dcb9c4bd55179c6ab60b191f08b2d07d2018eb4b71",
     "scripts/folio_details.py": "8283a6ba843eb0f958652d32669f0e2d94ab34fa5ae1a33277841852eb18851a",
-    "scripts/folio_labels.py": "9aae654ab090e708c10a6a0011e0cacf35616d67da6e9f966065720fc05ce817",
+    "scripts/folio_labels.py": "2afb66335fc719394ec3c14d2599a698548a8232c2d89a854e997797719b88c6",
     "scripts/folio_connections.py": "0591f4e1e37f8a2205c24236cf619c17944e7033e951fcd3ea1cf0a1f0ff5916",
     "data/themes.json": "48ca87b4f05cbbcd4357e2506c4062f2b9b6ee51711e74b6da2d0c51b36f6dea",
     "folio/highlights.json": "208bcf042435b832c7b7f2f3aa7cd20c06a63dba3cb70797ac6731c9a8ac0658",

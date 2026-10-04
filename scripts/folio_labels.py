@@ -39,10 +39,18 @@ def label_svg(lines, ink, slug=None):
 </svg>'''
 
 
-def label_picture(slug, theme_count):
+def label_picture(slug, theme_count, connected=None):
     lines = labels(theme_count)[slug]
     alt = escape(' — '.join(lines), quote=True)
     width, height = label_dimensions(slug, theme_count)
-    return (f'<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/label-{slug}-dark.png" />'
+    wide = align = ''
+    if connected:
+        # Wide views swap in the routed heading; the top-aligned tile joins what follows.
+        from folio_connections import WIDE_MIN
+        path, wide_width, wide_height = connected
+        wide = ''.join(f'<source media="(min-width: {WIDE_MIN}px) and (prefers-color-scheme: {mode})" srcset="{path}-{mode}.png" '
+                       f'width="{wide_width}" height="{wide_height}" />' for mode in ('dark', 'light'))
+        align = ' align="top"'
+    return (f'<picture>{wide}<source media="(prefers-color-scheme: dark)" srcset="./assets/label-{slug}-dark.png" />'
             f'<img src="./assets/label-{slug}-light.png" alt="{alt}" '
-            f'width="{width}" height="{height}" /></picture>')
+            f'width="{width}" height="{height}"{align} /></picture>')

@@ -22,6 +22,7 @@ python scripts/serve_folio.py --port 8767
 - `refresh_profile_stars.py`: validated, no-op-aware refresh of all theme stars, top-six ranking and total including Marketplace; never pushes itself. Used by the daily `profile-stars.yml` workflow.
 - `refresh_folio_totals.py`: shared public-repository collector and standalone total refresh; excludes forks and deduplicates by repository ID.
 - `check_folio.py --assets-only`: CI asset/link/provenance checks without local browser caches.
+- `folio_archive_routes.py`: wide-view routes for the theme archive: heading hub, column tracks, closing rail or merge into a single card.
 - `folio_acknowledgements.py`: Omarchy origin routed to its creator's card, then avatar cards in pairs, preserving configured names, roles and links.
 - `refresh_acknowledgement_avatars.py`: optional manual refresh of public GitHub avatars (requires `gh`); `--only SLUG` preserves the other portraits. Stores unchanged PNG/JPEG sources and provenance. Not part of daily star updates.
 

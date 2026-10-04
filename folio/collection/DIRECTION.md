@@ -5,7 +5,8 @@ The user prefers the first three project frames over the earlier folder-register
 ## Repeated geometry
 
 - Export: 1248 × 984 PNG; 624 × 492 SVG viewBox.
-- Profile: 248 × 196. Archive: 396 × 312; 13 pairs and a final single card.
+- Profile: 248 × 196. Archive: 396 × 312; 14 pairs. An odd count ends with a centered single card.
+- Wide archive views use routed card variants (`collection/assets/connected-*.svg`, 396 × 335/357); narrow views use the same spacing without routes (`collection/assets/spaced-*.svg`, 396 × 335) and a routed heading (`assets/connected-archive-head-*.png`, 792 px), built by `scripts/folio_archive_routes.py`. Strokes match the profile's displayed weights; every joined edge sits on whole pixels.
 - Full 16:9 preview window: x32/y24, 560 × 315; unchanged rendering size, no blur, retouching or destructive crop.
 - Name is below the image at x44, baseline382, in 38px Plex Sans Medium. ANSI color00–07 remains left-aligned at x44/y420. Eight 22 × 30 swatches retain their exact source values.
 - A single neutral mount with a cut lower-right corner, fine edge and floating shadow. No colored folder tab or rear layer. Only separate shadow shapes are filtered.

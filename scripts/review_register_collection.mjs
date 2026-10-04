@@ -167,15 +167,17 @@ try {
       assert(m.links.length===(archive?30:thanks?acknowledged.length+2:21),'Unexpected links '+route);
       if(archive) {
         const archiveCards=m.images.filter(i=>i.src.includes('/collection/assets/'));
-        const label=m.images.find(i=>i.src.endsWith('/label-archive-'+mode+'.png'));
+        const wide=width>=1280, routed=wide?'/connected-':'/spaced-';
+        const label=m.images.find(i=>i.src.endsWith((wide?'/connected-archive-head-':'/label-archive-')+mode+'.png'));
         assert(label?.declaredWidth==='280'&&label.declaredHeight==='76'&&label.alt==='Theme archive — 28 themes · color00–07 · A–Z','Readable archive heading tile');
         assert(label.y+label.height<=archiveCards[0].y,'Archive header tile overlaps the themes');
-        assert(archiveCards.length===28&&archiveCards.every((i,n)=>i.src.endsWith('/'+themes[n].slug+'-'+mode+'.svg')),'Archive A–Z order');
+        if(wide)assert(Math.abs(label.y+label.height-archiveCards[0].y)<1&&archiveCards.every((i,n)=>n<2||Math.abs(archiveCards[n-2].y+archiveCards[n-2].height-i.y)<1),'Archive routes must join without gaps');
+        assert(archiveCards.length===28&&archiveCards.every((i,n)=>i.src.endsWith(routed+themes[n].slug+'-'+mode+'.svg')),'Archive A–Z order');
         assert(new Set(archiveCards.map(i=>i.src)).size===28,'Repeated archive card');
-        assert(archiveCards.every(i=>i.declaredWidth==='396'&&i.declaredHeight==='312'),'Large archive dimensions');
+        assert(archiveCards.every(i=>i.declaredWidth==='396'&&i.declaredHeight==='335'),'Large archive dimensions');
         assert(archiveCards.every(i=>i.alt.includes('ANSI colors 00–07')&&i.alt.includes('GitHub stars, checked ')),'Archive alt text');
         const newCards=archiveCards.filter(i=>i.alt.includes('— NEW;'));
-        assert(newCards.length===1&&newCards[0].src.endsWith('/labra-'+mode+'.svg'),'Only Labra should be marked NEW');
+        assert(newCards.length===1&&newCards[0].src.endsWith(routed+'labra-'+mode+'.svg'),'Only Labra should be marked NEW');
         const rowSizes=Object.values(archiveCards.reduce((rows,i)=>{const y=Math.round(i.y);rows[y]=(rows[y]||0)+1;return rows;},{}));
         if(width===1440)assert(rowSizes.length===14&&rowSizes.every(n=>n===2),'Archive must have two large cards per row');
         if(width<=390)assert(rowSizes.every(n=>n===1),'Archive mobile wrapping');

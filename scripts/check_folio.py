@@ -340,6 +340,7 @@ def main():
     expected_assets.update(f'bio-{size}-{mode}.png' for size in ('wide', 'narrow') for mode in ('dark', 'light'))
     expected_assets.update(f'thanks-{person["slug"]}-{mode}.png' for person in acknowledged_people() for mode in ('dark', 'light'))
     expected_assets.update(f'{ORIGIN_SLUG}-{mode}.png' for mode in ('dark', 'light'))
+    expected_assets.update(f'connected-archive-head-{mode}.png' for mode in ('dark', 'light'))
     expected_assets.update(f'palette-{theme["slug"]}.png' for theme in themes)
     expected_assets.update(f'info-{card["slug"]}-{mode}.png' for card in detail_cards(themes, highlights) for mode in ('dark', 'light'))
     expected_assets.update(f'social-{slug}-{mode}.png' for slug, _, _ in SOCIALS for mode in ('dark', 'light'))

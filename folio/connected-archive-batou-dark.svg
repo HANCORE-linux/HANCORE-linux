@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="1056" viewBox="0 0 624 527.879">
+  <title>Batou — archive card with decorative connection route</title>
+  <image x="0" y="35.879" width="624" height="492" xlink:href="collection/assets/batou-dark.png" />
+  <path d="M312 0V51.879M312 507.879V527.879" fill="none" stroke="#48525b" stroke-width="1.566" />
+  <path d="M312 8V28" fill="none" stroke="#e8e3d9" stroke-width="2.192" />
+  <path d="M305.111 51.879H318.889M305.111 507.879H318.889" fill="none" stroke="#e8e3d9" stroke-width="1.879" />
+</svg>
