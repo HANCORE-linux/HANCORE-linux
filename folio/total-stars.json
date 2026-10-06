@@ -13,7 +13,7 @@
       "id": 1249470760,
       "full_name": "HANCORE-linux/cliamp-plugin-nightrider",
       "url": "https://github.com/HANCORE-linux/cliamp-plugin-nightrider",
-      "stars": 17,
+      "stars": 16,
       "fork": false,
       "private": false
     },
@@ -21,7 +21,7 @@
       "id": 1283082728,
       "full_name": "HANCORE-linux/GitHub-Traffic-Board",
       "url": "https://github.com/HANCORE-linux/GitHub-Traffic-Board",
-      "stars": 5,
+      "stars": 4,
       "fork": false,
       "private": false
     },
@@ -37,7 +37,7 @@
       "id": 1338810088,
       "full_name": "HANCORE-linux/OmaQ",
       "url": "https://github.com/HANCORE-linux/OmaQ",
-      "stars": 39,
+      "stars": 40,
       "fork": false,
       "private": false
     },
@@ -61,7 +61,7 @@
       "id": 1056349329,
       "full_name": "HANCORE-linux/omarchy-blackgold-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-blackgold-theme",
-      "stars": 53,
+      "stars": 52,
       "fork": false,
       "private": false
     },
@@ -77,7 +77,7 @@
       "id": 1059027884,
       "full_name": "HANCORE-linux/omarchy-blackturq-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-blackturq-theme",
-      "stars": 56,
+      "stars": 55,
       "fork": false,
       "private": false
     },
@@ -101,7 +101,7 @@
       "id": 1277735693,
       "full_name": "HANCORE-linux/omarchy-dos-moos-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-dos-moos-theme",
-      "stars": 28,
+      "stars": 27,
       "fork": false,
       "private": false
     },
@@ -109,7 +109,7 @@
       "id": 1172978579,
       "full_name": "HANCORE-linux/omarchy-greek-noir-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-greek-noir-theme",
-      "stars": 32,
+      "stars": 31,
       "fork": false,
       "private": false
     },
@@ -125,7 +125,7 @@
       "id": 1123367619,
       "full_name": "HANCORE-linux/omarchy-harbordark-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-harbordark-theme",
-      "stars": 40,
+      "stars": 41,
       "fork": false,
       "private": false
     },
@@ -141,7 +141,7 @@
       "id": 1231346774,
       "full_name": "HANCORE-linux/omarchy-kanso-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-kanso-theme",
-      "stars": 28,
+      "stars": 27,
       "fork": false,
       "private": false
     },
@@ -149,7 +149,7 @@
       "id": 1403775372,
       "full_name": "HANCORE-linux/omarchy-labra-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-labra-theme",
-      "stars": 15,
+      "stars": 18,
       "fork": false,
       "private": false
     },
@@ -173,7 +173,7 @@
       "id": 1098586772,
       "full_name": "HANCORE-linux/omarchy-moodpeak-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-moodpeak-theme",
-      "stars": 29,
+      "stars": 28,
       "fork": false,
       "private": false
     },
@@ -205,7 +205,7 @@
       "id": 1235573385,
       "full_name": "HANCORE-linux/omarchy-ryu-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-ryu-theme",
-      "stars": 9,
+      "stars": 8,
       "fork": false,
       "private": false
     },
@@ -213,7 +213,7 @@
       "id": 1203220387,
       "full_name": "HANCORE-linux/omarchy-saga-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-saga-theme",
-      "stars": 15,
+      "stars": 14,
       "fork": false,
       "private": false
     },
@@ -253,7 +253,7 @@
       "id": 1189693514,
       "full_name": "HANCORE-linux/omarchy-turbonite-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-turbonite-theme",
-      "stars": 24,
+      "stars": 23,
       "fork": false,
       "private": false
     },
@@ -293,7 +293,7 @@
       "id": 1051865105,
       "full_name": "HANCORE-linux/waybar-themes",
       "url": "https://github.com/HANCORE-linux/waybar-themes",
-      "stars": 636,
+      "stars": 637,
       "fork": false,
       "private": false
     },
@@ -364,16 +364,16 @@
       "private": false
     }
   ],
-  "owned_stars": 1911,
+  "owned_stars": 1906,
   "extra_stars": 332,
-  "total_stars": 2243,
-  "fetched_at": "2026-10-05T11:26:15.809867+00:00",
+  "total_stars": 2238,
+  "fetched_at": "2026-10-06T11:15:01.599566+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C243-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C238-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2243,
-    "sha256": "0280a15062a540ae23b6ddbeca5d6f5ec506c881bc5ef1fbb1fecaf8f6452ea5"
+    "stars": 2238,
+    "sha256": "ce8d5cd66e21b913145447e7279a044c9e46467faa25048a7b598df96c699de7"
   }
 }
