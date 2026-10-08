@@ -1,5 +1,5 @@
 {
-  "verified_on": "2026-10-07",
+  "verified_on": "2026-10-08",
   "source": "https://api.github.com/users/HANCORE-linux/repos?type=owner&sort=full_name&per_page=100&page=1",
   "selection": "Non-fork public omarchy-*-theme repositories, stars strictly greater than 30, descending by stars, repository-name tie break, at most six.",
   "minimum_stars_exclusive": 30,
@@ -31,8 +31,8 @@
     "kanso": 27,
     "ryu": 8,
     "dos-moos": 27,
-    "banish": 5,
-    "labra": 22
+    "banish": 6,
+    "labra": 23
   },
   "previews": {
     "solitude": {
