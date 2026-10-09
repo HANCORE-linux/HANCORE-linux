@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-08T11:20:30.001429+00:00",
+  "fetched_at": "2026-10-09T11:18:26.811100+00:00",
   "note": "Exact public GitHub API counts, static Shields styling; refreshed daily by profile-stars.",
   "badges": {
     "solitude": {
@@ -18,6 +18,14 @@
       "sha256": "03996bec9408cf8bde0f513d576cbae5b1f32bfdd0b763e372da51caa4317297",
       "api_snapshot": true
     },
+    "blackgold": {
+      "url": "https://img.shields.io/badge/stars-53-df6124?style=flat-square&labelColor=000000",
+      "stars": 53,
+      "width": 60,
+      "height": 20,
+      "sha256": "327e6deaf5e8ff854f0af9ee96f243b8207079d593a586e609c8cfd52d47dfe7",
+      "api_snapshot": true
+    },
     "mechanoonna": {
       "url": "https://img.shields.io/badge/stars-53-df6124?style=flat-square&labelColor=000000",
       "stars": 53,
@@ -26,23 +34,15 @@
       "sha256": "327e6deaf5e8ff854f0af9ee96f243b8207079d593a586e609c8cfd52d47dfe7",
       "api_snapshot": true
     },
-    "blackgold": {
-      "url": "https://img.shields.io/badge/stars-52-df6124?style=flat-square&labelColor=000000",
-      "stars": 52,
+    "harbordark": {
+      "url": "https://img.shields.io/badge/stars-42-df6124?style=flat-square&labelColor=000000",
+      "stars": 42,
       "width": 60,
       "height": 20,
-      "sha256": "e8f34556f7a94f3c7c2a60eed6c1076713786060ffee4de8b1c7b428fe2113e1",
+      "sha256": "c1eb9cc43f5f985e0f3794b6dd2c42fac47d17c7bb446509756e7a23791db318",
       "api_snapshot": true
     },
     "batou": {
-      "url": "https://img.shields.io/badge/stars-41-df6124?style=flat-square&labelColor=000000",
-      "stars": 41,
-      "width": 60,
-      "height": 20,
-      "sha256": "2a3c2ab4d337955316bbe3fec1924a871fc22c1ad5ea25acea116a8411e5f410",
-      "api_snapshot": true
-    },
-    "harbordark": {
       "url": "https://img.shields.io/badge/stars-41-df6124?style=flat-square&labelColor=000000",
       "stars": 41,
       "width": 60,
