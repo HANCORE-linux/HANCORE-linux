@@ -29,7 +29,7 @@
       "id": 1106981256,
       "full_name": "HANCORE-linux/HANCORE-linux",
       "url": "https://github.com/HANCORE-linux/HANCORE-linux",
-      "stars": 16,
+      "stars": 17,
       "fork": false,
       "private": false
     },
@@ -37,7 +37,7 @@
       "id": 1338810088,
       "full_name": "HANCORE-linux/OmaQ",
       "url": "https://github.com/HANCORE-linux/OmaQ",
-      "stars": 41,
+      "stars": 42,
       "fork": false,
       "private": false
     },
@@ -61,7 +61,7 @@
       "id": 1056349329,
       "full_name": "HANCORE-linux/omarchy-blackgold-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-blackgold-theme",
-      "stars": 53,
+      "stars": 54,
       "fork": false,
       "private": false
     },
@@ -109,7 +109,7 @@
       "id": 1172978579,
       "full_name": "HANCORE-linux/omarchy-greek-noir-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-greek-noir-theme",
-      "stars": 31,
+      "stars": 32,
       "fork": false,
       "private": false
     },
@@ -117,7 +117,7 @@
       "id": 1118461330,
       "full_name": "HANCORE-linux/omarchy-harbor-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-harbor-theme",
-      "stars": 24,
+      "stars": 25,
       "fork": false,
       "private": false
     },
@@ -149,7 +149,7 @@
       "id": 1403775372,
       "full_name": "HANCORE-linux/omarchy-labra-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-labra-theme",
-      "stars": 24,
+      "stars": 25,
       "fork": false,
       "private": false
     },
@@ -165,7 +165,7 @@
       "id": 1091747360,
       "full_name": "HANCORE-linux/omarchy-mechanoonna-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-mechanoonna-theme",
-      "stars": 53,
+      "stars": 54,
       "fork": false,
       "private": false
     },
@@ -237,7 +237,7 @@
       "id": 1169546307,
       "full_name": "HANCORE-linux/omarchy-solitude-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-solitude-theme",
-      "stars": 70,
+      "stars": 72,
       "fork": false,
       "private": false
     },
@@ -277,7 +277,7 @@
       "id": 1258696184,
       "full_name": "HANCORE-linux/quickshell-dots",
       "url": "https://github.com/HANCORE-linux/quickshell-dots",
-      "stars": 205,
+      "stars": 206,
       "fork": false,
       "private": false
     },
@@ -285,7 +285,7 @@
       "id": 1302068770,
       "full_name": "HANCORE-linux/Shibumi-Shell",
       "url": "https://github.com/HANCORE-linux/Shibumi-Shell",
-      "stars": 212,
+      "stars": 214,
       "fork": false,
       "private": false
     },
@@ -293,7 +293,7 @@
       "id": 1051865105,
       "full_name": "HANCORE-linux/waybar-themes",
       "url": "https://github.com/HANCORE-linux/waybar-themes",
-      "stars": 641,
+      "stars": 645,
       "fork": false,
       "private": false
     },
@@ -301,7 +301,7 @@
       "id": 1314624489,
       "full_name": "omacom/omarchy-plugin-marketplace",
       "url": "https://github.com/omacom/omarchy-plugin-marketplace",
-      "stars": 338,
+      "stars": 345,
       "fork": false,
       "private": false
     }
@@ -364,16 +364,16 @@
       "private": false
     }
   ],
-  "owned_stars": 1934,
-  "extra_stars": 338,
-  "total_stars": 2272,
-  "fetched_at": "2026-10-10T10:35:14.709589+00:00",
+  "owned_stars": 1950,
+  "extra_stars": 345,
+  "total_stars": 2295,
+  "fetched_at": "2026-10-11T10:48:03.456837+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C272-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C295-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2272,
-    "sha256": "3bf224a175f4af98b243742f409432307b1119b17986ff2f0f8f5db359d1e439"
+    "stars": 2295,
+    "sha256": "87b2a5353f7d42d7a0e5888acf286c9078c0ed99f603e7dea597ef34c7ba66b7"
   }
 }
