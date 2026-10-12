@@ -1,16 +1,24 @@
 {
-  "fetched_at": "2026-10-11T10:48:04.454578+00:00",
+  "fetched_at": "2026-10-12T11:56:02.889322+00:00",
   "note": "Exact public GitHub API counts, static Shields styling; refreshed daily by profile-stars.",
   "badges": {
     "solitude": {
-      "url": "https://img.shields.io/badge/stars-72-df6124?style=flat-square&labelColor=000000",
-      "stars": 72,
+      "url": "https://img.shields.io/badge/stars-76-df6124?style=flat-square&labelColor=000000",
+      "stars": 76,
       "width": 60,
       "height": 20,
-      "sha256": "632b03d67f041f41f3c122b566c8e6ca998508f9be19e785df8e13f98fb0f645",
+      "sha256": "3fe6d993a035306eb79f9c710e75ac4a66057010f4cd4542eb12bb489b5fdce4",
       "api_snapshot": true
     },
     "blackturq": {
+      "url": "https://img.shields.io/badge/stars-55-df6124?style=flat-square&labelColor=000000",
+      "stars": 55,
+      "width": 60,
+      "height": 20,
+      "sha256": "03996bec9408cf8bde0f513d576cbae5b1f32bfdd0b763e372da51caa4317297",
+      "api_snapshot": true
+    },
+    "mechanoonna": {
       "url": "https://img.shields.io/badge/stars-55-df6124?style=flat-square&labelColor=000000",
       "stars": 55,
       "width": 60,
@@ -26,20 +34,12 @@
       "sha256": "11bced039e518e8aea2196c2f9eb70e2b8e2b379d67cab91293449ae9bffcc6e",
       "api_snapshot": true
     },
-    "mechanoonna": {
-      "url": "https://img.shields.io/badge/stars-54-df6124?style=flat-square&labelColor=000000",
-      "stars": 54,
-      "width": 60,
-      "height": 20,
-      "sha256": "11bced039e518e8aea2196c2f9eb70e2b8e2b379d67cab91293449ae9bffcc6e",
-      "api_snapshot": true
-    },
     "harbordark": {
-      "url": "https://img.shields.io/badge/stars-42-df6124?style=flat-square&labelColor=000000",
-      "stars": 42,
+      "url": "https://img.shields.io/badge/stars-45-df6124?style=flat-square&labelColor=000000",
+      "stars": 45,
       "width": 60,
       "height": 20,
-      "sha256": "c1eb9cc43f5f985e0f3794b6dd2c42fac47d17c7bb446509756e7a23791db318",
+      "sha256": "c9cabb855b58fc8620c67bb4491b07a4288b187401a32ac6747d96b2d22ae1df",
       "api_snapshot": true
     },
     "batou": {
