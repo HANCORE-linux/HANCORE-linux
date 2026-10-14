@@ -29,7 +29,7 @@
       "id": 1106981256,
       "full_name": "HANCORE-linux/HANCORE-linux",
       "url": "https://github.com/HANCORE-linux/HANCORE-linux",
-      "stars": 27,
+      "stars": 28,
       "fork": false,
       "private": false
     },
@@ -37,7 +37,7 @@
       "id": 1338810088,
       "full_name": "HANCORE-linux/OmaQ",
       "url": "https://github.com/HANCORE-linux/OmaQ",
-      "stars": 52,
+      "stars": 53,
       "fork": false,
       "private": false
     },
@@ -53,7 +53,7 @@
       "id": 1079497170,
       "full_name": "HANCORE-linux/omarchy-batou-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-batou-theme",
-      "stars": 42,
+      "stars": 43,
       "fork": false,
       "private": false
     },
@@ -93,7 +93,7 @@
       "id": 1071759387,
       "full_name": "HANCORE-linux/omarchy-demon-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-demon-theme",
-      "stars": 18,
+      "stars": 19,
       "fork": false,
       "private": false
     },
@@ -101,7 +101,7 @@
       "id": 1277735693,
       "full_name": "HANCORE-linux/omarchy-dos-moos-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-dos-moos-theme",
-      "stars": 27,
+      "stars": 28,
       "fork": false,
       "private": false
     },
@@ -125,7 +125,7 @@
       "id": 1123367619,
       "full_name": "HANCORE-linux/omarchy-harbordark-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-harbordark-theme",
-      "stars": 45,
+      "stars": 46,
       "fork": false,
       "private": false
     },
@@ -133,7 +133,7 @@
       "id": 1083071475,
       "full_name": "HANCORE-linux/omarchy-inkypinky-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-inkypinky-theme",
-      "stars": 35,
+      "stars": 36,
       "fork": false,
       "private": false
     },
@@ -157,7 +157,7 @@
       "id": 1087643929,
       "full_name": "HANCORE-linux/omarchy-lasthorizon-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-lasthorizon-theme",
-      "stars": 36,
+      "stars": 37,
       "fork": false,
       "private": false
     },
@@ -173,7 +173,7 @@
       "id": 1098586772,
       "full_name": "HANCORE-linux/omarchy-moodpeak-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-moodpeak-theme",
-      "stars": 29,
+      "stars": 30,
       "fork": false,
       "private": false
     },
@@ -205,7 +205,7 @@
       "id": 1235573385,
       "full_name": "HANCORE-linux/omarchy-ryu-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-ryu-theme",
-      "stars": 8,
+      "stars": 9,
       "fork": false,
       "private": false
     },
@@ -237,7 +237,7 @@
       "id": 1169546307,
       "full_name": "HANCORE-linux/omarchy-solitude-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-solitude-theme",
-      "stars": 76,
+      "stars": 78,
       "fork": false,
       "private": false
     },
@@ -269,7 +269,7 @@
       "id": 1076439232,
       "full_name": "HANCORE-linux/omarchy-whitegold-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-whitegold-theme",
-      "stars": 13,
+      "stars": 14,
       "fork": false,
       "private": false
     },
@@ -277,7 +277,7 @@
       "id": 1258696184,
       "full_name": "HANCORE-linux/quickshell-dots",
       "url": "https://github.com/HANCORE-linux/quickshell-dots",
-      "stars": 209,
+      "stars": 210,
       "fork": false,
       "private": false
     },
@@ -285,7 +285,7 @@
       "id": 1302068770,
       "full_name": "HANCORE-linux/Shibumi-Shell",
       "url": "https://github.com/HANCORE-linux/Shibumi-Shell",
-      "stars": 219,
+      "stars": 221,
       "fork": false,
       "private": false
     },
@@ -364,16 +364,16 @@
       "private": false
     }
   ],
-  "owned_stars": 2001,
+  "owned_stars": 2017,
   "extra_stars": 349,
-  "total_stars": 2350,
-  "fetched_at": "2026-10-13T11:44:36.828292+00:00",
+  "total_stars": 2366,
+  "fetched_at": "2026-10-14T09:29:40.247543+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C350-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C366-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2350,
-    "sha256": "18d51e373890a8b02e3be01fa57cf5f76f1b83f8d4d8073db01d6c961ed38376"
+    "stars": 2366,
+    "sha256": "d269a92680986f679a6d081976006208674b9ea39a267837ade1f805b34c3df9"
   }
 }
