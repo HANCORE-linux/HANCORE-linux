@@ -285,7 +285,7 @@
       "id": 1258696184,
       "full_name": "HANCORE-linux/quickshell-dots",
       "url": "https://github.com/HANCORE-linux/quickshell-dots",
-      "stars": 215,
+      "stars": 217,
       "fork": false,
       "private": false
     },
@@ -293,7 +293,7 @@
       "id": 1424623898,
       "full_name": "HANCORE-linux/rumb",
       "url": "https://github.com/HANCORE-linux/rumb",
-      "stars": 64,
+      "stars": 66,
       "fork": false,
       "private": false
     },
@@ -301,7 +301,7 @@
       "id": 1302068770,
       "full_name": "HANCORE-linux/Shibumi-Shell",
       "url": "https://github.com/HANCORE-linux/Shibumi-Shell",
-      "stars": 242,
+      "stars": 241,
       "fork": false,
       "private": false
     },
@@ -309,7 +309,7 @@
       "id": 1051865105,
       "full_name": "HANCORE-linux/waybar-themes",
       "url": "https://github.com/HANCORE-linux/waybar-themes",
-      "stars": 658,
+      "stars": 659,
       "fork": false,
       "private": false
     },
@@ -388,16 +388,16 @@
       "private": false
     }
   ],
-  "owned_stars": 2172,
+  "owned_stars": 2176,
   "extra_stars": 362,
-  "total_stars": 2534,
-  "fetched_at": "2026-10-23T09:19:35.483545+00:00",
+  "total_stars": 2538,
+  "fetched_at": "2026-10-24T08:51:25.750711+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C534-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C538-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2534,
-    "sha256": "7a318d13eb191a3e1792c5959536e834282e1113dba8823b25f53b470469e302"
+    "stars": 2538,
+    "sha256": "c3246ec06c87e82737393a948c9ac77722bdcd48cac4185dfeb39d50b7b73758"
   }
 }
