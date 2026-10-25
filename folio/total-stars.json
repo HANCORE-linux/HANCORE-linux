@@ -45,7 +45,7 @@
       "id": 1370509138,
       "full_name": "HANCORE-linux/omarchy-banish-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-banish-theme",
-      "stars": 8,
+      "stars": 9,
       "fork": false,
       "private": false
     },
@@ -293,7 +293,7 @@
       "id": 1424623898,
       "full_name": "HANCORE-linux/rumb",
       "url": "https://github.com/HANCORE-linux/rumb",
-      "stars": 66,
+      "stars": 70,
       "fork": false,
       "private": false
     },
@@ -309,7 +309,7 @@
       "id": 1051865105,
       "full_name": "HANCORE-linux/waybar-themes",
       "url": "https://github.com/HANCORE-linux/waybar-themes",
-      "stars": 659,
+      "stars": 661,
       "fork": false,
       "private": false
     },
@@ -388,16 +388,16 @@
       "private": false
     }
   ],
-  "owned_stars": 2176,
+  "owned_stars": 2183,
   "extra_stars": 362,
-  "total_stars": 2538,
-  "fetched_at": "2026-10-24T08:51:25.750711+00:00",
+  "total_stars": 2545,
+  "fetched_at": "2026-10-25T09:07:54.125383+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C538-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C545-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2538,
-    "sha256": "c3246ec06c87e82737393a948c9ac77722bdcd48cac4185dfeb39d50b7b73758"
+    "stars": 2545,
+    "sha256": "d68799b9bd4eb60fd7de66249ccf1f5865fd15da409f18d9453d74c575180a31"
   }
 }
