@@ -160,7 +160,7 @@ def build():
                *sorted((FOLIO / 'sources').glob('popular-*.png')), FOLIO / 'type/plex-sans/IBMPlexSans.ttf']
     MANIFEST.write_text(json.dumps({'inputs': {str(p.relative_to(ROOT)): checksum(p) for p in sources},
                                     'outputs': {str(p.relative_to(ROOT)): checksum(p) for p in outputs}}, indent=2) + '\n')
-    print('OK 28 theme mounts in dark/light, separate two-column GitHub archive, historical identity study')
+    print('OK 29 theme mounts in dark/light, separate two-column GitHub archive, historical identity study')
 
 
 def check():
@@ -226,14 +226,14 @@ def check():
                 spread = subprocess.check_output([shutil.which('magick') or 'convert', str(png), '-crop', crop, '+repage', '-format', '%[standard-deviation]', 'info:'], text=True)
                 assert float(spread) > 1000, f'Missing screenshot/badge: {slug}, {crop}'
     archive = (FOLIO / 'THEMES.md').read_text()
-    assert archive.count('width="396" height="335" align="top"') == 28 and archive.count('/connected-') == 2 * 28 + 2 and archive.count('/spaced-') == 2 * 28
+    assert archive.count('width="396" height="335" align="top"') == 29 and archive.count('/connected-') == 2 * 29 + 2 and archive.count('/spaced-') == 2 * 29
     for theme in themes():
         for mode in INK:
             routed = ET.parse(COLLECTION / f'assets/connected-{theme["slug"]}-{mode}.svg').getroot()
             assert routed.find('s:svg[@id="badge-glyphs"]', ns) is None and routed.find('s:svg//s:svg[@id="badge-glyphs"]', ns) is not None, 'Routed card must embed the vector-lettered card'
             assert routed.findall('s:path', ns)[0].get('d').startswith('M312 0V'), 'Route must enter at the upper edge'
     assert (FOLIO / 'THEMES.md').read_text().count('— NEW;') == 1
-    print('OK all 56 theme mounts match project frames; exact palettes, unfiltered desktops, captions and visible badges')
+    print('OK all 58 theme mounts match project frames; exact palettes, unfiltered desktops, captions and visible badges')
 
 
 if __name__ == '__main__':

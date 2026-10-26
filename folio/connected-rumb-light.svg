@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="1040" viewBox="0 0 624 520">
+  <title>rumb — independent card with decorative connection route</title>
+  <image x="0" y="40" width="624" height="480" xlink:href="assets/rumb-light.png" />
+  <path d="M312 0V56M312 488V520" fill="none" stroke="#a1a6ab" stroke-width="2.5" />
+  <path d="M312 8V28" fill="none" stroke="#41474d" stroke-width="3.5" />
+  <path d="M301 56H323M301 488H323" fill="none" stroke="#41474d" stroke-width="3" />
+  
+</svg>

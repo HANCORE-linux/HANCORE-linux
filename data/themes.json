@@ -193,5 +193,11 @@
     "name": "Labra",
     "slug": "labra",
     "description": "Moss black, hot pink and acid lime"
+  },
+  {
+    "id": 29,
+    "name": "Soft Echoes",
+    "slug": "soft-echoes",
+    "description": "Slate night, dusty rose and pastel light"
   }
 ]

@@ -10,7 +10,7 @@ import struct
 import sys
 import xml.etree.ElementTree as ET
 from urllib.parse import urlsplit
-from build_folio import WORKS, PROJECT_CROPS, popular_works, theme_url, identities, badge_url
+from build_folio import WORKS, PROJECT_CROPS, PROJECT_WINDOWS, popular_works, theme_url, identities, badge_url
 from folio_details import detail_cards, SOCIALS, SHIPS_WITH_ADVANCE, ACCENT_INK
 from folio_labels import labels, label_dimensions
 from folio_connections import specs as connection_specs, connected_picture
@@ -76,8 +76,9 @@ def check_project_line():
                 continue
             slug = work['slug']
             card = ET.parse(ROOT / f'folio/{slug}-{mode}.svg').getroot()
-            assert card.attrib['viewBox'] == '0 0 624 700'
-            assert struct.unpack('>II', (ROOT / f'folio/assets/{slug}-{mode}.png').read_bytes()[16:24]) == (1248, 1400)
+            height = PROJECT_WINDOWS.get(slug, 560) + 140
+            assert card.attrib['viewBox'] == f'0 0 624 {height}'
+            assert struct.unpack('>II', (ROOT / f'folio/assets/{slug}-{mode}.png').read_bytes()[16:24]) == (1248, height * 2)
             caption = card.find('s:text', ns)
             assert caption.text == work['name']
             assert caption.attrib['x'] == '312' and caption.attrib['text-anchor'] == 'middle'
@@ -96,7 +97,7 @@ def check_project_line():
             assert len(card.findall('.//s:image', ns)) == 1
             filtered = [node for node in card.iter() if 'filter' in node.attrib]
             assert len(filtered) == 1 and filtered[0].tag == '{http://www.w3.org/2000/svg}path', 'Shadow must never blur the screenshot'
-    print('OK custom H, three 2× project mounts, centered Plex labels and unfiltered original source viewports')
+    print('OK custom H, four 2× project mounts, centered Plex labels and unfiltered original source viewports')
 
 
 def check_logo():
@@ -192,7 +193,7 @@ def check_connections():
     themes = json.loads((ROOT / 'data/themes.json').read_text())
     highlights = json.loads((ROOT / 'folio/highlights.json').read_text())
     connections = connection_specs(popular_works(), detail_cards(themes, highlights))
-    assert len(connections) == 15
+    assert len(connections) == 16
     for mode in ('dark', 'light'):
         for spec in connections:
             slug = spec['slug']
@@ -203,16 +204,16 @@ def check_connections():
             assert image.get('{http://www.w3.org/1999/xlink}href') == f'{spec["source"]}-{mode}.png'
             assert [image.get(k) for k in ('x', 'y', 'width', 'height')] == [str(spec['x']), str(spec['y']), '624', str(spec['body_height'])]
             assert len(svg.findall('s:path', ns)) == 3
-            if spec['kind'] == 'bridge':
-                assert svg.findall('s:path', ns)[1].get('d') == '', 'No staggered ticks above the newest theme and Solitude'
+            if spec['kind'] == 'flank':
+                assert svg.findall('s:path', ns)[1].get('d') == '', 'Only the centre route carries a bright segment'
             assert struct.unpack('>II', (ROOT / f'folio/assets/connected-{slug}-{mode}.png').read_bytes()[16:24]) == (spec['width'] * 2, spec['height'] * 2)
     from build_folio import FEATURED
     readme = (ROOT / 'folio/README.md').read_text()
     by_slug = {s['slug']: s for s in connections}
     assert ''.join(connected_picture(by_slug[slug], url, alt) for slug, url, alt in FEATURED) in readme, 'Continuous routes need separate adjacent links without whitespace'
-    assert readme.count('align="top"') == 15, 'Native row alignment is required at the joins'
+    assert readme.count('align="top"') == 16, 'Native row alignment is required at the joins'
     assert 'info-archive' in by_slug and by_slug['info-archive']['kind'] == 'archive'
-    print('OK 15 independently linked slices: projects through highlights, 3×2 themes joined to archive CTA, unchanged card scale')
+    print('OK 16 independently linked slices: projects, rumb between Waybar and QS-Dots, highlights, 3×2 themes joined to archive CTA, unchanged card scale')
 
 
 def main():
@@ -235,7 +236,7 @@ def main():
         assert record['url'] == badge_url(slug, record['stars'] if record.get('api_snapshot') else None)
         assert isinstance(snapshot['badges'][slug]['stars'], int)
     themes = json.loads((ROOT / 'data/themes.json').read_text())
-    assert parsed.images == 19 + len(popular), parsed.images
+    assert parsed.images == 20 + len(popular), parsed.images
     totals = total_snapshot()
     if all(record.get('api_snapshot') for record in snapshot['badges'].values()):
         archive_sources = json.loads((ROOT / 'folio/collection/sources.json').read_text())
@@ -273,8 +274,9 @@ def main():
     check_labels(len(themes))
     highlights = json.loads((ROOT / 'folio/highlights.json').read_text())
     check_detail_line(themes, highlights)
-    assert len(parsed.links) == len(popular) + 15, parsed.links
+    assert len(parsed.links) == len(popular) + 16, parsed.links
     assert 'https://github.com/HANCORE-linux/waybar-themes' in parsed.links
+    assert 'https://github.com/HANCORE-linux/rumb' in parsed.links
     assert 'https://github.com/omacom/omarchy-plugin-marketplace' in parsed.links
     assert parsed.tables == 0 and parsed.details == 0, 'The complete archive must be a separate page'
     assert './THEMES.md' in parsed.links
@@ -321,7 +323,7 @@ def main():
     assert 'Credits' not in thanks_source and 'Contributions' not in thanks_source
     archive = Check()
     archive.feed((ROOT / 'folio/THEMES.md').read_text())
-    assert archive.images == 29 and len(archive.links) == 30
+    assert archive.images == 30 and len(archive.links) == 31
     assert archive.tables == 0 and archive.details == 0
     assert archive.links.count('https://github.com/HANCORE-linux') == 2
     assert './README.md' not in archive.links

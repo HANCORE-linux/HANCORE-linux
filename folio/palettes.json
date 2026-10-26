@@ -394,6 +394,21 @@
       ],
       "sha256": "917af83a688b100688b5698429560f5fee56cc67f08bafd4f920470bf567f6af",
       "fetched_at": "2026-10-04T11:45:45.538050+00:00"
+    },
+    "soft-echoes": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-soft-echoes-theme/HEAD/colors.toml",
+      "colors": [
+        "#8c98a9",
+        "#cf8094",
+        "#98c09b",
+        "#ccc490",
+        "#959ee3",
+        "#c298d7",
+        "#86bed3",
+        "#d4ccca"
+      ],
+      "sha256": "8583c86fa10f3346bfad118b0789e1ba0cd920afe6ddf5a78e04fe3db2bdfb19",
+      "fetched_at": "2026-10-26T10:09:27.916076+00:00"
     }
   }
 }

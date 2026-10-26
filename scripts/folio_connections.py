@@ -10,11 +10,14 @@ SIGNAL_INK = {'dark': '#e8e3d9', 'light': '#41474d'}
 
 def specs(popular, details):
     result = [dict(slug=slug, kind='project', column=i, source=f'assets/{slug}',
-                   width=624, height=900, x=0, y=120, body_height=700)
+                   width=624, height=820, x=0, y=120, body_height=700)
               for i, slug in enumerate(PROJECTS)]
-    result += [dict(slug=f'info-{slug}', kind='bridge', column=i, source=f'assets/info-{slug}',
-                    width=936, height=272, x=312 if i == 0 else 0, y=40, body_height=192)
-               for i, slug in enumerate(('waybar', 'qs-dots'))]
+    # rumb's compact mount on the centre route; Waybar and QS-Dots centred beside it.
+    result.append(dict(slug='rumb', kind='feature', column=1, source='assets/rumb',
+                       width=624, height=520, x=0, y=40, body_height=480))
+    result += [dict(slug=f'info-{slug}', kind='flank', column=column, source=f'assets/info-{slug}',
+                    width=624, height=520, x=0, y=164, body_height=192)
+               for column, slug in ((0, 'waybar'), (2, 'qs-dots'))]
     result += [dict(slug=f'info-{card["slug"]}', kind='highlight', column=i, source=f'assets/info-{card["slug"]}',
                     width=624, height=232, x=0, y=40, body_height=192)
                for i, card in enumerate(c for c in details if c['group'] == 'highlights')]
@@ -39,12 +42,15 @@ def connected_svg(spec, mode):
         terminals = f'M301 136H323M301 {end}H323'
         if column == 1:
             hub = '<rect x="308" y="4" width="8" height="8" fill="#df6124" />'
-    elif kind == 'bridge':
-        # The three rails run in the transparent margins beside the two cards.
-        route = 'M312 0V272M936 0V272M312 120H336' if column == 0 else 'M0 0V272M624 0V272M624 120H600'
-        # Keep the outer rails quiet: their former bright segments were staggered.
-        segment = ''
-        terminals = 'M336 113V127' if column == 0 else 'M600 113V127'
+    elif kind == 'feature':
+        top, bottom = spec['y'] + 16, spec['y'] + spec['body_height'] - 32
+        route, segment = f'M312 0V{top}M312 {bottom}V{spec["height"]}', 'M312 8V28'
+        terminals = f'M301 {top}H323M301 {bottom}H323'
+    elif kind == 'flank':
+        # Keep the outer rails quiet: only the centre route carries a bright segment.
+        top, bottom = spec['y'] + 16, spec['y'] + 164
+        route, segment = f'M312 0V{top}M312 {bottom}V{spec["height"]}', ''
+        terminals = f'M301 {top}H323M301 {bottom}H323'
     elif kind == 'theme-bottom':
         route = 'M312 0V56' + ['M312 512V584H624', 'M312 512V612M0 584H624', 'M312 512V584H0'][column]
         segment = 'M312 12V32' + ['M468 584H524', 'M312 590V608', 'M100 584H156'][column]

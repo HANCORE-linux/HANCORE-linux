@@ -48,18 +48,26 @@ WORKS = [
      'image': '../assets/sources/rise-carousel.webp',
      'origin': 'Preserved real Rise V1 carousel capture; timestamp unavailable. Not a new V2 screenshot.',
      'url': 'https://github.com/HANCORE-linux/quickshell-dots'},
+    {'slug': 'rumb', 'name': 'rumb', 'size': [1700, 1050], 'crop': [560, 330, 580, 352],
+     'origin': 'rumb v0.1.6 demo data, motion_frames frame 440 (170 × 50, Labra): the eye at rest. Same renderer and scan phase as docs/overview.png, 1.3 s before its frame 480; unretouched.',
+     'url': 'https://github.com/HANCORE-linux/rumb'},
 ]
 FEATURED = [
     ('shibumi', 'https://github.com/HANCORE-linux/Shibumi-Shell', 'Shibumi-Shell — real bar configuration detail'),
     ('omaq', 'https://github.com/HANCORE-linux/OmaQ', 'OmaQ — chat for Omarchy, public documentation demo'),
     ('marketplace', 'https://github.com/omacom/omarchy-plugin-marketplace', 'Omarchy Plugin Marketplace — official public interface preview detail'),
 ]
+# rumb sits on the centre route between the Waybar and QS-Dots cards.
+SECOND = ('rumb', 'https://github.com/HANCORE-linux/rumb', 'rumb — software health dashboard, demo frame with the eye at rest')
 # Original screenshot viewports; no retouching or reconstructed interface content.
 PROJECT_CROPS = {
     'shibumi': [205, 165, 595, 480],
     'omaq': [0, 0, 420, 520],
     'marketplace': [12, 0, 750, 690],
+    'rumb': [560, 330, 580, 352],
 }
+# Landscape image windows; the mount keeps its width, cut corner and caption.
+PROJECT_WINDOWS = {'rumb': 340}
 
 
 def checksum(path):
@@ -141,11 +149,13 @@ def readme_content(markdown):
 </p>\n\n{summary_html()}\n\n<p align="center">{label_picture('subtitle', len(themes))}</p>'''
     details = detail_cards(themes, highlights)
     connections = {s['slug']: s for s in connection_specs(popular_works(), details)}
+    info = lambda card: connected_picture(connections[f'info-{card["slug"]}'], card['url'],
+        f'{card["title"]} — {card["caption"]}' + (' Omarchy.' if card.get('brand') else ''))
     project_rows = [''.join(connected_picture(connections[slug], url, alt) for slug, url, alt in FEATURED)]
-    for group in ('projects', 'highlights'):
-        project_rows.append(''.join(connected_picture(connections[f'info-{card["slug"]}'], card['url'],
-            f'{card["title"]} — {card["caption"]}' + (' Omarchy.' if card.get('brand') else ''))
-            for card in details if card['group'] == group))
+    bar, shell = (card for card in details if card['group'] == 'projects')
+    slug, url, alt = SECOND
+    project_rows.append(info(bar) + connected_picture(connections[slug], url, alt) + info(shell))
+    project_rows.append(''.join(info(card) for card in details if card['group'] == 'highlights'))
     projects = '<p align="center">' + '<br />'.join(project_rows) + '</p>'
     table = '<!-- Highlight cards are the final row of the connected project group above. -->'
     cells = []
@@ -178,20 +188,22 @@ def project_tile(work, ink):
     opacity = '0.48' if dark else '0.19'
     x, y, w, h = PROJECT_CROPS[work['slug']]
     sw, sh = work['size']
-    scale = min(560 / w, 560 / h)
+    window = PROJECT_WINDOWS.get(work['slug'], 560)
+    bottom = window + 108
+    scale = min(560 / w, window / h)
     image_w, image_h = w * scale, h * scale
-    image_x, image_y = 32 + (560 - image_w) / 2, 24 + (560 - image_h) / 2
-    outline = 'M24 16H600V646L578 668H24Z'
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="1400" viewBox="0 0 624 700">
+    image_x, image_y = 32 + (560 - image_w) / 2, 24 + (window - image_h) / 2
+    outline = f'M24 16H600V{bottom - 22}L578 {bottom}H24Z'
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1248" height="{(bottom + 32) * 2}" viewBox="0 0 624 {bottom + 32}">
   <title>{escape(work['name'])} — original interface, chamfered project mount</title>
   <defs><filter id="float" x="-15%" y="-15%" width="130%" height="140%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="8" /><feOffset dy="10" /></filter></defs>
   <path d="{outline}" fill="#000000" opacity="{opacity}" filter="url(#float)" />
   <path d="{outline}" fill="{paper}" stroke="{edge}" stroke-width="1.5" />
-  <rect x="32" y="24" width="560" height="560" fill="#101213" />
+  <rect x="32" y="24" width="560" height="{window}" fill="#101213" />
   <svg x="{image_x:.6f}" y="{image_y:.6f}" width="{image_w:.6f}" height="{image_h:.6f}" viewBox="{x} {y} {w} {h}" preserveAspectRatio="xMidYMid meet" overflow="hidden">
     <image xlink:href="sources/{work['slug']}.png" width="{sw}" height="{sh}" />
   </svg>
-  <text x="312" y="636" text-anchor="middle" fill="{ink}" font-family="IBM Plex Sans" font-size="34" font-weight="500">{escape(work['name'])}</text>
+  <text x="312" y="{window + 76}" text-anchor="middle" fill="{ink}" font-family="IBM Plex Sans" font-size="34" font-weight="500">{escape(work['name'])}</text>
 </svg>'''
 
 

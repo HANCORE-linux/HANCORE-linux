@@ -325,6 +325,21 @@
       },
       "sha256": "d17cf7253c9fa6d9fa5e9afb45f17fad43bac471bb1a6bc8b52107468f43be28",
       "fetched_at": "2026-10-04T11:45:45.538050+00:00"
+    },
+    "soft-echoes": {
+      "url": "https://raw.githubusercontent.com/HANCORE-linux/omarchy-soft-echoes-theme/HEAD/preview.png",
+      "width": 2560,
+      "height": 1440,
+      "badge": {
+        "url": "https://img.shields.io/badge/stars-9-df6124?style=flat-square&labelColor=000000",
+        "stars": 9,
+        "width": 54,
+        "height": 20,
+        "sha256": "2093d20d9574cf42f99c991556fd91d9fee464f3938961df7cc98f379bbdd02a",
+        "api_snapshot": true
+      },
+      "sha256": "b97452af28414a3cdc7612e8aeda8355eb73a96751f72de46e708413a6d19484",
+      "fetched_at": "2026-10-26T10:09:27.916076+00:00"
     }
   },
   "badges_fetched_at": "2026-10-26T10:04:17.743898+00:00"

@@ -1,7 +1,7 @@
 """GitHub-native theme mounts matching the three featured project cards."""
 from xml.sax.saxutils import escape
 
-THEME_LABELS = {'labra': 'NEW'}
+THEME_LABELS = {'soft-echoes': 'NEW'}
 
 
 def luminance(color):

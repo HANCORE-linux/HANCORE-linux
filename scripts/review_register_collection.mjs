@@ -97,7 +97,7 @@ try {
     for(const [width,mode,view] of [[1440,'dark','profile'],[1440,'light','profile'],[1440,'dark','readme'],[1280,'dark','profile'],[1279,'light','profile'],[1024,'dark','profile'],[900,'light','profile'],[768,'dark','profile'],[390,'dark','profile'],[390,'light','readme'],[320,'light','readme']]) {
       await navigate('folio.html',width,mode,view);
       const m=await metrics();valid(m,width,mode);
-      assert(m.images.length===23&&m.links.length===19,'Main profile count');
+      assert(m.images.length===26&&m.links.length===22,'Main profile count');
       const totalBadge=m.images.find(i=>i.src.endsWith('/total-stars-'+mode+'.svg'));
       assert(totalBadge&&totalBadge.declaredHeight==='44'&&Number(totalBadge.declaredWidth)===Math.round((totals.badge.width+24)*44/36),'Compact total-star badge');
       assert(totalBadge.alt.includes(totals.total_stars.toLocaleString('en-US'))&&totalBadge.alt.includes('non-fork')&&totalBadge.alt.includes('Omarchy Plugin Marketplace')&&totalBadge.alt.includes('checked '),'Transparent total-star scope/date');
@@ -118,37 +118,39 @@ try {
       if(width>=1280) {
         assert(new Set(projects.map(i=>i.y)).size===1,'Circuit slices must share a row');
         for(let n=1;n<projects.length;n++)assert(Math.abs(projects[n].x-projects[n-1].x-projects[n-1].width)<0.1,'Gap between circuit slices');
-        assert(projects.every(i=>Math.abs(i.height-248*900/624)<1),'Original mount scale changed');
+        assert(projects.every(i=>Math.abs(i.height-248*820/624)<1),'Original mount scale changed');
       }
       const labels=m.images.filter(i=>i.src.includes('/label-'));
       assert(labels.length===2&&labels.every(i=>i.declaredWidth==='248'&&i.declaredHeight==='28'),'Readable section labels');
       assert(labels.map(i=>i.alt).join('|')==='Linux themes & interfaces.|Most starred themes','Section label text');
       assert(bio.y+bio.height<=labels[0].y&&labels[0].y+labels[0].height<=projects[0].y,'Subtitle must follow the personal text, before projects');
-      for(const url of ['https://github.com/HANCORE-linux/OmaQ','https://github.com/omacom/omarchy-plugin-marketplace','https://github.com/HANCORE-linux/waybar-themes','https://github.com/HANCORE-linux/quickshell-dots'])assert(m.links.includes(url),'Lost project '+url);
+      for(const url of ['https://github.com/HANCORE-linux/rumb','https://github.com/HANCORE-linux/OmaQ','https://github.com/omacom/omarchy-plugin-marketplace','https://github.com/HANCORE-linux/waybar-themes','https://github.com/HANCORE-linux/quickshell-dots'])assert(m.links.includes(url),'Lost project '+url);
+      const rumb=m.images.find(i=>/\/(?:connected-)?rumb-(dark|light)\.png$/.test(i.src));
+      assert(rumb&&rumb.declaredWidth==='248'&&rumb.declaredHeight==='191'&&rumb.src.includes('/connected-')===(width>=1280),'Compact rumb mount');
       const details=m.images.filter(i=>i.fallback.includes('/info-'));
       assert(details.length===6&&details.every(i=>i.declaredWidth==='248'&&i.declaredHeight==='76'),'Info cards or archive card missing');
-      assert(details.some(i=>i.alt==='Labra — Newest theme.')&&details.filter(i=>i.alt.endsWith('Ships with Omarchy.')).length===2,'Lost latest/official notes');
-      assert(details.some(i=>i.alt==='All 28 themes — Open collection →'),'Archive link must be a card');
+      assert(details.some(i=>i.alt==='Soft Echoes — Newest theme.')&&details.filter(i=>i.alt.endsWith('Ships with Omarchy.')).length===2,'Lost latest/official notes');
+      assert(details.some(i=>i.alt==='All 29 themes — Open collection →'),'Archive link must be a card');
       if(width>=1280) {
-        const bridge=details.slice(0,2), highlights=details.slice(2,5);
-        assert(bridge.every(i=>i.width===372)&&new Set(bridge.map(i=>i.y)).size===1,'Two wide bridge slices');
-        assert(Math.abs(projects[0].y+projects[0].height-bridge[0].y)<1,'Project-to-bridge vertical seam');
-        assert(Math.abs(bridge[0].y+bridge[0].height-highlights[0].y)<1,'Bridge-to-highlight vertical seam');
-        assert(Math.abs(projects[0].x-bridge[0].x)<1&&Math.abs(projects[0].x-highlights[0].x)<1,'Connection group left edges');
-        assert(Math.abs(bridge[1].x-bridge[0].x-bridge[0].width)<1,'Bridge center rail seam');
+        const highlights=details.slice(2,5), row=[details[0],rumb,details[1]];
+        assert(row.every(i=>i.width===248&&Math.abs(i.height-248*520/624)<1)&&new Set(row.map(i=>i.y)).size===1,'Waybar, rumb and QS-Dots share one row');
+        assert(Math.abs(projects[0].y+projects[0].height-row[0].y)<1,'Project-to-rumb-row vertical seam');
+        assert(Math.abs(row[0].y+row[0].height-highlights[0].y)<1,'Rumb-row-to-highlight vertical seam');
+        assert(Math.abs(projects[0].x-row[0].x)<1&&Math.abs(projects[0].x-highlights[0].x)<1,'Connection group left edges');
+        for(let n=1;n<3;n++)assert(Math.abs(row[n].x-row[n-1].x-row[n-1].width)<1,'Gap in the rumb row');
         for(let n=0;n<3;n++)assert(Math.abs(cards[n].y+cards[n].height-cards[n+3].y)<1&&Math.abs(cards[n].x-cards[n+3].x)<1,'Theme network vertical seam');
         const archiveNode=details.find(i=>i.fallback.endsWith('/info-archive-light.png'));
         assert(Math.abs(cards[4].x-archiveNode.x)<1&&Math.abs(cards[4].y+cards[4].height-archiveNode.y)<1,'Final theme line must end at the archive CTA');
-        assert(m.images.filter(i=>i.src.includes('/connected-')).length===15,'Both complete connection networks and final archive node');
+        assert(m.images.filter(i=>i.src.includes('/connected-')).length===16,'Both complete connection networks and final archive node');
       } else assert(!m.images.some(i=>i.src.includes('/connected-')),'Narrow layouts must use original cards');
       const socials=m.images.filter(i=>i.src.includes('/social-'));
       assert(socials.length===5&&socials.every(i=>i.declaredWidth==='44'&&i.declaredHeight==='44'),'Missing accessible footer icons');
       assert(socials.map(i=>i.alt).join(',')==='Discord,X,Ko-fi,Buy Me a Coffee,Inspired by','Footer icon order');
-      const archiveCard=details.find(i=>i.alt==='All 28 themes — Open collection →');
+      const archiveCard=details.find(i=>i.alt==='All 29 themes — Open collection →');
       assert(archiveCard.y+archiveCard.height<=totalBadge.y&&totalBadge.y+totalBadge.height<=socials[0].y,'Total stars must sit below the archive and above the social icons');
       assert(new Set(socials.map(i=>i.y)).size===1&&socials.every((i,n)=>!n||i.x>socials[n-1].x),'Buy Me a Coffee follows Ko-fi; Inspired by stays last');
       if(width===1440) {
-        assert(m.articleHeight<1730,'Main profile too tall with readable bio and total badge');
+        assert(m.articleHeight<1760,'Main profile too tall with readable bio and total badge');
         assert(new Set(cards.map(i=>Math.round(i.y))).size===2,'Expected 3×2 compact grid');
         assert(new Set(projects.map(i=>Math.round(i.y))).size===1,'Project row changed');
       }
@@ -163,23 +165,23 @@ try {
       const m=await metrics();valid(m,width,mode);
       const archive=route==='collection.html';
       const thanks=route==='folio-acknowledgements.html';
-      assert(m.images.length===(archive?29:thanks?acknowledged.length+2:25),'Unexpected image count '+route);
-      assert(m.links.length===(archive?30:thanks?acknowledged.length+2:21),'Unexpected links '+route);
+      assert(m.images.length===(archive?30:thanks?acknowledged.length+2:26),'Unexpected image count '+route);
+      assert(m.links.length===(archive?31:thanks?acknowledged.length+2:22),'Unexpected links '+route);
       if(archive) {
         const archiveCards=m.images.filter(i=>i.src.includes('/collection/assets/'));
         const wide=width>=1280, routed=wide?'/connected-':'/spaced-';
         const label=m.images.find(i=>i.src.endsWith((wide?'/connected-archive-head-':'/label-archive-')+mode+'.png'));
-        assert(label?.declaredWidth==='280'&&label.declaredHeight==='76'&&label.alt==='Theme archive — 28 themes · color00–07 · A–Z','Readable archive heading tile');
+        assert(label?.declaredWidth==='280'&&label.declaredHeight==='76'&&label.alt==='Theme archive — 29 themes · color00–07 · A–Z','Readable archive heading tile');
         assert(label.y+label.height<=archiveCards[0].y,'Archive header tile overlaps the themes');
         if(wide)assert(Math.abs(label.y+label.height-archiveCards[0].y)<1&&archiveCards.every((i,n)=>n<2||Math.abs(archiveCards[n-2].y+archiveCards[n-2].height-i.y)<1),'Archive routes must join without gaps');
-        assert(archiveCards.length===28&&archiveCards.every((i,n)=>i.src.endsWith(routed+themes[n].slug+'-'+mode+'.svg')),'Archive A–Z order');
-        assert(new Set(archiveCards.map(i=>i.src)).size===28,'Repeated archive card');
+        assert(archiveCards.length===29&&archiveCards.every((i,n)=>i.src.endsWith(routed+themes[n].slug+'-'+mode+'.svg')),'Archive A–Z order');
+        assert(new Set(archiveCards.map(i=>i.src)).size===29,'Repeated archive card');
         assert(archiveCards.every(i=>i.declaredWidth==='396'&&i.declaredHeight==='335'),'Large archive dimensions');
         assert(archiveCards.every(i=>i.alt.includes('ANSI colors 00–07')&&i.alt.includes('GitHub stars, checked ')),'Archive alt text');
         const newCards=archiveCards.filter(i=>i.alt.includes('— NEW;'));
-        assert(newCards.length===1&&newCards[0].src.endsWith(routed+'labra-'+mode+'.svg'),'Only Labra should be marked NEW');
+        assert(newCards.length===1&&newCards[0].src.endsWith(routed+'soft-echoes-'+mode+'.svg'),'Only Soft Echoes should be marked NEW');
         const rowSizes=Object.values(archiveCards.reduce((rows,i)=>{const y=Math.round(i.y);rows[y]=(rows[y]||0)+1;return rows;},{}));
-        if(width===1440)assert(rowSizes.length===14&&rowSizes.every(n=>n===2),'Archive must have two large cards per row');
+        if(width===1440)assert(rowSizes.length===15&&rowSizes.filter(n=>n===2).length===14,'Archive must have two large cards per row');
         if(width<=390)assert(rowSizes.every(n=>n===1),'Archive mobile wrapping');
         for(const theme of themes)assert(m.links.includes('https://github.com/HANCORE-linux/omarchy-'+theme.slug+'-theme'),'Missing archive link '+theme.slug);
       } else if(thanks) {
@@ -208,7 +210,7 @@ try {
           for(let n=1;n<row.length;n++)assert(row[n].x>=row[n-1].x+row[n-1].width,'No overlapping inspiration cards');
         }
         const people=JSON.parse(fs.readFileSync(path.join(root,'folio/acknowledgements.json'),'utf8')).people;
-        assert(m.links[1]==='https://omarchy.org'&&people.every((person,n)=>m.links[n+2]===person.url),'Preserve each person or project link');
+        assert(m.links[1]===new URL('https://omarchy.org').href&&people.every((person,n)=>m.links[n+2]===person.url),'Preserve each person or project link');
         assert(await evaluate('document.querySelector(\'article img[alt="DHH / Omarchy"]\').closest("a").href === "https://github.com/dhh"'),'DHH must link to his personal profile');
         assert(await evaluate('document.querySelector(\'article img[alt="Ryan Hughes / Omarchy-dev"]\').closest("a").href === "https://github.com/ryanrhughes"'),'Ryan must link to the requested profile');
         assert(!await evaluate('/Credits|Contributions/.test(document.querySelector("article").textContent)'),'Wrong acknowledgements label');
@@ -273,7 +275,9 @@ try {
     await evaluate('[...document.styleSheets].forEach(sheet=>sheet.disabled=true)');
     const bare=await metrics();
     const bareProjects=bare.images.filter(i=>/\/(?:connected-)?(shibumi|omaq|marketplace)-(dark|light)\.png$/.test(i.src));
-    assert(bareProjects.length===3&&bareProjects.every(i=>i.width===248&&i.height===(width>=1280?358:278)),'Native source dimensions without CSS');
+    assert(bareProjects.length===3&&bareProjects.every(i=>i.width===248&&i.height===(width>=1280?326:278)),'Native source dimensions without CSS');
+    const bareRumb=bare.images.find(i=>/\/(?:connected-)?rumb-(dark|light)\.png$/.test(i.src));
+    assert(bareRumb?.loaded&&bareRumb.width===248&&bareRumb.height===(width>=1280?207:191),'Native rumb dimensions without CSS');
     console.log('OK native no-JS connections',width,mode);
   }
   await call('Emulation.setScriptExecutionDisabled',{value:false});
