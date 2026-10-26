@@ -125,10 +125,16 @@ try {
       assert(labels.map(i=>i.alt).join('|')==='Linux themes & interfaces.|Most starred themes','Section label text');
       assert(bio.y+bio.height<=labels[0].y&&labels[0].y+labels[0].height<=projects[0].y,'Subtitle must follow the personal text, before projects');
       for(const url of ['https://github.com/HANCORE-linux/rumb','https://github.com/HANCORE-linux/OmaQ','https://github.com/omacom/omarchy-plugin-marketplace','https://github.com/HANCORE-linux/waybar-themes','https://github.com/HANCORE-linux/quickshell-dots'])assert(m.links.includes(url),'Lost project '+url);
-      const rumb=m.images.find(i=>/\/(?:connected-)?rumb-(dark|light)\.png$/.test(i.src));
-      assert(rumb&&rumb.declaredWidth==='248'&&rumb.declaredHeight==='191'&&rumb.src.includes('/connected-')===(width>=1280),'Compact rumb mount');
+      const rumb=m.images.find(i=>/\/(?:connected-|stacked-)?rumb-(dark|light)\.png$/.test(i.src));
+      const stacked=(width>=595&&width<=767)||(width>=883&&width<=1177);
+      assert(rumb&&rumb.declaredWidth==='248'&&rumb.declaredHeight==='191'&&rumb.src.includes('/connected-')===(width>=1280)&&rumb.src.includes('/stacked-')===stacked,'Compact rumb mount');
       const details=m.images.filter(i=>i.fallback.includes('/info-'));
       assert(details.length===6&&details.every(i=>i.declaredWidth==='248'&&i.declaredHeight==='76'),'Info cards or archive card missing');
+      if(stacked) {
+        const column=[details[0],rumb,details[1]], centre=i=>i.x+i.width/2;
+        assert(rumb.width===496&&rumb.height===191&&column.every((i,n)=>!n||i.y>=column[n-1].y+column[n-1].height-1),'Waybar, rumb and QS-Dots need their own lines');
+        assert(column.every(i=>Math.abs(centre(i)-centre(rumb))<1),'The stacked rumb column must share one centre');
+      }
       assert(details.some(i=>i.alt==='Soft Echoes — Newest theme.')&&details.filter(i=>i.alt.endsWith('Ships with Omarchy.')).length===2,'Lost latest/official notes');
       assert(details.some(i=>i.alt==='All 29 themes — Open collection →'),'Archive link must be a card');
       if(width>=1280) {

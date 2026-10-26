@@ -23,7 +23,7 @@ PUBLIC.update(f'folio/assets/bio-{size}-{mode}.png' for size in ['wide', 'narrow
 PUBLIC.update(f'folio/assets/thanks-{person["slug"]}-{mode}.png' for person in json.loads((ROOT / 'folio/acknowledgements.json').read_text())['people'] for mode in ['dark', 'light'])
 PUBLIC.update(f'folio/assets/palette-{theme["slug"]}.png' for theme in json.loads((ROOT / 'data/themes.json').read_text()))
 PUBLIC.update(f'folio/assets/{name}-{mode}.png' for name in ['signature','shibumi','solitude','omaq','banish'] for mode in ['dark','light'])
-PUBLIC.update(f'folio/assets/{name}-{mode}.png' for name in ['marketplace','waybar','qs-dots','rumb'] for mode in ['dark','light'])
+PUBLIC.update(f'folio/assets/{name}-{mode}.png' for name in ['marketplace','waybar','qs-dots','rumb','stacked-rumb'] for mode in ['dark','light'])
 PUBLIC.update(f'folio/assets/{prefix}-{work["theme_slug"]}-{mode}.png' for work in popular_works() for prefix in ['popular', 'badge'] for mode in ['dark','light'])
 PUBLIC.update(f'folio/assets/wordmark-{variant["id"]}-{mode}.png' for variant in json.loads((ROOT / 'folio/identity.json').read_text())['variants'] for mode in ['dark','light'])
 PUBLIC.update(f'folio/assets/mark-logo-{mode}.png' for mode in ['dark', 'light'])

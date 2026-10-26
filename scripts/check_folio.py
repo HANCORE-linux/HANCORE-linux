@@ -97,7 +97,13 @@ def check_project_line():
             assert len(card.findall('.//s:image', ns)) == 1
             filtered = [node for node in card.iter() if 'filter' in node.attrib]
             assert len(filtered) == 1 and filtered[0].tag == '{http://www.w3.org/2000/svg}path', 'Shadow must never blur the screenshot'
-    print('OK custom H, four 2× project mounts, centered Plex labels and unfiltered original source viewports')
+        stacked = ET.parse(ROOT / f'folio/stacked-rumb-{mode}.svg').getroot()
+        height = PROJECT_WINDOWS['rumb'] + 140
+        image = stacked.find('s:image', ns)
+        assert stacked.attrib['viewBox'] == f'0 0 1248 {height}' and image.attrib['x'] == '312' and image.attrib['width'] == '624'
+        assert image.attrib['{http://www.w3.org/1999/xlink}href'] == f'assets/rumb-{mode}.png'
+        assert struct.unpack('>II', (ROOT / f'folio/assets/stacked-rumb-{mode}.png').read_bytes()[16:24]) == (2496, height * 2)
+    print('OK custom H, four 2× project mounts, a double-width rumb line, centered Plex labels and unfiltered original source viewports')
 
 
 def check_logo():
@@ -212,6 +218,7 @@ def check_connections():
     by_slug = {s['slug']: s for s in connections}
     assert ''.join(connected_picture(by_slug[slug], url, alt) for slug, url, alt in FEATURED) in readme, 'Continuous routes need separate adjacent links without whitespace'
     assert readme.count('align="top"') == 16, 'Native row alignment is required at the joins'
+    assert readme.count('srcset="./assets/stacked-rumb-') == 2, 'Medium widths stack Waybar, rumb and QS-Dots'
     assert 'info-archive' in by_slug and by_slug['info-archive']['kind'] == 'archive'
     print('OK 16 independently linked slices: projects, rumb between Waybar and QS-Dots, highlights, 3×2 themes joined to archive CTA, unchanged card scale')
 
@@ -343,6 +350,7 @@ def main():
     expected_assets.update(f'thanks-{person["slug"]}-{mode}.png' for person in acknowledged_people() for mode in ('dark', 'light'))
     expected_assets.update(f'{ORIGIN_SLUG}-{mode}.png' for mode in ('dark', 'light'))
     expected_assets.update(f'connected-archive-head-{mode}.png' for mode in ('dark', 'light'))
+    expected_assets.update(f'stacked-rumb-{mode}.png' for mode in ('dark', 'light'))
     expected_assets.update(f'palette-{theme["slug"]}.png' for theme in themes)
     expected_assets.update(f'info-{card["slug"]}-{mode}.png' for card in detail_cards(themes, highlights) for mode in ('dark', 'light'))
     expected_assets.update(f'social-{slug}-{mode}.png' for slug, _, _ in SOCIALS for mode in ('dark', 'light'))

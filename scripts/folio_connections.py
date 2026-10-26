@@ -3,6 +3,11 @@ from html import escape
 
 PROJECTS = ('shibumi', 'omaq', 'marketplace')
 WIDE_MIN = 1280
+# GitHub's README column is the viewport minus 82 px below 768, minus 370 px to 1011 and minus
+# 434 px to 1279, less a classic scrollbar of up to 17 px (live profile, 2026-10-26). At 496–743 px
+# three 248 px cards wrap two plus one; a 496 px rumb line stacks its row instead. Lower bounds
+# assume the widest scrollbar and upper bounds none, so the source is never narrowed or paired.
+STACKED = ((595, 767), (883, 1177))
 # Quiet routes; brighter signal segments and terminals.
 ROUTE_INK = {'dark': '#48525b', 'light': '#a1a6ab'}
 SIGNAL_INK = {'dark': '#e8e3d9', 'light': '#41474d'}
@@ -76,9 +81,13 @@ def connected_picture(spec, url, alt, title=None):
     slug = spec['slug']
     extension = 'svg' if spec['kind'].startswith('theme-') else 'png'
     tooltip = f' title="{escape(title, quote=True)}"' if title else ''
+    stacked = ''.join(f'<source media="{", ".join(f"(min-width: {low}px) and (max-width: {high}px) and (prefers-color-scheme: {mode})" for low, high in STACKED)}" '
+                      f'srcset="./assets/stacked-{slug}-{mode}.png" width="496" height="{fallback_height}" />'
+                      for mode in ('dark', 'light')) if spec['kind'] == 'feature' else ''
     return (f'<a href="{escape(url, quote=True)}"><picture>'
             f'<source media="(min-width: {WIDE_MIN}px) and (prefers-color-scheme: dark)" srcset="./assets/connected-{slug}-dark.{extension}" width="{width}" height="{height}" />'
             f'<source media="(min-width: {WIDE_MIN}px) and (prefers-color-scheme: light)" srcset="./assets/connected-{slug}-light.{extension}" width="{width}" height="{height}" />'
+            f'{stacked}'
             f'<source media="(prefers-color-scheme: dark)" srcset="./{spec["source"]}-dark.{extension}" />'
             f'<img src="./{spec["source"]}-light.{extension}" alt="{escape(alt, quote=True)}" width="248" height="{fallback_height}" align="top"{tooltip} />'
             '</picture></a>')

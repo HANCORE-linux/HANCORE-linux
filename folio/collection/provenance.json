@@ -5,7 +5,7 @@
     "scripts/folio_badges.py": "1226405ff666d14596e331dcb9c4bd55179c6ab60b191f08b2d07d2018eb4b71",
     "scripts/folio_labels.py": "2afb66335fc719394ec3c14d2599a698548a8232c2d89a854e997797719b88c6",
     "scripts/folio_archive_routes.py": "722daa028af100a6a7e806b2d8e461028b1abc3889a930cbdfb32a342d2ab698",
-    "scripts/folio_connections.py": "cbddf9e904e26dd3d9022fa2ffbf54b4bee8522ff602127266eb6a4c6e265768",
+    "scripts/folio_connections.py": "5c64c2b5a701ceb81730a121eb04ffb61a898ccabb4f7a6cf0c63c00469cf82c",
     "data/themes.json": "e780e25dfe107977e050d464f9a500bfb99befaf0caae6ebb93d454b32857e3a",
     "folio/assets/label-archive-dark.png": "bbb1fe0ee33c9e5d0aa83a2cd034c9f0219b3a09ea135f6a01d9f6f216d70ce3",
     "folio/assets/label-archive-light.png": "27c8ca547b3153d1be7c15c8a5aa91b99d0791c074d0f72fb69515899af9dee3",

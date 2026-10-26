@@ -207,6 +207,15 @@ def project_tile(work, ink):
 </svg>'''
 
 
+def stacked_tile(slug, mode):
+    """The unchanged project mount centred on a transparent double-width README line."""
+    height = PROJECT_WINDOWS[slug] + 140
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2496" height="{height * 2}" viewBox="0 0 1248 {height}">
+  <title>{escape(slug)} — project mount alone on its README line</title>
+  <image x="312" y="0" width="624" height="{height}" xlink:href="assets/{slug}-{mode}.png" />
+</svg>'''
+
+
 def tile(work, ink):
     if work['slug'] in PROJECT_CROPS:
         return project_tile(work, ink)
@@ -355,6 +364,7 @@ def main():
         for mode, ink in INK.items():
             compositions = [('signature', signature(ink)), ('mark-logo', logo_svg(ink, mark=True)), ('mark-core', signet_svg(mark=True)),
                             ('bio-wide', bio_svg(mode)), ('bio-narrow', bio_svg(mode, wide=False)), *[(w['slug'], tile(w, ink)) for w in works],
+                            (f'stacked-{SECOND[0]}', stacked_tile(SECOND[0], mode)),
                             *[(f'thanks-{person["slug"]}', acknowledgement_svg(person, mode)) for person in acknowledged_people()],
                             (ORIGIN_SLUG, origin_svg(mode)),
                             *[(f'label-{slug}', label_svg(lines, ink, slug)) for slug, lines in labels(len(themes)).items()],
