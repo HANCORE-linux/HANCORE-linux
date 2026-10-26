@@ -303,11 +303,11 @@
       "git_blob": "6b5db66b1dacdbcfc1937b5e16ee3acc9469d6e8",
       "note": "Reused preserved popular screenshot; no new image download.",
       "badge": {
-        "url": "https://img.shields.io/badge/stars-37-df6124?style=flat-square&labelColor=000000",
-        "stars": 37,
+        "url": "https://img.shields.io/badge/stars-38-df6124?style=flat-square&labelColor=000000",
+        "stars": 38,
         "width": 60,
         "height": 20,
-        "sha256": "b3ab878a6206828a8499db9ad429ebebb0291e8bd2203cf059f3277e06734948",
+        "sha256": "b3217cf48c55b9e8b0c6c606d3ffd21f0326d175fe570bcadaca2b42391606d2",
         "api_snapshot": true
       }
     },
@@ -327,5 +327,5 @@
       "fetched_at": "2026-10-04T11:45:45.538050+00:00"
     }
   },
-  "badges_fetched_at": "2026-10-25T09:07:54.287804+00:00"
+  "badges_fetched_at": "2026-10-26T10:04:17.743898+00:00"
 }
