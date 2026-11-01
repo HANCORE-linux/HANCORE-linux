@@ -1,5 +1,5 @@
 {
-  "verified_on": "2026-10-31",
+  "verified_on": "2026-11-01",
   "source": "https://api.github.com/users/HANCORE-linux/repos?type=owner&sort=full_name&per_page=100&page=1",
   "selection": "Non-fork public omarchy-*-theme repositories, stars strictly greater than 30, descending by stars, repository-name tie break, at most six.",
   "minimum_stars_exclusive": 30,
@@ -19,11 +19,11 @@
     "blackmoney": 15,
     "shadesofjade": 32,
     "lasthorizon": 39,
-    "velvetnight": 14,
+    "velvetnight": 13,
     "whitegold": 17,
-    "harbordark": 49,
+    "harbordark": 50,
     "harbor": 27,
-    "solitude": 83,
+    "solitude": 84,
     "oxocarbon": 28,
     "turbonite": 25,
     "greek-noir": 37,
@@ -33,7 +33,7 @@
     "dos-moos": 35,
     "banish": 9,
     "labra": 26,
-    "soft-echoes": 9
+    "soft-echoes": 8
   },
   "previews": {
     "solitude": {
