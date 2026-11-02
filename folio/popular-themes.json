@@ -1,5 +1,5 @@
 {
-  "verified_on": "2026-11-01",
+  "verified_on": "2026-11-02",
   "source": "https://api.github.com/users/HANCORE-linux/repos?type=owner&sort=full_name&per_page=100&page=1",
   "selection": "Non-fork public omarchy-*-theme repositories, stars strictly greater than 30, descending by stars, repository-name tie break, at most six.",
   "minimum_stars_exclusive": 30,
@@ -21,7 +21,7 @@
     "lasthorizon": 39,
     "velvetnight": 13,
     "whitegold": 17,
-    "harbordark": 50,
+    "harbordark": 51,
     "harbor": 27,
     "solitude": 84,
     "oxocarbon": 28,
