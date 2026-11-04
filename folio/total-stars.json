@@ -37,7 +37,7 @@
       "id": 1338810088,
       "full_name": "HANCORE-linux/OmaQ",
       "url": "https://github.com/HANCORE-linux/OmaQ",
-      "stars": 56,
+      "stars": 57,
       "fork": false,
       "private": false
     },
@@ -101,7 +101,7 @@
       "id": 1277735693,
       "full_name": "HANCORE-linux/omarchy-dos-moos-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-dos-moos-theme",
-      "stars": 35,
+      "stars": 34,
       "fork": false,
       "private": false
     },
@@ -245,7 +245,7 @@
       "id": 1169546307,
       "full_name": "HANCORE-linux/omarchy-solitude-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-solitude-theme",
-      "stars": 84,
+      "stars": 85,
       "fork": false,
       "private": false
     },
@@ -282,6 +282,14 @@
       "private": false
     },
     {
+      "id": 1444602011,
+      "full_name": "HANCORE-linux/pChart",
+      "url": "https://github.com/HANCORE-linux/pChart",
+      "stars": 1,
+      "fork": false,
+      "private": false
+    },
+    {
       "id": 1258696184,
       "full_name": "HANCORE-linux/quickshell-dots",
       "url": "https://github.com/HANCORE-linux/quickshell-dots",
@@ -293,7 +301,7 @@
       "id": 1424623898,
       "full_name": "HANCORE-linux/rumb",
       "url": "https://github.com/HANCORE-linux/rumb",
-      "stars": 105,
+      "stars": 115,
       "fork": false,
       "private": false
     },
@@ -388,16 +396,16 @@
       "private": false
     }
   ],
-  "owned_stars": 2291,
+  "owned_stars": 2303,
   "extra_stars": 373,
-  "total_stars": 2664,
-  "fetched_at": "2026-11-03T11:53:57.293715+00:00",
+  "total_stars": 2676,
+  "fetched_at": "2026-11-04T12:04:33.424245+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C664-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C676-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2664,
-    "sha256": "ab72edad5dba502a9b3f977c591128684ee8708ef456ae322eed704b4efabc98"
+    "stars": 2676,
+    "sha256": "d98b6c7eccde7638c6cc812257cdbf3b94d51834f8091f5f4a62f3a994850649"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "verified_on": "2026-11-03",
+  "verified_on": "2026-11-04",
   "source": "https://api.github.com/users/HANCORE-linux/repos?type=owner&sort=full_name&per_page=100&page=1",
   "selection": "Non-fork public omarchy-*-theme repositories, stars strictly greater than 30, descending by stars, repository-name tie break, at most six.",
   "minimum_stars_exclusive": 30,
@@ -23,14 +23,14 @@
     "whitegold": 17,
     "harbordark": 51,
     "harbor": 27,
-    "solitude": 84,
+    "solitude": 85,
     "oxocarbon": 28,
     "turbonite": 25,
     "greek-noir": 37,
     "saga": 18,
     "kanso": 30,
     "ryu": 11,
-    "dos-moos": 35,
+    "dos-moos": 34,
     "banish": 9,
     "labra": 26,
     "soft-echoes": 8
