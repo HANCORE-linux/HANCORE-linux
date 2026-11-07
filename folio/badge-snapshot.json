@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-06T12:04:09.184505+00:00",
+  "fetched_at": "2026-11-07T11:01:41.871239+00:00",
   "note": "Exact public GitHub API counts, static Shields styling; refreshed daily by profile-stars.",
   "badges": {
     "solitude": {
@@ -11,11 +11,11 @@
       "api_snapshot": true
     },
     "blackturq": {
-      "url": "https://img.shields.io/badge/stars-59-df6124?style=flat-square&labelColor=000000",
-      "stars": 59,
+      "url": "https://img.shields.io/badge/stars-60-df6124?style=flat-square&labelColor=000000",
+      "stars": 60,
       "width": 60,
       "height": 20,
-      "sha256": "9315c1e596843f2ac6390ec4b618c9a11a71f66594449ac613f4c165d46bdb9c",
+      "sha256": "a7125c95a25c1d15ab9e9a6b7208edb1664b72fb581e0370dc1b060b1486bebe",
       "api_snapshot": true
     },
     "mechanoonna": {
