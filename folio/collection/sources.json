@@ -34,11 +34,11 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/badge/stars-20-df6124?style=flat-square&labelColor=000000",
-        "stars": 20,
+        "url": "https://img.shields.io/badge/stars-19-df6124?style=flat-square&labelColor=000000",
+        "stars": 19,
         "width": 60,
         "height": 20,
-        "sha256": "0aaa86bc0e8bdca3db4ef54e66f1b5a1e5b4db4e338bfd1b302ef320adee0d00",
+        "sha256": "20a749360855e50f6e3cea36a5b6c6b882c8e60d27dd4e40ead0629d9ca201a7",
         "api_snapshot": true
       },
       "sha256": "e26fc0e282f4abda51ade9ca96dad23c9db1ce4ae3f967654610bc55f69609a9"
@@ -48,11 +48,11 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/badge/stars-34-df6124?style=flat-square&labelColor=000000",
-        "stars": 34,
+        "url": "https://img.shields.io/badge/stars-33-df6124?style=flat-square&labelColor=000000",
+        "stars": 33,
         "width": 60,
         "height": 20,
-        "sha256": "fafa69918567f8f995c3cee5634953f920459052fd8402c932b0b1acc5192558",
+        "sha256": "4162206601b57d639807ad8d4002d56f8a0649dd7076f7c603185215e8112a1b",
         "api_snapshot": true
       },
       "sha256": "70d3b30de641902cb30e54fb4743ab778f63f3933fcf81969653b6fe455b6b79"
@@ -90,11 +90,11 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/badge/stars-51-df6124?style=flat-square&labelColor=000000",
-        "stars": 51,
+        "url": "https://img.shields.io/badge/stars-50-df6124?style=flat-square&labelColor=000000",
+        "stars": 50,
         "width": 60,
         "height": 20,
-        "sha256": "83ee8315e11874b4f54f8bcfc1e0f525137c8a052b326a8837300cd6440706c8",
+        "sha256": "1f55dd1231ca9b8fc2caeb22f2efa46f439b6e07709a375bdd460c13a99ab182",
         "api_snapshot": true
       },
       "sha256": "e343daf061fe34de6a382e370c79fa753eb66afebd317a3fc4b665ce8377dbe6"
@@ -303,11 +303,11 @@
       "git_blob": "6b5db66b1dacdbcfc1937b5e16ee3acc9469d6e8",
       "note": "Reused preserved popular screenshot; no new image download.",
       "badge": {
-        "url": "https://img.shields.io/badge/stars-40-df6124?style=flat-square&labelColor=000000",
-        "stars": 40,
+        "url": "https://img.shields.io/badge/stars-41-df6124?style=flat-square&labelColor=000000",
+        "stars": 41,
         "width": 60,
         "height": 20,
-        "sha256": "67c6d413542c70d4868446c3cff3a01a3dc5cf3027f990eccf608f64859afe64",
+        "sha256": "2a3c2ab4d337955316bbe3fec1924a871fc22c1ad5ea25acea116a8411e5f410",
         "api_snapshot": true
       }
     },
@@ -342,5 +342,5 @@
       "fetched_at": "2026-10-26T10:09:27.916076+00:00"
     }
   },
-  "badges_fetched_at": "2026-11-07T11:01:41.871239+00:00"
+  "badges_fetched_at": "2026-11-08T11:15:07.514914+00:00"
 }
