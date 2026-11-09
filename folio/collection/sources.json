@@ -62,11 +62,11 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/badge/stars-38-df6124?style=flat-square&labelColor=000000",
-        "stars": 38,
+        "url": "https://img.shields.io/badge/stars-39-df6124?style=flat-square&labelColor=000000",
+        "stars": 39,
         "width": 60,
         "height": 20,
-        "sha256": "b3217cf48c55b9e8b0c6c606d3ffd21f0326d175fe570bcadaca2b42391606d2",
+        "sha256": "4a18ef9600fdf9d2f77d89bdd31d7040c62bf9bf0e34ab51f719279cc558ce53",
         "api_snapshot": true
       },
       "sha256": "3b86a3bc49c754a207ee339b50e92f961f2ca2e36f9ff79bdb1a57c9beab2e52"
@@ -188,11 +188,11 @@
       "width": 2560,
       "height": 1440,
       "badge": {
-        "url": "https://img.shields.io/badge/stars-12-df6124?style=flat-square&labelColor=000000",
-        "stars": 12,
+        "url": "https://img.shields.io/badge/stars-13-df6124?style=flat-square&labelColor=000000",
+        "stars": 13,
         "width": 60,
         "height": 20,
-        "sha256": "d268d435211d46d385b2cc6bafc5e0bebbe802f60bed84c75066199c697345eb",
+        "sha256": "209e674fcb1679109f697eb857935f19818b6719e6fe36eb7b1bb4aee5325001",
         "api_snapshot": true
       },
       "sha256": "778151050d3cb8873863e71eacba98bd2b867fde925d6bfa6c852974894b38e5"
@@ -303,11 +303,11 @@
       "git_blob": "6b5db66b1dacdbcfc1937b5e16ee3acc9469d6e8",
       "note": "Reused preserved popular screenshot; no new image download.",
       "badge": {
-        "url": "https://img.shields.io/badge/stars-41-df6124?style=flat-square&labelColor=000000",
-        "stars": 41,
+        "url": "https://img.shields.io/badge/stars-42-df6124?style=flat-square&labelColor=000000",
+        "stars": 42,
         "width": 60,
         "height": 20,
-        "sha256": "2a3c2ab4d337955316bbe3fec1924a871fc22c1ad5ea25acea116a8411e5f410",
+        "sha256": "c1eb9cc43f5f985e0f3794b6dd2c42fac47d17c7bb446509756e7a23791db318",
         "api_snapshot": true
       }
     },
@@ -342,5 +342,5 @@
       "fetched_at": "2026-10-26T10:09:27.916076+00:00"
     }
   },
-  "badges_fetched_at": "2026-11-08T11:15:07.514914+00:00"
+  "badges_fetched_at": "2026-11-09T12:49:13.244033+00:00"
 }
