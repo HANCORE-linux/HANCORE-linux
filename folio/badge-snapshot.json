@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-09T12:49:13.244033+00:00",
+  "fetched_at": "2026-11-10T12:35:51.989708+00:00",
   "note": "Exact public GitHub API counts, static Shields styling; refreshed daily by profile-stars.",
   "badges": {
     "solitude": {
@@ -10,20 +10,20 @@
       "sha256": "0d12954b32c8006a9bcd3ba82e03beea00e9398d052d47697bf9bc144309c420",
       "api_snapshot": true
     },
+    "blackgold": {
+      "url": "https://img.shields.io/badge/stars-62-df6124?style=flat-square&labelColor=000000",
+      "stars": 62,
+      "width": 60,
+      "height": 20,
+      "sha256": "4700bc72e500eb549d28edd1b631b1faa84452110d4d5e3e5e52b33e650a6566",
+      "api_snapshot": true
+    },
     "blackturq": {
       "url": "https://img.shields.io/badge/stars-61-df6124?style=flat-square&labelColor=000000",
       "stars": 61,
       "width": 60,
       "height": 20,
       "sha256": "a7e115015d102d29e66300aef0ee0154cdb1f06a4e2bf18cf7dbcbd846918e8d",
-      "api_snapshot": true
-    },
-    "blackgold": {
-      "url": "https://img.shields.io/badge/stars-60-df6124?style=flat-square&labelColor=000000",
-      "stars": 60,
-      "width": 60,
-      "height": 20,
-      "sha256": "a7125c95a25c1d15ab9e9a6b7208edb1664b72fb581e0370dc1b060b1486bebe",
       "api_snapshot": true
     },
     "mechanoonna": {
