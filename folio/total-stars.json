@@ -165,7 +165,7 @@
       "id": 1091747360,
       "full_name": "HANCORE-linux/omarchy-mechanoonna-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-mechanoonna-theme",
-      "stars": 60,
+      "stars": 61,
       "fork": false,
       "private": false
     },
@@ -253,7 +253,7 @@
       "id": 1083832669,
       "full_name": "HANCORE-linux/omarchy-thegreek-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-thegreek-theme",
-      "stars": 26,
+      "stars": 27,
       "fork": false,
       "private": false
     },
@@ -309,7 +309,7 @@
       "id": 1302068770,
       "full_name": "HANCORE-linux/Shibumi-Shell",
       "url": "https://github.com/HANCORE-linux/Shibumi-Shell",
-      "stars": 252,
+      "stars": 251,
       "fork": false,
       "private": false
     },
@@ -396,16 +396,16 @@
       "private": false
     }
   ],
-  "owned_stars": 2347,
+  "owned_stars": 2348,
   "extra_stars": 386,
-  "total_stars": 2733,
-  "fetched_at": "2026-11-15T11:55:31.774759+00:00",
+  "total_stars": 2734,
+  "fetched_at": "2026-11-16T12:41:55.249635+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C733-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C734-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2733,
-    "sha256": "50275a62f8bb3d01423464a1acd59b3fb59c00ed023cbd761c0b13fd4545b905"
+    "stars": 2734,
+    "sha256": "2835ef75b979c33e7aed8652deb57b5460b7ffc1df3fb1eb705d074327673e68"
   }
 }
