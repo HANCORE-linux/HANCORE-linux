@@ -45,7 +45,7 @@
       "id": 1370509138,
       "full_name": "HANCORE-linux/omarchy-banish-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-banish-theme",
-      "stars": 9,
+      "stars": 10,
       "fork": false,
       "private": false
     },
@@ -149,7 +149,7 @@
       "id": 1403775372,
       "full_name": "HANCORE-linux/omarchy-labra-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-labra-theme",
-      "stars": 26,
+      "stars": 25,
       "fork": false,
       "private": false
     },
@@ -293,7 +293,7 @@
       "id": 1258696184,
       "full_name": "HANCORE-linux/quickshell-dots",
       "url": "https://github.com/HANCORE-linux/quickshell-dots",
-      "stars": 231,
+      "stars": 230,
       "fork": false,
       "private": false
     },
@@ -309,7 +309,7 @@
       "id": 1302068770,
       "full_name": "HANCORE-linux/Shibumi-Shell",
       "url": "https://github.com/HANCORE-linux/Shibumi-Shell",
-      "stars": 255,
+      "stars": 256,
       "fork": false,
       "private": false
     },
@@ -317,7 +317,7 @@
       "id": 1051865105,
       "full_name": "HANCORE-linux/waybar-themes",
       "url": "https://github.com/HANCORE-linux/waybar-themes",
-      "stars": 679,
+      "stars": 680,
       "fork": false,
       "private": false
     },
@@ -396,16 +396,16 @@
       "private": false
     }
   ],
-  "owned_stars": 2371,
+  "owned_stars": 2372,
   "extra_stars": 394,
-  "total_stars": 2765,
-  "fetched_at": "2026-11-20T12:50:41.666150+00:00",
+  "total_stars": 2766,
+  "fetched_at": "2026-11-21T12:36:04.509302+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C765-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C766-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2765,
-    "sha256": "438251c800e143646200d575cc842bd1cf0f74fdfb577e262c62fe2d7174adf6"
+    "stars": 2766,
+    "sha256": "b8363be2423dfb2a1d81aec99f25a7e0c68231480b86e8f57165bb6af29a3b5a"
   }
 }
