@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-21T12:36:04.758249+00:00",
+  "fetched_at": "2026-11-23T14:33:32.121667+00:00",
   "note": "Exact public GitHub API counts, static Shields styling; refreshed daily by profile-stars.",
   "badges": {
     "solitude": {
@@ -43,11 +43,11 @@
       "api_snapshot": true
     },
     "batou": {
-      "url": "https://img.shields.io/badge/stars-45-df6124?style=flat-square&labelColor=000000",
-      "stars": 45,
+      "url": "https://img.shields.io/badge/stars-46-df6124?style=flat-square&labelColor=000000",
+      "stars": 46,
       "width": 60,
       "height": 20,
-      "sha256": "c9cabb855b58fc8620c67bb4491b07a4288b187401a32ac6747d96b2d22ae1df",
+      "sha256": "82ca71cc60ad5de42063907e708eeb4dcc5e5919fd41616ae0d72bb64a64d218",
       "api_snapshot": true
     }
   }
