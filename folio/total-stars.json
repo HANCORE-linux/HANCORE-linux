@@ -53,7 +53,7 @@
       "id": 1079497170,
       "full_name": "HANCORE-linux/omarchy-batou-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-batou-theme",
-      "stars": 46,
+      "stars": 47,
       "fork": false,
       "private": false
     },
@@ -77,7 +77,7 @@
       "id": 1059027884,
       "full_name": "HANCORE-linux/omarchy-blackturq-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-blackturq-theme",
-      "stars": 63,
+      "stars": 64,
       "fork": false,
       "private": false
     },
@@ -325,7 +325,7 @@
       "id": 1314624489,
       "full_name": "omacom/omarchy-plugin-marketplace",
       "url": "https://github.com/omacom/omarchy-plugin-marketplace",
-      "stars": 400,
+      "stars": 401,
       "fork": false,
       "private": false
     }
@@ -396,16 +396,16 @@
       "private": false
     }
   ],
-  "owned_stars": 2382,
-  "extra_stars": 400,
-  "total_stars": 2782,
-  "fetched_at": "2026-11-24T14:50:03.670457+00:00",
+  "owned_stars": 2384,
+  "extra_stars": 401,
+  "total_stars": 2785,
+  "fetched_at": "2026-11-25T14:16:52.393721+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C782-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C785-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2782,
-    "sha256": "9f9edc069da435ce0694849fca03d52f9f54ee4b5194e4f22e138c68a0d0942f"
+    "stars": 2785,
+    "sha256": "9f4e4311880c2f7fef0061cb0b60c196441f8e4570feb97499938077afecad6a"
   }
 }
