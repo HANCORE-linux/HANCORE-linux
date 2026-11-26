@@ -61,7 +61,7 @@
       "id": 1056349329,
       "full_name": "HANCORE-linux/omarchy-blackgold-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-blackgold-theme",
-      "stars": 64,
+      "stars": 65,
       "fork": false,
       "private": false
     },
@@ -157,7 +157,7 @@
       "id": 1087643929,
       "full_name": "HANCORE-linux/omarchy-lasthorizon-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-lasthorizon-theme",
-      "stars": 43,
+      "stars": 44,
       "fork": false,
       "private": false
     },
@@ -205,7 +205,7 @@
       "id": 1235573385,
       "full_name": "HANCORE-linux/omarchy-ryu-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-ryu-theme",
-      "stars": 13,
+      "stars": 14,
       "fork": false,
       "private": false
     },
@@ -317,7 +317,7 @@
       "id": 1051865105,
       "full_name": "HANCORE-linux/waybar-themes",
       "url": "https://github.com/HANCORE-linux/waybar-themes",
-      "stars": 681,
+      "stars": 682,
       "fork": false,
       "private": false
     },
@@ -325,7 +325,7 @@
       "id": 1314624489,
       "full_name": "omacom/omarchy-plugin-marketplace",
       "url": "https://github.com/omacom/omarchy-plugin-marketplace",
-      "stars": 401,
+      "stars": 404,
       "fork": false,
       "private": false
     }
@@ -396,16 +396,16 @@
       "private": false
     }
   ],
-  "owned_stars": 2384,
-  "extra_stars": 401,
-  "total_stars": 2785,
-  "fetched_at": "2026-11-25T14:16:52.393721+00:00",
+  "owned_stars": 2388,
+  "extra_stars": 404,
+  "total_stars": 2792,
+  "fetched_at": "2026-11-26T13:51:37.634308+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C785-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C792-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2785,
-    "sha256": "9f4e4311880c2f7fef0061cb0b60c196441f8e4570feb97499938077afecad6a"
+    "stars": 2792,
+    "sha256": "ff561ff89842c1ad0d2a6ad0711fd5a3aa765010de4faa9fa7696a6209e158bf"
   }
 }
