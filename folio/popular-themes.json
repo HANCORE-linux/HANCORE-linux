@@ -1,13 +1,13 @@
 {
-  "verified_on": "2026-11-27",
+  "verified_on": "2026-11-28",
   "source": "https://api.github.com/users/HANCORE-linux/repos?type=owner&sort=full_name&per_page=100&page=1",
   "selection": "Non-fork public omarchy-*-theme repositories, stars strictly greater than 30, descending by stars, repository-name tie break, at most six.",
   "minimum_stars_exclusive": 30,
   "limit": 6,
   "star_snapshot": {
-    "blackturq": 65,
+    "blackturq": 67,
     "blackgold": 66,
-    "demon": 19,
+    "demon": 20,
     "inkypinky": 40,
     "oxford": 15,
     "roseofdune": 15,
@@ -15,7 +15,7 @@
     "thegreek": 28,
     "batou": 48,
     "sapphire": 25,
-    "mechanoonna": 62,
+    "mechanoonna": 63,
     "blackmoney": 15,
     "shadesofjade": 32,
     "lasthorizon": 44,
@@ -23,7 +23,7 @@
     "whitegold": 17,
     "harbordark": 51,
     "harbor": 28,
-    "solitude": 87,
+    "solitude": 88,
     "oxocarbon": 29,
     "turbonite": 28,
     "greek-noir": 40,
@@ -31,9 +31,9 @@
     "kanso": 32,
     "ryu": 14,
     "dos-moos": 33,
-    "banish": 10,
+    "banish": 11,
     "labra": 25,
-    "soft-echoes": 8
+    "soft-echoes": 9
   },
   "previews": {
     "solitude": {

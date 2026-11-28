@@ -45,7 +45,7 @@
       "id": 1370509138,
       "full_name": "HANCORE-linux/omarchy-banish-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-banish-theme",
-      "stars": 10,
+      "stars": 11,
       "fork": false,
       "private": false
     },
@@ -77,7 +77,7 @@
       "id": 1059027884,
       "full_name": "HANCORE-linux/omarchy-blackturq-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-blackturq-theme",
-      "stars": 65,
+      "stars": 67,
       "fork": false,
       "private": false
     },
@@ -93,7 +93,7 @@
       "id": 1071759387,
       "full_name": "HANCORE-linux/omarchy-demon-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-demon-theme",
-      "stars": 19,
+      "stars": 20,
       "fork": false,
       "private": false
     },
@@ -165,7 +165,7 @@
       "id": 1091747360,
       "full_name": "HANCORE-linux/omarchy-mechanoonna-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-mechanoonna-theme",
-      "stars": 62,
+      "stars": 63,
       "fork": false,
       "private": false
     },
@@ -237,7 +237,7 @@
       "id": 1424698433,
       "full_name": "HANCORE-linux/omarchy-soft-echoes-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-soft-echoes-theme",
-      "stars": 8,
+      "stars": 9,
       "fork": false,
       "private": false
     },
@@ -245,7 +245,7 @@
       "id": 1169546307,
       "full_name": "HANCORE-linux/omarchy-solitude-theme",
       "url": "https://github.com/HANCORE-linux/omarchy-solitude-theme",
-      "stars": 87,
+      "stars": 88,
       "fork": false,
       "private": false
     },
@@ -293,7 +293,7 @@
       "id": 1258696184,
       "full_name": "HANCORE-linux/quickshell-dots",
       "url": "https://github.com/HANCORE-linux/quickshell-dots",
-      "stars": 230,
+      "stars": 229,
       "fork": false,
       "private": false
     },
@@ -301,7 +301,7 @@
       "id": 1424623898,
       "full_name": "HANCORE-linux/rumb",
       "url": "https://github.com/HANCORE-linux/rumb",
-      "stars": 132,
+      "stars": 134,
       "fork": false,
       "private": false
     },
@@ -317,7 +317,7 @@
       "id": 1051865105,
       "full_name": "HANCORE-linux/waybar-themes",
       "url": "https://github.com/HANCORE-linux/waybar-themes",
-      "stars": 682,
+      "stars": 683,
       "fork": false,
       "private": false
     },
@@ -396,16 +396,16 @@
       "private": false
     }
   ],
-  "owned_stars": 2394,
+  "owned_stars": 2403,
   "extra_stars": 407,
-  "total_stars": 2801,
-  "fetched_at": "2026-11-27T13:49:17.771303+00:00",
+  "total_stars": 2810,
+  "fetched_at": "2026-11-28T12:56:45.131027+00:00",
   "note": "Dated public project-star sum, not unique supporters.",
   "badge": {
-    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C801-df6124?style=flat-square&labelColor=000000",
+    "url": "https://img.shields.io/badge/total%20project%20stars-2%2C810-df6124?style=flat-square&labelColor=000000",
     "width": 150,
     "height": 20,
-    "stars": 2801,
-    "sha256": "acc97a7a20f03a1d3c96a088e86852639658aa7cfa04b689eef8da9714300ef0"
+    "stars": 2810,
+    "sha256": "bde0b9048172816e41b45d0f5c8575db7dc6a3f93b160f904bc2afea5ca7cda6"
   }
 }
